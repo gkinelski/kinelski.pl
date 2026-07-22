@@ -1,2 +1,3 @@
 # kinelski.pl
-Official academic website of Grzegorz Kinelski
+Official website of Dr. Grzegorz Kinelski
+Smart City • Energy Transition • Digital Economy
