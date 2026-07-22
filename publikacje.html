@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publikacje | dr Grzegorz Kinelski</title>
+<meta name="description" content="Pełny wykaz publikacji naukowych dr. Grzegorza Kinelskiego z filtrowaniem według roku, obszaru i typu.">
+<meta name="author" content="Grzegorz Kinelski">
+<meta name="theme-color" content="#081625">
+<link rel="canonical" href="https://kinelski.pl/publikacje.html">
+<meta property="og:title" content="Publikacje | dr Grzegorz Kinelski">
+<meta property="og:description" content="Pełny wykaz publikacji naukowych dr. Grzegorza Kinelskiego z filtrowaniem według roku, obszaru i typu.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kinelski.pl/publikacje.html">
+<meta property="og:image" content="https://kinelski.pl/assets/images/grzegorz-kinelski.webp">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="index.html" aria-label="Strona główna">
+      <span class="brand-mark">GK</span><span class="brand-text">Grzegorz Kinelski</span>
+    </a>
+    <button class="menu-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="main-nav" class="main-nav">
+      <a href="o-mnie.html">O mnie</a>
+      <a href="badania.html">Badania</a>
+      <a href="publikacje.html">Publikacje</a>
+      <a href="monografia.html">Monografia</a>
+      <a href="aktywnosc.html">Aktywność</a>
+      <a href="kontakt.html">Kontakt</a>
+      <button class="theme-toggle" aria-label="Zmień motyw">◐</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="page-hero simple"><div class="container"><p class="eyebrow">Dorobek naukowy</p><h1>Publikacje</h1><p class="page-lead">Pełny wykaz dorobku po doktoracie wraz z filtrowaniem według obszaru badawczego, roku i typu publikacji.</p></div></section>
+<section class="section">
+<div class="container">
+  <div class="pub-summary">
+    <div><strong id="pub-count">0</strong><span>wyników</span></div>
+    <a class="btn btn-ghost" href="do-pobrania/publikacje.csv" download>Pobierz CSV</a>
+  </div>
+  <div class="filters">
+    <label><span>Szukaj</span><input id="search" type="search" placeholder="Tytuł, autor, czasopismo..."></label>
+    <label><span>Obszar</span><select id="area-filter"><option value="">Wszystkie obszary</option></select></label>
+    <label><span>Rok</span><select id="year-filter"><option value="">Wszystkie lata</option></select></label>
+    <label><span>Typ</span><select id="type-filter"><option value="">Wszystkie typy</option></select></label>
+  </div>
+  <div id="publications-list" class="publications-dynamic" aria-live="polite"></div>
+</div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-shell">
+    <span>© 2026 Grzegorz Kinelski</span>
+    <div class="footer-links">
+      <a href="https://orcid.org/0000-0002-5768-463X" target="_blank" rel="noopener">ORCID</a>
+      <a href="https://bazawiedzy.wsb.edu.pl/info/author/AWSBb5b555f7f5d74029821e5e1246894262/" target="_blank" rel="noopener">Profil AWSB</a>
+      <span>kinelski.pl</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/publications.js"></script>
+</body></html>
