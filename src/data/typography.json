@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "preset": "standard",
+  "preset": "custom",
   "scale": 1,
   "responsive": {
     "tabletScale": 0.97,
@@ -15,7 +15,7 @@
   },
   "navigation": {
     "brandSize": 16,
-    "menuSize": 14,
+    "menuSize": 16,
     "languageSize": 11,
     "headerHeight": 78,
     "gap": 22
