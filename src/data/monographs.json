@@ -1,0 +1,527 @@
+{
+  "summary": {
+    "total": 9,
+    "authored": 3,
+    "coauthored": 3,
+    "edited": 3,
+    "title": "9 książek naukowych",
+    "lead": "Trzy monografie autorskie, trzy monografie współautorskie oraz trzy redakcje naukowe — od konkurencyjności i gospodarki cyfrowej po Smart City, energetykę i rezyliencję."
+  },
+  "categories": [
+    {
+      "key": "autorska",
+      "label": "Monografie autorskie",
+      "shortLabel": "Autorska",
+      "count": 3,
+      "description": "Książki, w których Grzegorz Kinelski jest jedynym autorem i odpowiada za całość koncepcji, argumentacji oraz syntezy wyników."
+    },
+    {
+      "key": "wspolautorska",
+      "label": "Monografie współautorskie",
+      "shortLabel": "Współautorska",
+      "count": 3,
+      "description": "Książki wieloautorskie powstałe we współpracy krajowej i międzynarodowej, w których Grzegorz Kinelski jest współautorem."
+    },
+    {
+      "key": "redakcja",
+      "label": "Redakcje naukowe",
+      "shortLabel": "Redakcja naukowa",
+      "count": 3,
+      "description": "Monografie zbiorowe, za których koncepcję i spójność naukową Grzegorz Kinelski współodpowiada jako redaktor, często równocześnie autor rozdziałów."
+    }
+  ],
+  "items": [
+    {
+      "slug": "rezyliencja-miast-inteligentnych",
+      "title": "Rezyliencja miast inteligentnych w warunkach transformacji energetyczno-klimatycznej",
+      "categoryKey": "autorska",
+      "categoryLabel": "Monografia autorska",
+      "year": 2026,
+      "language": "polski",
+      "authors": [
+        "Grzegorz Kinelski"
+      ],
+      "editors": [],
+      "role": "Autor; indywidualny wkład 100%",
+      "roleShort": "Autor — wkład 100%",
+      "publisher": "Polskie Wydawnictwo Ekonomiczne S.A.",
+      "place": "Warszawa",
+      "pages": "",
+      "isbn": "978-83-208-2704-0",
+      "eisbn": "978-83-208-2706-4",
+      "doi": "10.33226/978-83-208-2706-4",
+      "cover": "/images/monographs/rezyliencja-miast-inteligentnych.webp",
+      "coverWidth": 988,
+      "coverHeight": 1302,
+      "featured": true,
+      "detailType": "extended",
+      "externalUrl": "https://doi.org/10.33226/978-83-208-2706-4",
+      "externalLabel": "Otwórz DOI",
+      "lead": "Główne osiągnięcie naukowe: autorska koncepcja rezyliencji miasta inteligentnego oraz empirycznie zweryfikowany model kapitałów 4T+.",
+      "description": [
+        "Monografia ujmuje Smart City jako złożony system adaptacyjny, którego jakość nie zależy wyłącznie od technologii, lecz także od kompetencji, zaufania, współzarządzania oraz bezpieczeństwa mieszkańców.",
+        "Książka syntetyzuje program badań nad Smart City, transformacją energetyczno-klimatyczną, gospodarką cyfrową i odpornością miejską. Model 4T+ integruje technologię, talent, tolerancję i zaufanie z nadrzędnym rezultatem w postaci rezyliencji."
+      ],
+      "topics": [
+        "Smart City",
+        "rezyliencja miejska",
+        "transformacja energetyczno-klimatyczna",
+        "model 4T+",
+        "bezpieczeństwo mieszkańców"
+      ],
+      "contributions": [
+        {
+          "title": "Główne osiągnięcie habilitacyjne",
+          "text": "Monografia została wskazana jako autorskie osiągnięcie naukowe i stanowi zwieńczenie wieloletniego programu badawczego."
+        },
+        {
+          "title": "Model 4T+",
+          "text": "Oryginalna rama łącząca kapitały miejskie, governance, dekarbonizację i bezpieczeństwo w jeden model rezyliencji."
+        },
+        {
+          "title": "Weryfikacja empiryczna",
+          "text": "Projekt obejmuje badanie 1000 mieszkańców, 18 spotkań FGI ze 152 uczestnikami oraz modelowanie CB-SEM, OLS i ANOVA."
+        }
+      ],
+      "citation": "Kinelski, G. (2026). Rezyliencja miast inteligentnych w warunkach transformacji energetyczno-klimatycznej. Polskie Wydawnictwo Ekonomiczne S.A. https://doi.org/10.33226/978-83-208-2706-4"
+    },
+    {
+      "slug": "competitiveness-efficiency-digital-economy",
+      "title": "Competitiveness and Efficiency Management Through Cognitive Technologies in the Digital Economy",
+      "categoryKey": "autorska",
+      "categoryLabel": "Monografia autorska",
+      "year": 2019,
+      "language": "angielski",
+      "authors": [
+        "Grzegorz Kinelski"
+      ],
+      "editors": [],
+      "role": "Autor",
+      "roleShort": "Autor",
+      "publisher": "Wydawnictwo Adam Marszałek",
+      "place": "Toruń",
+      "pages": "221",
+      "isbn": "978-83-8180-228-4",
+      "eisbn": "",
+      "doi": "",
+      "cover": "/images/monographs/competitiveness-efficiency-digital-economy.webp",
+      "coverWidth": 988,
+      "coverHeight": 1357,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "https://sklep.marszalek.com.pl/pl/glowna/4613-competitiveness-and-efficiency-management-through-cognitive-technologies-in-the-digital-economy.html",
+      "externalLabel": "Strona wydawcy",
+      "lead": "Autorska monografia o zarządzaniu konkurencyjnością i efektywnością w realiach gospodarki cyfrowej oraz rozwoju technologii poznawczych.",
+      "description": [
+        "Książka rozwija problematykę konkurencyjności i efektywności organizacji w warunkach cyfryzacji. Tytułowe technologie poznawcze są rozpatrywane jako element zmiany sposobu podejmowania decyzji, pomiaru rezultatów i zarządzania przedsiębiorstwem.",
+        "Monografia stanowi ważne ogniwo między wcześniejszymi badaniami nad konkurencyjnością sektora energetycznego a późniejszym programem dotyczącym gospodarki cyfrowej, Smart City i transformacji organizacji infrastrukturalnych."
+      ],
+      "topics": [
+        "konkurencyjność",
+        "efektywność",
+        "gospodarka cyfrowa",
+        "technologie poznawcze",
+        "zarządzanie przedsiębiorstwem"
+      ],
+      "contributions": [
+        {
+          "title": "Samodzielna synteza",
+          "text": "Całość koncepcji i wywodu została opracowana przez Grzegorza Kinelskiego."
+        },
+        {
+          "title": "Cyfrowa transformacja zarządzania",
+          "text": "Monografia łączy klasyczne problemy efektywności z rozwojem technologii poznawczych i cyfrowych narzędzi zarządczych."
+        }
+      ],
+      "citation": "Kinelski, G. (2019). Competitiveness and Efficiency Management Through Cognitive Technologies in the Digital Economy. Wydawnictwo Adam Marszałek. ISBN 978-83-8180-228-4."
+    },
+    {
+      "slug": "analiza-czynnikow-konkurencyjnosci",
+      "title": "Analiza wybranych czynników konkurencyjności metodą dekompozycji",
+      "categoryKey": "autorska",
+      "categoryLabel": "Monografia autorska",
+      "year": 2017,
+      "language": "polski",
+      "authors": [
+        "Grzegorz Kinelski"
+      ],
+      "editors": [],
+      "role": "Autor",
+      "roleShort": "Autor",
+      "publisher": "Wydawnictwo Naukowe PWN",
+      "place": "Warszawa",
+      "pages": "",
+      "isbn": "978-83-01-19300-3",
+      "eisbn": "",
+      "doi": "",
+      "cover": "/images/monographs/analiza-czynnikow-konkurencyjnosci.webp",
+      "coverWidth": 988,
+      "coverHeight": 1283,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "",
+      "externalLabel": "",
+      "lead": "Autorska monografia poświęcona identyfikacji oraz analizie czynników konkurencyjności z wykorzystaniem podejścia dekompozycyjnego.",
+      "description": [
+        "Książka porządkuje wybrane determinanty konkurencyjności i przedstawia ich analizę metodą dekompozycji. Stanowi rezultat wcześniejszego etapu badań nad konkurencyjnością przedsiębiorstw i sektora elektroenergetycznego.",
+        "Publikacja dokumentuje rozwój warsztatu analitycznego autora oraz przejście od badań czynników przewagi konkurencyjnej do szerszych zagadnień efektywności, cyfryzacji i transformacji."
+      ],
+      "topics": [
+        "konkurencyjność",
+        "dekompozycja",
+        "analiza czynników",
+        "przewaga konkurencyjna",
+        "sektor elektroenergetyczny"
+      ],
+      "contributions": [
+        {
+          "title": "Autorska konstrukcja analityczna",
+          "text": "Książka samodzielnie rozwija sposób porządkowania i badania determinant konkurencyjności."
+        },
+        {
+          "title": "Fundament programu badawczego",
+          "text": "Monografia zamyka etap badań nad konkurencyjnością i tworzy podstawę dla późniejszych analiz efektywności oraz transformacji cyfrowej."
+        }
+      ],
+      "citation": "Kinelski, G. (2017). Analiza wybranych czynników konkurencyjności metodą dekompozycji. Wydawnictwo Naukowe PWN. ISBN 978-83-01-19300-3."
+    },
+    {
+      "slug": "toward-climate-neutral-management",
+      "title": "Towards the Climate Neutral Management of Innovation and Energy Security in Smart World",
+      "categoryKey": "wspolautorska",
+      "categoryLabel": "Monografia współautorska",
+      "year": 2022,
+      "language": "angielski",
+      "authors": [
+        "Olena Borysiak",
+        "Karolina Mucha-Kuś",
+        "Vasyl Brych",
+        "Grzegorz Kinelski"
+      ],
+      "editors": [],
+      "role": "Współautor",
+      "roleShort": "Współautor w międzynarodowym zespole",
+      "publisher": "Logos Verlag Berlin",
+      "place": "Berlin",
+      "pages": "185",
+      "isbn": "978-3-8325-5544-3",
+      "eisbn": "",
+      "doi": "",
+      "cover": "/images/monographs/towards-climate-neutral-management.webp",
+      "coverWidth": 988,
+      "coverHeight": 1270,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "https://logos-verlag.de/cgi-bin/engbuchmid?isbn=5544&lng=deu&id=",
+      "externalLabel": "Strona wydawcy",
+      "lead": "Międzynarodowa monografia o zarządzaniu innowacjami i bezpieczeństwem energetycznym w drodze do neutralności klimatycznej.",
+      "description": [
+        "Autorzy analizują ambicję celów klimatycznych ONZ i Unii Europejskiej oraz organizacyjne i ekonomiczne możliwości zmian w sektorach energetycznych Polski i Ukrainy.",
+        "Monografia wskazuje, że rozwój odnawialnych źródeł energii powinien być uzupełniony zarządzaniem nowoczesnymi systemami i paliwami, współpracą uczestników rynku oraz technologicznym wymiarem governance."
+      ],
+      "topics": [
+        "neutralność klimatyczna",
+        "bezpieczeństwo energetyczne",
+        "innowacje",
+        "Polska i Ukraina",
+        "governance technologiczny"
+      ],
+      "contributions": [
+        {
+          "title": "Współautorstwo międzynarodowe",
+          "text": "Książka powstała w czteroosobowym zespole badaczy z Polski i Ukrainy, łącząc perspektywy zarządzania, ekonomii i finansów."
+        },
+        {
+          "title": "Podejście interdyscyplinarne",
+          "text": "Analiza integruje transformację energetyczną, innowacje, strategię państwa i bezpieczeństwo energetyczne."
+        }
+      ],
+      "citation": "Borysiak, O., Mucha-Kuś, K., Brych, V., & Kinelski, G. (2022). Towards the Climate Neutral Management of Innovation and Energy Security in Smart World. Logos Verlag Berlin. ISBN 978-3-8325-5544-3."
+    },
+    {
+      "slug": "project-management-metropolis-gzm",
+      "title": "Project Management in Public Administration. The Case of Metropolis GZM",
+      "categoryKey": "wspolautorska",
+      "categoryLabel": "Monografia wieloautorska",
+      "year": 2020,
+      "language": "angielski",
+      "authors": [
+        "Barbara Sorychta-Wojsczyk",
+        "Anna Musioł-Urbańczyk",
+        "Seweryn Tchórzewski",
+        "Grzegorz Kinelski",
+        "Marcin Lis"
+      ],
+      "editors": [
+        "Krzysztof Zamasz",
+        "Karolina Mucha-Kuś"
+      ],
+      "role": "Współautor; autor i współautor rozdziałów",
+      "roleShort": "Współautor książki",
+      "publisher": "Wydawnictwo Adam Marszałek",
+      "place": "Toruń",
+      "pages": "190",
+      "isbn": "978-83-8180-323-6",
+      "eisbn": "",
+      "doi": "",
+      "cover": "/images/monographs/project-management-metropolis-gzm.webp",
+      "coverWidth": 988,
+      "coverHeight": 1349,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "https://wsb.edu.pl/nauka-i-badania/perfect-regionalna-inicjatywa-doskonalosci-w-akademii-wsb/aktualnosci/monografia-project-management-in-public-administration-the-case-of-metropolis-gzm.html",
+      "externalLabel": "Informacja Akademii WSB",
+      "lead": "Monografia wieloautorska o zarządzaniu projektami w administracji publicznej, przedstawionym na przykładzie Górnośląsko-Zagłębiowskiej Metropolii.",
+      "description": [
+        "Książka omawia projektowe podejście do zarządzania w administracji publicznej i wykorzystuje doświadczenia Metropolii GZM jako rozbudowane studium zastosowania.",
+        "Publikacja została przygotowana z myślą o badaczach, ekspertach samorządowych oraz praktykach władz lokalnych i regionalnych zainteresowanych wdrażaniem systemów zarządzania projektami."
+      ],
+      "topics": [
+        "zarządzanie projektami",
+        "administracja publiczna",
+        "Metropolia GZM",
+        "wdrożenie systemu projektowego",
+        "samorząd"
+      ],
+      "contributions": [
+        {
+          "title": "Rozdział współautorski",
+          "text": "Recommendation for the Efficient Implementation of Project Management System in the Metropolitan Office — z Krzysztofem Zamaszem i Marcinem Lisem, s. 151–163."
+        },
+        {
+          "title": "Współautorstwo konkluzji",
+          "text": "Conclusions — z Marcinem Lisem, s. 164–169."
+        },
+        {
+          "title": "Rola w książce",
+          "text": "Grzegorz Kinelski jest współautorem monografii, natomiast redaktorami naukowymi całego tomu są Krzysztof Zamasz i Karolina Mucha-Kuś."
+        }
+      ],
+      "citation": "Mucha-Kuś, K., & Zamasz, K. (red.). (2020). Project Management in Public Administration. The Case of Metropolis GZM. Wydawnictwo Adam Marszałek. ISBN 978-83-8180-323-6."
+    },
+    {
+      "slug": "nowe-technologie-rynek-nieruchomosci",
+      "title": "Nowe technologie na rynku nieruchomości – w poszukiwaniu zrównoważonego rozwoju",
+      "categoryKey": "wspolautorska",
+      "categoryLabel": "Monografia współautorska",
+      "year": 2023,
+      "language": "polski",
+      "authors": [
+        "Piotr Bartkowiak",
+        "Anna Górska",
+        "Maciej Koszel",
+        "Anna Mazurczak",
+        "Łukasz Strączkowski",
+        "Grzegorz Kinelski"
+      ],
+      "editors": [],
+      "role": "Współautor",
+      "roleShort": "Współautor",
+      "publisher": "Wydawnictwo Uniwersytetu Ekonomicznego w Poznaniu",
+      "place": "Poznań",
+      "pages": "116",
+      "isbn": "978-83-8211-155-2",
+      "eisbn": "978-83-8211-156-9",
+      "doi": "10.18559/978-83-8211-156-9",
+      "cover": "/images/monographs/nowe-technologie-rynek-nieruchomosci.webp",
+      "coverWidth": 988,
+      "coverHeight": 1319,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "https://doi.org/10.18559/978-83-8211-156-9",
+      "externalLabel": "Otwórz DOI / pełny tekst",
+      "lead": "Współautorska monografia o technologiach PropTech i ich wpływie na zrównoważony rozwój rynku nieruchomości mieszkaniowych.",
+      "description": [
+        "Książka przedstawia wykorzystanie nowoczesnych produktów technologicznych i biznesowych przez podmioty działające na rynku nieruchomości mieszkaniowych, przede wszystkim na rynku pierwotnym.",
+        "Autorzy analizują wpływ PropTech na społeczności lokalne, środowisko, ład korporacyjny i gospodarkę lokalną. Monografia łączy krytyczny przegląd literatury z badaniem przedsiębiorstw deweloperskich na poznańskim rynku mieszkaniowym."
+      ],
+      "topics": [
+        "PropTech",
+        "rynek nieruchomości",
+        "zrównoważony rozwój",
+        "cyfryzacja",
+        "Smart City",
+        "Poznań"
+      ],
+      "contributions": [
+        {
+          "title": "Współautorstwo interdyscyplinarne",
+          "text": "Publikacja powstała w sześcioosobowym zespole łączącym kompetencje z zakresu nieruchomości, zarządzania, cyfryzacji i zrównoważonego rozwoju."
+        },
+        {
+          "title": "Znaczenie dla programu Smart City",
+          "text": "Książka rozszerza badania nad cyfryzacją i zrównoważonym rozwojem o rynek mieszkaniowy oraz technologie miejskie."
+        }
+      ],
+      "citation": "Bartkowiak, P., Górska, A., Koszel, M., Mazurczak, A., Strączkowski, Ł., & Kinelski, G. (2023). Nowe technologie na rynku nieruchomości – w poszukiwaniu zrównoważonego rozwoju. Wydawnictwo Uniwersytetu Ekonomicznego w Poznaniu. https://doi.org/10.18559/978-83-8211-156-9"
+    },
+    {
+      "slug": "innovation-organisational-management",
+      "title": "Innovation in Organisational Management: Under Conditions of Sustainable Development",
+      "categoryKey": "redakcja",
+      "categoryLabel": "Redakcja naukowa monografii",
+      "year": 2020,
+      "language": "angielski",
+      "authors": [],
+      "editors": [
+        "Krzysztof Zamasz",
+        "Katarzyna Szczepańska-Woszczyna",
+        "Grzegorz Kinelski"
+      ],
+      "role": "Współredaktor naukowy; autor i współautor rozdziałów",
+      "roleShort": "Współredaktor naukowy",
+      "publisher": "Akademia WSB",
+      "place": "Dąbrowa Górnicza",
+      "pages": "203",
+      "isbn": "978-83-65621-95-5",
+      "eisbn": "",
+      "doi": "",
+      "cover": "/images/monographs/innovation-organisational-management.webp",
+      "coverWidth": 988,
+      "coverHeight": 1341,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "https://bazawiedzy.wsb.edu.pl/info/book/AWSB125a316fe82b4c5d82a46b8155acae74",
+      "externalLabel": "Rekord Akademii WSB",
+      "lead": "Redagowana monografia zbiorowa o innowacjach w zarządzaniu organizacjami funkcjonującymi w warunkach zrównoważonego rozwoju.",
+      "description": [
+        "Tom integruje perspektywy zarządzania, innowacji, transformacji cyfrowej i zrównoważonego rozwoju. Jego układ przedstawia różne wymiary zmian organizacyjnych oraz narzędzia oceny ich rezultatów.",
+        "Grzegorz Kinelski współodpowiada za redakcję naukową całej monografii, a ponadto wnosi własne rozdziały dotyczące zarządzania projektami, efektywności, konkurencyjności i decyzji inwestycyjnych w gospodarce cyfrowej."
+      ],
+      "topics": [
+        "innowacje organizacyjne",
+        "zrównoważony rozwój",
+        "gospodarka cyfrowa",
+        "zarządzanie projektami",
+        "decyzje inwestycyjne"
+      ],
+      "contributions": [
+        {
+          "title": "Redakcja naukowa",
+          "text": "Współredakcja tomu z Krzysztofem Zamaszem i Katarzyną Szczepańską-Woszczyną."
+        },
+        {
+          "title": "Rozdział autorski",
+          "text": "Autorski rozdział o wpływie zrównoważonego rozwoju na efektywność zarządzania projektami i konkurencyjność przedsiębiorstw energetycznych w gospodarce cyfrowej."
+        },
+        {
+          "title": "Rozdział współautorski",
+          "text": "Współautorski rozdział z Wojciechem Murasem o zarządzaniu decyzjami inwestycyjnymi i wycenie wartości przedsiębiorstwa przy użyciu miar niefinansowych."
+        }
+      ],
+      "citation": "Zamasz, K., Szczepańska-Woszczyna, K., & Kinelski, G. (red.). (2020). Innovation in Organisational Management: Under Conditions of Sustainable Development. Akademia WSB. ISBN 978-83-65621-95-5."
+    },
+    {
+      "slug": "koncepcja-smart-city-potencjaly-4t",
+      "title": "Koncepcja Smart City i potencjały 4T. Inteligentne zarządzanie miastami Górnośląsko-Zagłębiowskiej Metropolii",
+      "categoryKey": "redakcja",
+      "categoryLabel": "Redakcja naukowa monografii",
+      "year": 2022,
+      "language": "polski",
+      "authors": [],
+      "editors": [
+        "Zbigniew J. Makieła",
+        "Karolina Mucha-Kuś",
+        "Grzegorz Kinelski"
+      ],
+      "role": "Współredaktor naukowy; współautor rozdziałów",
+      "roleShort": "Współredaktor naukowy",
+      "publisher": "Akademia WSB",
+      "place": "Dąbrowa Górnicza",
+      "pages": "240",
+      "isbn": "978-83-66794-71-9",
+      "eisbn": "",
+      "doi": "",
+      "cover": "/images/monographs/koncepcja-smart-city-4t.webp",
+      "coverWidth": 988,
+      "coverHeight": 1338,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "https://bazawiedzy.wsb.edu.pl/info/book/AWSB5a47ddabeb1e481e8e389b1f7b10eea2/",
+      "externalLabel": "Rekord i pełny tekst",
+      "lead": "Redagowana monografia o koncepcji Smart City, kapitałach 4T i inteligentnym zarządzaniu miastami Górnośląsko-Zagłębiowskiej Metropolii.",
+      "description": [
+        "Książka porządkuje koncepcję Smart City w odniesieniu do realnych warunków metropolitalnych i pokazuje znaczenie technologii, talentu, tolerancji oraz kapitałów współpracy dla rozwoju miast.",
+        "Publikacja łączy refleksję koncepcyjną, analizę polityk miejskich oraz studia przypadków miast i gmin GZM. Jest ważnym etapem rozwoju programu, który następnie został rozszerzony o model rezyliencji 4T+."
+      ],
+      "topics": [
+        "Smart City",
+        "kapitały 4T",
+        "Metropolia GZM",
+        "zarządzanie sieciowe",
+        "mobilność",
+        "współpraca miast"
+      ],
+      "contributions": [
+        {
+          "title": "Redakcja naukowa",
+          "text": "Współredakcja tomu ze Zbigniewem J. Makiełą i Karoliną Muchą-Kuś."
+        },
+        {
+          "title": "Wstęp",
+          "text": "Współautorstwo wstępu ze Zbigniewem Makiełą, s. 7–20."
+        },
+        {
+          "title": "Rozdziały badawcze",
+          "text": "Współautorstwo rozdziałów o sieciowym zarządzaniu mobilnością, wdrażaniu Smart City oraz realizacji koncepcji na przykładzie Dąbrowy Górniczej."
+        }
+      ],
+      "citation": "Makieła, Z. J., Mucha-Kuś, K., & Kinelski, G. (red.). (2022). Koncepcja Smart City i potencjały 4T. Inteligentne zarządzanie miastami Górnośląsko-Zagłębiowskiej Metropolii. Akademia WSB. ISBN 978-83-66794-71-9."
+    },
+    {
+      "slug": "wspolczesne-bezpieczenstwo-azji-pacyfiku",
+      "title": "Współczesne bezpieczeństwo regionu Azji i Pacyfiku: wybrane problemy",
+      "categoryKey": "redakcja",
+      "categoryLabel": "Redakcja naukowa monografii",
+      "year": 2020,
+      "language": "polski",
+      "authors": [],
+      "editors": [
+        "Joanna Marszałek-Kawa",
+        "Grzegorz Kinelski"
+      ],
+      "role": "Współredaktor naukowy; autor rozdziału; współautor wstępu",
+      "roleShort": "Współredaktor naukowy",
+      "publisher": "Wydawnictwo Adam Marszałek",
+      "place": "Toruń",
+      "pages": "244",
+      "isbn": "978-83-8180-273-4",
+      "eisbn": "",
+      "doi": "",
+      "cover": "/images/monographs/bezpieczenstwo-azji-pacyfiku.webp",
+      "coverWidth": 988,
+      "coverHeight": 1543,
+      "featured": false,
+      "detailType": "standard",
+      "externalUrl": "https://sklep.marszalek.com.pl/pl/glowna/4574-wspolczesne-bezpieczenstwo-regionu-azji-i-pacyfiku.html",
+      "externalLabel": "Strona wydawcy",
+      "lead": "Redagowana monografia zbiorowa o współczesnym bezpieczeństwie regionu Azji i Pacyfiku, obejmująca perspektywę militarną i niemilitarną.",
+      "description": [
+        "Tom porządkuje wybrane problemy bezpieczeństwa regionu Azji i Pacyfiku w tradycyjnej strukturze problemowej. Poszczególne rozdziały stanowią samodzielne analizy, a razem tworzą wielowymiarowy obraz przemian politycznych, społecznych i gospodarczych.",
+        "Rola Grzegorza Kinelskiego jest potrójna: współredakcja naukowa całej książki, samodzielne autorstwo rozdziału poświęconego zarządzaniu bezpieczeństwem energetycznym na linii Unia Europejska–Chiny oraz współautorstwo wstępu."
+      ],
+      "topics": [
+        "Azja i Pacyfik",
+        "bezpieczeństwo międzynarodowe",
+        "bezpieczeństwo energetyczne",
+        "Unia Europejska–Chiny",
+        "zarządzanie projektami energetycznymi"
+      ],
+      "contributions": [
+        {
+          "title": "Redakcja naukowa",
+          "text": "Współredakcja tomu z Joanną Marszałek-Kawą."
+        },
+        {
+          "title": "Rozdział autorski",
+          "text": "Zarządzanie bezpieczeństwem energetycznym z wykorzystaniem zarządzania projektami energetycznymi w otoczeniu gospodarki cyfrowej na linii Unia Europejska–Chiny, s. 109–159."
+        },
+        {
+          "title": "Współautorstwo wstępu",
+          "text": "Wstęp — z Joanną Marszałek-Kawą, s. 5–9."
+        }
+      ],
+      "citation": "Marszałek-Kawa, J., & Kinelski, G. (red.). (2020). Współczesne bezpieczeństwo regionu Azji i Pacyfiku: wybrane problemy. Wydawnictwo Adam Marszałek. ISBN 978-83-8180-273-4."
+    }
+  ]
+}

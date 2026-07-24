@@ -1,0 +1,402 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import SectionHeading from '../../components/SectionHeading.astro';
+import ResearchModel from '../../components/ResearchModel.astro';
+import MethodCard from '../../components/MethodCard.astro';
+import BookSchema from '../../components/BookSchema.astro';
+import book from '../../data/monograph.json';
+---
+
+<BaseLayout
+  title="Rezyliencja miast inteligentnych"
+  description="Monografia Grzegorza Kinelskiego o rezyliencji miast inteligentnych, transformacji energetyczno-klimatycznej i modelu kapitałów 4T+."
+>
+  <BookSchema />
+
+  <section class="book-hero">
+    <div class="container"><a class="book-back-link book-back-link-light" href="/monografie">← Wszystkie monografie</a></div>
+    <div class="book-hero-orbit orbit-a"></div>
+    <div class="book-hero-orbit orbit-b"></div>
+
+    <div class="container book-hero-grid">
+      <figure class="book-cover-authentic">
+        <img
+          src="/images/monographs/rezyliencja-miast-inteligentnych.webp"
+          alt="Okładka monografii Grzegorza Kinelskiego: Rezyliencja miast inteligentnych w warunkach transformacji energetyczno-klimatycznej"
+          width="988"
+          height="1302"
+          loading="eager"
+        />
+      </figure>
+
+      <div class="book-hero-copy">
+        <p class="eyebrow pale">Monografia autorska</p>
+        <h1 class="notranslate" translate="no">{book.title}</h1>
+        <p class="book-lead">
+          Syntetyczne zwieńczenie programu badawczego poświęconego
+          inteligentnemu zarządzaniu miastami, dekarbonizacji, gospodarce
+          cyfrowej oraz bezpieczeństwu energetycznemu mieszkańców.
+        </p>
+
+        <div class="book-identifiers notranslate" translate="no">
+          <span>ISBN {book.isbn}</span>
+          <span>e-ISBN {book.eisbn}</span>
+          <span>Warszawa {book.year}</span>
+        </div>
+
+        <div class="actions">
+          <a class="button light" href={book.doiUrl} target="_blank" rel="noopener">
+            DOI monografii
+          </a>
+          <a class="button book-outline" href="#model-4t">
+            Poznaj model 4T+
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="book-subnav" aria-label="Nawigacja po monografii">
+    <div class="container">
+      <a href="#problem">Problem</a>
+      <a href="#model-4t">Model 4T+</a>
+      <a href="#metodyka">Metodyka</a>
+      <a href="#wyniki">Wyniki</a>
+      <a href="#wklad">Wkład naukowy</a>
+      <a href="#zastosowania">Zastosowania</a>
+      <a href="#cytowanie">Cytowanie</a>
+    </div>
+  </nav>
+
+  <section class="section" id="problem">
+    <div class="container monograph-editorial">
+      <div>
+        <p class="eyebrow">Problem naukowy</p>
+        <h2>Od technologicznego Smart City do miasta odpornego</h2>
+      </div>
+
+      <div class="monograph-prose">
+        <p class="lead">
+          Punktem wyjścia monografii jest przesunięcie paradygmatu Smart City
+          od technologicznej optymalizacji do systemowej rezyliencji.
+        </p>
+        <p>
+          Inteligencja miasta nie jest utożsamiana z liczbą sensorów,
+          aplikacji czy cyfrowych usług. Obejmuje zdolność systemu miejskiego
+          do rozpoznawania zagrożeń, absorpcji zakłóceń, uczenia się,
+          adaptacji i utrzymania ciągłości kluczowych funkcji.
+        </p>
+        <p>
+          Główne pytanie dotyczy sposobu integrowania kapitałów miejskich,
+          transformacji energetyczno-klimatycznej i inteligentnego
+          współzarządzania w celu budowania trwałej odporności miasta.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section model-section-v4" id="model-4t">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Główny wkład koncepcyjny"
+        title="Autorski model kapitałów 4T+"
+        text="Kapitały rozwojowe tworzą system, którego efektem ma być zdolność miasta do adaptacji, ciągłości działania i ochrony mieszkańców."
+      />
+      <ResearchModel />
+
+      <div class="model-explanation">
+        <article>
+          <span>01</span>
+          <h3>Integracja zamiast izolacji</h3>
+          <p>
+            Poszczególne kapitały nie działają samodzielnie. Ich wartość
+            powstaje w relacjach, współzarządzaniu i zdolności do koordynacji.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Bezpieczeństwo jako rezultat</h3>
+          <p>
+            Bezpieczeństwo energetyczne mieszkańców jest traktowane jako
+            nadrzędny rezultat skutecznej transformacji.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Technologia jako narzędzie</h3>
+          <p>
+            Technologia wspiera inteligencję miasta, ale nie zastępuje
+            kapitału społecznego, kompetencji i sprawnych instytucji.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="metodyka">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Projekt badawczy"
+        title="Triangulacja metod i źródeł"
+        text="Projekt łączy badanie ilościowe, jakościowe oraz analizę strategii i dokumentów miejskich."
+      />
+
+      <div class="methods-grid">
+        <MethodCard
+          value="N=1000"
+          title="Badanie mieszkańców GZM"
+          text={`Badanie przeprowadzone w okresie ${book.research.period} na obszarze Górnośląsko-Zagłębiowskiej Metropolii.`}
+          tag="moduł ilościowy"
+        />
+        <MethodCard
+          value="18"
+          title="Spotkań fokusowych"
+          text="Pogłębienie interpretacji wyników oraz identyfikacja mechanizmów społecznych i instytucjonalnych."
+          tag="FGI"
+        />
+        <MethodCard
+          value="152"
+          title="Uczestników FGI"
+          text="Perspektywy mieszkańców i interesariuszy miejskich wykorzystane w module jakościowym."
+          tag="moduł jakościowy"
+        />
+        <MethodCard
+          value="CB-SEM"
+          title="Modelowanie strukturalne"
+          text="Weryfikacja zależności bezpośrednich, pośrednich, mediacji i jakości modelu pomiarowego."
+          tag="analiza ilościowa"
+        />
+        <MethodCard
+          value="OLS"
+          title="Regresja liniowa"
+          text="Ocena siły predyktorów oraz relacji między konstruktami programu badawczego."
+          tag="analiza uzupełniająca"
+        />
+        <MethodCard
+          value="ANOVA"
+          title="Różnice grupowe"
+          text="Porównanie ocen mieszkańców i identyfikacja zróżnicowania społecznego."
+          tag="analiza uzupełniająca"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="section findings-v4" id="wyniki">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Najważniejsze ustalenia"
+        title="Wyniki, które zmieniają sposób myślenia o Smart City"
+        text="Rezyliencja jest rezultatem integracji technologii, kapitałów społecznych, governance i bezpieczeństwa."
+      />
+
+      <div class="findings-ledger">
+        <article>
+          <span class="finding-number">01</span>
+          <div>
+            <h3>Integracja kapitałów 4T+ wzmacnia skuteczność dekarbonizacji</h3>
+            <p>
+              Wyniki wskazują, że spójność kapitałów miejskich silnie wiąże się
+              ze zdolnością do realizacji celów transformacji energetyczno-klimatycznej.
+            </p>
+          </div>
+          <strong>β = 0,828</strong>
+        </article>
+
+        <article>
+          <span class="finding-number">02</span>
+          <div>
+            <h3>Zaufanie i talent mają kluczowe znaczenie</h3>
+            <p>
+              Kapitały społeczne, kompetencyjne i kreatywne wspierają akceptację,
+              trwałość zmian oraz zdolność instytucji do działania.
+            </p>
+          </div>
+          <strong>istotne</strong>
+        </article>
+
+        <article>
+          <span class="finding-number">03</span>
+          <div>
+            <h3>Technologia nie jest samoistnym predyktorem rezultatu</h3>
+            <p>
+              Sama infrastruktura technologiczna nie tworzy odpornego miasta bez
+              governance, zaufania, kompetencji i społecznej legitymizacji.
+            </p>
+          </div>
+          <strong>nieistotne</strong>
+        </article>
+
+        <article>
+          <span class="finding-number">04</span>
+          <div>
+            <h3>Bezpieczeństwo energetyczne ma wymiar społeczny i instytucjonalny</h3>
+            <p>
+              Ochrona mieszkańców wymaga nie tylko stabilnych dostaw, ale także
+              dostępności, komunikacji, współpracy i odporności usług publicznych.
+            </p>
+          </div>
+          <strong>4T+</strong>
+        </article>
+      </div>
+
+      <p class="finding-note">
+        Wartości statystyczne są prezentowane syntetycznie. Pełna interpretacja,
+        założenia modelu i testy jakości znajdują się w monografii.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="wklad">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Oryginalny wkład"
+        title="Co monografia wnosi do nauk o zarządzaniu"
+        text="Osiągnięcie łączy rozwój teorii, modelowanie empiryczne i narzędzia wdrożeniowe."
+      />
+
+      <div class="contribution-grid">
+        <article>
+          <span>Teoria</span>
+          <h3>Rekonceptualizacja Smart City</h3>
+          <p>
+            Miasto inteligentne zostaje ujęte jako system adaptacyjny,
+            a nie wyłącznie technologiczna platforma usług.
+          </p>
+        </article>
+        <article>
+          <span>Model</span>
+          <h3>Rama kapitałów 4T+</h3>
+          <p>
+            Autorska integracja kapitałów miejskich z bezpieczeństwem,
+            rezyliencją i sprawczością instytucjonalną.
+          </p>
+        </article>
+        <article>
+          <span>Empiria</span>
+          <h3>Weryfikacja wielometodowa</h3>
+          <p>
+            Połączenie reprezentatywnego badania mieszkańców, FGI,
+            modelowania strukturalnego i analiz uzupełniających.
+          </p>
+        </article>
+        <article>
+          <span>Praktyka</span>
+          <h3>Instrumentarium zarządcze</h3>
+          <p>
+            Możliwość przełożenia konstruktu na KPI, strategie,
+            polityki energetyczne i programy dekarbonizacyjne.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section application-section" id="zastosowania">
+    <div class="container application-grid">
+      <div>
+        <p class="eyebrow pale">Wartość aplikacyjna</p>
+        <h2>Od modelu naukowego do decyzji zarządczych</h2>
+        <p class="light-copy">
+          Model 4T+ może wspierać projektowanie i ocenę polityk miejskich,
+          energetycznych oraz programów budowania odporności.
+        </p>
+      </div>
+
+      <div class="application-list">
+        <article>
+          <span>01</span>
+          <div>
+            <h3>Strategie Smart City</h3>
+            <p>Ocena równowagi między technologią, kapitałem społecznym i governance.</p>
+          </div>
+        </article>
+        <article>
+          <span>02</span>
+          <div>
+            <h3>Programy dekarbonizacji</h3>
+            <p>Uwzględnienie społecznej akceptacji, kompetencji i bezpieczeństwa mieszkańców.</p>
+          </div>
+        </article>
+        <article>
+          <span>03</span>
+          <div>
+            <h3>KPI rezyliencji</h3>
+            <p>Przełożenie konstruktów teoretycznych na mierniki i system monitorowania.</p>
+          </div>
+        </article>
+        <article>
+          <span>04</span>
+          <div>
+            <h3>Zarządzanie kryzysowe</h3>
+            <p>Identyfikacja zdolności adaptacyjnych, zasobów i słabych punktów systemu.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cytowanie">
+    <div class="container citation-grid">
+      <div>
+        <p class="eyebrow">Metadane książki</p>
+        <h2>Cytowanie i identyfikatory</h2>
+      </div>
+
+      <div class="citation-panel">
+        <p id="book-citation" class="notranslate" translate="no">
+          Kinelski, G. ({book.year}). <em>{book.title}</em>.
+          {book.publisher}. https://doi.org/{book.doi}
+        </p>
+
+        <div class="citation-identifiers notranslate" translate="no">
+          <span>ISBN: {book.isbn}</span>
+          <span>e-ISBN: {book.eisbn}</span>
+          <span>DOI: {book.doi}</span>
+        </div>
+
+        <div class="actions">
+          <button class="button primary" type="button" data-copy-book>
+            Kopiuj APA
+          </button>
+          <a class="button secondary" href={book.doiUrl} target="_blank" rel="noopener">
+            Otwórz DOI
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reviewers-section">
+    <div class="container">
+      <p class="eyebrow">Recenzje wydawnicze</p>
+      <h2>Recenzentki monografii</h2>
+      <div class="reviewers-grid">
+        {book.reviewers.map((reviewer) => (
+          <article>
+            <span>Recenzja wydawnicza</span>
+            <h3>{reviewer}</h3>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.querySelector('[data-copy-book]')?.addEventListener('click', async (event) => {
+      const citation = document.querySelector('#book-citation')?.textContent?.trim();
+      if (!citation) return;
+
+      await navigator.clipboard.writeText(citation);
+      const button = event.currentTarget;
+      if (!(button instanceof HTMLButtonElement)) return;
+
+      const original = button.textContent;
+      button.textContent = 'Skopiowano';
+      setTimeout(() => {
+        button.textContent = original;
+      }, 1300);
+    });
+  </script>
+  <section class="section all-books-cta"><div class="container"><p class="eyebrow pale">Dorobek książkowy</p><h2>Wszystkie monografie i redakcje naukowe</h2><p class="light-copy">Zobacz pełny katalog dziewięciu książek naukowych.</p><a class="button light" href="/monografie">Przejdź do katalogu</a></div></section>
+</BaseLayout>

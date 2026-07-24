@@ -9,12 +9,23 @@
     "affiliation": "Akademia WSB",
     "role": "doktor nauk ekonomicznych • adiunkt • menedżer sektora energii",
     "logoText": "GK",
-    "footerTagline": "Smart City • transformacja energetyczna • gospodarka cyfrowa"
+    "footerTagline": "Smart City • transformacja energetyczna • gospodarka cyfrowa",
+    "sameAs": [
+      "https://orcid.org/0000-0002-5768-463X",
+      "https://pl.linkedin.com/in/kinelski",
+      "https://ir.enea.pl/lad-korporacyjny/23203/grzegorz-kinelski",
+      "https://bazawiedzy.wsb.edu.pl/info/author/AWSBb5b555f7f5d74029821e5e1246894262?lang=pl&pn=1&tab=publications",
+      "https://amu.edu.pl/uniwersytet/rada-uczelni/grzegorz-kinelski"
+    ]
   },
   "navigation": [
     {
       "href": "/o-mnie",
       "label": "O mnie"
+    },
+    {
+      "href": "/kariera",
+      "label": "Kariera"
     },
     {
       "href": "/badania",
@@ -25,8 +36,8 @@
       "label": "Publikacje"
     },
     {
-      "href": "/monografia",
-      "label": "Monografia"
+      "href": "/monografie",
+      "label": "Monografie"
     },
     {
       "href": "/aktywnosc",
@@ -79,8 +90,8 @@
         "href": "/publikacje"
       },
       "secondaryButton": {
-        "label": "Monografia",
-        "href": "/monografia"
+        "label": "Monografie",
+        "href": "/monografie"
       }
     },
     "metrics": [
@@ -89,8 +100,8 @@
         "label": "publikacji naukowych"
       },
       {
-        "value": "3",
-        "label": "monografie autorskie"
+        "value": "9",
+        "label": "książek naukowych"
       },
       {
         "value": "36",
@@ -141,29 +152,29 @@
       ]
     },
     "monograph": {
-      "kicker": "Polskie Wydawnictwo Ekonomiczne • 2026",
+      "kicker": "Dorobek książkowy • 2017–2026",
       "coverTitle": "Rezyliencja miast inteligentnych",
       "coverSubtitle": "w warunkach transformacji energetyczno-klimatycznej",
       "coverAuthor": "Grzegorz Kinelski",
-      "eyebrow": "Główne osiągnięcie naukowe",
-      "title": "Autorski model kapitałów 4T+",
-      "lead": "Model integruje technologię, talent, tolerancję i zaufanie z bezpieczeństwem mieszkańców oraz sprawczością instytucjonalną.",
+      "eyebrow": "Monografie i redakcje naukowe",
+      "title": "9 książek naukowych",
+      "lead": "Trzy monografie autorskie, trzy monografie współautorskie oraz trzy redakcje naukowe. Każda książka ma własną kartę z charakterystyką, rolą autora lub redaktora i danymi bibliograficznymi.",
       "metrics": [
         {
-          "value": "1000",
-          "label": "respondentów"
+          "value": "3",
+          "label": "autorskie"
         },
         {
-          "value": "152",
-          "label": "uczestników FGI"
+          "value": "3",
+          "label": "współautorskie"
         },
         {
-          "value": "CB-SEM",
-          "label": "modelowanie"
+          "value": "3",
+          "label": "redakcje naukowe"
         }
       ],
-      "buttonLabel": "Poznaj monografię",
-      "buttonHref": "/monografia"
+      "buttonLabel": "Zobacz wszystkie monografie",
+      "buttonHref": "/monografie"
     },
     "publications": {
       "eyebrow": "Publikacje",

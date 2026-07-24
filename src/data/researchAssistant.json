@@ -9,8 +9,8 @@
           "a": "Model 4T+ integruje technologię, talent, tolerancję i zaufanie z nadrzędnym komponentem bezpieczeństwa mieszkańców. Służy do oceny zdolności miasta do adaptacji, ciągłości działania i realizacji transformacji energetyczno-klimatycznej.",
           "links": [
             {
-              "label": "Monografia",
-              "href": "/monografia"
+              "label": "Monografie",
+              "href": "/monografie"
             },
             {
               "label": "Program badawczy",
@@ -24,7 +24,7 @@
           "links": [
             {
               "label": "Wyniki badań",
-              "href": "/monografia#wyniki"
+              "href": "/monografie/rezyliencja-miast-inteligentnych#wyniki"
             }
           ]
         },
@@ -34,7 +34,7 @@
           "links": [
             {
               "label": "Model 4T+",
-              "href": "/monografia#model-4t"
+              "href": "/monografie/rezyliencja-miast-inteligentnych#model-4t"
             }
           ]
         }
@@ -95,8 +95,8 @@
           "a": "Bezpieczeństwo energetyczne obejmuje ciągłość dostaw, dostępność cenową, jakość komunikacji, odporność usług publicznych i zdolność instytucji do działania w warunkach zakłóceń.",
           "links": [
             {
-              "label": "Monografia",
-              "href": "/monografia"
+              "label": "Monografie",
+              "href": "/monografie"
             }
           ]
         },

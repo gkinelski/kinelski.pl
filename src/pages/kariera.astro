@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import career from '../data/career.json';
+
+const sameAs = career.publicProfiles.filter((item) => item.schema).map((item) => item.url);
+const profileSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  name: 'Kariera zawodowa Grzegorza Kinelskiego',
+  url: 'https://kinelski.pl/kariera',
+  dateModified: '2026-07-24',
+  mainEntity: {
+    '@type': 'Person',
+    name: 'Grzegorz Kinelski',
+    honorificPrefix: 'dr',
+    image: 'https://kinelski.pl/images/grzegorz-kinelski.webp',
+    jobTitle: career.hero.currentRole,
+    worksFor: { '@type': 'Organization', name: 'Enea S.A.' },
+    alumniOf: [
+      { '@type': 'CollegeOrUniversity', name: 'Politechnika Śląska' },
+      { '@type': 'CollegeOrUniversity', name: 'Uniwersytet Szczeciński' },
+      { '@type': 'CollegeOrUniversity', name: 'Dominican University' }
+    ],
+    sameAs
+  }
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Strona główna', item: 'https://kinelski.pl/' },
+    { '@type': 'ListItem', position: 2, name: 'Kariera', item: 'https://kinelski.pl/kariera' }
+  ]
+};
+---
+<BaseLayout
+  title="Kariera"
+  description="Kariera zawodowa, funkcje, osiągnięcia, wykształcenie i zweryfikowane profile internetowe dr. Grzegorza Kinelskiego."
+>
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(profileSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  <section class="career-hero-v5">
+    <div class="career-hero-orbit career-orbit-one"></div>
+    <div class="career-hero-orbit career-orbit-two"></div>
+    <div class="container career-hero-grid-v5">
+      <div class="career-hero-copy-v5">
+        <p class="eyebrow">{career.hero.eyebrow}</p>
+        <h1>{career.hero.title}</h1>
+        <p class="page-lead">{career.hero.lead}</p>
+        <div class="career-current-role-v5">
+          <span>Aktualnie</span>
+          <strong>{career.hero.currentRole}</strong>
+          <p>{career.hero.currentRoleMeta}</p>
+        </div>
+        <div class="actions">
+          <a class="button primary" href="#funkcje">Aktualne funkcje</a>
+          <a class="button secondary" href="#internet">Profile w internecie</a>
+        </div>
+      </div>
+      <div class="career-portrait-panel-v5">
+        <img src={career.hero.portrait} alt={career.hero.portraitAlt} width="1100" height="1500" />
+        <div class="career-portrait-caption-v5"><span>Energetyka • zarządzanie • nauka</span><strong>dr Grzegorz Kinelski</strong></div>
+      </div>
+    </div>
+    <div class="container career-metrics-v5">
+      {career.metrics.map((metric) => <article><strong>{metric.value}</strong><span>{metric.label}</span></article>)}
+    </div>
+  </section>
+
+  <nav class="career-subnav-v5" aria-label="Nawigacja po stronie Kariera">
+    <div class="container">
+      <a href="#funkcje">Funkcje</a>
+      <a href="#doswiadczenie">Doświadczenie</a>
+      <a href="#osiagniecia">Osiągnięcia</a>
+      <a href="#edukacja">Edukacja</a>
+      <a href="#wyroznienia">Wyróżnienia</a>
+      <a href="#internet">W internecie</a>
+    </div>
+  </nav>
+
+  <section class="section" id="funkcje">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow">Aktualne funkcje</p><h2>Przywództwo, nadzór i działalność akademicka</h2></div>
+        <p>Wybrane role potwierdzone przez publiczne strony instytucji i spółek.</p>
+      </div>
+      <div class="career-role-grid-v5">
+        {career.currentRoles.map((item) => (
+          <article class="career-role-card-v5">
+            <span>{item.meta}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            <a href={item.url} target="_blank" rel="noopener noreferrer">{item.linkLabel} ↗</a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section career-timeline-section-v5" id="doswiadczenie">
+    <div class="container career-timeline-layout-v5">
+      <div class="career-timeline-intro-v5">
+        <p class="eyebrow pale">Doświadczenie</p>
+        <h2>Ponad trzy dekady w sektorze energii</h2>
+        <p>Od sprzedaży i obsługi handlowej, przez centralizację procesów oraz budowę obszarów handlu, po zarządzanie transformacją grup kapitałowych.</p>
+      </div>
+      <div class="career-timeline-v5">
+        {career.timeline.map((item, index) => (
+          <article>
+            <div class="career-timeline-marker-v5"><span>{String(index + 1).padStart(2, '0')}</span></div>
+            <div class="career-timeline-date-v5">{item.period}</div>
+            <div class="career-timeline-body-v5"><p>{item.organisation}</p><h3>{item.role}</h3><strong>{item.description}</strong></div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="osiagniecia">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow">Portfolio zmian</p><h2>Najważniejsze obszary osiągnięć</h2></div>
+        <p>Osiągnięcia opisano jako rezultaty pracy zespołowej i odpowiedzialności menedżerskiej, bez przypisywania jednej osobie efektów całych organizacji.</p>
+      </div>
+      <div class="career-achievement-groups-v5">
+        {career.achievementGroups.map((group) => (
+          <article class="career-achievement-group-v5">
+            <span>{group.number}</span>
+            <h3>{group.title}</h3>
+            <p>{group.lead}</p>
+            <ul>{group.items.map((item) => <li>{item}</li>)}</ul>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section career-selected-section-v5">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow pale">Wybrane rezultaty</p><h2>Projekty, które definiują profil zawodowy</h2></div>
+        <p class="light-copy">Od rozwoju OZE i handlu energią po cyfryzację procesów oraz integrację obsługi klienta.</p>
+      </div>
+      <div class="career-selected-grid-v5">
+        {career.selectedAchievements.map((item) => (
+          <article>
+            <span>{item.year}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+            {item.sourceUrl ? <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.sourceLabel} ↗</a> : <strong>{item.sourceLabel}</strong>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="edukacja">
+    <div class="container career-education-layout-v5">
+      <div>
+        <p class="eyebrow">Wykształcenie</p>
+        <h2>Technika, zarządzanie, ekonomia</h2>
+        <p class="page-lead">Profil edukacyjny łączy elektroenergetykę, zarządzanie przedsiębiorstwem, finanse, projekty i badania ekonomiczne.</p>
+      </div>
+      <div class="career-education-list-v5">
+        {career.education.map((item) => (
+          <article><span>{item.year}</span><div><p>{item.institution}</p><h3>{item.title}</h3><strong>{item.description}</strong></div></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section career-competencies-section-v5">
+    <div class="container">
+      <div class="section-heading"><div><p class="eyebrow">Kompetencje</p><h2>Warsztat zarządczy i ekspercki</h2></div><p>Kompetencje rozwijane w praktyce organizacyjnej, programach menedżerskich, studiach i działalności naukowej.</p></div>
+      <div class="career-competencies-grid-v5">
+        {career.competencies.map((item) => <article><h3>{item.title}</h3><p>{item.text}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="wyroznienia">
+    <div class="container career-recognition-layout-v5">
+      <div><p class="eyebrow">Wyróżnienia</p><h2>Rozpoznawalność branżowa</h2><p>Rozdzielono nagrody indywidualne od wyróżnień przyznawanych zarządzanym organizacjom i zespołom.</p></div>
+      <div class="career-recognition-list-v5">
+        {career.recognition.map((item) => (
+          <article><span>{item.year}</span><div><h3>{item.title}</h3><p>{item.text}</p>{item.url && <a href={item.url} target="_blank" rel="noopener noreferrer">Źródło ↗</a>}</div></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section career-internet-section-v5" id="internet">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow pale">Obecność publiczna</p><h2>Grzegorz Kinelski w internecie</h2></div>
+        <p class="light-copy">Oficjalne profile instytucjonalne, identyfikatory naukowe, bazy bibliometryczne i publiczne źródła zawodowe.</p>
+      </div>
+      <div class="career-profile-grid-v5">
+        {career.publicProfiles.map((item) => (
+          <a href={item.url} target="_blank" rel="noopener noreferrer">
+            <span>{item.category}</span><h3>{item.name}</h3><p>{item.description}</p><strong>Otwórz ↗</strong>
+          </a>
+        ))}
+      </div>
+      <p class="career-source-note-v5">Stan weryfikacji: {career.meta.verifiedAt}. {career.meta.sourceNote}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container career-cta-v5">
+      <div><p class="eyebrow">{career.cta.eyebrow}</p><h2>{career.cta.title}</h2><p>{career.cta.text}</p></div>
+      <div class="career-cta-links-v5">{career.cta.links.map((item, index) => <a class:list={["button", index === 0 ? "primary" : "secondary"]} href={item.href}>{item.label}</a>)}</div>
+    </div>
+  </section>
+</BaseLayout>

@@ -15,7 +15,7 @@ const visibleNavigation = navigation.filter((item) =>
     <button class="menu-button" data-menu-toggle aria-label="Otwórz menu"><span></span><span></span><span></span></button>
     <nav class="navigation" data-menu aria-label="Nawigacja główna">
       {visibleNavigation.map((item) => (
-        <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>{item.label}</a>
+        <a href={item.href} aria-current={(current === item.href || current.startsWith(`${item.href}/`)) ? 'page' : undefined}>{item.label}</a>
       ))}
       <LanguageSwitcher compact={true} />
       <button class="theme-button" data-theme-toggle aria-label="Zmień motyw">◐</button>

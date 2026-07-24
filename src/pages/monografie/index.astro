@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MonographCard from '../../components/MonographCard.astro';
+import catalogue from '../../data/monographs.json';
+const schema={ '@context':'https://schema.org','@type':'ItemList',name:'Monografie i książki naukowe Grzegorza Kinelskiego',numberOfItems:catalogue.items.length,itemListElement:catalogue.items.map((book,index)=>({'@type':'ListItem',position:index+1,url:`https://kinelski.pl/monografie/${book.slug}`,name:book.title}))};
+---
+<BaseLayout title="Monografie" description="Dziewięć książek naukowych Grzegorza Kinelskiego: monografie autorskie, współautorskie i redakcje naukowe.">
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <section class="books-hero">
+    <div class="books-hero-orbit books-orbit-a"></div><div class="books-hero-orbit books-orbit-b"></div>
+    <div class="container books-hero-grid">
+      <div>
+        <p class="eyebrow">Dorobek książkowy</p>
+        <h1>Monografie</h1>
+        <p class="page-lead">{catalogue.summary.lead}</p>
+      </div>
+      <div class="books-stat-panel">
+        <article><strong>{catalogue.summary.total}</strong><span>książek naukowych</span></article>
+        <article><strong>{catalogue.summary.authored}</strong><span>autorskie</span></article>
+        <article><strong>{catalogue.summary.coauthored}</strong><span>współautorskie</span></article>
+        <article><strong>{catalogue.summary.edited}</strong><span>redakcje naukowe</span></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section books-categories-section">
+    <div class="container">
+      <div class="books-category-grid">
+        {catalogue.categories.map((category)=><article><span>{category.count}</span><h2>{category.label}</h2><p>{category.description}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section books-catalogue-section">
+    <div class="container">
+      <div class="books-catalogue-head">
+        <div><p class="eyebrow">Katalog</p><h2>Wybierz książkę</h2></div>
+        <div class="book-filters" role="group" aria-label="Filtrowanie monografii">
+          <button class="active" type="button" data-book-filter="all" aria-pressed="true">Wszystkie <span>9</span></button>
+          <button type="button" data-book-filter="autorska" aria-pressed="false">Autorskie <span>3</span></button>
+          <button type="button" data-book-filter="wspolautorska" aria-pressed="false">Współautorskie <span>3</span></button>
+          <button type="button" data-book-filter="redakcja" aria-pressed="false">Redakcje <span>3</span></button>
+        </div>
+      </div>
+      <div class="monograph-card-grid" data-book-grid>
+        {catalogue.items.map((book)=><MonographCard book={book} />)}
+      </div>
+      <p class="books-empty" data-books-empty hidden>Brak książek w wybranej kategorii.</p>
+    </div>
+  </section>
+  <script>
+    const filters = document.querySelectorAll<HTMLButtonElement>('[data-book-filter]');
+    const cards = document.querySelectorAll<HTMLElement>('[data-book-card]');
+    const empty = document.querySelector<HTMLElement>('[data-books-empty]');
+    filters.forEach((button)=>button.addEventListener('click',()=>{
+      const selected=button.dataset.bookFilter || 'all'; let visible=0;
+      filters.forEach((item)=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});
+      cards.forEach((card)=>{const show=selected==='all'||card.dataset.category===selected;card.hidden=!show;if(show)visible++;});
+      if(empty) empty.hidden=visible!==0;
+    }));
+  </script>
+</BaseLayout>

@@ -1,0 +1,404 @@
+{
+  "meta": {
+    "verifiedAt": "24 lipca 2026 r.",
+    "sourceNote": "Treść opracowano na podstawie CV zawodowego oraz zweryfikowanych, publicznie dostępnych profili instytucjonalnych. Dane prywatne z dokumentów aplikacyjnych nie są publikowane."
+  },
+  "hero": {
+    "eyebrow": "Kariera zawodowa i przywództwo",
+    "title": "Transformacja sektora energii w praktyce",
+    "lead": "Ponad trzy dekady doświadczenia w elektroenergetyce, handlu energią i gazem, obsłudze klienta, restrukturyzacji oraz zarządzaniu złożonymi organizacjami infrastrukturalnymi.",
+    "currentRole": "Prezes Zarządu Enea S.A.",
+    "currentRoleMeta": "od marca 2024 r. • nowa trzyletnia kadencja od 29 maja 2026 r.",
+    "portrait": "/images/grzegorz-kinelski.webp",
+    "portraitAlt": "dr Grzegorz Kinelski"
+  },
+  "metrics": [
+    {
+      "value": "32+",
+      "label": "lata w sektorze energetycznym"
+    },
+    {
+      "value": "6",
+      "label": "dużych grup i organizacji energetycznych"
+    },
+    {
+      "value": "9",
+      "label": "książek naukowych"
+    },
+    {
+      "value": "66",
+      "label": "publikacji naukowych"
+    }
+  ],
+  "currentRoles": [
+    {
+      "title": "Prezes Zarządu Enea S.A.",
+      "meta": "od marca 2024 r.; nowa kadencja od 29 maja 2026 r.",
+      "text": "Kierowanie jedną z największych grup energetycznych w Polsce oraz realizacja strategii transformacji, rozwoju OZE, bezpieczeństwa energetycznego i inwestycji infrastrukturalnych.",
+      "url": "https://ir.enea.pl/lad-korporacyjny/23203/grzegorz-kinelski",
+      "linkLabel": "Oficjalny profil Enea"
+    },
+    {
+      "title": "Prezes Rady Zarządzającej TOE",
+      "meta": "XVIII kadencja • od marca 2025 r.",
+      "text": "Udział w kształtowaniu dialogu rynku energii, regulacji, modeli handlu oraz warunków bezpiecznej transformacji sektora.",
+      "url": "https://toe.pl/o-toe/wladze-toe/",
+      "linkLabel": "Władze TOE"
+    },
+    {
+      "title": "Członek Rady Uczelni UAM",
+      "meta": "kadencja 2025–2028",
+      "text": "Zaangażowanie w ład akademicki i strategiczne spojrzenie na współpracę nauki, gospodarki oraz instytucji publicznych.",
+      "url": "https://amu.edu.pl/uniwersytet/rada-uczelni/grzegorz-kinelski",
+      "linkLabel": "Profil UAM"
+    },
+    {
+      "title": "Członek Rady Naukowej ITG KOMAG",
+      "meta": "kadencja 2025–2029",
+      "text": "Współudział w rozwoju badań stosowanych, innowacji przemysłowych i transferu technologii w sektorach infrastrukturalnych.",
+      "url": "https://komag.eu/instytut/rada-naukowa",
+      "linkLabel": "Rada Naukowa KOMAG"
+    },
+    {
+      "title": "Wiceprzewodniczący Rady Nadzorczej Polimex Mostostal S.A.",
+      "meta": "XV kadencja 2026–2029 • członek Komitetu Audytu",
+      "text": "Nadzór właścicielski i audyt w spółce realizującej złożone projekty energetyczne, przemysłowe i infrastrukturalne.",
+      "url": "https://www.polimex-mostostal.pl/raport/ukonstytuowanie-sie-rady-nadzorczej-emitenta-i-wybor-komitetu-audytu",
+      "linkLabel": "Raport bieżący spółki"
+    },
+    {
+      "title": "Adiunkt Akademii WSB",
+      "meta": "Katedra Zarządzania",
+      "text": "Badania i dydaktyka w obszarach Smart City, transformacji energetycznej, gospodarki cyfrowej, konkurencyjności oraz rezyliencji.",
+      "url": "https://bazawiedzy.wsb.edu.pl/info/author/AWSBb5b555f7f5d74029821e5e1246894262?lang=pl&pn=1&tab=publications",
+      "linkLabel": "Profil naukowy AWSB"
+    }
+  ],
+  "timeline": [
+    {
+      "period": "2024–obecnie",
+      "organisation": "Enea S.A.",
+      "role": "Prezes Zarządu",
+      "description": "Odpowiedzialność za strategię i transformację Grupy Enea, rozwój zielonego portfela wytwórczego, inwestycje, bezpieczeństwo energetyczne oraz zarządzanie grupą kapitałową."
+    },
+    {
+      "period": "2018–2024",
+      "organisation": "Grupa Veolia w Polsce",
+      "role": "Funkcje zarządcze, m.in. członek zarządu Veolia Energy Contracting Poland",
+      "description": "Restrukturyzacja i wdrażanie strategii obszarowych, budowa i centralizacja obrotu energią i gazem, rozwój sprzedaży, usług wspólnych oraz obsługi klienta."
+    },
+    {
+      "period": "2018",
+      "organisation": "Energetyczne Centrum / Energia dla Firm",
+      "role": "Prezes Zarządu",
+      "description": "Reorganizacja przedsiębiorstw, rozwój produktów i strategii sprzedaży energii oraz gazu dla klientów biznesowych i konsumentów."
+    },
+    {
+      "period": "2017–2018",
+      "organisation": "PKP Energetyka Sprzedaż",
+      "role": "Prezes Zarządu",
+      "description": "Utworzenie struktur obrotu hurtowego i sprzedaży energii oraz gazu, rozwój strategii firmy i przygotowanie migracji zasobów do nowych struktur sprzedażowych."
+    },
+    {
+      "period": "2013–2016",
+      "organisation": "Enea S.A.",
+      "role": "Członek Zarządu ds. Handlowych",
+      "description": "Strategia handlowa, centralizacja obrotu energią, gazem i paliwami, rozwój centrum biznesowego sprzedaży oraz funkcji usług wspólnych i akwizycji strategicznych."
+    },
+    {
+      "period": "2010–2013",
+      "organisation": "TAURON / GZE",
+      "role": "Wiceprezes Zarządu i funkcje zarządcze",
+      "description": "Strategia obsługi klienta, reorganizacja procesów wsparcia sprzedaży, integracja spółek obsługowych i rozwój modeli biznesowych w grupie energetycznej."
+    },
+    {
+      "period": "2000–2010",
+      "organisation": "Vattenfall / GZE",
+      "role": "Dyrektor Obsługi Klientów, prokurent i wcześniejsze funkcje menedżerskie",
+      "description": "Rozwój nowoczesnych kanałów sprzedaży i obsługi, proces zmiany sprzedawcy, projekty SAP i billingowe, call center, e-usługi oraz unbundling."
+    },
+    {
+      "period": "1993–2000",
+      "organisation": "INPROEL / Górnośląski Zakład Energetyczny",
+      "role": "Początki kariery w sprzedaży i elektroenergetyce",
+      "description": "Doświadczenie sprzedażowe, handlowe i operacyjne, następnie zarządzanie obsługą handlową oraz rozwój kompetencji technicznych i rynkowych."
+    }
+  ],
+  "achievementGroups": [
+    {
+      "number": "01",
+      "title": "Strategia i transformacja energetyczna",
+      "lead": "Projektowanie i wdrażanie kierunków rozwoju dużych grup energetycznych.",
+      "items": [
+        "Realizacja Strategii rozwoju Grupy Enea do 2035 roku, w tym rozwój OZE i zielonego portfela wytwórczego.",
+        "Wygrane aukcje rynku mocy, rozwój projektów PV, farm wiatrowych i nowych jednostek ciepłowniczych.",
+        "Udział w strategicznych akwizycjach oraz integracji aktywów w Grupach Enea i TAURON.",
+        "Wdrażanie bezpieczeństwa i cyberbezpieczeństwa w organizacji energetycznej."
+      ]
+    },
+    {
+      "number": "02",
+      "title": "Handel, sprzedaż i modele rynkowe",
+      "lead": "Budowa struktur obrotu, sprzedaży i produktów energetycznych.",
+      "items": [
+        "Centralizacja handlu energią, gazem i paliwami w Grupie Enea.",
+        "Utworzenie i centralizacja obrotu energią i gazem w Grupie Veolia — projekt ELEKTRON.",
+        "Budowa struktur obrotu i sprzedaży w PKP Energetyka — projekt OMEGA.",
+        "Rozwój produktów handlowych, kanałów sprzedaży i obsługi klientów biznesowych oraz indywidualnych."
+      ]
+    },
+    {
+      "number": "03",
+      "title": "Restrukturyzacja i usługi wspólne",
+      "lead": "Integracja procesów, spółek i zespołów w dużych grupach kapitałowych.",
+      "items": [
+        "Wydzielanie sprzedaży i obsługi klienta z operatorów systemów dystrybucyjnych.",
+        "Łączenie spółek obsługi klienta oraz rozwój centrów usług wspólnych.",
+        "Centralizacja call center, windykacji, wydruków masowych i procesów back-office.",
+        "Optymalizacja kosztów obsługi oraz wdrażanie modeli rozliczeń SLA."
+      ]
+    },
+    {
+      "number": "04",
+      "title": "Cyfryzacja procesów i klienta",
+      "lead": "Technologie wspierające handel, obsługę, zarządzanie i bezpieczeństwo.",
+      "items": [
+        "Wdrożenia systemów SAP, CRM oraz migracje systemów billingowych.",
+        "Rozwój e-faktur, e-płatności, produktów online i elektronicznych kanałów obsługi.",
+        "Systemy wsparcia sprzedaży, switchingu, obiegu dokumentów i rejestracji czynności.",
+        "Automatyzacja procesów odczytowych, windykacyjnych i operacyjnych."
+      ]
+    }
+  ],
+  "selectedAchievements": [
+    {
+      "year": "2025",
+      "title": "Bursztyn Polskiej Energetyki",
+      "text": "Indywidualne wyróżnienie za realizację Strategii rozwoju Grupy Enea do 2035 roku w sektorze OZE; w ciągu pięciu miesięcy Grupa pozyskała 11 farm wiatrowych o łącznej mocy blisko 200 MW.",
+      "sourceLabel": "Uzasadnienie nagrody",
+      "sourceUrl": "https://ecb.biz.pl/bursztyny/"
+    },
+    {
+      "year": "Enea",
+      "title": "Centralizacja handlu i strategiczne akwizycje",
+      "text": "Budowa centralnego modelu handlu energią i paliwami, rozwój centrum usług wspólnych oraz funkcji wspierających akwizycje strategiczne.",
+      "sourceLabel": "Oficjalny profil Enea",
+      "sourceUrl": "https://ir.enea.pl/lad-korporacyjny/23203/grzegorz-kinelski"
+    },
+    {
+      "year": "Veolia",
+      "title": "Centralizacja obrotu energią i gazem",
+      "text": "Wdrożenie strategii obszaru handlu i obsługi klienta oraz utworzenie scentralizowanych struktur obrotu i sprzedaży dla Grupy Veolia w Polsce.",
+      "sourceLabel": "Oficjalny profil zawodowy",
+      "sourceUrl": "https://amu.edu.pl/uniwersytet/rada-uczelni/grzegorz-kinelski"
+    },
+    {
+      "year": "PKP",
+      "title": "Budowa struktur obrotu i sprzedaży",
+      "text": "Utworzenie obszaru handlu energią i gazem, rozwój strategii sprzedażowej oraz organizacja procesów rynkowych w PKP Energetyka Sprzedaż.",
+      "sourceLabel": "Oficjalny profil zawodowy",
+      "sourceUrl": "https://ir.enea.pl/lad-korporacyjny/23203/grzegorz-kinelski"
+    },
+    {
+      "year": "Vattenfall",
+      "title": "Pierwszy proces zmiany sprzedawcy i nowe kanały sprzedaży",
+      "text": "Uruchamianie procesów rynkowych, produktów online, pierwszej kampanii door-to-door oraz nowoczesnych kanałów obsługi klienta.",
+      "sourceLabel": "CV zawodowe",
+      "sourceUrl": ""
+    },
+    {
+      "year": "IT",
+      "title": "Cyfryzacja obsługi i procesów handlowych",
+      "text": "Wdrożenia SAP i CRM, migracje billingowe, e-faktury, e-płatności, systemy obiegu dokumentów oraz narzędzia wsparcia sprzedaży i switchingu.",
+      "sourceLabel": "CV zawodowe",
+      "sourceUrl": ""
+    }
+  ],
+  "education": [
+    {
+      "year": "2017",
+      "title": "Doktor nauk ekonomicznych",
+      "institution": "Uniwersytet Szczeciński",
+      "description": "Stopień doktora w dyscyplinie ekonomia; rozprawa dotycząca oddziaływania centrów usług wspólnych na konkurencyjność przedsiębiorstw sektora energetycznego."
+    },
+    {
+      "year": "2011",
+      "title": "Master of Business Administration",
+      "institution": "Dominican University, Brennan School of Business, Chicago",
+      "description": "Program MBA rozwijający kompetencje strategiczne, finansowe, przywódcze i zarządcze."
+    },
+    {
+      "year": "2008–2009",
+      "title": "Międzynarodowe studia menedżerskie",
+      "institution": "Akademia Ekonomiczna w Katowicach • VUT w Brnie",
+      "description": "Studia menedżersko-finansowe oraz menedżersko-marketingowe w środowisku międzynarodowym."
+    },
+    {
+      "year": "2007–2008",
+      "title": "Zarządzanie projektami",
+      "institution": "Wyższa Szkoła Bankowa w Poznaniu",
+      "description": "Studia podyplomowe rozwijające metodykę planowania i realizacji złożonych projektów."
+    },
+    {
+      "year": "2000",
+      "title": "Magister inżynier zarządzania i marketingu",
+      "institution": "Politechnika Śląska",
+      "description": "Wydział Organizacji i Zarządzania, specjalność zarządzanie przedsiębiorstwem."
+    },
+    {
+      "year": "1997",
+      "title": "Inżynier elektrotechniki",
+      "institution": "Politechnika Śląska",
+      "description": "Wydział Elektryczny, kierunek elektrotechnika, specjalność elektroenergetyka."
+    }
+  ],
+  "competencies": [
+    {
+      "title": "Strategia i przywództwo",
+      "text": "Planowanie rozwoju, zarządzanie portfelem zmian, motywowanie zespołów i podejmowanie decyzji w warunkach niepewności."
+    },
+    {
+      "title": "Rynek energii i gazu",
+      "text": "Handel hurtowy i detaliczny, produkty, regulacje, sprzedaż, obsługa klienta i zarządzanie ryzykiem rynkowym."
+    },
+    {
+      "title": "Restrukturyzacja i ład korporacyjny",
+      "text": "Integracja organizacji, centralizacja procesów, centra usług wspólnych, akwizycje i nadzór właścicielski."
+    },
+    {
+      "title": "Zarządzanie projektami i zmianą",
+      "text": "Green Project Management, PMI, PRINCE2, zarządzanie procesami, analizy finansowe i programy transformacyjne."
+    },
+    {
+      "title": "Cyfryzacja i dane",
+      "text": "Systemy ERP, CRM i billing, elektroniczna obsługa klienta, automatyzacja oraz cyberbezpieczeństwo."
+    },
+    {
+      "title": "Nauka i transfer wiedzy",
+      "text": "Smart City, model 4T+, rezyliencja, transformacja energetyczna, gospodarka cyfrowa i badania aplikacyjne."
+    }
+  ],
+  "recognition": [
+    {
+      "year": "2025",
+      "title": "Bursztyn Polskiej Energetyki",
+      "text": "Indywidualne wyróżnienie za konsekwentne wdrażanie strategii rozwoju OZE i zielonego portfela wytwórczego Grupy Enea.",
+      "url": "https://ecb.biz.pl/bursztyny/"
+    },
+    {
+      "year": "2007–2014",
+      "title": "Wyróżnienia jakości obsługi zarządzanych organizacji",
+      "text": "Nagrody i godła „Firma Przyjazna Klientowi” oraz wyróżnienia jakościowe były osiągnięciami zespołowymi organizacji i procesów rozwijanych pod kierownictwem menedżerskim.",
+      "url": ""
+    }
+  ],
+  "publicProfiles": [
+    {
+      "name": "Enea S.A. — profil zarządu",
+      "category": "Funkcja zawodowa",
+      "description": "Oficjalny biogram Prezesa Zarządu Enea S.A. oraz przebieg kariery menedżerskiej.",
+      "url": "https://ir.enea.pl/lad-korporacyjny/23203/grzegorz-kinelski",
+      "schema": true
+    },
+    {
+      "name": "Biuro Prasowe Grupy Enea",
+      "category": "Profil medialny",
+      "description": "Oficjalna teczka prasowa z biogramem i materiałami do wykorzystania przez media.",
+      "url": "https://media.enea.pl/teczka-prasowa/23212/grzegorz-kinelski",
+      "schema": true
+    },
+    {
+      "name": "LinkedIn",
+      "category": "Profil zawodowy",
+      "description": "Aktualności zawodowe, wystąpienia, komentarze dotyczące transformacji energetycznej i zarządzania.",
+      "url": "https://pl.linkedin.com/in/kinelski",
+      "schema": true
+    },
+    {
+      "name": "Akademia WSB — baza wiedzy",
+      "category": "Profil naukowy",
+      "description": "Publikacje, cytowania, promotorstwo, statystyki oraz sieć współpracy naukowej.",
+      "url": "https://bazawiedzy.wsb.edu.pl/info/author/AWSBb5b555f7f5d74029821e5e1246894262?lang=pl&pn=1&tab=publications",
+      "schema": true
+    },
+    {
+      "name": "ORCID",
+      "category": "Identyfikator naukowy",
+      "description": "Trwały identyfikator autora: 0000-0002-5768-463X.",
+      "url": "https://orcid.org/0000-0002-5768-463X",
+      "schema": true
+    },
+    {
+      "name": "Scopus",
+      "category": "Baza bibliometryczna",
+      "description": "Wyszukiwanie profilu autora według identyfikatora ORCID.",
+      "url": "https://www.scopus.com/results/authorNamesList.uri?orcidId=0000-0002-5768-463X",
+      "schema": true
+    },
+    {
+      "name": "Web of Science",
+      "category": "Baza bibliometryczna",
+      "description": "Profil autora i ResearcherID: AAA-3088-2020.",
+      "url": "https://www.webofscience.com/wos/author/record/AAA-3088-2020",
+      "schema": true
+    },
+    {
+      "name": "Rada Uczelni UAM",
+      "category": "Ład akademicki",
+      "description": "Oficjalny profil członka Rady Uczelni Uniwersytetu im. Adama Mickiewicza w Poznaniu.",
+      "url": "https://amu.edu.pl/uniwersytet/rada-uczelni/grzegorz-kinelski",
+      "schema": true
+    },
+    {
+      "name": "Towarzystwo Obrotu Energią",
+      "category": "Rynek energii",
+      "description": "Skład Rady Zarządzającej TOE i funkcja Prezesa Rady Zarządzającej.",
+      "url": "https://toe.pl/o-toe/wladze-toe/",
+      "schema": true
+    },
+    {
+      "name": "Rada Naukowa ITG KOMAG",
+      "category": "Nauka i przemysł",
+      "description": "Skład Rady Naukowej instytutu w kadencji 2025–2029.",
+      "url": "https://komag.eu/instytut/rada-naukowa",
+      "schema": true
+    },
+    {
+      "name": "Polimex Mostostal S.A.",
+      "category": "Nadzór właścicielski",
+      "description": "Raport o ukonstytuowaniu Rady Nadzorczej i Komitetu Audytu XV kadencji.",
+      "url": "https://www.polimex-mostostal.pl/raport/ukonstytuowanie-sie-rady-nadzorczej-emitenta-i-wybor-komitetu-audytu",
+      "schema": true
+    },
+    {
+      "name": "Wyniki wyszukiwania Google",
+      "category": "Pozostałe źródła",
+      "description": "Wyszukiwanie publicznych informacji, wywiadów, wystąpień i publikacji dotyczących Grzegorza Kinelskiego.",
+      "url": "https://www.google.com/search?q=%22Grzegorz+Kinelski%22",
+      "schema": false
+    }
+  ],
+  "cta": {
+    "eyebrow": "Dalsza eksploracja",
+    "title": "Nauka, książki i współpraca",
+    "text": "Kariera menedżerska stanowi praktyczny kontekst programu badawczego, publikacji i projektów dotyczących transformacji sektora energii.",
+    "links": [
+      {
+        "label": "O mnie",
+        "href": "/o-mnie"
+      },
+      {
+        "label": "Monografie",
+        "href": "/monografie"
+      },
+      {
+        "label": "Publikacje",
+        "href": "/publikacje"
+      },
+      {
+        "label": "Kontakt",
+        "href": "/kontakt"
+      }
+    ]
+  }
+}

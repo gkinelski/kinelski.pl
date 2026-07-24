@@ -9,7 +9,7 @@ const { title = site.title, description = site.description, image = '/images/grz
 const canonical = new URL(Astro.url.pathname, site.url);
 const fullTitle = title === site.title ? title : `${title} | ${site.name}`;
 const themeCss = `:root{--theme-primary:${theme.primary};--theme-primary-dark:${theme.primaryDark};--theme-navy:${theme.navy};--theme-navy-soft:${theme.navySoft};--theme-light-bg:${theme.light.background};--theme-light-surface:${theme.light.surface};--theme-light-surface-soft:${theme.light.surfaceSoft};--theme-light-text:${theme.light.text};--theme-light-muted:${theme.light.muted};--theme-light-line:${theme.light.line};--theme-dark-bg:${theme.dark.background};--theme-dark-surface:${theme.dark.surface};--theme-dark-surface-soft:${theme.dark.surfaceSoft};--theme-dark-text:${theme.dark.text};--theme-dark-muted:${theme.dark.muted};--theme-dark-line:${theme.dark.line};}`;
-const personSchema = {'@context':'https://schema.org','@type':'Person',name:site.name,honorificPrefix:'dr',url:site.url,image:new URL(image,site.url).href,jobTitle:site.role,affiliation:{'@type':'CollegeOrUniversity',name:site.affiliation},sameAs:[site.orcid]};
+const personSchema = {'@context':'https://schema.org','@type':'Person',name:site.name,honorificPrefix:'dr',url:site.url,image:new URL(image,site.url).href,jobTitle:site.role,affiliation:{'@type':'CollegeOrUniversity',name:site.affiliation},sameAs:site.sameAs ?? [site.orcid]};
 ---
 <!doctype html>
 <html lang="pl" data-language="pl">
