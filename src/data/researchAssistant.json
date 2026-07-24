@@ -1,0 +1,178 @@
+{
+  "categories": [
+    {
+      "id": "4t",
+      "label": "Model 4T+",
+      "questions": [
+        {
+          "q": "Czym jest model 4T+?",
+          "a": "Model 4T+ integruje technologię, talent, tolerancję i zaufanie z nadrzędnym komponentem bezpieczeństwa mieszkańców. Służy do oceny zdolności miasta do adaptacji, ciągłości działania i realizacji transformacji energetyczno-klimatycznej.",
+          "links": [
+            {
+              "label": "Monografia",
+              "href": "/monografia"
+            },
+            {
+              "label": "Program badawczy",
+              "href": "/badania"
+            }
+          ]
+        },
+        {
+          "q": "Dlaczego technologia nie wystarcza do budowy Smart City?",
+          "a": "Technologia jest narzędziem, a nie samodzielnym źródłem rezyliencji. Bez zaufania, kompetencji, współzarządzania i społecznej legitymizacji nawet zaawansowana infrastruktura nie zapewnia trwałej skuteczności.",
+          "links": [
+            {
+              "label": "Wyniki badań",
+              "href": "/monografia#wyniki"
+            }
+          ]
+        },
+        {
+          "q": "Jaką rolę pełni bezpieczeństwo w modelu 4T+?",
+          "a": "Bezpieczeństwo jest rezultatem integrującym pozostałe kapitały. Obejmuje nie tylko ciągłość dostaw energii, ale również dostępność usług, odporność instytucji, komunikację i ochronę mieszkańców.",
+          "links": [
+            {
+              "label": "Model 4T+",
+              "href": "/monografia#model-4t"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "smart-city",
+      "label": "Smart City",
+      "questions": [
+        {
+          "q": "Jak w badaniach definiowane jest Smart City?",
+          "a": "Smart City jest traktowane jako złożony system adaptacyjny. Jego inteligencja wynika z umiejętności łączenia danych, technologii, instytucji, kapitałów społecznych i infrastruktury w celu poprawy jakości życia oraz odporności.",
+          "links": [
+            {
+              "label": "Smart City w programie badawczym",
+              "href": "/badania#smart-city"
+            }
+          ]
+        },
+        {
+          "q": "Jakie znaczenie ma współzarządzanie?",
+          "a": "Współzarządzanie koordynuje działania administracji, biznesu, nauki i mieszkańców. Zwiększa przepływ wiedzy, legitymizację decyzji oraz zdolność do reagowania na złożone problemy metropolitalne.",
+          "links": [
+            {
+              "label": "Program badawczy",
+              "href": "/badania"
+            }
+          ]
+        },
+        {
+          "q": "Co odróżnia miasto inteligentne od miasta cyfrowego?",
+          "a": "Miasto cyfrowe koncentruje się na technologiach i danych. Miasto inteligentne wykorzystuje je w powiązaniu z kompetencjami, instytucjami i zaufaniem, aby osiągać mierzalne rezultaty społeczne, środowiskowe i gospodarcze.",
+          "links": [
+            {
+              "label": "Publikacje Smart City",
+              "href": "/publikacje?obszar=Smart%20City%20i%20współzarządzanie"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "energy",
+      "label": "Transformacja energetyczna",
+      "questions": [
+        {
+          "q": "Co decyduje o skuteczności dekarbonizacji?",
+          "a": "Skuteczność zależy od spójności instrumentów technicznych, organizacyjnych, finansowych i społecznych. Kluczowe są zaufanie, kompetencje, stabilność instytucjonalna oraz ochrona mieszkańców przed kosztami i ryzykiem transformacji.",
+          "links": [
+            {
+              "label": "Transformacja w programie",
+              "href": "/badania#transformacja"
+            }
+          ]
+        },
+        {
+          "q": "Jak badane jest bezpieczeństwo energetyczne mieszkańców?",
+          "a": "Bezpieczeństwo energetyczne obejmuje ciągłość dostaw, dostępność cenową, jakość komunikacji, odporność usług publicznych i zdolność instytucji do działania w warunkach zakłóceń.",
+          "links": [
+            {
+              "label": "Monografia",
+              "href": "/monografia"
+            }
+          ]
+        },
+        {
+          "q": "Jaką rolę pełni akceptacja społeczna?",
+          "a": "Akceptacja społeczna wpływa na tempo, trwałość i legitymizację transformacji. Jest wzmacniana przez transparentność, partycypację, sprawiedliwy podział kosztów i korzyści oraz wiarygodność instytucji.",
+          "links": [
+            {
+              "label": "Publikacje o dekarbonizacji",
+              "href": "/publikacje?obszar=Dekarbonizacja%20i%20zrównoważony%20rozwój"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "digital",
+      "label": "Gospodarka cyfrowa",
+      "questions": [
+        {
+          "q": "Jak cyfryzacja zmienia organizacje energetyczne?",
+          "a": "Cyfryzacja przekształca procesy, modele biznesowe, zarządzanie danymi i relacje z klientami. Jej efekty zależą od jakości wdrożenia, kompetencji, interoperacyjności i ładu danych.",
+          "links": [
+            {
+              "label": "Cyfryzacja w programie",
+              "href": "/badania#cyfryzacja"
+            }
+          ]
+        },
+        {
+          "q": "Czym są cyfrowe bliźniaki w energetyce?",
+          "a": "Cyfrowy bliźniak jest dynamicznym modelem zasobu, procesu lub systemu, zasilanym danymi z rzeczywistego środowiska. Może wspierać prognozowanie, optymalizację, diagnostykę i zarządzanie ryzykiem.",
+          "links": [
+            {
+              "label": "Publikacje o gospodarce cyfrowej",
+              "href": "/publikacje?obszar=Gospodarka%20cyfrowa"
+            }
+          ]
+        },
+        {
+          "q": "Jakie ryzyka wiążą się z cyfryzacją?",
+          "a": "Najważniejsze ryzyka obejmują cyberbezpieczeństwo, jakość danych, zależność technologiczną, brak interoperacyjności, deficyt kompetencji i nieprzejrzystość algorytmów.",
+          "links": [
+            {
+              "label": "Program badawczy",
+              "href": "/badania"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cooperation",
+      "label": "Współpraca",
+      "questions": [
+        {
+          "q": "W jakich obszarach możliwa jest współpraca?",
+          "a": "Możliwa jest współpraca przy projektach badawczych, publikacjach, konferencjach, analizach strategicznych i przedsięwzięciach transformacyjnych dotyczących Smart City, energetyki, cyfryzacji i rezyliencji.",
+          "links": [
+            {
+              "label": "Kontakt",
+              "href": "/kontakt"
+            }
+          ]
+        },
+        {
+          "q": "Jaki jest główny adres kontaktowy?",
+          "a": "Głównym adresem kontaktowym na stronie jest gkinelski@wsb.edu.pl.",
+          "links": [
+            {
+              "label": "Napisz wiadomość",
+              "href": "mailto:gkinelski@wsb.edu.pl"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

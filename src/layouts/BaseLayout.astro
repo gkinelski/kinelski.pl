@@ -1,0 +1,43 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+import { site, theme } from '../data/site';
+
+interface Props { title?: string; description?: string; image?: string; noindex?: boolean; }
+const { title = site.title, description = site.description, image = '/images/grzegorz-kinelski.webp', noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url);
+const fullTitle = title === site.title ? title : `${title} | ${site.name}`;
+const themeCss = `:root{--theme-primary:${theme.primary};--theme-primary-dark:${theme.primaryDark};--theme-navy:${theme.navy};--theme-navy-soft:${theme.navySoft};--theme-light-bg:${theme.light.background};--theme-light-surface:${theme.light.surface};--theme-light-surface-soft:${theme.light.surfaceSoft};--theme-light-text:${theme.light.text};--theme-light-muted:${theme.light.muted};--theme-light-line:${theme.light.line};--theme-dark-bg:${theme.dark.background};--theme-dark-surface:${theme.dark.surface};--theme-dark-surface-soft:${theme.dark.surfaceSoft};--theme-dark-text:${theme.dark.text};--theme-dark-muted:${theme.dark.muted};--theme-dark-line:${theme.dark.line};}`;
+const personSchema = {'@context':'https://schema.org','@type':'Person',name:site.name,honorificPrefix:'dr',url:site.url,image:new URL(image,site.url).href,jobTitle:site.role,affiliation:{'@type':'CollegeOrUniversity',name:site.affiliation},sameAs:[site.orcid]};
+---
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <meta name="theme-color" content={theme.navy} />
+  {noindex && <meta name="robots" content="noindex,nofollow,noarchive" />}
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  <meta property="og:type" content="website" /><meta property="og:locale" content="pl_PL" />
+  <meta property="og:title" content={fullTitle} /><meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} /><meta property="og:image" content={new URL(image,site.url)} />
+  <meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} /><meta name="twitter:image" content={new URL(image,site.url)} />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  <style is:global set:html={themeCss}></style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a><Header />
+  <main id="main"><slot /></main><Footer />
+  <script is:inline>
+    const root=document.documentElement;const saved=localStorage.getItem('theme');if(saved==='dark')root.dataset.theme='dark';
+    document.querySelector('[data-theme-toggle]')?.addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=next;localStorage.setItem('theme',next)});
+    const menu=document.querySelector('[data-menu]');document.querySelector('[data-menu-toggle]')?.addEventListener('click',()=>menu?.toggleAttribute('data-open'));
+  </script>
+</body></html>

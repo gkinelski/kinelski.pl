@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ResearchNetwork from '../components/ResearchNetwork.astro';
+import ResearchArea from '../components/ResearchArea.astro';
+import ResearchStage from '../components/ResearchStage.astro';
+import research from '../data/research.json';
+import publications from '../data/publications.json';
+---
+
+<BaseLayout
+  title="Badania"
+  description="Program badawczy dr. Grzegorza Kinelskiego: Smart City, transformacja energetyczna, gospodarka cyfrowa, energetyka i model 4T+."
+>
+  <section class="research-hero">
+    <div class="research-hero-shape shape-a"></div>
+    <div class="research-hero-shape shape-b"></div>
+    <div class="container research-hero-grid">
+      <div>
+        <p class="eyebrow">Program badawczy</p>
+        <h1>Od konkurencyjności<br /><span>do rezyliencji</span></h1>
+        <p class="page-lead">
+          Program integruje zarządzanie miastem, transformację
+          energetyczno-klimatyczną, gospodarkę cyfrową oraz funkcjonowanie
+          organizacji infrastrukturalnych.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#mapa">Zobacz mapę programu</a>
+          <a class="button secondary" href="/publikacje">Publikacje</a>
+        </div>
+      </div>
+
+      <div class="research-hero-panel">
+        <span class="research-hero-code">4T+</span>
+        <h2>Miasto jako system adaptacyjny</h2>
+        <p>
+          Technologia, talent, tolerancja i zaufanie tworzą wspólną
+          zdolność rozwojową wtedy, gdy są integrowane przez
+          współzarządzanie i ukierunkowane na bezpieczeństwo mieszkańców.
+        </p>
+        <div class="research-hero-metrics">
+          <span><strong>4</strong>obszary</span>
+          <span><strong>53</strong>publikacje</span>
+          <span><strong>1</strong>model autorski</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="research-subnav" aria-label="Nawigacja po programie badawczym">
+    <div class="container">
+      <a href="#mapa">Mapa programu</a>
+      <a href="#smart-city">Smart City</a>
+      <a href="#transformacja">Transformacja</a>
+      <a href="#cyfryzacja">Cyfryzacja</a>
+      <a href="#energetyka">Energetyka</a>
+      <a href="#ewolucja">Ewolucja</a>
+      <a href="#metody">Metody</a>
+    </div>
+  </nav>
+
+  <section class="section research-map-section" id="mapa">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Architektura programu"
+        title="Cztery strumienie, jeden problem zarządczy"
+        text="Program rozwija się wokół pytania, jak organizacje i miasta mogą utrzymać zdolność rozwoju oraz bezpieczeństwo w warunkach transformacji i polikryzysu."
+      />
+      <ResearchNetwork />
+    </div>
+  </section>
+
+  <section class="section research-thesis-section">
+    <div class="container research-thesis-grid">
+      <div>
+        <p class="eyebrow">Teza integrująca</p>
+        <h2>Technologia nie tworzy odporności samodzielnie</h2>
+      </div>
+      <div class="research-thesis-copy">
+        <p class="lead">
+          Rezyliencja powstaje dzięki integracji infrastruktury, kompetencji,
+          zaufania, instytucji oraz zdolności do koordynacji działań.
+        </p>
+        <p>
+          Dlatego program badawczy nie traktuje Smart City, cyfryzacji
+          i transformacji energetycznej jako osobnych zjawisk. Są one
+          współzależnymi procesami zarządzania zmianą w złożonych systemach.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section research-areas-section">
+    <div class="container">
+      {research.areas.map((area) => (
+        <ResearchArea area={area} publications={publications} />
+      ))}
+    </div>
+  </section>
+
+  <section class="section research-evolution-section" id="ewolucja">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Ewolucja programu"
+        title="Ciągłość problemów i narastanie syntezy"
+        text="Kolejne etapy nie zastępowały wcześniejszych tematów, lecz rozszerzały je od poziomu organizacji do miasta i systemu infrastrukturalnego."
+      />
+      <div class="research-stage-list">
+        {research.programStages.map((stage, index) => (
+          <ResearchStage stage={stage} index={index} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section research-methods-section" id="metody">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Warsztat badawczy"
+        title="Metody dostosowane do złożoności problemu"
+        text="Łączenie metod ilościowych i jakościowych umożliwia jednoczesną ocenę zależności oraz interpretację mechanizmów."
+      />
+      <div class="research-method-grid">
+        {research.methods.map((method) => (
+          <article>
+            <strong>{method.code}</strong>
+            <h3>{method.title}</h3>
+            <p>{method.text}</p>
+          </article>
+        ))}
+      </div>
+
+      <div class="method-integration">
+        <div>
+          <span>01</span>
+          <h3>Pomiar</h3>
+          <p>Operacjonalizacja konstruktów oraz testowanie jakości skal.</p>
+        </div>
+        <div class="integration-arrow">→</div>
+        <div>
+          <span>02</span>
+          <h3>Wyjaśnienie</h3>
+          <p>Ocena zależności, mediatorów i zróżnicowania grupowego.</p>
+        </div>
+        <div class="integration-arrow">→</div>
+        <div>
+          <span>03</span>
+          <h3>Interpretacja</h3>
+          <p>Konfrontacja wyników z doświadczeniami mieszkańców i interesariuszy.</p>
+        </div>
+        <div class="integration-arrow">→</div>
+        <div>
+          <span>04</span>
+          <h3>Aplikacja</h3>
+          <p>Przełożenie ustaleń na strategie, KPI i polityki publiczne.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section research-output-section">
+    <div class="container research-output-grid">
+      <div>
+        <p class="eyebrow pale">Rezultat syntezy</p>
+        <h2>Monografia i model 4T+</h2>
+        <p class="light-copy">
+          Najważniejszym rezultatem integracji czterech strumieni jest
+          autorska monografia poświęcona rezyliencji miast inteligentnych.
+        </p>
+      </div>
+      <div class="research-output-actions">
+        <a class="button light" href="/monografia">Poznaj monografię</a>
+        <a class="button book-outline" href="/publikacje">Przeglądaj publikacje</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

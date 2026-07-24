@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCard from '../components/ContactCard.astro';
+import contact from '../data/contact.json';
+---
+
+<BaseLayout
+  title="Kontakt"
+  description="Kontakt z dr. Grzegorzem Kinelskim — Smart City, transformacja energetyczna, gospodarka cyfrowa i rezyliencja miejska."
+>
+  <section class="contact-hero-v4">
+    <div class="container contact-hero-grid-v4">
+      <div>
+        <p class="eyebrow">Kontakt i współpraca</p>
+        <h1>Rozmowa zaczyna<br /><span>dobry projekt</span></h1>
+        <p class="page-lead">
+          Współpraca naukowa, publikacyjna, konferencyjna i ekspercka
+          w obszarach Smart City, transformacji energetycznej,
+          gospodarki cyfrowej oraz zarządzania organizacjami infrastrukturalnymi.
+        </p>
+      </div>
+      <ContactCard />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-content-grid-v4">
+      <div>
+        <p class="eyebrow">Zakres współpracy</p>
+        <h2>Tematy, w których warto się skontaktować</h2>
+      </div>
+      <div class="cooperation-list-v4">
+        {contact.cooperation.map((item, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2,'0')}</span>
+            <h3>{item}</h3>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section profiles-section-v4">
+    <div class="container">
+      <p class="eyebrow">Profile i identyfikatory</p>
+      <h2>Obecność naukowa online</h2>
+      <div class="profile-grid-v4">
+        <a href={contact.orcid} target="_blank" rel="noopener">
+          <span>ORCID</span>
+          <strong>Identyfikator autora</strong>
+          <small>Otwórz profil ↗</small>
+        </a>
+        <a href="/publikacje">
+          <span>Publikacje</span>
+          <strong>Pełna baza dorobku</strong>
+          <small>Przeglądaj bazę →</small>
+        </a>
+        <a href="/monografia">
+          <span>Monografia</span>
+          <strong>Model 4T+ i rezyliencja</strong>
+          <small>Zobacz minisite →</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section downloads-section-v4">
+    <div class="container">
+      <p class="eyebrow">Do pobrania</p>
+      <h2>Pliki i cytowania</h2>
+      <div class="download-grid-v4">
+        <a href="/grzegorz-kinelski.vcf" download>
+          <span>VCF</span>
+          <strong>Kontakt elektroniczny</strong>
+          <small>Pobierz plik</small>
+        </a>
+        <a href="/kinelski-monografia.bib" download>
+          <span>BIB</span>
+          <strong>BibTeX monografii</strong>
+          <small>Pobierz cytowanie</small>
+        </a>
+        <a href="/kinelski-monografia.ris" download>
+          <span>RIS</span>
+          <strong>RIS monografii</strong>
+          <small>Pobierz cytowanie</small>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact-final-v4">
+    <div class="container">
+      <p class="eyebrow pale">E-mail</p>
+      <h2><a href={`mailto:${contact.email}`}>{contact.email}</a></h2>
+    </div>
+  </section>
+</BaseLayout>

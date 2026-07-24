@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationCard from '../components/PublicationCard.astro';
+import publications from '../data/publications.json';
+import summary from '../data/publication-summary.json';
+
+const sorted = [...publications].sort(
+  (a, b) => Number(b.year) - Number(a.year) || Number(b.lp) - Number(a.lp)
+);
+---
+<BaseLayout title="Publikacje" description="Pełny wykaz publikacji naukowych dr. Grzegorza Kinelskiego.">
+  <section class="publication-hero">
+    <div class="container publication-hero-grid">
+      <div>
+        <p class="eyebrow">Dorobek naukowy</p>
+        <h1>Publikacje</h1>
+        <p class="page-lead">
+          Pełny wykaz dorobku po doktoracie z wyszukiwaniem, filtrowaniem
+          i narzędziami cytowania.
+        </p>
+      </div>
+      <div class="publication-stat-panel">
+        <div><strong>{summary.count}</strong><span>pozycji</span></div>
+        <div><strong>{summary.years.length}</strong><span>lat</span></div>
+        <div><strong>{summary.areas.length}</strong><span>obszarów</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section publication-browser">
+    <div class="container">
+      <div class="publication-toolbar">
+        <label>
+          <span>Szukaj</span>
+          <input id="publication-search" type="search" placeholder="Tytuł, autor, czasopismo..." />
+        </label>
+        <label>
+          <span>Obszar</span>
+          <select id="publication-area">
+            <option value="">Wszystkie obszary</option>
+            {summary.areas.map((area) => <option value={area}>{area}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Rok</span>
+          <select id="publication-year">
+            <option value="">Wszystkie lata</option>
+            {summary.years.map((year) => <option value={year}>{year}</option>)}
+          </select>
+        </label>
+        <label>
+          <span>Typ</span>
+          <select id="publication-type">
+            <option value="">Wszystkie typy</option>
+            {summary.types.map((type) => <option value={type}>{type}</option>)}
+          </select>
+        </label>
+      </div>
+
+      <div class="publication-result-bar">
+        <p><strong id="publication-count">{summary.count}</strong> wyników</p>
+        <button id="publication-reset" class="publication-reset" type="button">
+          Wyczyść filtry
+        </button>
+      </div>
+
+      <div class="publication-list">
+        {sorted.map((publication) => <PublicationCard publication={publication} />)}
+      </div>
+
+      <div class="publication-empty" id="publication-empty" hidden>
+        Brak publikacji spełniających kryteria.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const normalize = (value: unknown): string =>
+      String(value ?? '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+
+    const search = document.querySelector<HTMLInputElement>('#publication-search');
+    const area = document.querySelector<HTMLSelectElement>('#publication-area');
+    const year = document.querySelector<HTMLSelectElement>('#publication-year');
+    const type = document.querySelector<HTMLSelectElement>('#publication-type');
+    const reset = document.querySelector<HTMLButtonElement>('#publication-reset');
+    const cards = Array.from(
+      document.querySelectorAll<HTMLElement>('[data-publication]')
+    );
+    const count = document.querySelector<HTMLElement>('#publication-count');
+    const empty = document.querySelector<HTMLElement>('#publication-empty');
+
+    const selectedArea = new URLSearchParams(window.location.search).get('obszar');
+    if (area && selectedArea) area.value = selectedArea;
+
+    const filterPublications = (): void => {
+      const query = normalize(search?.value);
+      let visible = 0;
+
+      cards.forEach((card: HTMLElement) => {
+        const show =
+          (!query || normalize(card.dataset.search).includes(query)) &&
+          (!area?.value || card.dataset.area === area.value) &&
+          (!year?.value || card.dataset.year === year.value) &&
+          (!type?.value || card.dataset.type === type.value);
+
+        card.hidden = !show;
+        if (show) visible += 1;
+      });
+
+      if (count) count.textContent = String(visible);
+      if (empty) empty.hidden = visible !== 0;
+    };
+
+    search?.addEventListener('input', filterPublications);
+    area?.addEventListener('change', filterPublications);
+    year?.addEventListener('change', filterPublications);
+    type?.addEventListener('change', filterPublications);
+
+    filterPublications();
+
+    reset?.addEventListener('click', () => {
+      if (search) search.value = '';
+      if (area) area.value = '';
+      if (year) year.value = '';
+      if (type) type.value = '';
+      filterPublications();
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('[data-show-apa]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const panel = button
+          .closest<HTMLElement>('[data-publication]')
+          ?.querySelector<HTMLElement>('[data-apa-panel]');
+
+        if (!panel) return;
+        panel.hidden = !panel.hidden;
+        button.textContent = panel.hidden ? 'Pokaż APA' : 'Ukryj APA';
+      });
+    });
+
+    const copyText = async (
+      text: string | undefined,
+      button: HTMLButtonElement
+    ): Promise<void> => {
+      if (!text) return;
+      await navigator.clipboard.writeText(text);
+      const original = button.textContent ?? '';
+      button.textContent = 'Skopiowano';
+      window.setTimeout(() => {
+        button.textContent = original;
+      }, 1200);
+    };
+
+    document.querySelectorAll<HTMLButtonElement>('[data-copy-apa]').forEach((button) => {
+      button.addEventListener('click', () => {
+        void copyText(button.dataset.apa, button);
+      });
+    });
+
+    document.querySelectorAll<HTMLButtonElement>('[data-copy-bibtex]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const authors = String(button.dataset.authors ?? '').replace(
+          /,|&| i /g,
+          ' and '
+        );
+
+        const bibtex = `@article{Kinelski${button.dataset.year ?? ''},
+  author = {${authors}},
+  title = {${button.dataset.title ?? ''}},
+  year = {${button.dataset.year ?? ''}},
+  journal = {${button.dataset.publisher ?? ''}},
+  doi = {${button.dataset.doi ?? ''}}
+}`;
+
+        void copyText(bibtex, button);
+      });
+    });
+  </script>
+</BaseLayout>

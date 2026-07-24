@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Kinelski;Grzegorz;;dr;
+FN:dr Grzegorz Kinelski
+TITLE:Adiunkt; badacz Smart City; menedżer sektora energii
+ORG:Akademia WSB;Katedra Zarządzania
+EMAIL;TYPE=INTERNET:gkinelski@wsb.edu.pl
+URL:https://kinelski.pl
+URL;TYPE=ORCID:https://orcid.org/0000-0002-5768-463X
+NOTE:Smart City, transformacja energetyczno-klimatyczna, gospodarka cyfrowa, rezyliencja miejska.
+END:VCARD

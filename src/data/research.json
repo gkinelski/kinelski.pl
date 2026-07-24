@@ -1,0 +1,156 @@
+{
+  "areas": [
+    {
+      "id": "smart-city",
+      "number": "01",
+      "title": "Smart City i współzarządzanie metropolitalne",
+      "shortTitle": "Smart City",
+      "lead": "Miasto inteligentne jako złożony system adaptacyjny, w którym technologia, instytucje, kapitały społeczne i infrastruktura tworzą wspólną zdolność rozwojową.",
+      "questions": [
+        "Jak projektować współzarządzanie w strukturach metropolitalnych?",
+        "Które kapitały miejskie wzmacniają zdolność adaptacji?",
+        "Jak przełożyć dane i technologię na jakość życia mieszkańców?"
+      ],
+      "themes": [
+        "Smart City 4.0",
+        "governance sieciowy",
+        "metropolie i gminy",
+        "kapitały miejskie",
+        "partycypacja",
+        "strategie rozwoju"
+      ],
+      "methods": [
+        "analiza strategii",
+        "FGI",
+        "badania mieszkańców",
+        "modelowanie SEM"
+      ],
+      "publicationArea": "Smart City i współzarządzanie"
+    },
+    {
+      "id": "transformacja",
+      "number": "02",
+      "title": "Transformacja energetyczno-klimatyczna",
+      "shortTitle": "Transformacja",
+      "lead": "Badania nad dekarbonizacją obejmują skuteczność instrumentów, bezpieczeństwo mieszkańców, akceptację społeczną i zdolność organizacji do zarządzania zmianą.",
+      "questions": [
+        "Co decyduje o skuteczności programów dekarbonizacyjnych?",
+        "Jak pogodzić cele klimatyczne z bezpieczeństwem i dostępnością energii?",
+        "Jak budować społeczną legitymizację transformacji?"
+      ],
+      "themes": [
+        "dekarbonizacja",
+        "NETZero",
+        "bezpieczeństwo energetyczne",
+        "zielone finansowanie",
+        "akceptacja społeczna",
+        "odpowiedzialność"
+      ],
+      "methods": [
+        "regresja OLS",
+        "ANOVA",
+        "analiza polityk",
+        "studia przypadków"
+      ],
+      "publicationArea": "Dekarbonizacja i zrównoważony rozwój"
+    },
+    {
+      "id": "cyfryzacja",
+      "number": "03",
+      "title": "Gospodarka cyfrowa i technologie poznawcze",
+      "shortTitle": "Cyfryzacja",
+      "lead": "Cyfrowa transformacja jest analizowana jako zmiana modeli zarządzania, procesów, kompetencji i sposobów tworzenia wartości w organizacjach infrastrukturalnych.",
+      "questions": [
+        "Jak cyfryzacja wpływa na konkurencyjność przedsiębiorstw?",
+        "W jaki sposób cyfrowe bliźniaki wspierają transformację energetyczną?",
+        "Jak zarządzać danymi, cyberbezpieczeństwem i interoperacyjnością?"
+      ],
+      "themes": [
+        "digital twins",
+        "gospodarka cyfrowa",
+        "technologie poznawcze",
+        "zarządzanie danymi",
+        "cyberbezpieczeństwo",
+        "modele biznesowe"
+      ],
+      "methods": [
+        "multi-case study",
+        "analiza procesów",
+        "modele efektywności",
+        "analiza porównawcza"
+      ],
+      "publicationArea": "Gospodarka cyfrowa"
+    },
+    {
+      "id": "energetyka",
+      "number": "04",
+      "title": "Zarządzanie subsektorem elektroenergetycznym",
+      "shortTitle": "Energetyka",
+      "lead": "Program obejmuje konkurencyjność, regulacje, zarządzanie usługami, ochronę konsumenta i efektywność organizacji działających w sektorze energii.",
+      "questions": [
+        "Jak regulacje wpływają na konkurencyjność i modele działania?",
+        "Jak centra usług wspólnych zmieniają efektywność organizacji?",
+        "Jak chronić konsumentów i prosumentów w okresie transformacji?"
+      ],
+      "themes": [
+        "rynek energii",
+        "rynek mocy",
+        "regulacje",
+        "centra usług wspólnych",
+        "ochrona konsumentów",
+        "konkurencyjność"
+      ],
+      "methods": [
+        "badania organizacyjne",
+        "analiza regulacyjna",
+        "studia przypadków",
+        "analiza ekonomiczna"
+      ],
+      "publicationArea": "Subsektor elektroenergetyczny"
+    }
+  ],
+  "programStages": [
+    {
+      "year": "2017–2019",
+      "title": "Konkurencyjność i usługi wspólne",
+      "text": "Rozwinięcie problematyki rozprawy doktorskiej: efektywność, modele organizacyjne i konkurencyjność przedsiębiorstw energetycznych."
+    },
+    {
+      "year": "2019–2021",
+      "title": "Transformacja cyfrowa organizacji",
+      "text": "Badania nad technologiami poznawczymi, zarządzaniem projektami, wyceną i cyfrowymi modelami biznesowymi."
+    },
+    {
+      "year": "2021–2024",
+      "title": "Smart City i dekarbonizacja",
+      "text": "Integracja perspektywy miejskiej, energetycznej i społecznej; rozwój badań GZM oraz koncepcji kapitałów 4T+."
+    },
+    {
+      "year": "2024–2026",
+      "title": "Rezyliencja i bezpieczeństwo",
+      "text": "Synteza programu w autorskim modelu 4T+ oraz monografii o rezyliencji miast inteligentnych."
+    }
+  ],
+  "methods": [
+    {
+      "code": "SEM",
+      "title": "Modelowanie równań strukturalnych",
+      "text": "Weryfikacja relacji między konstruktami, efektów pośrednich i jakości modelu pomiarowego."
+    },
+    {
+      "code": "OLS",
+      "title": "Regresja liniowa",
+      "text": "Ocena predyktorów skuteczności transformacji i bezpieczeństwa energetycznego."
+    },
+    {
+      "code": "FGI",
+      "title": "Zogniskowane wywiady grupowe",
+      "text": "Pogłębiona interpretacja mechanizmów społecznych, instytucjonalnych i zarządczych."
+    },
+    {
+      "code": "MCS",
+      "title": "Wielokrotne studium przypadku",
+      "text": "Porównanie organizacji, miast i grup energetycznych w rzeczywistych warunkach działania."
+    }
+  ]
+}

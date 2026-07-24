@@ -1,0 +1,22 @@
+---
+interface Stage {
+  year: string;
+  title: string;
+  text: string;
+}
+
+interface Props {
+  stage: Stage;
+  index: number;
+}
+
+const { stage, index } = Astro.props as Props;
+---
+<article class="research-stage">
+  <span class="research-stage-index">{String(index + 1).padStart(2, '0')}</span>
+  <div>
+    <p>{stage.year}</p>
+    <h3>{stage.title}</h3>
+    <span>{stage.text}</span>
+  </div>
+</article>

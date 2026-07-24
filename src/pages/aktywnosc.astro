@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import ConferenceList from '../components/ConferenceList.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import MobilityCard from '../components/MobilityCard.astro';
+import activity from '../data/activity.json';
+import conferences from '../data/conferences.json';
+---
+
+<BaseLayout
+  title="Aktywność"
+  description="Projekty, konferencje, mobilność, dydaktyka, opieka naukowa i działalność ekspercka dr. Grzegorza Kinelskiego."
+>
+  <section class="activity-hero">
+    <div class="activity-shape shape-one"></div>
+    <div class="activity-shape shape-two"></div>
+    <div class="container activity-hero-grid">
+      <div>
+        <p class="eyebrow">Aktywność naukowa i ekspercka</p>
+        <h1>Badania w relacji<br /><span>z praktyką</span></h1>
+        <p class="page-lead">
+          Projekty, mobilność, konferencje, dydaktyka i działalność ekspercka
+          tworzą środowisko, w którym wyniki badań są konfrontowane z realnymi
+          problemami transformacji.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#projekty">Projekty</a>
+          <a class="button secondary" href="#konferencje">Konferencje</a>
+        </div>
+      </div>
+
+      <div class="activity-hero-panel">
+        <div><strong>{activity.projects.length}</strong><span>projekty</span></div>
+        <div><strong>{conferences.length}</strong><span>wydarzeń</span></div>
+        <div><strong>{activity.mobility.length}</strong><span>staże i mobilności</span></div>
+        <div><strong>{activity.awards.length}</strong><span>wyróżnienia</span></div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="activity-subnav" aria-label="Nawigacja po aktywności">
+    <div class="container">
+      <a href="#projekty">Projekty</a>
+      <a href="#mobilnosc">Mobilność</a>
+      <a href="#konferencje">Konferencje</a>
+      <a href="#dydaktyka">Dydaktyka</a>
+      <a href="#opieka">Opieka naukowa</a>
+      <a href="#wyroznienia">Wyróżnienia</a>
+      <a href="#ekspertyza">Ekspertyza</a>
+    </div>
+  </nav>
+
+  <section class="section" id="projekty">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Projekty"
+        title="Współpraca badawcza i edukacyjna"
+        text="Projekty rozwijają program badawczy w środowisku międzynarodowym i międzyinstytucjonalnym."
+      />
+      <div class="project-grid-v4">
+        {activity.projects.map((project) => <ProjectCard project={project} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section mobility-section-v4" id="mobilnosc">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Mobilność naukowa"
+        title="Wiedza rozwijana między instytucjami"
+        text="Staże i mobilność umożliwiały konfrontację programu badawczego z różnymi tradycjami naukowymi i praktykami zarządzania."
+      />
+      <div class="mobility-grid-v4">
+        {activity.mobility.map((item) => <MobilityCard item={item} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section conference-section-v4" id="konferencje">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Konferencje"
+        title="Wystąpienia, panele i debata naukowa"
+        text="Wykaz obejmuje aktywny udział w konferencjach, seminariach i wydarzeniach branżowych."
+      />
+      <ConferenceList conferences={conferences} />
+    </div>
+  </section>
+
+  <section class="section teaching-section-v4" id="dydaktyka">
+    <div class="container teaching-grid-v4">
+      <div>
+        <p class="eyebrow">Dydaktyka</p>
+        <h2>Przekładanie badań na proces uczenia</h2>
+        <p class="teaching-lead">
+          Zajęcia akademickie i eksperckie łączą teorię zarządzania z realnymi
+          studiami przypadków sektora energetycznego i miast.
+        </p>
+      </div>
+
+      <div class="teaching-list-v4">
+        {activity.teaching.map((item, index) => (
+          <article>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <div>
+              <p>{item.audience}</p>
+              <h3>{item.title}</h3>
+              <strong>{item.text}</strong>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section supervision-section-v4" id="opieka">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Rozwój młodszych badaczy"
+        title="Opieka naukowa i recenzowanie"
+        text="Aktywność obejmuje wsparcie doktorantów, konsultacje metodologiczne i udział w ocenie jakości badań."
+      />
+      <div class="supervision-grid-v4">
+        {activity.supervision.map((item) => (
+          <article>
+            <span>{item.names}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section awards-section-v4" id="wyroznienia">
+    <div class="container awards-grid-v4">
+      <div>
+        <p class="eyebrow pale">Wyróżnienia</p>
+        <h2>Rozpoznawalność naukowa i branżowa</h2>
+        <p class="light-copy">
+          Nagrody i role środowiskowe dokumentują praktyczne oddziaływanie
+          badań i doświadczenia zarządczego.
+        </p>
+      </div>
+
+      <div class="awards-list-v4">
+        {activity.awards.map((award) => (
+          <article>
+            <span>{award.year}</span>
+            <div>
+              <h3>{award.title}</h3>
+              <p>{award.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="ekspertyza">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Oddziaływanie"
+        title="Obszary ekspertyzy"
+        text="Działalność ekspercka łączy wiedzę akademicką z doświadczeniem zarządzania przedsiębiorstwami infrastrukturalnymi."
+      />
+      <div class="expertise-grid-v4">
+        {activity.expertise.map((item) => (
+          <article>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section activity-cta-section">
+    <div class="container activity-cta">
+      <div>
+        <p class="eyebrow">Współpraca</p>
+        <h2>Projekty naukowe i eksperckie</h2>
+        <p>
+          Zapraszam do współpracy przy badaniach, publikacjach,
+          konferencjach i projektach transformacyjnych.
+        </p>
+      </div>
+      <a class="button primary" href="/kontakt">Kontakt</a>
+    </div>
+  </section>
+</BaseLayout>

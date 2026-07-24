@@ -1,0 +1,26 @@
+---
+interface Project {
+  period: string;
+  type: string;
+  title: string;
+  text: string;
+  tags: string[];
+}
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props as Props;
+---
+<article class="project-card-v4">
+  <div class="project-meta">
+    <span>{project.period}</span>
+    <span>{project.type}</span>
+  </div>
+  <h3>{project.title}</h3>
+  <p>{project.text}</p>
+  <div class="project-tags">
+    {project.tags.map((tag: string) => <span>{tag}</span>)}
+  </div>
+</article>

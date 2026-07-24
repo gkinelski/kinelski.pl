@@ -1,0 +1,186 @@
+{
+  "site": {
+    "name": "Grzegorz Kinelski",
+    "title": "dr Grzegorz Kinelski",
+    "description": "Smart City, transformacja energetyczno-klimatyczna, gospodarka cyfrowa i rezyliencja miejska.",
+    "url": "https://kinelski.pl",
+    "email": "gkinelski@wsb.edu.pl",
+    "orcid": "https://orcid.org/0000-0002-5768-463X",
+    "affiliation": "Akademia WSB",
+    "role": "doktor nauk ekonomicznych • adiunkt • menedżer sektora energii",
+    "logoText": "GK",
+    "footerTagline": "Smart City • transformacja energetyczna • gospodarka cyfrowa"
+  },
+  "navigation": [
+    {
+      "href": "/o-mnie",
+      "label": "O mnie"
+    },
+    {
+      "href": "/badania",
+      "label": "Badania"
+    },
+    {
+      "href": "/publikacje",
+      "label": "Publikacje"
+    },
+    {
+      "href": "/monografia",
+      "label": "Monografia"
+    },
+    {
+      "href": "/aktywnosc",
+      "label": "Aktywność"
+    },
+    {
+      "href": "/asystent",
+      "label": "Asystent"
+    },
+    {
+      "href": "/kontakt",
+      "label": "Kontakt"
+    }
+  ],
+  "theme": {
+    "primary": "#2567d9",
+    "primaryDark": "#164d9e",
+    "navy": "#071726",
+    "navySoft": "#0d263c",
+    "light": {
+      "background": "#f5f7fa",
+      "surface": "#ffffff",
+      "surfaceSoft": "#eaf0f6",
+      "text": "#0d2238",
+      "muted": "#63758a",
+      "line": "#d7e0e9"
+    },
+    "dark": {
+      "background": "#07111c",
+      "surface": "#0b1927",
+      "surfaceSoft": "#102438",
+      "text": "#eef5fb",
+      "muted": "#a3b5c6",
+      "line": "#263a4d"
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Nauka dla zrównoważonej przyszłości",
+      "firstName": "Grzegorz",
+      "lastName": "Kinelski",
+      "specialisms": "Smart City • transformacja energetyczna • gospodarka cyfrowa",
+      "intro": "Doktor nauk ekonomicznych, adiunkt Akademii WSB i menedżer sektora energii. Badam rezyliencję miast, dekarbonizację, cyfryzację infrastruktury oraz bezpieczeństwo energetyczne mieszkańców.",
+      "portrait": "/images/grzegorz-kinelski.webp",
+      "portraitAlt": "dr Grzegorz Kinelski",
+      "portraitKicker": "doktor nauk ekonomicznych",
+      "portraitTitle": "Akademia WSB",
+      "primaryButton": {
+        "label": "Publikacje",
+        "href": "/publikacje"
+      },
+      "secondaryButton": {
+        "label": "Monografia",
+        "href": "/monografia"
+      }
+    },
+    "metrics": [
+      {
+        "value": "66",
+        "label": "pozycji dorobku"
+      },
+      {
+        "value": "1",
+        "label": "monografia autorska"
+      },
+      {
+        "value": "1000",
+        "label": "respondentów GZM"
+      },
+      {
+        "value": "18",
+        "label": "spotkań FGI"
+      }
+    ],
+    "profile": {
+      "eyebrow": "Profil",
+      "title": "Nauka oparta na praktyce",
+      "lead": "Łączę przygotowanie techniczne, ekonomiczne i menedżerskie z wieloletnim doświadczeniem w sektorze energetycznym.",
+      "text": "Mój program badawczy obejmuje inteligentne zarządzanie miastami, kapitały 4T+, transformację energetyczno-klimatyczną, gospodarkę cyfrową oraz konkurencyjność organizacji infrastrukturalnych.",
+      "linkLabel": "Poznaj pełny profil →",
+      "linkHref": "/o-mnie"
+    },
+    "research": {
+      "eyebrow": "Program badawczy",
+      "title": "Cztery powiązane obszary",
+      "text": "Od inteligentnego zarządzania miastem do odporności energetycznej i cyfrowej.",
+      "areas": [
+        {
+          "number": "01",
+          "title": "Smart City",
+          "text": "Miasto inteligentne jako system adaptacyjny, sieciowy i współzarządzany.",
+          "href": "/badania#smart-city"
+        },
+        {
+          "number": "02",
+          "title": "Transformacja energetyczna",
+          "text": "Dekarbonizacja, bezpieczeństwo energetyczne i akceptacja społeczna.",
+          "href": "/badania#transformacja"
+        },
+        {
+          "number": "03",
+          "title": "Model 4T+",
+          "text": "Technologia, talent, tolerancja, zaufanie i rezyliencja systemowa.",
+          "href": "/badania#model-4t"
+        },
+        {
+          "number": "04",
+          "title": "Gospodarka cyfrowa",
+          "text": "Cyfrowe bliźniaki, dane i transformacja organizacji infrastrukturalnych.",
+          "href": "/badania#cyfryzacja"
+        }
+      ]
+    },
+    "monograph": {
+      "kicker": "Polskie Wydawnictwo Ekonomiczne • 2026",
+      "coverTitle": "Rezyliencja miast inteligentnych",
+      "coverSubtitle": "w warunkach transformacji energetyczno-klimatycznej",
+      "coverAuthor": "Grzegorz Kinelski",
+      "eyebrow": "Główne osiągnięcie naukowe",
+      "title": "Autorski model kapitałów 4T+",
+      "lead": "Model integruje technologię, talent, tolerancję i zaufanie z bezpieczeństwem mieszkańców oraz sprawczością instytucjonalną.",
+      "metrics": [
+        {
+          "value": "1000",
+          "label": "respondentów"
+        },
+        {
+          "value": "152",
+          "label": "uczestników FGI"
+        },
+        {
+          "value": "CB-SEM",
+          "label": "modelowanie"
+        }
+      ],
+      "buttonLabel": "Poznaj monografię",
+      "buttonHref": "/monografia"
+    },
+    "publications": {
+      "eyebrow": "Publikacje",
+      "title": "Najnowsze prace",
+      "text": "Wybrane wyniki badań nad transformacją energetyczną, cyfryzacją i Smart City.",
+      "featuredLp": [
+        66,
+        65,
+        64
+      ]
+    }
+  },
+  "visibility": {
+    "profileSection": true,
+    "researchSection": true,
+    "monographSection": true,
+    "publicationsSection": true,
+    "showAssistantInNavigation": true
+  }
+}

@@ -1,0 +1,17 @@
+---
+import contact from '../data/contact.json';
+---
+<article class="contact-card-v4">
+  <p class="eyebrow">Kontakt akademicki</p>
+  <h2>{contact.name}</h2>
+  <p>{contact.degree}<br />{contact.role}</p>
+  <div class="contact-lines">
+    <a href={`mailto:${contact.email}`}>{contact.email}</a>
+    <span>{contact.affiliation} • {contact.department}</span>
+    <a href={contact.orcid} target="_blank" rel="noopener">ORCID</a>
+  </div>
+  <div class="actions">
+    <a class="button primary" href={`mailto:${contact.email}`}>Napisz wiadomość</a>
+    <a class="button secondary" href="/grzegorz-kinelski.vcf" download>Pobierz kontakt</a>
+  </div>
+</article>

@@ -1,0 +1,106 @@
+---
+interface Conference {
+  date?: string;
+  year?: string | number;
+  place?: string;
+  organizer?: string;
+  name?: string;
+  activity?: string;
+}
+
+interface Props {
+  conferences?: Conference[];
+}
+
+const { conferences = [] } = Astro.props as Props;
+
+const clean: Conference[] = conferences
+  .filter((item: Conference) => Boolean(item.name || item.activity || item.organizer))
+  .sort(
+    (a: Conference, b: Conference) =>
+      Number(b.year ?? 0) - Number(a.year ?? 0)
+  );
+
+const years: string[] = Array.from(
+  new Set<string>(
+    clean
+      .map((item: Conference) => String(item.year ?? ''))
+      .filter((value: string) => value.length > 0)
+  )
+).sort().reverse();
+---
+<div class="conference-browser">
+  <div class="conference-toolbar">
+    <label>
+      <span>Szukaj wydarzenia</span>
+      <input id="conference-search" type="search" placeholder="Nazwa, organizator, miejsce..." />
+    </label>
+    <label>
+      <span>Rok</span>
+      <select id="conference-year">
+        <option value="">Wszystkie lata</option>
+        {years.map((year: string) => <option value={year}>{year}</option>)}
+      </select>
+    </label>
+  </div>
+
+  <div class="conference-count"><strong id="conference-count">{clean.length}</strong> wydarzeń</div>
+
+  <div class="conference-list">
+    {clean.map((conference: Conference) => (
+      <article
+        class="conference-item-v4"
+        data-conference
+        data-year={conference.year}
+        data-search={`${conference.name ?? ''} ${conference.organizer ?? ''} ${conference.place ?? ''} ${conference.activity ?? ''}`.toLowerCase()}
+      >
+        <time>{conference.date || conference.year}</time>
+        <div>
+          <span>{conference.place}{conference.organizer ? ` • ${conference.organizer}` : ''}</span>
+          <h3>{conference.name || conference.organizer || 'Wydarzenie naukowe'}</h3>
+          {conference.activity && <p>{conference.activity}</p>}
+        </div>
+      </article>
+    ))}
+  </div>
+
+  <div id="conference-empty" class="conference-empty" hidden>
+    Brak wydarzeń spełniających kryteria.
+  </div>
+</div>
+
+<script>
+  const search = document.querySelector<HTMLInputElement>('#conference-search');
+  const year = document.querySelector<HTMLSelectElement>('#conference-year');
+  const items = Array.from(
+    document.querySelectorAll<HTMLElement>('[data-conference]')
+  );
+  const count = document.querySelector<HTMLElement>('#conference-count');
+  const empty = document.querySelector<HTMLElement>('#conference-empty');
+
+  const normalize = (value: unknown): string =>
+    String(value ?? '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+  const filterConferences = (): void => {
+    const query = normalize(search?.value);
+    let visible = 0;
+
+    items.forEach((item: HTMLElement) => {
+      const show =
+        (!query || normalize(item.dataset.search).includes(query)) &&
+        (!year?.value || item.dataset.year === year.value);
+
+      item.hidden = !show;
+      if (show) visible += 1;
+    });
+
+    if (count) count.textContent = String(visible);
+    if (empty) empty.hidden = visible !== 0;
+  };
+
+  search?.addEventListener('input', filterConferences);
+  year?.addEventListener('change', filterConferences);
+</script>

@@ -1,32 +1,59 @@
-# kinelski.pl — kompletna wersja 3.0
+# KINELSKI.PL 5.0.2
 
-Wielostronicowy serwis akademicki oparty na danych z pełnego pakietu habilitacyjnego.
+# KINELSKI.PL 5.0.1 — panel administratora
 
-## Strony
-- index.html
-- o-mnie.html
-- badania.html
-- publikacje.html (dynamiczne filtrowanie 53 pozycji)
-- monografia.html
-- aktywnosc.html
-- kontakt.html
-
-## Dane
-- assets/data/publications.json
-- assets/data/conferences.json
-- do-pobrania/publikacje.csv
+Pełna wersja serwisu Astro z panelem administratora oraz poprawkami typowania dla Astro 7.1.3.
 
 ## Uruchomienie
-Otwórz folder w VS Code i uruchom index.html za pomocą Live Server.
+
+```bash
+npm install
+npm run dev
+```
+
+Strona:
+
+```text
+http://localhost:4321/
+```
+
+Panel administratora:
+
+```text
+http://localhost:4321/admin
+```
+
+## Kontrola przed publikacją
+
+```bash
+npm run check
+npm run build
+npm run preview
+```
+
+## Kontakt na stronie
+
+```text
+gkinelski@wsb.edu.pl
+```
+
+## Panel administratora
+
+Instrukcja znajduje się w pliku:
+
+```text
+INSTRUKCJA_PANELU_ADMINISTRATORA.md
+```
 
 ## Publikacja
-Wgraj całą zawartość folderu do repozytorium gkinelski/kinelski.pl.
-GitHub: Settings → Pages → Deploy from a branch → main / root.
-Custom domain: kinelski.pl.
-Nie usuwaj rekordów DNS `home` i `_acme-challenge.home`, ponieważ obsługują Home Assistant.
 
-## Przed publikacją
-- potwierdź treść sekcji kariery i funkcji;
-- uruchom adres grzegorz@kinelski.pl lub zmień adres kontaktowy;
-- sprawdź wszystkie linki zewnętrzne;
-- sprawdź stronę na telefonie.
+Po poprawnym teście skopiuj zawartość projektu do lokalnego repozytorium `kinelski.pl`, następnie wykonaj:
+
+```bash
+git add .
+git commit -m "KINELSKI.PL 5.0.1 - panel administratora i poprawki kompilacji"
+git push
+```
+
+
+Poprawka 5.0.2: zamknięto komponent `AdminLayout` w `src/pages/admin.astro`, co usuwało błąd kompilacji produkcyjnej.

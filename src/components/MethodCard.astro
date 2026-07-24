@@ -1,0 +1,16 @@
+---
+interface Props {
+  value: string;
+  title: string;
+  text: string;
+  tag?: string;
+}
+const { value, title, text, tag } = Astro.props;
+---
+
+<article class="method-card">
+  {tag && <span>{tag}</span>}
+  <strong>{value}</strong>
+  <h3>{title}</h3>
+  <p>{text}</p>
+</article>

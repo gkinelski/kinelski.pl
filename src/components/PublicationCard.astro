@@ -1,0 +1,62 @@
+---
+interface Publication {
+  lp: number | string;
+  year: number | string;
+  title: string;
+  authors: string;
+  type: string;
+  area: string;
+  publisher?: string;
+  doi?: string;
+  doiUrl?: string;
+  url?: string;
+  apa?: string;
+}
+
+interface Props {
+  publication: Publication;
+}
+
+const { publication } = Astro.props as Props;
+---
+<article
+  class="publication-card"
+  data-publication
+  data-year={publication.year}
+  data-area={publication.area}
+  data-type={publication.type}
+  data-search={`${publication.title} ${publication.authors} ${publication.publisher ?? ''}`.toLowerCase()}
+>
+  <div class="publication-year">{publication.year}</div>
+  <div class="publication-content">
+    <div class="publication-tags">
+      <span>{publication.area}</span>
+      <span>{publication.type}</span>
+      <span>LP {publication.lp}</span>
+    </div>
+    <h2>{publication.title}</h2>
+    <p class="publication-authors">{publication.authors}</p>
+    {publication.publisher && <p class="publication-source">{publication.publisher}</p>}
+    <div class="publication-controls">
+      <button class="publication-control" type="button" data-copy-apa data-apa={publication.apa ?? ''}>Kopiuj APA</button>
+      <button class="publication-control" type="button" data-show-apa>Pokaż APA</button>
+      <button
+        class="publication-control"
+        type="button"
+        data-copy-bibtex
+        data-title={publication.title}
+        data-authors={publication.authors}
+        data-year={publication.year}
+        data-doi={publication.doi ?? ''}
+        data-publisher={publication.publisher ?? ''}
+      >
+        Kopiuj BibTeX
+      </button>
+    </div>
+    <div class="publication-apa" data-apa-panel hidden>{publication.apa}</div>
+  </div>
+  <div class="publication-links">
+    {publication.doiUrl && <a href={publication.doiUrl} target="_blank" rel="noopener">DOI ↗</a>}
+    {!publication.doiUrl && publication.url && <a href={publication.url} target="_blank" rel="noopener">Źródło ↗</a>}
+  </div>
+</article>

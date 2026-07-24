@@ -1,0 +1,36 @@
+---
+interface Item {
+  period?: string;
+  year?: string;
+  organisation?: string;
+  institution?: string;
+  role?: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  items: Item[];
+  variant?: 'career' | 'education';
+}
+
+const { items, variant = 'career' } = Astro.props;
+---
+
+<div class:list={['timeline-pro', `timeline-${variant}`]}>
+  {items.map((item) => (
+    <article class="timeline-entry">
+      <div class="timeline-rail">
+        <span class="timeline-dot"></span>
+        <span class="timeline-line"></span>
+      </div>
+      <div class="timeline-date">{item.period ?? item.year}</div>
+      <div class="timeline-body">
+        <p class="timeline-context">{item.organisation ?? item.institution}</p>
+        <h3>{item.role ?? item.title}</h3>
+        {item.role && <p class="timeline-degree">{item.title}</p>}
+        <p>{item.description}</p>
+      </div>
+    </article>
+  ))}
+</div>

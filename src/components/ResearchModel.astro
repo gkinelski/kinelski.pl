@@ -1,0 +1,43 @@
+---
+const nodes = [
+  {
+    code: 'T1',
+    title: 'Technologia',
+    text: 'Infrastruktura cyfrowa i energetyczna, dane, sensory, automatyzacja i interoperacyjność.'
+  },
+  {
+    code: 'T2',
+    title: 'Talent',
+    text: 'Kompetencje, kreatywność, zdolność uczenia się i kapitał wiedzy.'
+  },
+  {
+    code: 'T3',
+    title: 'Tolerancja',
+    text: 'Otwartość, inkluzywność, różnorodność i zdolność współpracy.'
+  },
+  {
+    code: 'T4',
+    title: 'Zaufanie',
+    text: 'Legitymizacja instytucji, transparentność, relacje i akceptacja działań publicznych.'
+  }
+];
+---
+
+<div class="model-4t" aria-label="Model kapitałów 4T+">
+  <div class="model-center">
+    <span>+</span>
+    <strong>Rezyliencja</strong>
+    <small>bezpieczeństwo • adaptacja • ciągłość</small>
+  </div>
+
+  {nodes.map((node, index) => (
+    <article class={`model-node model-node-${index + 1}`}>
+      <span>{node.code}</span>
+      <h3>{node.title}</h3>
+      <p>{node.text}</p>
+    </article>
+  ))}
+
+  <div class="model-ring ring-one"></div>
+  <div class="model-ring ring-two"></div>
+</div>

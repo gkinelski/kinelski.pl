@@ -1,0 +1,173 @@
+---
+import data from '../data/researchAssistant.json';
+const allQuestions = data.categories.flatMap((category) =>
+  category.questions.map((item) => ({ ...item, category: category.label }))
+);
+---
+<section class="assistant-shell" data-research-assistant>
+  <div class="assistant-sidebar">
+    <div class="assistant-brand">
+      <span>AI</span>
+      <div>
+        <strong>Asystent badań</strong>
+        <small>Baza wiedzy KINELSKI.PL</small>
+      </div>
+    </div>
+
+    <nav aria-label="Kategorie pytań">
+      <button class="assistant-category active" data-category="all">Wszystkie tematy</button>
+      {data.categories.map((category) => (
+        <button class="assistant-category" data-category={category.id}>{category.label}</button>
+      ))}
+    </nav>
+
+    <p class="assistant-disclaimer">
+      Odpowiedzi są generowane z przygotowanej bazy wiedzy serwisu i nie zastępują pełnych publikacji.
+    </p>
+  </div>
+
+  <div class="assistant-main">
+    <div class="assistant-intro">
+      <p class="eyebrow">Zapytaj o badania</p>
+      <h2>Znajdź odpowiedź w programie naukowym</h2>
+      <p>
+        Wybierz pytanie lub wpisz własne hasło. Asystent przeszukuje
+        wiedzę dotyczącą modelu 4T+, Smart City, transformacji energetycznej
+        i gospodarki cyfrowej.
+      </p>
+    </div>
+
+    <label class="assistant-search">
+      <span class="sr-only">Wyszukaj pytanie</span>
+      <input type="search" placeholder="Np. czym jest model 4T+?" data-assistant-search />
+      <button type="button" data-assistant-submit>Szukaj</button>
+    </label>
+
+    <div class="assistant-suggestions" data-assistant-suggestions>
+      {allQuestions.slice(0, 6).map((item) => (
+        <button type="button" data-question={item.q} data-category-name={item.category}>
+          <span>{item.category}</span>
+          <strong>{item.q}</strong>
+        </button>
+      ))}
+    </div>
+
+    <div class="assistant-answer" data-assistant-answer hidden>
+      <div class="assistant-answer-head">
+        <span>Odpowiedź</span>
+        <button type="button" data-assistant-close aria-label="Zamknij odpowiedź">×</button>
+      </div>
+      <h3 data-answer-question></h3>
+      <p data-answer-text></p>
+      <div class="assistant-answer-links" data-answer-links></div>
+    </div>
+
+    <div class="assistant-empty" data-assistant-empty hidden>
+      <h3>Nie znalazłem dokładnej odpowiedzi</h3>
+      <p>
+        Spróbuj użyć krótszego hasła, np. „4T+”, „Smart City”,
+        „dekarbonizacja” albo „cyfrowe bliźniaki”.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ assistantData: JSON.stringify(data) }}>
+  const root = document.querySelector('[data-research-assistant]');
+  if (root) {
+    const parsed = JSON.parse(assistantData);
+    const entries = parsed.categories.flatMap((category) =>
+      category.questions.map((item) => ({ ...item, categoryId: category.id, category: category.label }))
+    );
+
+    const normalize = (value) =>
+      String(value ?? '')
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
+
+    const search = root.querySelector('[data-assistant-search]');
+    const submit = root.querySelector('[data-assistant-submit]');
+    const suggestions = root.querySelector('[data-assistant-suggestions]');
+    const answer = root.querySelector('[data-assistant-answer]');
+    const empty = root.querySelector('[data-assistant-empty]');
+    const answerQuestion = root.querySelector('[data-answer-question]');
+    const answerText = root.querySelector('[data-answer-text]');
+    const answerLinks = root.querySelector('[data-answer-links]');
+
+    const showAnswer = (entry) => {
+      if (!entry) return;
+      answerQuestion.textContent = entry.q;
+      answerText.textContent = entry.a;
+      answerLinks.innerHTML = '';
+
+      entry.links?.forEach((link) => {
+        const anchor = document.createElement('a');
+        anchor.href = link.href;
+        anchor.textContent = link.label;
+        if (link.href.startsWith('http')) {
+          anchor.target = '_blank';
+          anchor.rel = 'noopener';
+        }
+        answerLinks.appendChild(anchor);
+      });
+
+      answer.hidden = false;
+      empty.hidden = true;
+      answer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    };
+
+    const scoreEntry = (entry, query) => {
+      const q = normalize(query);
+      const source = normalize(`${entry.q} ${entry.a} ${entry.category}`);
+      if (source.includes(q)) return 100;
+      return q.split(/\s+/).filter((word) => word.length > 2 && source.includes(word)).length;
+    };
+
+    const runSearch = () => {
+      const value = search.value.trim();
+      if (!value) return;
+      const ranked = entries
+        .map((entry) => ({ entry, score: scoreEntry(entry, value) }))
+        .sort((a, b) => b.score - a.score);
+      if (ranked[0]?.score > 0) showAnswer(ranked[0].entry);
+      else {
+        answer.hidden = true;
+        empty.hidden = false;
+      }
+    };
+
+    submit?.addEventListener('click', runSearch);
+    search?.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') runSearch();
+    });
+
+    root.querySelectorAll('[data-question]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const entry = entries.find((item) => item.q === button.dataset.question);
+        if (entry) showAnswer(entry);
+      });
+    });
+
+    root.querySelectorAll('[data-category]').forEach((button) => {
+      button.addEventListener('click', () => {
+        root.querySelectorAll('[data-category]').forEach((item) => item.classList.remove('active'));
+        button.classList.add('active');
+        const selected = button.dataset.category;
+        const filtered = selected === 'all' ? entries : entries.filter((entry) => entry.categoryId === selected);
+        suggestions.innerHTML = '';
+        filtered.slice(0, 8).forEach((entry) => {
+          const item = document.createElement('button');
+          item.type = 'button';
+          item.innerHTML = `<span>${entry.category}</span><strong>${entry.q}</strong>`;
+          item.addEventListener('click', () => showAnswer(entry));
+          suggestions.appendChild(item);
+        });
+      });
+    });
+
+    root.querySelector('[data-assistant-close]')?.addEventListener('click', () => {
+      answer.hidden = true;
+    });
+  }
+</script>

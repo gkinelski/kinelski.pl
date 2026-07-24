@@ -1,0 +1,177 @@
+{
+  "hero": {
+    "eyebrow": "Profil naukowy i zawodowy",
+    "title": "Technika, zarządzanie i transformacja",
+    "lead": "Łączę przygotowanie inżynierskie i ekonomiczne z ponad trzydziestoletnim doświadczeniem w sektorze energetycznym oraz działalnością badawczą w naukach o zarządzaniu i jakości.",
+    "portrait": "/images/grzegorz-kinelski.webp",
+    "portraitAlt": "dr Grzegorz Kinelski",
+    "portraitKicker": "Akademia WSB",
+    "portraitTitle": "Adiunkt w Katedrze Zarządzania"
+  },
+  "biogram": {
+    "lead": "Jestem doktorem nauk ekonomicznych, inżynierem elektrykiem, menedżerem i nauczycielem akademickim.",
+    "paragraphs": [
+      "Od 1994 roku jestem związany z sektorem energetycznym. Doświadczenie operacyjne, handlowe i zarządcze zdobywałem w przedsiębiorstwach infrastrukturalnych oraz grupach kapitałowych działających na rynku energii. Równolegle rozwijałem warsztat badawczy dotyczący konkurencyjności, zarządzania usługami, transformacji cyfrowej i dekarbonizacji.",
+      "Od 2020 roku pracuję na stanowisku adiunkta w Katedrze Zarządzania Akademii WSB w Dąbrowie Górniczej. Prowadzę badania oraz zajęcia na studiach licencjackich, magisterskich i MBA. W pracy naukowej wykorzystuję praktyczne doświadczenie w projektowaniu i wdrażaniu zmian w organizacjach sektora energetycznego."
+    ],
+    "quote": "Moim celem jest tworzenie wiedzy, która objaśnia mechanizmy transformacji, a zarazem może zostać przełożona na strategie, decyzje i mierzalne rezultaty."
+  },
+  "perspectives": [
+    {
+      "title": "Perspektywa",
+      "value": "Inżynierska",
+      "text": "Elektroenergetyka, infrastruktura, technologie i niezawodność systemów."
+    },
+    {
+      "title": "Perspektywa",
+      "value": "Ekonomiczna",
+      "text": "Konkurencyjność, efektywność, finanse i wartość organizacji."
+    },
+    {
+      "title": "Perspektywa",
+      "value": "Menedżerska",
+      "text": "Strategia, przywództwo, transformacja i zarządzanie interesariuszami."
+    },
+    {
+      "title": "Perspektywa",
+      "value": "Naukowa",
+      "text": "Smart City, model 4T+, rezyliencja oraz metody ilościowe i jakościowe."
+    }
+  ],
+  "education": [
+    {
+      "year": "1997",
+      "title": "Inżynier elektrotechniki",
+      "institution": "Politechnika Śląska",
+      "description": "Wydział Elektryczny, specjalność elektroenergetyka. Techniczny fundament badań nad infrastrukturą i bezpieczeństwem energetycznym."
+    },
+    {
+      "year": "2000",
+      "title": "Magister inżynier zarządzania i marketingu",
+      "institution": "Politechnika Śląska",
+      "description": "Specjalność zarządzanie przedsiębiorstwem. Integracja perspektywy technicznej z ekonomią organizacji."
+    },
+    {
+      "year": "2009",
+      "title": "Studia menedżersko-finansowe",
+      "institution": "Akademia Ekonomiczna w Katowicach • VUT w Brnie",
+      "description": "Rozwój kompetencji w zakresie finansów, strategii i zarządzania wartością."
+    },
+    {
+      "year": "2011",
+      "title": "Master of Business Administration",
+      "institution": "Dominican University, Brennan School of Business, Chicago",
+      "description": "Program MBA wzmacniający kompetencje przywódcze, strategiczne i finansowe."
+    },
+    {
+      "year": "2017",
+      "title": "Doktor nauk ekonomicznych",
+      "institution": "Uniwersytet Szczeciński",
+      "description": "Rozprawa: „Oddziaływanie centrów usług wspólnych na konkurencyjność przedsiębiorstw sektora energetycznego”."
+    }
+  ],
+  "career": [
+    {
+      "period": "1994–2000",
+      "organisation": "Górnośląski Zakład Energetyczny",
+      "role": "Początek kariery w elektroenergetyce",
+      "title": "Początek kariery w elektroenergetyce",
+      "description": "Doświadczenie operacyjne i organizacyjne w przedsiębiorstwie infrastrukturalnym."
+    },
+    {
+      "period": "2000–2010",
+      "organisation": "Vattenfall",
+      "role": "Funkcje menedżerskie",
+      "title": "Funkcje menedżerskie",
+      "description": "Zarządzanie obsługą klientów i sprzedażą, w tym funkcja Dyrektora Obsługi Klientów."
+    },
+    {
+      "period": "2010–2013",
+      "organisation": "Tauron",
+      "role": "Członek Zarządu ds. Obsługi Klientów",
+      "title": "Członek Zarządu ds. Obsługi Klientów",
+      "description": "Zarządzanie procesami klientowskimi i usługowymi w dużej grupie energetycznej."
+    },
+    {
+      "period": "2013–2016",
+      "organisation": "Grupa Enea",
+      "role": "Członek Zarządu",
+      "title": "Członek Zarządu",
+      "description": "Zarządzanie w grupie kapitałowej oraz rozwój modeli usług wspólnych i efektywności organizacyjnej."
+    },
+    {
+      "period": "2017–2018",
+      "organisation": "PKP Energetyka",
+      "role": "Prezes PKP Energetyka Sprzedaż",
+      "title": "Prezes PKP Energetyka Sprzedaż",
+      "description": "Zarządzanie sprzedażą energii i usługami dla odbiorców infrastrukturalnych."
+    },
+    {
+      "period": "2018–2024",
+      "organisation": "Grupa Veolia",
+      "role": "Funkcje zarządcze",
+      "title": "Funkcje zarządcze",
+      "description": "Członek zarządów Veolia Energy Contracting Poland i Veolia Energy Supply Poland; projekty dekarbonizacyjne i usługowe."
+    },
+    {
+      "period": "od 2024",
+      "organisation": "Enea S.A.",
+      "role": "Prezes Zarządu",
+      "title": "Prezes Zarządu",
+      "description": "Zarządzanie transformacją jednej z największych grup energetycznych w Polsce."
+    },
+    {
+      "period": "od 2020",
+      "organisation": "Akademia WSB",
+      "role": "Adiunkt w Katedrze Zarządzania",
+      "title": "Adiunkt w Katedrze Zarządzania",
+      "description": "Badania, dydaktyka na studiach licencjackich, magisterskich i MBA oraz współpraca z otoczeniem społeczno-gospodarczym."
+    }
+  ],
+  "qualifications": [
+    {
+      "title": "Certified Green Project Manager, GPM-b",
+      "meta": "GPM Global • 2022–2027",
+      "text": "Zarządzanie projektami z uwzględnieniem efektów środowiskowych, społecznych i ładu organizacyjnego."
+    },
+    {
+      "title": "Professional Project Management",
+      "meta": "kwalifikacje projektowe",
+      "text": "Projektowanie i prowadzenie złożonych programów transformacyjnych oraz portfeli inwestycji."
+    },
+    {
+      "title": "Certified Peer Reviewer Course",
+      "meta": "Elsevier Researcher Academy",
+      "text": "Kompetencje w zakresie krytycznej oceny badań, metod i komunikacji naukowej."
+    },
+    {
+      "title": "Ekspertyza sektorowa",
+      "meta": "energetyka • regulacje • rynek",
+      "text": "Praktyczna znajomość organizacji infrastrukturalnych, usług energetycznych, dekarbonizacji i bezpieczeństwa."
+    }
+  ],
+  "recognition": [
+    {
+      "year": "2025",
+      "title": "Bursztyn Polskiej Energetyki",
+      "text": "Wyróżnienie za rozwój zielonego portfela wytwórczego, odnawialnych źródeł energii i realizację strategii transformacyjnej."
+    },
+    {
+      "year": "2025",
+      "title": "Najlepsze w Polsce – The Best in Poland",
+      "text": "Nagroda dla Enea S.A. i Statuetka Hipolita jako potwierdzenie jakości zarządzania i oddziaływania społecznego."
+    },
+    {
+      "year": "2025–2029",
+      "title": "Rada Naukowa ITG KOMAG",
+      "text": "Członkostwo w radzie naukowej instytutu badawczego jako przejaw rozpoznawalności eksperckiej."
+    }
+  ],
+  "cta": {
+    "eyebrow": "Dalsza eksploracja",
+    "title": "Poznaj program badawczy",
+    "text": "Kolejna część serwisu przedstawia Smart City, transformację energetyczną, gospodarkę cyfrową i autorski model 4T+.",
+    "label": "Przejdź do badań",
+    "href": "/badania"
+  }
+}

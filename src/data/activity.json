@@ -1,0 +1,152 @@
+{
+  "projects": [
+    {
+      "period": "2023–2026",
+      "title": "SHORE",
+      "type": "projekt międzynarodowy",
+      "text": "Projekt badawczo-edukacyjny rozwijający edukację na rzecz zrównoważonego rozwoju oraz świadomość środowiskową.",
+      "tags": [
+        "edukacja",
+        "zrównoważony rozwój",
+        "współpraca międzynarodowa"
+      ]
+    },
+    {
+      "period": "2023–2026",
+      "title": "HEIsCITI",
+      "type": "projekt badawczo-edukacyjny",
+      "text": "Wzmacnianie roli uczelni wyższych w inteligentnych, innowacyjnych i zrównoważonych ekosystemach miejskich.",
+      "tags": [
+        "Smart City",
+        "uczelnie",
+        "innowacje"
+      ]
+    },
+    {
+      "period": "2026–2027",
+      "title": "Q-Helix Urban Resilience",
+      "type": "projekt badawczy",
+      "text": "Badania nad miejską rezyliencją i współpracą w modelu poczwórnej helisy: nauka, biznes, administracja i społeczeństwo.",
+      "tags": [
+        "rezyliencja",
+        "4-helix",
+        "governance"
+      ]
+    },
+    {
+      "period": "2021",
+      "title": "Grant RID",
+      "type": "projekt interdyscyplinarny",
+      "text": "Rozwój badań nad Smart City, potencjałami 4T i mechanizmami zarządzania rozwojem metropolitalnym.",
+      "tags": [
+        "4T",
+        "Smart City",
+        "metropolia"
+      ]
+    }
+  ],
+  "mobility": [
+    {
+      "year": "2022",
+      "institution": "University of Zagreb",
+      "place": "Zagrzeb, Chorwacja",
+      "type": "staż naukowy",
+      "text": "Rozwój międzynarodowego wymiaru programu badawczego oraz współpracy w obszarze zarządzania i zrównoważonego rozwoju."
+    },
+    {
+      "year": "2022",
+      "institution": "VSB–Technical University of Ostrava",
+      "place": "Ostrawa, Czechy",
+      "type": "visiting professor mobility",
+      "text": "Współpraca naukowa w obszarze energetyki, wodoru, transformacji i zarządzania organizacjami infrastrukturalnymi."
+    },
+    {
+      "year": "2022",
+      "institution": "Uniwersytet Ekonomiczny w Katowicach",
+      "place": "Katowice, Polska",
+      "type": "staż naukowy",
+      "text": "Rozwój badań w dyscyplinie nauk o zarządzaniu i jakości oraz pogłębienie warsztatu metodologicznego."
+    },
+    {
+      "year": "2020–2021",
+      "institution": "IGSMiE PAN",
+      "place": "Kraków, Polska",
+      "type": "staż naukowy",
+      "text": "Badania nad dekarbonizacją, rynkiem mocy, polityką energetyczną i gospodarką zasobami."
+    }
+  ],
+  "teaching": [
+    {
+      "title": "Transformacja energetyczna",
+      "audience": "studia magisterskie i MBA",
+      "text": "Zarządzanie zmianą, dekarbonizacja, rynek energii, bezpieczeństwo i strategie przedsiębiorstw energetycznych."
+    },
+    {
+      "title": "Smart City i zarządzanie metropolią",
+      "audience": "studia licencjackie i magisterskie",
+      "text": "Modele Smart City, governance, kapitały miejskie, dane, partycypacja i rezyliencja."
+    },
+    {
+      "title": "Zarządzanie projektami",
+      "audience": "studia i programy menedżerskie",
+      "text": "Projektowanie, realizacja i ocena złożonych projektów transformacyjnych."
+    },
+    {
+      "title": "Gospodarka cyfrowa",
+      "audience": "zajęcia eksperckie",
+      "text": "Cyfrowe modele biznesowe, dane, technologie poznawcze i transformacja organizacji."
+    }
+  ],
+  "supervision": [
+    {
+      "title": "Promotorstwo pomocnicze",
+      "names": "dr Jakub Stęchły • dr Wojciech Muras",
+      "text": "Wsparcie rozwoju prac doktorskich związanych z energetyką, cyfryzacją i zarządzaniem."
+    },
+    {
+      "title": "Opieka nad doktorantami",
+      "names": "seminaria i konsultacje badawcze",
+      "text": "Konsultowanie problemów badawczych, metodologii, operacjonalizacji i interpretacji wyników."
+    },
+    {
+      "title": "Recenzowanie naukowe",
+      "names": "czasopisma i konferencje",
+      "text": "Aktywność recenzencka oraz udział w ocenie artykułów, rozdziałów i wystąpień naukowych."
+    }
+  ],
+  "awards": [
+    {
+      "year": "2025",
+      "title": "Bursztyn Polskiej Energetyki",
+      "text": "Wyróżnienie za działalność związaną z transformacją energetyczną, rozwojem OZE i budowaniem odporności sektora."
+    },
+    {
+      "year": "2025",
+      "title": "Najlepsze w Polsce – The Best in Poland",
+      "text": "Wyróżnienie dla Enea S.A. i Statuetka Hipolita jako potwierdzenie jakości zarządzania oraz oddziaływania społecznego."
+    },
+    {
+      "year": "2025–2029",
+      "title": "Rada Naukowa ITG KOMAG",
+      "text": "Członkostwo w radzie naukowej instytutu badawczego i udział w rozwoju badań stosowanych."
+    }
+  ],
+  "expertise": [
+    {
+      "title": "Energetyka i rynek energii",
+      "text": "Strategie, regulacje, konkurencyjność, sprzedaż, usługi, bezpieczeństwo i transformacja."
+    },
+    {
+      "title": "Smart City i administracja lokalna",
+      "text": "Strategie miejskie, governance, kapitały społeczne i infrastruktura krytyczna."
+    },
+    {
+      "title": "Transformacja organizacyjna",
+      "text": "Centra usług wspólnych, cyfryzacja, efektywność, zarządzanie zmianą i modele biznesowe."
+    },
+    {
+      "title": "Debata publiczna i konferencje",
+      "text": "Udział w panelach branżowych, seminariach, kongresach i dyskusjach eksperckich."
+    }
+  ]
+}

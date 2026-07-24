@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ResearchAssistant from '../components/ResearchAssistant.astro';
+---
+
+<BaseLayout
+  title="Zapytaj o badania"
+  description="Interaktywny asystent wiedzy o badaniach Grzegorza Kinelskiego: model 4T+, Smart City, transformacja energetyczna i gospodarka cyfrowa."
+>
+  <section class="assistant-hero">
+    <div class="container">
+      <p class="eyebrow">Interaktywna baza wiedzy</p>
+      <h1>Zapytaj o moje badania</h1>
+      <p class="page-lead">
+        Szybki dostęp do najważniejszych pojęć, wyników i obszarów
+        programu naukowego.
+      </p>
+    </div>
+  </section>
+
+  <section class="section assistant-page-section">
+    <div class="container">
+      <ResearchAssistant />
+    </div>
+  </section>
+
+  <section class="section assistant-contact-strip">
+    <div class="container assistant-contact-grid">
+      <div>
+        <p class="eyebrow pale">Potrzebujesz pełnej odpowiedzi?</p>
+        <h2>Skontaktuj się bezpośrednio</h2>
+      </div>
+      <a class="button light" href="mailto:gkinelski@wsb.edu.pl">gkinelski@wsb.edu.pl</a>
+    </div>
+  </section>
+</BaseLayout>

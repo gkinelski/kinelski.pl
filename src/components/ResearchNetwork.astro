@@ -1,0 +1,32 @@
+---
+const nodes = [
+  { id: 'city', title: 'Smart City', subtitle: 'współzarządzanie' },
+  { id: 'energy', title: 'Transformacja', subtitle: 'dekarbonizacja' },
+  { id: 'digital', title: 'Cyfryzacja', subtitle: 'dane i technologia' },
+  { id: 'sector', title: 'Energetyka', subtitle: 'organizacje i regulacje' }
+];
+---
+<div class="research-network" aria-label="Mapa programu badawczego">
+  <div class="network-center">
+    <span>4T+</span>
+    <strong>Rezyliencja</strong>
+    <small>bezpieczeństwo mieszkańców</small>
+  </div>
+
+  {nodes.map((node, index) => (
+    <a class={`network-node network-node-${index + 1}`} href={`#${['smart-city','transformacja','cyfryzacja','energetyka'][index]}`}>
+      <span>{String(index + 1).padStart(2, '0')}</span>
+      <strong>{node.title}</strong>
+      <small>{node.subtitle}</small>
+    </a>
+  ))}
+
+  <svg class="network-lines" viewBox="0 0 1000 620" aria-hidden="true">
+    <line x1="500" y1="310" x2="190" y2="145" />
+    <line x1="500" y1="310" x2="810" y2="145" />
+    <line x1="500" y1="310" x2="190" y2="475" />
+    <line x1="500" y1="310" x2="810" y2="475" />
+    <circle cx="500" cy="310" r="195" />
+    <circle cx="500" cy="310" r="260" />
+  </svg>
+</div>

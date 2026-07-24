@@ -1,0 +1,24 @@
+---
+interface MobilityItem {
+  year: string;
+  type: string;
+  institution: string;
+  place: string;
+  text: string;
+}
+
+interface Props {
+  item: MobilityItem;
+}
+
+const { item } = Astro.props as Props;
+---
+<article class="mobility-card-v4">
+  <span class="mobility-year">{item.year}</span>
+  <div>
+    <p>{item.type}</p>
+    <h3>{item.institution}</h3>
+    <span>{item.place}</span>
+    <p class="mobility-text">{item.text}</p>
+  </div>
+</article>

@@ -1,0 +1,32 @@
+---
+import book from '../data/monograph.json';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  name: book.title,
+  author: {
+    '@type': 'Person',
+    name: book.author,
+    url: 'https://kinelski.pl'
+  },
+  publisher: {
+    '@type': 'Organization',
+    name: book.publisher
+  },
+  datePublished: String(book.year),
+  isbn: book.isbn,
+  bookFormat: 'https://schema.org/Hardcover',
+  inLanguage: 'pl',
+  url: book.doiUrl,
+  sameAs: book.doiUrl,
+  about: [
+    'Smart City',
+    'rezyliencja miejska',
+    'transformacja energetyczna',
+    'bezpieczeństwo energetyczne',
+    'model 4T+'
+  ]
+};
+---
+<script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />

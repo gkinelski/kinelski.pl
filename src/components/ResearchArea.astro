@@ -1,0 +1,88 @@
+---
+interface ResearchAreaData {
+  id: string;
+  number: string;
+  shortTitle: string;
+  title: string;
+  lead: string;
+  questions: string[];
+  themes: string[];
+  methods: string[];
+  publicationArea: string;
+}
+
+interface Publication {
+  area: string;
+  year: string | number;
+  type: string;
+  title: string;
+  authors: string;
+  doiUrl?: string;
+}
+
+interface Props {
+  area: ResearchAreaData;
+  publications?: Publication[];
+}
+
+const { area, publications = [] } = Astro.props as Props;
+
+const related: Publication[] = publications
+  .filter((publication: Publication) => publication.area === area.publicationArea)
+  .sort(
+    (a: Publication, b: Publication) =>
+      Number(b.year) - Number(a.year)
+  )
+  .slice(0, 3);
+---
+<section class="research-area-detail" id={area.id}>
+  <div class="research-area-heading">
+    <span>{area.number}</span>
+    <div>
+      <p class="eyebrow">{area.shortTitle}</p>
+      <h2>{area.title}</h2>
+      <p class="research-area-lead">{area.lead}</p>
+    </div>
+  </div>
+
+  <div class="research-area-columns">
+    <article>
+      <h3>Pytania badawcze</h3>
+      <ol class="research-question-list">
+        {area.questions.map((question: string) => <li>{question}</li>)}
+      </ol>
+    </article>
+
+    <article>
+      <h3>Zakres tematyczny</h3>
+      <div class="research-tag-cloud">
+        {area.themes.map((theme: string) => <span>{theme}</span>)}
+      </div>
+      <h3 class="research-method-title">Dominujące metody</h3>
+      <div class="research-method-tags">
+        {area.methods.map((method: string) => <span>{method}</span>)}
+      </div>
+    </article>
+  </div>
+
+  <div class="related-research-publications">
+    <div class="related-heading">
+      <h3>Powiązane publikacje</h3>
+      <a href={`/publikacje?obszar=${encodeURIComponent(area.publicationArea)}`}>
+        Pełny wykaz →
+      </a>
+    </div>
+    <div class="related-publication-grid">
+      {related.map((publication: Publication) => (
+        <article>
+          <span>{publication.year} • {publication.type}</span>
+          <h4>{publication.title}</h4>
+          <p>{publication.authors}</p>
+          {publication.doiUrl && (
+            <a href={publication.doiUrl} target="_blank" rel="noopener">DOI ↗</a>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

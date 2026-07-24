@@ -1,0 +1,22 @@
+---
+import { navigation, site, visibility } from '../data/site';
+const current = Astro.url.pathname;
+const visibleNavigation = navigation.filter((item) =>
+  item.href !== '/asystent' || visibility.showAssistantInNavigation
+);
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label={`${site.name} — strona główna`}>
+      <span class="brand-mark">{site.logoText}</span>
+      <span>{site.name}</span>
+    </a>
+    <button class="menu-button" data-menu-toggle aria-label="Otwórz menu"><span></span><span></span><span></span></button>
+    <nav class="navigation" data-menu aria-label="Nawigacja główna">
+      {visibleNavigation.map((item) => (
+        <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>{item.label}</a>
+      ))}
+      <button class="theme-button" data-theme-toggle aria-label="Zmień motyw">◐</button>
+    </nav>
+  </div>
+</header>
