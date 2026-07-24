@@ -11,6 +11,7 @@ interface Publication {
   doiUrl?: string;
   url?: string;
   apa?: string;
+  period?: string;
 }
 
 interface Props {
@@ -25,6 +26,7 @@ const { publication } = Astro.props as Props;
   data-year={publication.year}
   data-area={publication.area}
   data-type={publication.type}
+  data-period={publication.period ?? (Number(publication.year) >= 2018 ? "po" : "przed")}
   data-search={`${publication.title} ${publication.authors} ${publication.publisher ?? ''}`.toLowerCase()}
 >
   <div class="publication-year">{publication.year}</div>
@@ -33,10 +35,11 @@ const { publication } = Astro.props as Props;
       <span>{publication.area}</span>
       <span>{publication.type}</span>
       <span>LP {publication.lp}</span>
+      <span>{(publication.period ?? (Number(publication.year) >= 2018 ? "po" : "przed")) === "po" ? "Po doktoracie" : "Przed doktoratem"}</span>
     </div>
-    <h2>{publication.title}</h2>
-    <p class="publication-authors">{publication.authors}</p>
-    {publication.publisher && <p class="publication-source">{publication.publisher}</p>}
+    <h2 class="notranslate" translate="no">{publication.title}</h2>
+    <p class="publication-authors notranslate" translate="no">{publication.authors}</p>
+    {publication.publisher && <p class="publication-source notranslate" translate="no">{publication.publisher}</p>}
     <div class="publication-controls">
       <button class="publication-control" type="button" data-copy-apa data-apa={publication.apa ?? ''}>Kopiuj APA</button>
       <button class="publication-control" type="button" data-show-apa>Pokaż APA</button>
@@ -53,7 +56,7 @@ const { publication } = Astro.props as Props;
         Kopiuj BibTeX
       </button>
     </div>
-    <div class="publication-apa" data-apa-panel hidden>{publication.apa}</div>
+    <div class="publication-apa notranslate" translate="no" data-apa-panel hidden>{publication.apa}</div>
   </div>
   <div class="publication-links">
     {publication.doiUrl && <a href={publication.doiUrl} target="_blank" rel="noopener">DOI ↗</a>}

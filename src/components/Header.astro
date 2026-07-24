@@ -1,5 +1,6 @@
 ---
 import { navigation, site, visibility } from '../data/site';
+import LanguageSwitcher from './LanguageSwitcher.astro';
 const current = Astro.url.pathname;
 const visibleNavigation = navigation.filter((item) =>
   item.href !== '/asystent' || visibility.showAssistantInNavigation
@@ -7,7 +8,7 @@ const visibleNavigation = navigation.filter((item) =>
 ---
 <header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label={`${site.name} — strona główna`}>
+    <a class="brand notranslate" translate="no" href="/" aria-label={`${site.name} — strona główna`}>
       <span class="brand-mark">{site.logoText}</span>
       <span>{site.name}</span>
     </a>
@@ -16,6 +17,7 @@ const visibleNavigation = navigation.filter((item) =>
       {visibleNavigation.map((item) => (
         <a href={item.href} aria-current={current === item.href ? 'page' : undefined}>{item.label}</a>
       ))}
+      <LanguageSwitcher compact={true} />
       <button class="theme-button" data-theme-toggle aria-label="Zmień motyw">◐</button>
     </nav>
   </div>

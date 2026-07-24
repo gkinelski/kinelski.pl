@@ -12,7 +12,7 @@ const themeCss = `:root{--theme-primary:${theme.primary};--theme-primary-dark:${
 const personSchema = {'@context':'https://schema.org','@type':'Person',name:site.name,honorificPrefix:'dr',url:site.url,image:new URL(image,site.url).href,jobTitle:site.role,affiliation:{'@type':'CollegeOrUniversity',name:site.affiliation},sameAs:[site.orcid]};
 ---
 <!doctype html>
-<html lang="pl">
+<html lang="pl" data-language="pl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
@@ -35,6 +35,7 @@ const personSchema = {'@context':'https://schema.org','@type':'Person',name:site
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a><Header />
   <main id="main"><slot /></main><Footer />
+  <script is:inline src="/i18n-public.js" defer></script>
   <script is:inline>
     const root=document.documentElement;const saved=localStorage.getItem('theme');if(saved==='dark')root.dataset.theme='dark';
     document.querySelector('[data-theme-toggle]')?.addEventListener('click',()=>{const next=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=next;localStorage.setItem('theme',next)});

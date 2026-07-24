@@ -18,26 +18,26 @@ import book from '../data/monograph.json';
     <div class="book-hero-orbit orbit-b"></div>
 
     <div class="container book-hero-grid">
-      <div class="book-cover-3d" aria-label="Wizualizacja okładki monografii">
-        <div class="book-spine"></div>
-        <div class="book-front">
-          <div class="book-front-kicker">{book.publisher} • {book.year}</div>
-          <h1>Rezyliencja<br />miast inteligentnych</h1>
-          <p>w warunkach transformacji energetyczno-klimatycznej</p>
-          <strong>{book.author}</strong>
-        </div>
-      </div>
+      <figure class="book-cover-authentic">
+        <img
+          src="/images/okladka-monografii.png"
+          alt="Okładka monografii Grzegorza Kinelskiego: Rezyliencja miast inteligentnych w warunkach transformacji energetyczno-klimatycznej"
+          width="319"
+          height="484"
+          loading="eager"
+        />
+      </figure>
 
       <div class="book-hero-copy">
         <p class="eyebrow pale">Monografia autorska</p>
-        <h1>{book.title}</h1>
+        <h1 class="notranslate" translate="no">{book.title}</h1>
         <p class="book-lead">
           Syntetyczne zwieńczenie programu badawczego poświęconego
           inteligentnemu zarządzaniu miastami, dekarbonizacji, gospodarce
           cyfrowej oraz bezpieczeństwu energetycznemu mieszkańców.
         </p>
 
-        <div class="book-identifiers">
+        <div class="book-identifiers notranslate" translate="no">
           <span>ISBN {book.isbn}</span>
           <span>e-ISBN {book.eisbn}</span>
           <span>Warszawa {book.year}</span>
@@ -343,12 +343,12 @@ import book from '../data/monograph.json';
       </div>
 
       <div class="citation-panel">
-        <p id="book-citation">
+        <p id="book-citation" class="notranslate" translate="no">
           Kinelski, G. ({book.year}). <em>{book.title}</em>.
           {book.publisher}. https://doi.org/{book.doi}
         </p>
 
-        <div class="citation-identifiers">
+        <div class="citation-identifiers notranslate" translate="no">
           <span>ISBN: {book.isbn}</span>
           <span>e-ISBN: {book.eisbn}</span>
           <span>DOI: {book.doi}</span>

@@ -15,8 +15,7 @@ const sorted = [...publications].sort(
         <p class="eyebrow">Dorobek naukowy</p>
         <h1>Publikacje</h1>
         <p class="page-lead">
-          Pełny wykaz dorobku po doktoracie z wyszukiwaniem, filtrowaniem
-          i narzędziami cytowania.
+          Pełny wykaz 66 publikacji naukowych: 13 pozycji przed doktoratem oraz 53 po doktoracie, z wyszukiwaniem, filtrowaniem i narzędziami cytowania.
         </p>
       </div>
       <div class="publication-stat-panel">
@@ -55,6 +54,14 @@ const sorted = [...publications].sort(
             {summary.types.map((type) => <option value={type}>{type}</option>)}
           </select>
         </label>
+        <label>
+          <span>Okres</span>
+          <select id="publication-period">
+            <option value="">Wszystkie publikacje</option>
+            <option value="po">Po doktoracie (53)</option>
+            <option value="przed">Przed doktoratem (13)</option>
+          </select>
+        </label>
       </div>
 
       <div class="publication-result-bar">
@@ -85,6 +92,7 @@ const sorted = [...publications].sort(
     const area = document.querySelector<HTMLSelectElement>('#publication-area');
     const year = document.querySelector<HTMLSelectElement>('#publication-year');
     const type = document.querySelector<HTMLSelectElement>('#publication-type');
+    const period = document.querySelector<HTMLSelectElement>('#publication-period');
     const reset = document.querySelector<HTMLButtonElement>('#publication-reset');
     const cards = Array.from(
       document.querySelectorAll<HTMLElement>('[data-publication]')
@@ -104,7 +112,8 @@ const sorted = [...publications].sort(
           (!query || normalize(card.dataset.search).includes(query)) &&
           (!area?.value || card.dataset.area === area.value) &&
           (!year?.value || card.dataset.year === year.value) &&
-          (!type?.value || card.dataset.type === type.value);
+          (!type?.value || card.dataset.type === type.value) &&
+          (!period?.value || card.dataset.period === period.value);
 
         card.hidden = !show;
         if (show) visible += 1;
@@ -118,6 +127,7 @@ const sorted = [...publications].sort(
     area?.addEventListener('change', filterPublications);
     year?.addEventListener('change', filterPublications);
     type?.addEventListener('change', filterPublications);
+    period?.addEventListener('change', filterPublications);
 
     filterPublications();
 
@@ -126,6 +136,7 @@ const sorted = [...publications].sort(
       if (area) area.value = '';
       if (year) year.value = '';
       if (type) type.value = '';
+      if (period) period.value = '';
       filterPublications();
     });
 

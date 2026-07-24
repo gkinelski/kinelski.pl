@@ -1,18 +1,23 @@
 {
-  "count": 53,
+  "count": 66,
   "years": [
-    "2026",
-    "2024",
-    "2023",
-    "2022",
-    "2021",
-    "2020",
-    "2019",
-    "2018"
+    2026,
+    2024,
+    2023,
+    2022,
+    2021,
+    2020,
+    2019,
+    2018,
+    2017,
+    2015,
+    2014,
+    2003
   ],
   "areas": [
     "Dekarbonizacja i zrównoważony rozwój",
     "Gospodarka cyfrowa",
+    "Metodologia nauk",
     "Monografia 4T+",
     "Smart City i współzarządzanie",
     "Subsektor elektroenergetyczny"
@@ -22,5 +27,19 @@
     "Monografia",
     "Rozdział",
     "Rozdział, Redakcja"
+  ],
+  "periods": [
+    {
+      "value": "",
+      "label": "Wszystkie publikacje"
+    },
+    {
+      "value": "po",
+      "label": "Po doktoracie (53)"
+    },
+    {
+      "value": "przed",
+      "label": "Przed doktoratem (13)"
+    }
   ]
 }

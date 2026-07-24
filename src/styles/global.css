@@ -514,7 +514,7 @@ h3 { margin-top: 0; }
 .publication-stat-panel{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:24px;background:var(--surface);overflow:hidden}
 .publication-stat-panel>div{padding:25px 18px;text-align:center;border-right:1px solid var(--line)}.publication-stat-panel>div:last-child{border-right:0}
 .publication-stat-panel strong,.publication-stat-panel span{display:block}.publication-stat-panel strong{font:800 31px Manrope,sans-serif}.publication-stat-panel span{color:var(--muted);font-size:11px;text-transform:uppercase}
-.publication-toolbar{position:sticky;top:94px;z-index:20;display:grid;grid-template-columns:2fr 1fr .8fr 1fr;gap:13px;padding:18px;border:1px solid var(--line);border-radius:22px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(16px)}
+.publication-toolbar{position:sticky;top:94px;z-index:20;display:grid;grid-template-columns:2fr 1fr .8fr 1fr 1.15fr;gap:13px;padding:18px;border:1px solid var(--line);border-radius:22px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(16px)}
 .publication-toolbar label>span{display:block;margin-bottom:7px;color:var(--muted);font-size:11px;font-weight:800;text-transform:uppercase}.publication-toolbar input,.publication-toolbar select{width:100%;min-height:46px;padding:0 13px;border:1px solid var(--line);border-radius:13px;color:var(--text);background:var(--surface)}
 .publication-result-bar{display:flex;justify-content:space-between;align-items:center;margin:28px 0 8px;color:var(--muted)}.publication-result-bar strong{color:var(--text);font:800 27px Manrope}
 .publication-reset,.publication-control{border:0;color:var(--blue);background:transparent;cursor:pointer;font-weight:800}.publication-list{border-top:1px solid var(--line)}
@@ -2264,3 +2264,79 @@ h3 { margin-top: 0; }
     margin-top: 20px;
   }
 }
+
+
+/* KINELSKI.PL 5.1 — wielojęzyczność */
+.header-inner { gap: 18px; }
+.language-switcher { position: relative; z-index: 120; }
+.language-current {
+  min-width: 62px; height: 40px; display: inline-flex; align-items: center;
+  justify-content: center; gap: 7px; border: 1px solid var(--line);
+  border-radius: 999px; color: var(--text); background: var(--surface);
+  font: 800 11px Manrope,sans-serif; cursor: pointer;
+}
+.language-menu {
+  position: absolute; top: calc(100% + 10px); right: 0; width: 178px;
+  padding: 8px; border: 1px solid var(--line); border-radius: 16px;
+  background: var(--surface); box-shadow: var(--shadow);
+}
+.language-menu[hidden] { display: none !important; }
+.language-menu button {
+  width: 100%; display: grid; grid-template-columns: 36px 1fr; align-items: center;
+  padding: 10px 11px; border: 0; border-radius: 10px; color: var(--text);
+  background: transparent; text-align: left; cursor: pointer;
+}
+.language-menu button:hover { background: var(--surface-soft); }
+.language-menu button span { color: var(--blue); font-weight: 800; }
+@media (max-width: 900px) {
+  .navigation .language-switcher { order: 20; }
+  .language-menu { right: auto; left: 0; }
+}
+
+/* KINELSKI.PL 5.1.1 — pełny dorobek i autentyczna okładka */
+.book-cover-authentic {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(0 34px 48px rgba(0,0,0,.34));
+}
+.book-cover-authentic img {
+  display: block;
+  width: min(100%, 440px);
+  height: auto;
+  border-radius: 3px;
+  background: #fff;
+}
+@media (max-width: 1100px) {
+  .publication-toolbar { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .publication-toolbar { grid-template-columns: 1fr; position: static; }
+  .book-cover-authentic img { width: min(86vw, 360px); }
+}
+
+
+/* KINELSKI.PL 5.1.2 — pełne automatyczne tłumaczenie publicznej strony */
+.google-translate-element {
+  position: fixed !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  left: -9999px !important;
+  top: -9999px !important;
+}
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+iframe.goog-te-banner-frame,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-tooltip,
+.goog-tooltip:hover { display: none !important; }
+html, body { top: 0 !important; }
+.goog-text-highlight {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+body > .skiptranslate { display: none !important; }

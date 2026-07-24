@@ -13,7 +13,8 @@
     "pages": "",
     "apa": "Benduch, D., Besiekierska, A., Ganczar, M., Kinelski, G., Szpor, G., & Rytlewski, M. (2026). Digital twins as tools for energy transition: Data governance, cybersecurity, and spatial planning—A multi-case study of Polish energy groups. Sustainability, 18(12), 5961. https://doi.org/10.3390/su18125961",
     "status": "wydana",
-    "doiUrl": "https://doi.org/10.3390/su18125961"
+    "doiUrl": "https://doi.org/10.3390/su18125961",
+    "period": "po"
   },
   {
     "lp": 65,
@@ -29,7 +30,8 @@
     "pages": "",
     "apa": "Kinelski, G. (2026). Rezyliencja miast inteligentnych w warunkach transformacji energetyczno-klimatycznej. Polskie Wydawnictwo Ekonomiczne S.A. https://doi.org/10.33226/978-83-208-2706-4",
     "status": "wydana",
-    "doiUrl": "https://doi.org/10.33226/978-83-208-2706-4"
+    "doiUrl": "https://doi.org/10.33226/978-83-208-2706-4",
+    "period": "po"
   },
   {
     "lp": 64,
@@ -45,7 +47,8 @@
     "pages": "159--177",
     "apa": "Kinelski, G. (2024). Smart City 4.0 development as a solution for NETZero economy. Zeszyty Naukowe Politechniki Śląskiej. Organizacja i Zarządzanie, 194, 159–177. https://doi.org/10.29119/1641-3466.2024.194.9",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.29119/1641-3466.2024.194.9"
+    "doiUrl": "https://doi.org/10.29119/1641-3466.2024.194.9",
+    "period": "po"
   },
   {
     "lp": 63,
@@ -61,7 +64,8 @@
     "pages": "399-422",
     "apa": "Kinelski, G. (2024). Rewolucja 4.0 w elektroenergetyce. W: M. Będkowski-Kozioł (red.), Prawo energetyczne. Stan obecny i perspektywy w 100-lecie ustawy elektrycznej (s. 399–422). Instytut De Republica. ISBN 978-83-67253-89-5",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 60,
@@ -77,7 +81,8 @@
     "pages": "424-438",
     "apa": "Kinelski, G., & Budka, B. (2024). The neoliberal approach and consumer protection. W: T. S. Hunter, M. Kraśniewski, J. Malinauskaite, & M. Czarnecka (Eds.), Routledge handbook of consumer protection and behaviour in energy markets (s. 424–438). Routledge. https://doi.org/10.4324/9781003375883-35",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.4324/9781003375883, 10.4324/9781003375883-35"
+    "doiUrl": "https://doi.org/10.4324/9781003375883, 10.4324/9781003375883-35",
+    "period": "po"
   },
   {
     "lp": 62,
@@ -93,7 +98,8 @@
     "pages": "218-239",
     "apa": "Mucha-Kuś, K., Makieła, Z. J., Kinelski, G., Stuss, M. M., Raczek, M., Wrana, K., & Borysiak, O. (2023). Cooperation among industry and cities as a tool for sustainable management of metropolises. Polish Journal of Management Studies, 28(1), 218–239. https://doi.org/10.17512/pjms.2023.28.1.13",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.17512/pjms.2023.28.1.13"
+    "doiUrl": "https://doi.org/10.17512/pjms.2023.28.1.13",
+    "period": "po"
   },
   {
     "lp": 61,
@@ -109,7 +115,8 @@
     "pages": "161-174",
     "apa": "Konovalyuk, I., Brych, V., Borysiak, O., Mucha-Kuś, K., Pavlenchyk, N., Pavlenchyk, A., Moskvyak, Y., & Kinelski, G. (2023). Monitoring the integration of environmentally friendly technologies in business structures in the context of climate security. Forum Scientiae Oeconomia, 11(2), 161–174. https://doi.org/10.23762/FSO_VOL11_NO2_8",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.23762/FSO_VOL11_NO2_8"
+    "doiUrl": "https://doi.org/10.23762/FSO_VOL11_NO2_8",
+    "period": "po"
   },
   {
     "lp": 59,
@@ -125,7 +132,8 @@
     "pages": "",
     "apa": "Kinelski, G., Mucha-Kuś, K., Stęchły, J., Makieła, Z. J., Kamiński, J., & Stefańska, M. (2023). The impact of a special economic zone management on the development of modern sectors and technologies in a Polish metropolis: The smart city context. Energies, 16(6), 2825. https://doi.org/10.3390/en16062825",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en16062825"
+    "doiUrl": "https://doi.org/10.3390/en16062825",
+    "period": "po"
   },
   {
     "lp": 58,
@@ -141,7 +149,8 @@
     "pages": "",
     "apa": "Bartkowiak, P., Górska, A., Koszel, M., Mazurczak, A., Strączkowski, Ł., & Kinelski, G. (2023). Nowe technologie na rynku nieruchomości – w poszukiwaniu zrównoważonego rozwoju. Wydawnictwo Uniwersytetu Ekonomicznego w Poznaniu. https://doi.org/10.18559/978-83-8211-156-9",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.18559/978-83-8211-156-9"
+    "doiUrl": "https://doi.org/10.18559/978-83-8211-156-9",
+    "period": "po"
   },
   {
     "lp": 56,
@@ -157,7 +166,8 @@
     "pages": "",
     "apa": "Zych, G., Bronicki, J., Czarnecka, M., Kinelski, G., & Kamiński, J. (2023). The cost of using gas as a transition fuel in the transition to low-carbon energy: The case study of Poland and selected European countries. Energies, 16(2), 994. https://doi.org/10.3390/en16020994",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en16020994"
+    "doiUrl": "https://doi.org/10.3390/en16020994",
+    "period": "po"
   },
   {
     "lp": 55,
@@ -173,7 +183,8 @@
     "pages": "21-38",
     "apa": "Kinelski, G. (2023). Wyzwania zrównoważonego rozwoju w perspektywie koncepcji zielonej energetyki. W: M. Lis, M. Kot-Radojewska, & E. Popławska (red.), Zrównoważony rozwój organizacji (s. 21–38). Akademia WSB. ISBN 978-83-67673-06-8",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 50,
@@ -189,7 +200,8 @@
     "pages": "870-887",
     "apa": "Kinelski, G. (2023). Komentarz do art. 51–54. W: M. Czarnecka & T. Ogłódek (red.), Prawo energetyczne. Efektywność energetyczna. Tom I. Komentarz (s. 870–887). C.H.Beck. ISBN 978-83-8235-865-0",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 49,
@@ -205,7 +217,8 @@
     "pages": "472-489",
     "apa": "Kinelski, G. (2023). Komentarz do art. 11–11x. W: M. Czarnecka & T. Ogłódek (red.), Prawo energetyczne. Efektywność energetyczna. Tom I. Komentarz (s. 472–489). C.H.Beck. ISBN 978-83-8235-865-0",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 48,
@@ -221,7 +234,8 @@
     "pages": "868-884",
     "apa": "Kinelski, G., & Zamasz, K. (2023). Komentarz do art. 29–35. W: M. Czarnecka & T. Ogłódek (red.), Odnawialne źródła energii. Rynek mocy. Inwestycje w zakresie elektrowni wiatrowych. Promowanie energii z wysokosprawnej kogeneracji oraz w morskich farmach wiatrowych. Tom II. Komentarz (s. 868–884). C.H.Beck. ISBN 978-83-8235-866-7",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 57,
@@ -237,7 +251,8 @@
     "pages": "89-106",
     "apa": "Kinelski, G. (2022). Koncepcja sterowania i zarządzania przepływem energii w Smart City. W: M. Lis, Z. Dacko-Pikiewicz, & K. Szczepańska-Woszczyna (red.), Smart cities - zarządzanie inteligentnym miastem (ss. 89–106). Akademia WSB. ISBN 9788366794948",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 54,
@@ -253,7 +268,8 @@
     "pages": "",
     "apa": "Borysiak, O., Mucha-Kuś, K., Brych, V., & Kinelski, G. (2022). Towards the Climate Neutral Management of Innovation and Energy Security in Smart World. LOGOS Verlag Berlin. ISBN 978-3-8325-5544-3",
     "status": "Wydruk",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 53,
@@ -269,7 +285,8 @@
     "pages": "92-106",
     "apa": "Kinelski, G. (2022). Smart city 4.0 as a set of social synergies. Polish Journal of Management Studies, 26(1), 92–106. https://doi.org/10.17512/pjms.2022.26.1.06",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.17512/pjms.2022.26.1.06"
+    "doiUrl": "https://doi.org/10.17512/pjms.2022.26.1.06",
+    "period": "po"
   },
   {
     "lp": 52,
@@ -285,7 +302,8 @@
     "pages": "36-44",
     "apa": "Kinelski, G. (2022). Ewolucja koncepcji Smart City w aktywności zasobów miejskich: Studium przypadku GZM. Przegląd Organizacji, 2, 36–44. https://doi.org/10.33141/po.2022.02.05",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.33141/po.2022.02.05"
+    "doiUrl": "https://doi.org/10.33141/po.2022.02.05",
+    "period": "po"
   },
   {
     "lp": 51,
@@ -301,7 +319,8 @@
     "pages": "109-136",
     "apa": "Kinelski, G. (2022). Smart-city trends in the environment of sustainability as support for decarbonization processes. Polityka Energetyczna – Energy Policy Journal, 25(2), 109–136. https://doi.org/10.33223/EPJ/149739",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.33223/epj/149739"
+    "doiUrl": "https://doi.org/10.33223/epj/149739",
+    "period": "po"
   },
   {
     "lp": 47,
@@ -317,7 +336,8 @@
     "pages": "",
     "apa": "Makieła, Z., Stuss, M., Kinelski, G., Michałek, J., Mucha-Kuś, K., & Budziński, M. (2022). Smart City 4.0: Sustainable urban development in the Metropolis GZM. Sustainability, 14(6), 3516. https://doi.org/10.3390/su14063516",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/su14063516"
+    "doiUrl": "https://doi.org/10.3390/su14063516",
+    "period": "po"
   },
   {
     "lp": 46,
@@ -333,7 +353,8 @@
     "pages": "",
     "apa": "Makieła, Z. J., Kinelski, G., Stęchły, J., Raczek, M., Wrana, K., & Michałek, J. (2022). Tools for network smart city management—The case study of potential possibility of managing energy and associated emissions in metropolitan areas. Energies, 15(7), 2316. https://doi.org/10.3390/en15072316",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en15072316"
+    "doiUrl": "https://doi.org/10.3390/en15072316",
+    "period": "po"
   },
   {
     "lp": 45,
@@ -349,7 +370,8 @@
     "pages": "97-126",
     "apa": "Kinelski, G., Stęchły, J., & Michałek, J. (2022). Sieciowe zarządzanie miastem/gminą – poznanie wykorzystywanych narzędzi sieciowego zarządzania mobilnością na poziomie Górnośląsko-Zagłębiowskiej Metropolii. W: Z. Makieła, K. Mucha-Kuś, & G. Kinelski (red.), Koncepcja Smart City i potencjały 4T. Inteligentne zarządzanie miastami Górnośląsko-Zagłębiowskiej Metropolii (s. 97–126). Akademia WSB. ISBN 978-83-66794-71-9",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 44,
@@ -365,7 +387,8 @@
     "pages": "175-194",
     "apa": "Kinelski, G., Raczek, M., Budziński, M., & Wrana, K. (2022). Wdrażanie koncepcji Smart City w miastach Górnośląsko-Zagłębiowskiej Metropolii: Identyfikacja przejawów współpracy miast Górnośląsko-Zagłębiowskiej Metropolii w zakresie wdrażania koncepcji Smart City i rozwijania kapitałów 4T. W: Z. Makieła, K. Mucha-Kuś, & G. Kinelski (red.), Koncepcja Smart City i potencjały 4T. Inteligentne zarządzanie miastami Górnośląsko-Zagłębiowskiej Metropolii (s. 175–194). Akademia WSB. ISBN 978-83-66794-71-9",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 43,
@@ -381,7 +404,8 @@
     "pages": "195-230",
     "apa": "Kinelski, G., Makieła, Z., & Pasternak, A. (2022). Realizacja koncepcji Smart City w miastach Górnośląsko-Zagłębiowskiej Metropolii na przykładzie Dąbrowy Górniczej. W: Z. Makieła, K. Mucha-Kuś, & G. Kinelski (red.), Koncepcja Smart City i potencjały 4T. Inteligentne zarządzanie miastami Górnośląsko-Zagłębiowskiej Metropolii (s. 195–230). Akademia WSB. ISBN 978-83-66794-71-9",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 42,
@@ -397,7 +421,8 @@
     "pages": "7-20",
     "apa": "Kinelski, G., & Makieła, Z. (2022). Wstęp. W: Z. Makieła, K. Mucha-Kuś, & G. Kinelski (red.), Koncepcja Smart City i potencjały 4T. Inteligentne zarządzanie miastami Górnośląsko-Zagłębiowskiej Metropolii (s. 7–20). Akademia WSB. ISBN 978-83-66794-71-9",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 41,
@@ -413,7 +438,8 @@
     "pages": "",
     "apa": "Kinelski, G., Bartkowiak, P., & Bartkowiak, A. (2022). Efficiency of shaping the value chain in the area of the use of raw materials in agro-biorefinery in sustainable development. Energies, 15(17), 6260. https://doi.org/10.3390/en15176260",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en15176260"
+    "doiUrl": "https://doi.org/10.3390/en15176260",
+    "period": "po"
   },
   {
     "lp": 40,
@@ -429,7 +455,8 @@
     "pages": "",
     "apa": "Kinelski, G., Stęchły, J., & Bartkowiak, P. (2022). Various facets of sustainable smart city management: Selected examples from Polish metropolitan areas. Energies, 15(9), 2980. https://doi.org/10.3390/en15092980",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en15092980"
+    "doiUrl": "https://doi.org/10.3390/en15092980",
+    "period": "po"
   },
   {
     "lp": 39,
@@ -445,7 +472,8 @@
     "pages": "",
     "apa": "Czarnecka, M., Chudy-Laskowska, K., Kinelski, G., Lew, G., Sadowska, B., Wójcik-Jurkiewicz, M., & Budka, B. (2022). Grants and funding for the processes of decarbonization in the scope of sustainability development—the case from Poland. Energies, 15(20), 7481. https://doi.org/10.3390/en15207481",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en15207481"
+    "doiUrl": "https://doi.org/10.3390/en15207481",
+    "period": "po"
   },
   {
     "lp": 38,
@@ -461,7 +489,8 @@
     "pages": "",
     "apa": "Czarnecka, M., Kinelski, G., Stefańska, M., Grzesiak, M., & Budka, B. (2022). Social media engagement in shaping green energy business models. Energies, 15(5), 1727. https://doi.org/10.3390/en15051727",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en15051727"
+    "doiUrl": "https://doi.org/10.3390/en15051727",
+    "period": "po"
   },
   {
     "lp": 37,
@@ -477,7 +506,8 @@
     "pages": "219-236",
     "apa": "Kinelski, G. (2022). Rozwój rynków energii elektrycznej oraz kluczowe czynniki wpływające na konsumentów i prosumentów. W: M. Namysłowska (red.), Wyzwania dla prawa konsumenckiego w wymiarze globalnym, regionalnym i lokalnym (s. 219–236). C.H.Beck. ISBN 978-83-8291-407-8",
     "status": "Wersja ksiązkowa w bibliografii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 36,
@@ -493,7 +523,8 @@
     "pages": "914-922",
     "apa": "Zych, G., Budka, B., Czarnecka, M., Kinelski, G., & Wójcik-Jurkiewicz, M. (2021). Concept, developments, and consequences of greenwashing. European Research Studies Journal, 24(4B), 914–922. https://doi.org/10.35808/ersj/2779",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.35808/ersj/2779"
+    "doiUrl": "https://doi.org/10.35808/ersj/2779",
+    "period": "po"
   },
   {
     "lp": 35,
@@ -509,7 +540,8 @@
     "pages": "ss.17",
     "apa": "Kaszyński, P., Komorowska, A., Zamasz, K., Kinelski, G., & Kamiński, J. (2021). Capacity market and (the lack of) new investments: Evidence from Poland. Energies, 14(23), 7843. https://doi.org/10.3390/en14237843",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en14237843"
+    "doiUrl": "https://doi.org/10.3390/en14237843",
+    "period": "po"
   },
   {
     "lp": 34,
@@ -525,7 +557,8 @@
     "pages": "ss.11",
     "apa": "Kinelski, G., Stęchły, J., Sienicki, A., Czornik, K., & Borkowski, P. (2021). Application of smart technologies in Metropolis GZM to reduce harmful emissions in district heating systems. Energies, 14(22), 7665. https://doi.org/10.3390/en14227665",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en14227665"
+    "doiUrl": "https://doi.org/10.3390/en14227665",
+    "period": "po"
   },
   {
     "lp": 33,
@@ -541,7 +574,8 @@
     "pages": "ss.19",
     "apa": "Drożdż, W., Kinelski, G., Czarnecka, M., Wójcik-Jurkiewicz, M., Maroušková, A., & Zych, G. (2021). Determinants of decarbonization—How to realize sustainable and low carbon cities?. Energies, 14(9), 2640. https://doi.org/10.3390/en14092640",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en14092640"
+    "doiUrl": "https://doi.org/10.3390/en14092640",
+    "period": "po"
   },
   {
     "lp": 32,
@@ -557,7 +591,8 @@
     "pages": "ss.17",
     "apa": "Malec, M., Kinelski, G., & Czarnecka, M. (2021). The impact of COVID-19 on electricity demand profiles: A case study of selected business clients in Poland. Energies, 14(17), 5332. https://doi.org/10.3390/en14175332",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en14175332"
+    "doiUrl": "https://doi.org/10.3390/en14175332",
+    "period": "po"
   },
   {
     "lp": 31,
@@ -573,7 +608,8 @@
     "pages": "ss.22",
     "apa": "Wójcik-Jurkiewicz, M., Czarnecka, M., Kinelski, G., Sadowska, B., & Bilińska-Reformat, K. (2021). Determinants of decarbonisation in the transformation of the energy sector: The case of Poland. Energies, 14(5), 1217. https://doi.org/10.3390/en14051217",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.3390/en14051217"
+    "doiUrl": "https://doi.org/10.3390/en14051217",
+    "period": "po"
   },
   {
     "lp": 30,
@@ -589,7 +625,8 @@
     "pages": "s. 1196-1210",
     "apa": "Wójcik-Jurkiewicz, M., Lubicz-Posochowska, A., Czarnecka, M., Kinelski, G., & Sadowska, B. (2021). Legal aspects of sharing economy: The case of games’ platforms. European Research Studies Journal, 24(Special Issue 1), 1196–1210. https://doi.org/10.35808/ersj/2098",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.35808/ersj/2098"
+    "doiUrl": "https://doi.org/10.35808/ersj/2098",
+    "period": "po"
   },
   {
     "lp": 29,
@@ -605,7 +642,8 @@
     "pages": "12926-12935",
     "apa": "Kinelski, G. (2020). Sustainable development of project management in energy companies: The digital economy context. W: Proceedings of the 36th International Business Information Management Association (IBIMA) (s. 12926–12935). IBIMA. ISBN 978-0-9998551-5-7",
     "status": "Wydruk",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 28,
@@ -621,7 +659,8 @@
     "pages": "s.5-20",
     "apa": "Kinelski, G. (2020). The main factors of successful project management in the aspect of energy enterprises’ efficiency in the digital economy environment. Polityka Energetyczna – Energy Policy Journal, 23(3), 5–20. https://doi.org/10.33223/EPJ/126435",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.33223/EPJ/126435"
+    "doiUrl": "https://doi.org/10.33223/EPJ/126435",
+    "period": "po"
   },
   {
     "lp": 27,
@@ -637,7 +676,8 @@
     "pages": "61-72",
     "apa": "Kinelski, G. (2020). Gospodarka cyfrowa i jej narzędzia pomiaru efektywności przedsiębiorstw energetycznych. Rynek Energii, 147(2), 61–72.",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": "https://doi.org/Do wyjaśnienia"
+    "doiUrl": "https://doi.org/Do wyjaśnienia",
+    "period": "po"
   },
   {
     "lp": 26,
@@ -653,7 +693,8 @@
     "pages": "ss.25",
     "apa": "Kinelski, G. (2020). Koszty ochrony konsumentów w aspekcie efektywności i jej pomiaru w przedsiębiorstwach subsektora elektroenergetycznego (Costs of Consumer Protection in the Aspect of Efficiency and Its Measurement in Enterprises of the Power Sector). SSRN Electronic Journal. https://doi.org/10.2139/ssrn.3546814",
     "status": "Wydruk",
-    "doiUrl": "https://doi.org/10.2139/ssrn.3546814"
+    "doiUrl": "https://doi.org/10.2139/ssrn.3546814",
+    "period": "po"
   },
   {
     "lp": 25,
@@ -669,7 +710,8 @@
     "pages": "684-700",
     "apa": "Kinelski, G. (2020). Komentarz – objaśnienia do prawa energetycznego do art. 51–54. W: M. Czarnecka & T. Ogłódek (red.), Prawo energetyczne. Ustawa o odnawialnych źródłach energii. Ustawa o rynku mocy. Ustawa o inwestycjach w zakresie elektrowni wiatrowych: komentarz (s. 684–700). Wydawnictwo C.H.Beck. ISBN 978-83-8158-698-6",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 24,
@@ -685,7 +727,8 @@
     "pages": "99-118",
     "apa": "Kinelski, G. (2020). Sustainable development and its influence on project management efficiency and enterprise competitiveness on the energy market in terms of the digital economy. W: K. Szczepańska-Woszczyna, K. Zamasz, & G. Kinelski (red.), Innovation in Organisational Management: Under Conditions of Sustainable Development (s. 99–118). WSB University. ISBN 978-83-65621-95-5",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 23,
@@ -701,7 +744,8 @@
     "pages": "119-138",
     "apa": "Kinelski, G., & Muras, W. (2020). Investment decision management using joint-stock company value estimation via non-financial measures in the time of the digital economy. W: K. Szczepańska-Woszczyna, K. Zamasz, & G. Kinelski (red.), Innovation in Organisational Management: Under Conditions of Sustainable Development (s. 119–138). WSB University. ISBN 978-83-65621-95-5",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 21,
@@ -717,7 +761,8 @@
     "pages": "164-169",
     "apa": "Kinelski, G., & Lis, M. (2020). Conclusions. W: K. Zamasz & K. Mucha-Kuś (red.), Project Management in Public Administration: The Case of Metropolis GZM (s. 164–169). Wydawnictwo Adam Marszałek. ISBN 978-83-8180-323-6",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 20,
@@ -733,7 +778,8 @@
     "pages": "151-163",
     "apa": "Kinelski, G., Zamasz, K., & Lis, M. (2020). Recommendation for the efficient implementation of project management system in the Metropolitan Office. W: K. Zamasz & K. Mucha-Kuś (red.), Project Management in Public Administration: The Case of Metropolis GZM (s. 151–163). Wydawnictwo Adam Marszałek. ISBN 978-83-8180-323-6",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 22,
@@ -749,7 +795,8 @@
     "pages": "ss. 222",
     "apa": "Kinelski, G. (2019). Competitivness and Efficiency Management Through Cognitive Technologies in the Digital Economy. Adam Marszałek. ISBN 978-83-8180-228-4",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 19,
@@ -765,7 +812,8 @@
     "pages": "s05-09",
     "apa": "Kinelski, G., & Marszałek-Kawa, J. (2019). Wstęp. W: J. Marszałek-Kawa & G. Kinelski (red.), Współczesne bezpieczeństwo regionu Azji i Pacyfiku: wybrane problemy (s. 5–9). Wydawnictwo Adam Marszałek. ISBN 978-83-8180-273-4",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 18,
@@ -781,7 +829,8 @@
     "pages": "109-159",
     "apa": "Kinelski, G. (2019). Zarządzanie bezpieczeństwem energetycznym z wykorzystaniem zarządzania projektami energetycznymi w otoczeniu gospodarki cyfrowej na linii Unia Europejska–Chiny. W: J. Marszałek-Kawa & G. Kinelski (red.), Współczesne bezpieczeństwo regionu Azji i Pacyfiku: wybrane problemy (s. 109–159). Wydawnictwo Adam Marszałek. ISBN 978-83-8180-273-4",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 17,
@@ -797,7 +846,8 @@
     "pages": "156-170",
     "apa": "Kinelski, G. (2018). Efektywność, jej miary, wskaźniki i ich pomiar w przedsiębiorstwach subsektora elektroenergetycznego. W: Rynek energii elektrycznej. REE 2018 (s. 156–170). Stowarzyszenie Elektryków Polskich Oddział Lubelski; Wydawnictwo PEKTOR. ISBN 978-83-932680-7-8",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 16,
@@ -813,7 +863,8 @@
     "pages": "78-90",
     "apa": "Kinelski, G. (2018). Centrum usług wspólnych jako praktyczne wdrożenie idei współdzielenia w obszarze efektywności i konkurencyjności w subsektorze elektroenergetycznym. W: R. Miśkiewicz & K. Szczepańska-Woszczyna (red.), Gospodarka współdzielenia – wybrane problemy (s. 78–90). Wydawnictwo Naukowe PWN. ISBN 978-83-01-20098-5",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 15,
@@ -829,7 +880,8 @@
     "pages": "148-166",
     "apa": "Kinelski, G. (2018). Об’єднані центри обслуговування як інноваційні організації, що підтримують ріст конкурентоспроможності підприємств. W: О. І. Амоша (ред.), Інноваційне промислове підприємство в формуванні сталого розвитку: монографія (s. 148–166). Національна академія наук України. ISBN 978-966-02-8521-7",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
   },
   {
     "lp": 14,
@@ -845,6 +897,228 @@
     "pages": "277-290",
     "apa": "Kinelski, G. (2018). Rynek dwutowarowy i istota jego konkurencyjności w sektorze elektroenergetycznym. Zeszyty Naukowe Instytutu Gospodarki Surowcami Mineralnymi i Energią PAN, 102(1), 277–290. ISSN 2080-0819",
     "status": "Wersja książkowa w bibligrafii",
-    "doiUrl": ""
+    "doiUrl": "",
+    "period": "po"
+  },
+  {
+    "lp": 13,
+    "year": 2017,
+    "title": "Analiza wybranych czynników konkurencyjności metodą dekompozycji",
+    "authors": "Grzegorz Kinelski",
+    "type": "Monografia",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "Wydawnictwo Naukowe PWN",
+    "place": "Warszawa",
+    "doi": "",
+    "url": "",
+    "pages": "",
+    "apa": "Kinelski, G. (2017). Analiza wybranych czynników konkurencyjności metodą dekompozycji. Wydawnictwo Naukowe PWN. ISBN 978-83-01-19300-3",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 12,
+    "year": 2017,
+    "title": "Potential competitive edge and determining factors shaping the competitive environment in the electrical power sub-sector",
+    "authors": "Grzegorz Kinelski",
+    "type": "Artykuł",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "European Cooperation, 6(25)",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "49–59",
+    "apa": "Kinelski, G. (2017). Potential competitive edge and determining factors shaping the competitive environment in the electrical power sub-sector. European Cooperation, 6(25), 49–59.",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 11,
+    "year": 2017,
+    "title": "Improvement of capacity market participants’ efficiency through the implementation of shared services centres in the business",
+    "authors": "Grzegorz Kinelski",
+    "type": "Rozdział",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "W: P. Głowski & O. Kvilinskyi (red.), Economic Transformation in Ukraine: Comparative Analysis and European Experience",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "126–136",
+    "apa": "Kinelski, G. (2017). Improvement of capacity market participants’ efficiency through the implementation of shared services centres in the business. W: P. Głowski & O. Kvilinskyi (red.), Economic Transformation in Ukraine: Comparative Analysis and European Experience (s. 126–136). Institute for International Cooperation Development; Consilium Sp. z o.o. ISBN 978-83-944739-0-7",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 10,
+    "year": 2017,
+    "title": "Rynek konkurencyjny i źródła jego przewagi w subsektorze elektroenergetycznym",
+    "authors": "K. Pająk, Grzegorz Kinelski",
+    "type": "Artykuł",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "Progress in Economic Sciences, 4",
+    "place": "",
+    "doi": "10.14595/PES/04/025",
+    "url": "https://doi.org/10.14595/PES/04/025",
+    "pages": "347–360",
+    "apa": "Pająk, K., & Kinelski, G. (2017). Rynek konkurencyjny i źródła jego przewagi w subsektorze elektroenergetycznym. Progress in Economic Sciences, 4, 347–360. https://doi.org/10.14595/PES/04/025",
+    "status": "wydana",
+    "doiUrl": "https://doi.org/10.14595/PES/04/025",
+    "period": "przed"
+  },
+  {
+    "lp": 9,
+    "year": 2017,
+    "title": "The essence of competition in the electrical power subsector",
+    "authors": "Grzegorz Kinelski",
+    "type": "Artykuł",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "Экономический вестник Донбасса, 4(50)",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "115–123",
+    "apa": "Kinelski, G. (2017). The essence of competition in the electrical power subsector. Экономический вестник Донбасса, 4(50), 115–123.",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 8,
+    "year": 2015,
+    "title": "Centra usług wspólnych – wsparcie innowacyjnego przedsiębiorstwa energetycznego",
+    "authors": "Grzegorz Kinelski",
+    "type": "Rozdział",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "W: K. Zamasz, M. Woszczyk & K. Pająk (red.), Innowacyjne przedsiębiorstwo energetyczne",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "96–111",
+    "apa": "Kinelski, G. (2015). Centra usług wspólnych – wsparcie innowacyjnego przedsiębiorstwa energetycznego. W: K. Zamasz, M. Woszczyk, & K. Pająk (red.), Innowacyjne przedsiębiorstwo energetyczne (s. 96–111). Wydawnictwo Adam Marszałek. ISBN 978-83-8019-237-9",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 7,
+    "year": 2015,
+    "title": "Rynek energii elektrycznej – reformy a nowe możliwości sprzedaży energii",
+    "authors": "Grzegorz Kinelski, F. Larsen, O. Fasiecka",
+    "type": "Rozdział",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "W: K. Zamasz, M. Woszczyk & K. Pająk (red.), Innowacyjne przedsiębiorstwo energetyczne",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "147–165",
+    "apa": "Kinelski, G., Larsen, F., & Fasiecka, O. (2015). Rynek energii elektrycznej – reformy a nowe możliwości sprzedaży energii. W: K. Zamasz, M. Woszczyk, & K. Pająk (red.), Innowacyjne przedsiębiorstwo energetyczne (s. 147–165). Wydawnictwo Adam Marszałek. ISBN 978-83-8019-237-9",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 6,
+    "year": 2015,
+    "title": "Electricity market – reforms and new sales opportunities",
+    "authors": "Grzegorz Kinelski, F. Larsen, O. Fasiecka",
+    "type": "Rozdział",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "W: K. Zamasz, M. Woszczyk & K. Pająk (red.), Innowacyjne przedsiębiorstwo energetyczne",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "166–183",
+    "apa": "Kinelski, G., Larsen, F., & Fasiecka, O. (2015). Electricity market – reforms and new sales opportunities. W: K. Zamasz, M. Woszczyk, & K. Pająk (red.), Innowacyjne przedsiębiorstwo energetyczne (s. 166–183). Wydawnictwo Adam Marszałek. ISBN 978-83-8019-237-9",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 5,
+    "year": 2015,
+    "title": "Development of shared services centre as a key element of company restructuring – case study of Enea Capital Group",
+    "authors": "Grzegorz Kinelski",
+    "type": "Rozdział",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "W: R. Borowiecki & B. Siuta-Tokarska (red.), Restructuring as the imperative of developmental changes in economy",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "147–161",
+    "apa": "Kinelski, G. (2015). Development of shared services centre as a key element of company restructuring – case study of Enea Capital Group. W: R. Borowiecki & B. Siuta-Tokarska (red.), Restructuring as the imperative of developmental changes in economy (s. 147–161). Foundation of the Cracow University of Economics. ISBN 978-83-65173-08-9",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 4,
+    "year": 2015,
+    "title": "Improvement of capacity market participants’ efficiency throughout the implementation of shared services centers in the business",
+    "authors": "Grzegorz Kinelski",
+    "type": "Rozdział",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "W: K. Zamasz (red.), Capacity Market in Contemporary Economic Policy, Difin",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "25–36",
+    "apa": "Kinelski, G. (2015). Improvement of capacity market participants’ efficiency throughout the implementation of shared services centers in the business. W: K. Zamasz (red.), Capacity Market in Contemporary Economic Policy (s. 25–36). Difin. ISBN 978-83-7930-967-2",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 3,
+    "year": 2015,
+    "title": "Rozwój modeli produktowych na rynku energii elektrycznej w segmencie konsumentów",
+    "authors": "Grzegorz Kinelski",
+    "type": "Artykuł",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "Internetowy Kwartalnik Antymonopolowy i Regulacyjny, 4(3)",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "95–108",
+    "apa": "Kinelski, G. (2015). Rozwój modeli produktowych na rynku energii elektrycznej w segmencie konsumentów. Internetowy Kwartalnik Antymonopolowy i Regulacyjny, 4(3), 95–108. ISSN 2299-8837",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 2,
+    "year": 2014,
+    "title": "Marketing w przedsiębiorstwie energetycznym – wybrane aspekty z perspektywy rynku polskiego",
+    "authors": "Grzegorz Kinelski",
+    "type": "Artykuł",
+    "area": "Subsektor elektroenergetyczny",
+    "publisher": "Polityka Energetyczna – Energy Policy Journal, 17(3)",
+    "place": "",
+    "doi": "",
+    "url": "",
+    "pages": "309–320",
+    "apa": "Kinelski, G. (2014). Marketing w przedsiębiorstwie energetycznym – wybrane aspekty z perspektywy rynku polskiego. Polityka Energetyczna – Energy Policy Journal, 17(3), 309–320. ISSN 1429-6675",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
+  },
+  {
+    "lp": 1,
+    "year": 2003,
+    "title": "Aprioryzm",
+    "authors": "Grzegorz Kinelski",
+    "type": "Rozdział",
+    "area": "Metodologia nauk",
+    "publisher": "W: Z. Gacek & J. Rąb (red.), Wybrane kategorie metodologii nauk, Politechnika Śląska w Gliwicach",
+    "place": "Gliwice",
+    "doi": "",
+    "url": "",
+    "pages": "34–38",
+    "apa": "Kinelski, G. (2003). Aprioryzm. W: Z. Gacek & J. Rąb (red.), Wybrane kategorie metodologii nauk (s. 34–38). Politechnika Śląska w Gliwicach. ISBN 83-915530-3-5",
+    "status": "wydana",
+    "doiUrl": "",
+    "period": "przed"
   }
 ]

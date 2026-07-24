@@ -1,0 +1,18 @@
+---
+const compact = Astro.props.compact ?? false;
+---
+<div class:list={["language-switcher", compact && "language-switcher-compact", "notranslate"]} data-language-switcher translate="no">
+  <button class="language-current" type="button" data-language-toggle aria-label="Wybierz język" aria-expanded="false">
+    <span data-language-code>PL</span>
+    <span aria-hidden="true">⌄</span>
+  </button>
+  <div class="language-menu" data-language-menu hidden>
+    <button type="button" data-language="pl" lang="pl"><span>PL</span> Polski</button>
+    <button type="button" data-language="en" lang="en"><span>EN</span> English</button>
+    <button type="button" data-language="de" lang="de"><span>DE</span> Deutsch</button>
+    <button type="button" data-language="cs" lang="cs"><span>CS</span> Čeština</button>
+    <button type="button" data-language="fr" lang="fr"><span>FR</span> Français</button>
+    <button type="button" data-language="uk" lang="uk"><span>UA</span> Українська</button>
+    <button type="button" data-language="it" lang="it"><span>IT</span> Italiano</button>
+  </div>
+</div>
