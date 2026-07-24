@@ -47,3 +47,20 @@ Każde kliknięcie **Zapisz i opublikuj** tworzy commit na gałęzi `main`. GitH
 - token traktuj jak hasło;
 - po utracie komputera lub podejrzeniu wycieku natychmiast usuń token w ustawieniach GitHub;
 - panel nie edytuje workflow ani ustawień repozytorium, dlatego wystarczy uprawnienie `Contents: Read and write`.
+
+## 6. Typografia i rozmiary tekstu
+
+W menu **Typografia** można:
+
+- wybrać wariant Kompaktowy, Standardowy, Powiększony lub Prezentacyjny;
+- zmieniać globalną skalę tekstu;
+- ustawiać osobne korekty dla tabletu i telefonu;
+- regulować menu górne, nagłówki, karty, publikacje, monografie, przyciski, formularze, liczniki i stopkę;
+- sprawdzać wynik w podglądzie komputera, tabletu i telefonu.
+
+Zmiana jest widoczna w podglądzie natychmiast, ale trafia na stronę publiczną dopiero po kliknięciu **Zapisz i opublikuj**. Przycisk **Przywróć domyślne** odtwarza bezpieczne ustawienia wersji standardowej.
+
+
+## Pierwsze uruchomienie panelu typografii
+
+Jeżeli repozytorium zawiera jeszcze wersję 5.3.0 i nie ma pliku `src/data/typography.json`, panel 5.3.2 połączy się normalnie, zastosuje ustawienia standardowe i utworzy plik automatycznie przy pierwszym zapisie zmian typografii.

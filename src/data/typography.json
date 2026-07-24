@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "preset": "standard",
+  "scale": 1,
+  "responsive": {
+    "tabletScale": 0.97,
+    "mobileScale": 0.92
+  },
+  "body": {
+    "fontSize": 16,
+    "lineHeight": 1.65,
+    "leadSize": 18,
+    "largeLeadSize": 25,
+    "detailLeadSize": 20
+  },
+  "navigation": {
+    "brandSize": 16,
+    "menuSize": 14,
+    "languageSize": 11,
+    "headerHeight": 78,
+    "gap": 22
+  },
+  "headings": {
+    "heroMin": 58,
+    "heroFluidVw": 8,
+    "heroMax": 100,
+    "pageMin": 54,
+    "pageFluidVw": 7.4,
+    "pageMax": 94,
+    "sectionMin": 38,
+    "sectionFluidVw": 5,
+    "sectionMax": 60,
+    "cardTitle": 30,
+    "smallTitle": 20
+  },
+  "components": {
+    "eyebrowSize": 12,
+    "buttonSize": 16,
+    "buttonHeight": 50,
+    "formSize": 16,
+    "formLabelSize": 11,
+    "formHeight": 46,
+    "metadataSize": 11,
+    "footerSize": 14
+  },
+  "content": {
+    "publicationTitleSize": 27,
+    "monographTitleSize": 25,
+    "careerCardTitleSize": 25,
+    "cardBodySize": 16
+  },
+  "metrics": {
+    "homeValueSize": 36,
+    "publicationValueSize": 31,
+    "booksValueSize": 44,
+    "careerValueSize": 37,
+    "labelSize": 11
+  }
+}

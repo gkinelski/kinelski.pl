@@ -2379,3 +2379,153 @@ body > .skiptranslate { display: none !important; }
 @media(max-width:1100px){.career-role-grid-v5,.career-selected-grid-v5,.career-profile-grid-v5,.career-competencies-grid-v5{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:980px){.career-hero-grid-v5,.career-timeline-layout-v5,.career-education-layout-v5,.career-recognition-layout-v5{grid-template-columns:1fr}.career-metrics-v5{grid-template-columns:repeat(2,1fr)}.career-timeline-intro-v5{position:static}.career-cta-v5{grid-template-columns:1fr}.career-cta-links-v5{justify-content:flex-start}.career-subnav-v5{top:78px}}
 @media(max-width:650px){.career-hero-v5{padding-top:58px}.career-portrait-panel-v5{min-height:480px}.career-portrait-panel-v5>img{height:480px}.career-role-grid-v5,.career-achievement-groups-v5,.career-selected-grid-v5,.career-profile-grid-v5,.career-competencies-grid-v5{grid-template-columns:1fr}.career-timeline-v5 article{grid-template-columns:46px 1fr}.career-timeline-date-v5{grid-column:2}.career-timeline-body-v5{grid-column:2}.career-education-list-v5 article,.career-recognition-list-v5 article{grid-template-columns:1fr}.career-cta-v5{padding:27px}.career-metrics-v5 article:nth-child(2){border-right:0}}
+
+/* KINELSKI.PL 5.3.2 — typografia sterowana z panelu administratora */
+body {
+  font-size: var(--type-body, 16px);
+  line-height: var(--type-line-height, 1.65);
+}
+
+.header-inner { min-height: var(--type-navigation-height, 78px); }
+.brand { font-size: var(--type-brand, 16px); }
+.navigation {
+  gap: var(--type-navigation-gap, 22px);
+  font-size: var(--type-navigation, 14px);
+}
+.language-current,
+.language-menu button { font-size: var(--type-language, 11px); }
+
+.hero h1 {
+  font-size: clamp(var(--type-hero-min, 58px), var(--type-hero-fluid, 8vw), var(--type-hero-max, 100px));
+}
+.about-hero h1,
+.page-hero h1,
+.publication-hero h1,
+.book-hero-copy h1,
+.research-hero h1,
+.activity-hero h1,
+.contact-hero-v4 h1,
+.assistant-hero h1,
+.books-hero h1,
+.book-detail-copy h1,
+.career-hero-copy-v5 h1,
+.error-page h1 {
+  font-size: clamp(var(--type-page-min, 48px), var(--type-page-fluid, 6.8vw), var(--type-page-max, 88px));
+}
+
+h2 {
+  font-size: clamp(var(--type-section-min, 36px), var(--type-section-fluid, 5vw), var(--type-section-max, 60px));
+}
+.books-category-grid h2,
+.career-achievement-group-v5 h3 { font-size: var(--type-card-title, 30px); }
+.area-card h3,
+.publication-preview h3,
+.related-books-grid h3,
+.career-competencies-grid-v5 h3 { font-size: var(--type-small-title, 20px); }
+.publication-content h2 { font-size: var(--type-publication-title, 27px); }
+.monograph-card-body h2 { font-size: var(--type-monograph-title, 25px); }
+.career-role-card-v5 h3,
+.career-timeline-body-v5 h3,
+.career-selected-grid-v5 h3,
+.career-education-list-v5 h3,
+.career-profile-grid-v5 h3 { font-size: var(--type-career-title, 25px); }
+
+.eyebrow { font-size: var(--type-eyebrow, 12px); }
+.hero-intro,
+.page-lead,
+.editorial-copy,
+.light-copy,
+.monograph-prose,
+.career-timeline-intro-v5 p:not(.eyebrow) { font-size: var(--type-lead, 18px); }
+.lead { font-size: var(--type-large-lead, 25px); }
+.book-detail-lead { font-size: var(--type-detail-lead, 20px); }
+
+.button,
+.book-filters button,
+.publication-reset,
+.publication-control,
+.conference-toolbar button,
+.assistant-search button,
+.contact-form button {
+  font-size: var(--type-button, 16px);
+}
+.button,
+.book-filters button,
+.assistant-search button,
+.contact-form button {
+  min-height: var(--type-button-height, 50px);
+}
+
+main input:not([type='checkbox']):not([type='radio']),
+main select,
+main textarea { font-size: var(--type-form, 16px); }
+main input:not([type='checkbox']):not([type='radio']),
+main select { min-height: var(--type-form-height, 46px); }
+main label > span,
+.publication-toolbar label > span,
+.conference-toolbar label > span { font-size: var(--type-form-label, 11px); }
+
+.area-card,
+.publication-preview article,
+.monograph-card-body,
+.books-category-grid article,
+.related-books-grid > a,
+.career-role-card-v5,
+.career-selected-grid-v5 article,
+.career-profile-grid-v5 > a { font-size: var(--type-card-body, 16px); }
+
+.portrait-note span,
+.metrics span,
+.publication-stat-panel span,
+.books-stat-panel span,
+.publication-tags span,
+.publication-control,
+.publication-apa,
+.book-kicker,
+.book-detail-kickers span,
+.book-role-box span,
+.monograph-card-meta,
+.monograph-featured,
+.career-current-role-v5 span,
+.career-metrics-v5 span,
+.career-role-card-v5 > span,
+.career-timeline-marker-v5 span,
+.career-timeline-body-v5 > p,
+.career-selected-grid-v5 article > span,
+.career-education-list-v5 p,
+.career-profile-grid-v5 span,
+.career-source-note-v5 { font-size: var(--type-metadata, 11px); }
+
+.metrics strong { font-size: var(--type-metric-home, 36px); }
+.publication-stat-panel strong { font-size: var(--type-metric-publication, 31px); }
+.books-stat-panel strong { font-size: var(--type-metric-books, 44px); }
+.career-metrics-v5 strong { font-size: var(--type-metric-career, 37px); }
+.metrics span,
+.publication-stat-panel span,
+.books-stat-panel span,
+.career-metrics-v5 span { font-size: var(--type-metric-label, 11px); }
+
+.site-footer,
+.footer-links { font-size: var(--type-footer, 14px); }
+
+@media (max-width: 980px) {
+  .navigation { top: var(--type-navigation-height, 78px); }
+}
+.publication-toolbar { top: calc(var(--type-navigation-height, 78px) + 16px); }
+.career-subnav-v5 { top: var(--type-navigation-height, 78px); }
+@media (max-width: 1120px) {
+  .menu-button { display: block; }
+  .navigation {
+    position: absolute;
+    top: var(--type-navigation-height, 78px);
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px;
+    border-bottom: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .navigation[data-open] { display: flex; }
+}

@@ -6,7 +6,7 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 <div class="admin-login" data-login>
   <div class="admin-admin-language"><LanguageSwitcher compact={true} /></div>
   <div class="admin-login-card">
-    <div class="admin-logo">GK</div><p class="admin-kicker">KINELSKI.PL 5.3.0</p><h1>Panel administratora</h1>
+    <div class="admin-logo">GK</div><p class="admin-kicker">KINELSKI.PL 5.3.2</p><h1>Panel administratora</h1>
     <p>Edytuj treści, kolory, publikacje i zdjęcia bez otwierania kodu. Zmiany są zapisywane bezpośrednio w repozytorium GitHub.</p>
     <div class="admin-login-grid"><label>Właściciel repozytorium<input data-owner value="gkinelski"/></label><label>Repozytorium<input data-repo value="kinelski.pl"/></label><label>Gałąź<input data-branch value="main"/></label><label class="admin-token-field">Token GitHub<input data-token type="password" autocomplete="off" placeholder="github_pat_..."/></label></div>
     <label class="admin-checkbox"><input type="checkbox" data-remember/> Zachowaj token tylko do zamknięcia tej karty</label>
@@ -18,14 +18,42 @@ import LanguageSwitcher from '../components/LanguageSwitcher.astro';
 </div>
 
 <div class="admin-app" data-app hidden>
-  <header class="admin-topbar"><div><strong>KINELSKI.PL</strong><span>Panel administratora 5.3.0</span></div><div class="admin-top-actions"><LanguageSwitcher compact={true} /><span class="admin-connection" data-connection>Połączono</span><a href="/" target="_blank">Zobacz stronę ↗</a><button data-save-all>Zapisz wszystkie zmiany</button><button data-logout>Wyloguj</button></div></header>
+  <header class="admin-topbar"><div><strong>KINELSKI.PL</strong><span>Panel administratora 5.3.2</span></div><div class="admin-top-actions"><LanguageSwitcher compact={true} /><span class="admin-connection" data-connection>Połączono</span><a href="/" target="_blank">Zobacz stronę ↗</a><button data-save-all>Zapisz wszystkie zmiany</button><button data-logout>Wyloguj</button></div></header>
   <aside class="admin-sidebar">
-    <button class="active" data-view="dashboard">Pulpit</button><button data-view="home">Strona główna</button><button data-view="theme">Wygląd</button><button data-view="profile">Profil</button><button data-view="career">Kariera</button><button data-view="publications">Publikacje</button><button data-view="research">Badania</button><button data-view="monographs">Monografie</button><button data-view="monograph">Monografia 4T+</button><button data-view="activity">Aktywność</button><button data-view="contact">Kontakt</button><button data-view="assistant">Asystent</button><button data-view="media">Zdjęcia</button><button data-view="advanced">Zaawansowane</button>
+    <button class="active" data-view="dashboard">Pulpit</button><button data-view="home">Strona główna</button><button data-view="theme">Wygląd</button><button data-view="typography">Typografia</button><button data-view="profile">Profil</button><button data-view="career">Kariera</button><button data-view="publications">Publikacje</button><button data-view="research">Badania</button><button data-view="monographs">Monografie</button><button data-view="monograph">Monografia 4T+</button><button data-view="activity">Aktywność</button><button data-view="contact">Kontakt</button><button data-view="assistant">Asystent</button><button data-view="media">Zdjęcia</button><button data-view="advanced">Zaawansowane</button>
   </aside>
   <main class="admin-main">
     <section class="admin-panel active" data-panel="dashboard"><div class="admin-heading"><div><p>Pulpit</p><h1>Zarządzanie serwisem</h1></div><span data-last-load></span></div><div class="admin-dashboard-grid" data-dashboard></div><div class="admin-info-box"><h2>Jak działa publikowanie?</h2><p>Po kliknięciu „Zapisz” panel tworzy commit w repozytorium. GitHub Actions automatycznie przebuduje i opublikuje stronę. Zwykle trwa to od kilkudziesięciu sekund do kilku minut.</p></div></section>
     <section class="admin-panel" data-panel="home"><div class="admin-heading"><div><p>Treść</p><h1>Strona główna</h1></div><button class="admin-primary" data-save-file="site">Zapisz i opublikuj</button></div><div data-editor="home"></div></section>
     <section class="admin-panel" data-panel="theme"><div class="admin-heading"><div><p>Design system</p><h1>Kolory i widoczność</h1></div><button class="admin-primary" data-save-file="site">Zapisz i opublikuj</button></div><div data-editor="theme"></div></section>
+    <section class="admin-panel" data-panel="typography">
+      <div class="admin-heading"><div><p>Design system</p><h1>Typografia i rozmiary tekstu</h1></div><button class="admin-primary" data-save-file="typography">Zapisz i opublikuj</button></div>
+      <div class="admin-typography-intro">
+        <div><strong>Bezpieczne sterowanie typografią</strong><p>Ustawiaj wielkość tekstu w menu, nagłówkach, kartach, publikacjach, formularzach i przyciskach. Zakresy są ograniczone, aby zachować responsywność strony.</p></div>
+        <div class="admin-typography-presets" data-typography-presets>
+          <button type="button" data-typography-preset="compact">Kompaktowy</button>
+          <button type="button" data-typography-preset="standard">Standardowy</button>
+          <button type="button" data-typography-preset="enlarged">Powiększony</button>
+          <button type="button" data-typography-preset="presentation">Prezentacyjny</button>
+          <button type="button" class="admin-danger-soft" data-typography-reset>Przywróć domyślne</button>
+        </div>
+      </div>
+      <div class="admin-typography-layout">
+        <div class="admin-typography-controls" data-typography-controls></div>
+        <aside class="admin-typography-preview-wrap">
+          <div class="admin-typography-preview-head"><div><span>Podgląd na żywo</span><strong data-typography-preset-label>Standardowy</strong></div><div class="admin-preview-devices"><button type="button" class="active" data-typography-device="desktop">Komputer</button><button type="button" data-typography-device="tablet">Tablet</button><button type="button" data-typography-device="mobile">Telefon</button></div></div>
+          <div class="admin-typography-preview-stage" data-typography-stage>
+            <div class="admin-typography-preview" data-typography-preview data-device="desktop">
+              <header><strong><span>GK</span> Grzegorz Kinelski</strong><nav>O mnie&nbsp;&nbsp; Kariera&nbsp;&nbsp; Publikacje&nbsp;&nbsp; Monografie</nav></header>
+              <section><small>Nauka dla zrównoważonej przyszłości</small><h2>Grzegorz <em>Kinelski</em></h2><p>Smart City, transformacja energetyczna i gospodarka cyfrowa.</p><div><button>Publikacje</button><button>Monografie</button></div></section>
+              <article><small>Karta publikacji</small><h3>Digital twins as tools for energy transition</h3><p>Przykładowy opis karty, metadanych i tekstu podstawowego.</p><label><span>Wyszukiwanie</span><input type="text" value="Tytuł, autor, czasopismo…" readonly /></label></article>
+              <footer>Grzegorz Kinelski • ORCID • Kontakt</footer>
+            </div>
+          </div>
+          <p class="admin-typography-note">Zmiany w podglądzie są lokalne. Publikacja nastąpi dopiero po kliknięciu „Zapisz i opublikuj”.</p>
+        </aside>
+      </div>
+    </section>
     <section class="admin-panel" data-panel="profile"><div class="admin-heading"><div><p>O mnie</p><h1>Profil i kariera</h1></div><button class="admin-primary" data-save-file="profile">Zapisz i opublikuj</button></div><div data-editor="profile"></div></section>
     <section class="admin-panel" data-panel="career"><div class="admin-heading"><div><p>Doświadczenie zawodowe</p><h1>Kariera, osiągnięcia i profile publiczne</h1></div><button class="admin-primary" data-save-file="career">Zapisz i opublikuj</button></div><div data-editor="career"></div></section>
     <section class="admin-panel" data-panel="publications"><div class="admin-heading"><div><p>Dorobek</p><h1>Publikacje</h1></div><button class="admin-primary" data-save-file="publications">Zapisz bazę</button></div><div class="admin-publication-tools"><input type="search" placeholder="Szukaj publikacji..." data-publication-search/><button data-add-publication>+ Dodaj publikację</button></div><div data-publication-list></div><div class="admin-drawer" data-publication-drawer hidden><div class="admin-drawer-head"><h2 data-publication-title>Publikacja</h2><button data-close-publication>×</button></div><div data-publication-editor></div><div class="admin-drawer-actions"><button class="admin-primary" data-accept-publication>Zastosuj</button></div></div></section>
