@@ -86,19 +86,19 @@
     "metrics": [
       {
         "value": "66",
-        "label": "pozycji dorobku"
+        "label": "publikacji naukowych"
       },
       {
         "value": "3",
-        "label": "monografie autorska"
+        "label": "monografie autorskie"
       },
       {
-        "value": "1000",
-        "label": "respondentów GZM"
+        "value": "36",
+        "label": "lat pracy zawodowej i naukowej"
       },
       {
         "value": "18",
-        "label": "spotkań FGI"
+        "label": "aktywnych wystąpień na konferencjach i kongresach"
       }
     ],
     "profile": {
