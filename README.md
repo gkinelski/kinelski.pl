@@ -1,4 +1,4 @@
-# KINELSKI.PL 5.0.2
+# KINELSKI.PL 5.0.3
 
 # KINELSKI.PL 5.0.1 — panel administratora
 
@@ -56,4 +56,8 @@ git push
 ```
 
 
-Poprawka 5.0.2: zamknięto komponent `AdminLayout` w `src/pages/admin.astro`, co usuwało błąd kompilacji produkcyjnej.
+Poprawka 5.0.3: zamknięto komponent `AdminLayout` w `src/pages/admin.astro`, co usuwało błąd kompilacji produkcyjnej.
+
+
+## Poprawka 5.0.3
+Naprawiono przełączanie ekranu logowania na pulpit administratora po połączeniu z GitHub.
