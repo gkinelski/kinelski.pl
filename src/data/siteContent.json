@@ -30,10 +30,6 @@
       "label": "Kariera"
     },
     {
-      "href": "/projekty",
-      "label": "Projekty"
-    },
-    {
       "href": "/bibliometria",
       "label": "Bibliometria"
     },
@@ -51,15 +47,23 @@
     },
     {
       "href": "/aktywnosc",
-      "label": "Aktywność"
-    },
-    {
-      "href": "/asystent",
-      "label": "Asystent"
+      "label": "Aktywność",
+      "children": [
+        {
+          "href": "/projekty",
+          "label": "Projekty"
+        }
+      ]
     },
     {
       "href": "/kontakt",
-      "label": "Kontakt"
+      "label": "Kontakt",
+      "children": [
+        {
+          "href": "/asystent",
+          "label": "Asystent"
+        }
+      ]
     }
   ],
   "theme": {

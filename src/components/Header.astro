@@ -1,10 +1,23 @@
 ---
 import { navigation, site, visibility } from '../data/site';
 import LanguageSwitcher from './LanguageSwitcher.astro';
+
+type NavigationItem = {
+  href: string;
+  label: string;
+  children?: Array<{ href: string; label: string }>;
+};
+
 const current = Astro.url.pathname;
-const visibleNavigation = navigation.filter((item) =>
-  item.href !== '/asystent' || visibility.showAssistantInNavigation
-);
+const visibleNavigation = (navigation as NavigationItem[]).map((item) => ({
+  ...item,
+  children: item.children?.filter(
+    (child) => child.href !== '/asystent' || visibility.showAssistantInNavigation
+  ),
+}));
+
+const isCurrent = (href: string) =>
+  current === href || current.startsWith(`${href}/`);
 ---
 <header class="site-header">
   <div class="container header-inner">
@@ -14,9 +27,33 @@ const visibleNavigation = navigation.filter((item) =>
     </a>
     <button class="menu-button" data-menu-toggle aria-label="Otwórz menu"><span></span><span></span><span></span></button>
     <nav class="navigation" data-menu aria-label="Nawigacja główna">
-      {visibleNavigation.map((item) => (
-        <a href={item.href} aria-current={(current === item.href || current.startsWith(`${item.href}/`)) ? 'page' : undefined}>{item.label}</a>
-      ))}
+      {visibleNavigation.map((item) => {
+        const hasChildren = Boolean(item.children?.length);
+        const activeChild = item.children?.some((child) => isCurrent(child.href));
+
+        return hasChildren ? (
+          <div class:list={['navigation-group', { 'has-active-child': activeChild }]}>
+            <a
+              class="navigation-parent"
+              href={item.href}
+              aria-current={isCurrent(item.href) ? 'page' : undefined}
+            >
+              {item.label}<span class="navigation-caret" aria-hidden="true">⌄</span>
+            </a>
+            <div class="navigation-submenu" aria-label={`${item.label} — podmenu`}>
+              {item.children?.map((child) => (
+                <a href={child.href} aria-current={isCurrent(child.href) ? 'page' : undefined}>
+                  {child.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a href={item.href} aria-current={isCurrent(item.href) ? 'page' : undefined}>
+            {item.label}
+          </a>
+        );
+      })}
       <LanguageSwitcher compact={true} />
       <button class="theme-button" data-theme-toggle aria-label="Zmień motyw">◐</button>
     </nav>
