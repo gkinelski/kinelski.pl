@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "eyebrow": "Portfolio wdrożeń",
+    "title": "Mapa projektów energetycznych",
+    "lead": "Wybrane programy transformacyjne, handlowe, sprzedażowe i cyfrowe realizowane w największych grupach energetycznych w Polsce.",
+    "note": "Punkty na mapie oznaczają główne ośrodki organizacji, a nie dokładne lokalizacje wszystkich instalacji i wdrożeń."
+  },
+  "metrics": [
+    { "value": "4", "label": "grupy energetyczne" },
+    { "value": "12", "label": "wybranych programów i wdrożeń" },
+    { "value": "32+", "label": "lata doświadczenia sektorowego" },
+    { "value": "4", "label": "główne obszary kompetencji" }
+  ],
+  "organisations": [
+    {
+      "id": "enea",
+      "name": "Enea",
+      "city": "Poznań",
+      "period": "2013–2016 • 2024–obecnie",
+      "role": "Członek Zarządu ds. Handlowych • Prezes Zarządu",
+      "mapPosition": { "x": 35, "y": 38 },
+      "summary": "Strategia, transformacja Grupy Enea, rozwój OZE, centralizacja handlu oraz bezpieczeństwo energetyczne.",
+      "areas": ["Transformacja", "OZE", "Handel", "Bezpieczeństwo"],
+      "projects": [
+        {
+          "title": "Strategia Grupy Enea do 2035 roku",
+          "type": "Transformacja",
+          "description": "Realizacja kierunków transformacji, rozwoju zielonego portfela wytwórczego oraz inwestycji infrastrukturalnych.",
+          "result": "Spójny program rozwoju Grupy łączący bezpieczeństwo energetyczne z dekarbonizacją."
+        },
+        {
+          "title": "Rozwój portfela OZE",
+          "type": "OZE",
+          "description": "Rozwój projektów fotowoltaicznych i wiatrowych oraz pozyskiwanie nowych aktywów odnawialnych.",
+          "result": "Rozszerzenie zielonego portfela wytwórczego Grupy."
+        },
+        {
+          "title": "Centralizacja handlu",
+          "type": "Handel",
+          "description": "Centralizacja obrotu energią, gazem i paliwami oraz rozwój centrum biznesowego sprzedaży.",
+          "result": "Zintegrowany model handlu i wsparcia sprzedaży w grupie kapitałowej."
+        },
+        {
+          "title": "Bezpieczeństwo i cyberbezpieczeństwo",
+          "type": "Bezpieczeństwo",
+          "description": "Rozwój mechanizmów bezpieczeństwa energetycznego i odporności cyfrowej organizacji.",
+          "result": "Wzmocnienie zarządzania ryzykiem infrastrukturalnym i cyfrowym."
+        }
+      ]
+    },
+    {
+      "id": "veolia",
+      "name": "Veolia",
+      "city": "Warszawa",
+      "period": "2018–2024",
+      "role": "Funkcje zarządcze w Grupie Veolia w Polsce",
+      "mapPosition": { "x": 67, "y": 42 },
+      "summary": "Restrukturyzacja, strategia obszarowa oraz centralizacja obrotu energią i gazem.",
+      "areas": ["Handel", "Restrukturyzacja", "Sprzedaż"],
+      "projects": [
+        {
+          "title": "Projekt ELEKTRON",
+          "type": "Handel",
+          "description": "Utworzenie i centralizacja obrotu energią i gazem w Grupie Veolia w Polsce.",
+          "result": "Scentralizowane struktury handlowe i sprzedażowe."
+        },
+        {
+          "title": "Strategia handlu i obsługi klienta",
+          "type": "Strategia",
+          "description": "Wdrożenie strategii obszarowych, rozwój sprzedaży i usług wspólnych.",
+          "result": "Połączenie procesów handlowych, sprzedażowych i obsługowych."
+        },
+        {
+          "title": "Restrukturyzacja procesów",
+          "type": "Restrukturyzacja",
+          "description": "Reorganizacja funkcji oraz rozwój modeli współpracy w grupie kapitałowej.",
+          "result": "Uproszczenie procesów i wzmocnienie odpowiedzialności biznesowej."
+        }
+      ]
+    },
+    {
+      "id": "tauron",
+      "name": "TAURON / GZE",
+      "city": "Katowice",
+      "period": "2000–2013",
+      "role": "Funkcje dyrektorskie i zarządcze",
+      "mapPosition": { "x": 52, "y": 73 },
+      "summary": "Integracja obsługi klienta, cyfryzacja procesów, rozwój kanałów sprzedaży i modeli biznesowych.",
+      "areas": ["Cyfryzacja", "Klient", "Integracja"],
+      "projects": [
+        {
+          "title": "Integracja obsługi klienta",
+          "type": "Integracja",
+          "description": "Łączenie spółek obsługowych i reorganizacja procesów wsparcia sprzedaży.",
+          "result": "Zintegrowany model obsługi w grupie energetycznej."
+        },
+        {
+          "title": "Cyfrowe kanały sprzedaży i obsługi",
+          "type": "Cyfryzacja",
+          "description": "Wdrożenia SAP, CRM, systemów billingowych, e-faktur, e-płatności oraz e-usług.",
+          "result": "Nowoczesne procesy sprzedaży i wielokanałowej obsługi klienta."
+        },
+        {
+          "title": "Proces zmiany sprzedawcy",
+          "type": "Rynek",
+          "description": "Uruchamianie procesów rynkowych i nowych kanałów sprzedażowych.",
+          "result": "Praktyczne wdrożenie mechanizmów konkurencyjnego rynku energii."
+        }
+      ]
+    },
+    {
+      "id": "pkp",
+      "name": "PKP Energetyka Sprzedaż",
+      "city": "Warszawa",
+      "period": "2017–2018",
+      "role": "Prezes Zarządu",
+      "mapPosition": { "x": 73, "y": 48 },
+      "summary": "Budowa struktur obrotu hurtowego i sprzedaży energii oraz gazu.",
+      "areas": ["Handel", "Sprzedaż", "Organizacja"],
+      "projects": [
+        {
+          "title": "Projekt OMEGA",
+          "type": "Handel",
+          "description": "Budowa obszaru handlu energią i gazem oraz procesów rynku hurtowego.",
+          "result": "Nowe struktury obrotu i kompetencje rynkowe."
+        },
+        {
+          "title": "Strategia sprzedaży",
+          "type": "Sprzedaż",
+          "description": "Rozwój strategii firmy i przygotowanie migracji zasobów do nowych struktur.",
+          "result": "Uporządkowany model sprzedażowy i organizacyjny."
+        }
+      ]
+    }
+  ]
+}

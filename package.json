@@ -1,17 +1,19 @@
 {
   "name": "kinelski-pl-5",
   "type": "module",
-  "version": "5.3.2",
+  "version": "5.4.23",
   "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "audit": "node scripts/audit-site.mjs"
   },
   "dependencies": {
     "@astrojs/check": "latest",
+    "@astrojs/sitemap": "3.7.3",
     "astro": "latest",
     "typescript": "latest"
   }

@@ -79,49 +79,105 @@
       "period": "2024–obecnie",
       "organisation": "Enea S.A.",
       "role": "Prezes Zarządu",
-      "description": "Odpowiedzialność za strategię i transformację Grupy Enea, rozwój zielonego portfela wytwórczego, inwestycje, bezpieczeństwo energetyczne oraz zarządzanie grupą kapitałową."
+      "description": "Odpowiedzialność za strategię i transformację Grupy Enea, rozwój zielonego portfela wytwórczego, inwestycje, bezpieczeństwo energetyczne oraz zarządzanie grupą kapitałową.",
+      "filterKeys": ["enea", "zarzad", "transformacja", "oze"],
+      "tags": ["Zarząd", "Transformacja", "OZE", "Bezpieczeństwo energetyczne"],
+      "projects": [
+        "Realizacja Strategii rozwoju Grupy Enea do 2035 roku",
+        "Rozwój portfela OZE i inwestycji infrastrukturalnych",
+        "Bezpieczeństwo energetyczne i cyberbezpieczeństwo"
+      ]
     },
     {
       "period": "2018–2024",
       "organisation": "Grupa Veolia w Polsce",
       "role": "Funkcje zarządcze, m.in. członek zarządu Veolia Energy Contracting Poland",
-      "description": "Restrukturyzacja i wdrażanie strategii obszarowych, budowa i centralizacja obrotu energią i gazem, rozwój sprzedaży, usług wspólnych oraz obsługi klienta."
+      "description": "Restrukturyzacja i wdrażanie strategii obszarowych, budowa i centralizacja obrotu energią i gazem, rozwój sprzedaży, usług wspólnych oraz obsługi klienta.",
+      "filterKeys": ["veolia", "zarzad", "handel", "restrukturyzacja"],
+      "tags": ["Zarząd", "Handel", "Restrukturyzacja", "Usługi wspólne"],
+      "projects": [
+        "Projekt ELEKTRON — centralizacja obrotu energią i gazem",
+        "Rozwój sprzedaży i obsługi klienta",
+        "Wdrażanie strategii obszarowych Grupy Veolia"
+      ]
     },
     {
       "period": "2018",
       "organisation": "Energetyczne Centrum / Energia dla Firm",
       "role": "Prezes Zarządu",
-      "description": "Reorganizacja przedsiębiorstw, rozwój produktów i strategii sprzedaży energii oraz gazu dla klientów biznesowych i konsumentów."
+      "description": "Reorganizacja przedsiębiorstw, rozwój produktów i strategii sprzedaży energii oraz gazu dla klientów biznesowych i konsumentów.",
+      "filterKeys": ["inne", "zarzad", "handel", "restrukturyzacja"],
+      "tags": ["Zarząd", "Handel", "Restrukturyzacja"],
+      "projects": [
+        "Reorganizacja przedsiębiorstw",
+        "Rozwój produktów energii i gazu",
+        "Strategia sprzedaży B2B i B2C"
+      ]
     },
     {
       "period": "2017–2018",
       "organisation": "PKP Energetyka Sprzedaż",
       "role": "Prezes Zarządu",
-      "description": "Utworzenie struktur obrotu hurtowego i sprzedaży energii oraz gazu, rozwój strategii firmy i przygotowanie migracji zasobów do nowych struktur sprzedażowych."
+      "description": "Utworzenie struktur obrotu hurtowego i sprzedaży energii oraz gazu, rozwój strategii firmy i przygotowanie migracji zasobów do nowych struktur sprzedażowych.",
+      "filterKeys": ["pkp", "zarzad", "handel", "restrukturyzacja"],
+      "tags": ["Zarząd", "Handel", "Sprzedaż", "Transformacja organizacyjna"],
+      "projects": [
+        "Projekt OMEGA — budowa obszaru handlu energią i gazem",
+        "Strategia sprzedaży i procesów rynkowych",
+        "Migracja zasobów do nowych struktur sprzedażowych"
+      ]
     },
     {
       "period": "2013–2016",
       "organisation": "Enea S.A.",
       "role": "Członek Zarządu ds. Handlowych",
-      "description": "Strategia handlowa, centralizacja obrotu energią, gazem i paliwami, rozwój centrum biznesowego sprzedaży oraz funkcji usług wspólnych i akwizycji strategicznych."
+      "description": "Strategia handlowa, centralizacja obrotu energią, gazem i paliwami, rozwój centrum biznesowego sprzedaży oraz funkcji usług wspólnych i akwizycji strategicznych.",
+      "filterKeys": ["enea", "zarzad", "handel", "restrukturyzacja"],
+      "tags": ["Zarząd", "Handel", "Usługi wspólne", "Akwizycje"],
+      "projects": [
+        "Centralizacja handlu energią, gazem i paliwami",
+        "Centrum biznesowe sprzedaży i usługi wspólne",
+        "Wsparcie akwizycji strategicznych"
+      ]
     },
     {
       "period": "2010–2013",
       "organisation": "TAURON / GZE",
       "role": "Wiceprezes Zarządu i funkcje zarządcze",
-      "description": "Strategia obsługi klienta, reorganizacja procesów wsparcia sprzedaży, integracja spółek obsługowych i rozwój modeli biznesowych w grupie energetycznej."
+      "description": "Strategia obsługi klienta, reorganizacja procesów wsparcia sprzedaży, integracja spółek obsługowych i rozwój modeli biznesowych w grupie energetycznej.",
+      "filterKeys": ["tauron", "zarzad", "cyfryzacja", "restrukturyzacja"],
+      "tags": ["Zarząd", "Obsługa klienta", "Integracja", "Modele biznesowe"],
+      "projects": [
+        "Integracja spółek obsługi klienta",
+        "Reorganizacja procesów wsparcia sprzedaży",
+        "Rozwój modeli biznesowych Grupy TAURON"
+      ]
     },
     {
       "period": "2000–2010",
       "organisation": "Vattenfall / GZE",
       "role": "Dyrektor Obsługi Klientów, prokurent i wcześniejsze funkcje menedżerskie",
-      "description": "Rozwój nowoczesnych kanałów sprzedaży i obsługi, proces zmiany sprzedawcy, projekty SAP i billingowe, call center, e-usługi oraz unbundling."
+      "description": "Rozwój nowoczesnych kanałów sprzedaży i obsługi, proces zmiany sprzedawcy, projekty SAP i billingowe, call center, e-usługi oraz unbundling.",
+      "filterKeys": ["vattenfall", "dyrektor", "cyfryzacja", "handel"],
+      "tags": ["Dyrektor", "Cyfryzacja", "Sprzedaż", "Obsługa klienta"],
+      "projects": [
+        "Pierwszy proces zmiany sprzedawcy",
+        "Wdrożenia SAP, CRM i systemów billingowych",
+        "Call center, e-usługi i nowe kanały sprzedaży"
+      ]
     },
     {
       "period": "1993–2000",
       "organisation": "INPROEL / Górnośląski Zakład Energetyczny",
       "role": "Początki kariery w sprzedaży i elektroenergetyce",
-      "description": "Doświadczenie sprzedażowe, handlowe i operacyjne, następnie zarządzanie obsługą handlową oraz rozwój kompetencji technicznych i rynkowych."
+      "description": "Doświadczenie sprzedażowe, handlowe i operacyjne, następnie zarządzanie obsługą handlową oraz rozwój kompetencji technicznych i rynkowych.",
+      "filterKeys": ["inne", "specjalista", "handel"],
+      "tags": ["Sprzedaż", "Elektroenergetyka", "Obsługa handlowa"],
+      "projects": [
+        "Rozwój kompetencji technicznych i rynkowych",
+        "Zarządzanie obsługą handlową",
+        "Doświadczenie operacyjne w elektroenergetyce"
+      ]
     }
   ],
   "achievementGroups": [

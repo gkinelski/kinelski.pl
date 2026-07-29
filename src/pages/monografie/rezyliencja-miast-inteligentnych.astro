@@ -10,6 +10,7 @@ import book from '../../data/monograph.json';
 <BaseLayout
   title="Rezyliencja miast inteligentnych"
   description="Monografia Grzegorza Kinelskiego o rezyliencji miast inteligentnych, transformacji energetyczno-klimatycznej i modelu kapitałów 4T+."
+  preloadImage="/images/monographs/rezyliencja-miast-inteligentnych.webp"
 >
   <BookSchema />
 
@@ -26,6 +27,8 @@ import book from '../../data/monograph.json';
           width="988"
           height="1302"
           loading="eager"
+          fetchpriority="high"
+          decoding="async"
         />
       </figure>
 

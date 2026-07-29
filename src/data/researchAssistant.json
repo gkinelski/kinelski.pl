@@ -164,11 +164,15 @@
         },
         {
           "q": "Jaki jest główny adres kontaktowy?",
-          "a": "Głównym adresem kontaktowym na stronie jest gkinelski@wsb.edu.pl.",
+          "a": "W sprawach naukowych napisz na gkinelski@wsb.edu.pl. W sprawach branżowych, energetycznych i eksperckich użyj adresu grzegorz@kinelski.pl.",
           "links": [
             {
-              "label": "Napisz wiadomość",
+              "label": "Kontakt naukowy",
               "href": "mailto:gkinelski@wsb.edu.pl"
+            },
+            {
+              "label": "Kontakt branżowy",
+              "href": "mailto:grzegorz@kinelski.pl"
             }
           ]
         }

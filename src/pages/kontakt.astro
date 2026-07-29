@@ -6,7 +6,7 @@ import contact from '../data/contact.json';
 
 <BaseLayout
   title="Kontakt"
-  description="Kontakt z dr. Grzegorzem Kinelskim — Smart City, transformacja energetyczna, gospodarka cyfrowa i rezyliencja miejska."
+  description="Kontakt naukowy i branżowy z dr. Grzegorzem Kinelskim — badania, Smart City, energetyka, zarządzanie i współpraca ekspercka."
 >
   <section class="contact-hero-v4">
     <div class="container contact-hero-grid-v4">
@@ -90,8 +90,20 @@ import contact from '../data/contact.json';
 
   <section class="section contact-final-v4">
     <div class="container">
-      <p class="eyebrow pale">E-mail</p>
-      <h2><a href={`mailto:${contact.email}`}>{contact.email}</a></h2>
+      <p class="eyebrow pale">Wybierz właściwy kontakt</p>
+      <h2>Dwa kanały współpracy</h2>
+      <div class="contact-final-grid-v5420">
+        <a href={`mailto:${contact.scientificEmail}`}>
+          <span>Kontakty naukowe</span>
+          <strong class="notranslate" translate="no">{contact.scientificEmail}</strong>
+          <small>Badania • publikacje • konferencje • współpraca akademicka</small>
+        </a>
+        <a href={`mailto:${contact.industryEmail}`}>
+          <span>Kontakty branżowe</span>
+          <strong class="notranslate" translate="no">{contact.industryEmail}</strong>
+          <small>Energetyka • zarządzanie • projekty • ekspertyza</small>
+        </a>
+      </div>
     </div>
   </section>
 </BaseLayout>

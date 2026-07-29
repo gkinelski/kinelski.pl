@@ -36,6 +36,7 @@ const breadcrumbSchema = {
 <BaseLayout
   title="Kariera"
   description="Kariera zawodowa, funkcje, osiągnięcia, wykształcenie i zweryfikowane profile internetowe dr. Grzegorza Kinelskiego."
+  preloadImage={career.hero.portrait}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(profileSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
@@ -59,7 +60,7 @@ const breadcrumbSchema = {
         </div>
       </div>
       <div class="career-portrait-panel-v5">
-        <img src={career.hero.portrait} alt={career.hero.portraitAlt} width="1100" height="1500" />
+        <img src={career.hero.portrait} alt={career.hero.portraitAlt} width="360" height="480" loading="eager" fetchpriority="high" decoding="async" />
         <div class="career-portrait-caption-v5"><span>Energetyka • zarządzanie • nauka</span><strong>dr Grzegorz Kinelski</strong></div>
       </div>
     </div>
@@ -78,6 +79,44 @@ const breadcrumbSchema = {
       <a href="#internet">W internecie</a>
     </div>
   </nav>
+
+  <section class="career-role-synthesis-v5417" aria-labelledby="career-role-synthesis-title">
+    <div class="container">
+      <div class="career-role-synthesis-head-v5417">
+        <div>
+          <p class="eyebrow">Profil odpowiedzialności</p>
+          <h2 id="career-role-synthesis-title">Trzy obszary jednej ścieżki zawodowej</h2>
+        </div>
+        <p>Aktualne funkcje łączą zarządzanie dużą organizacją, nadzór właścicielski i branżowy oraz rozwój wiedzy akademickiej.</p>
+      </div>
+      <div class="career-role-synthesis-grid-v5417">
+        <a href="#doswiadczenie">
+          <span>01</span>
+          <div>
+            <p>Zarządzanie operacyjne</p>
+            <h3>Transformacja i odpowiedzialność za organizację</h3>
+            <strong>Przejdź do doświadczenia ↓</strong>
+          </div>
+        </a>
+        <a href="#funkcje">
+          <span>02</span>
+          <div>
+            <p>Nadzór i rynek</p>
+            <h3>Ład korporacyjny, współpraca sektorowa i strategiczna</h3>
+            <strong>Zobacz aktualne funkcje ↓</strong>
+          </div>
+        </a>
+        <a href="#edukacja">
+          <span>03</span>
+          <div>
+            <p>Nauka i rozwój wiedzy</p>
+            <h3>Badania, dydaktyka i transfer doświadczeń do praktyki</h3>
+            <strong>Przejdź do edukacji ↓</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
 
   <section class="section" id="funkcje">
     <div class="container">
@@ -104,18 +143,86 @@ const breadcrumbSchema = {
         <p class="eyebrow pale">Doświadczenie</p>
         <h2>Ponad trzy dekady w sektorze energii</h2>
         <p>Od sprzedaży i obsługi handlowej, przez centralizację procesów oraz budowę obszarów handlu, po zarządzanie transformacją grup kapitałowych.</p>
+        <div class="career-filter-panel-v54" aria-label="Filtry interaktywnego CV">
+          <div>
+            <span>Organizacja</span>
+            <div class="career-filter-group-v54" data-filter-group="organisation">
+              <button class="is-active" type="button" data-career-filter="all">Wszystkie</button>
+              <button type="button" data-career-filter="enea">Enea</button>
+              <button type="button" data-career-filter="veolia">Veolia</button>
+              <button type="button" data-career-filter="tauron">TAURON</button>
+              <button type="button" data-career-filter="pkp">PKP Energetyka</button>
+              <button type="button" data-career-filter="vattenfall">Vattenfall / GZE</button>
+            </div>
+          </div>
+          <div>
+            <span>Obszar</span>
+            <div class="career-filter-group-v54" data-filter-group="area">
+              <button class="is-active" type="button" data-career-filter="all">Wszystkie</button>
+              <button type="button" data-career-filter="zarzad">Zarząd</button>
+              <button type="button" data-career-filter="handel">Handel</button>
+              <button type="button" data-career-filter="transformacja">Transformacja</button>
+              <button type="button" data-career-filter="restrukturyzacja">Restrukturyzacja</button>
+              <button type="button" data-career-filter="cyfryzacja">Cyfryzacja</button>
+            </div>
+          </div>
+          <p class="career-filter-result-v54" aria-live="polite"><strong data-career-count>{career.timeline.length}</strong> etapów kariery</p>
+        </div>
       </div>
-      <div class="career-timeline-v5">
+      <div class="career-timeline-v5" data-career-timeline>
         {career.timeline.map((item, index) => (
-          <article>
+          <article data-career-entry data-filter-keys={(item.filterKeys ?? []).join(' ')}>
             <div class="career-timeline-marker-v5"><span>{String(index + 1).padStart(2, '0')}</span></div>
             <div class="career-timeline-date-v5">{item.period}</div>
-            <div class="career-timeline-body-v5"><p>{item.organisation}</p><h3>{item.role}</h3><strong>{item.description}</strong></div>
+            <div class="career-timeline-body-v5">
+              <p>{item.organisation}</p>
+              <h3>{item.role}</h3>
+              <strong>{item.description}</strong>
+              <div class="career-tags-v54">{item.tags?.map((tag) => <span>{tag}</span>)}</div>
+              <details class="career-details-v54">
+                <summary>Najważniejsze projekty i rezultaty</summary>
+                <ul>{item.projects?.map((project) => <li>{project}</li>)}</ul>
+              </details>
+            </div>
           </article>
         ))}
+        <p class="career-empty-v54" data-career-empty hidden>Brak etapów spełniających oba wybrane kryteria. Zmień jeden z filtrów.</p>
       </div>
     </div>
   </section>
+
+  <script is:inline>
+    (() => {
+      const groups = [...document.querySelectorAll('[data-filter-group]')];
+      const entries = [...document.querySelectorAll('[data-career-entry]')];
+      const count = document.querySelector('[data-career-count]');
+      const empty = document.querySelector('[data-career-empty]');
+      const selected = { organisation: 'all', area: 'all' };
+
+      const update = () => {
+        let visible = 0;
+        entries.forEach((entry) => {
+          const keys = (entry.dataset.filterKeys || '').split(' ');
+          const matches = Object.values(selected).every((filter) => filter === 'all' || keys.includes(filter));
+          entry.hidden = !matches;
+          if (matches) visible += 1;
+        });
+        if (count) count.textContent = String(visible);
+        if (empty) empty.hidden = visible !== 0;
+      };
+
+      groups.forEach((group) => {
+        group.addEventListener('click', (event) => {
+          const button = event.target.closest('[data-career-filter]');
+          if (!button) return;
+          group.querySelectorAll('[data-career-filter]').forEach((item) => item.classList.remove('is-active'));
+          button.classList.add('is-active');
+          selected[group.dataset.filterGroup] = button.dataset.careerFilter;
+          update();
+        });
+      });
+    })();
+  </script>
 
   <section class="section" id="osiagniecia">
     <div class="container">

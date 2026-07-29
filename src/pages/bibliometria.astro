@@ -1,0 +1,295 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import publications from '../data/publications.json';
+import data from '../data/bibliometrics.json';
+
+const years = publications.reduce((acc, publication) => {
+  const year = String(publication.year);
+  acc[year] = (acc[year] ?? 0) + 1;
+  return acc;
+}, {} as Record<string, number>);
+const yearly = Object.entries(years).sort(([a], [b]) => Number(a) - Number(b));
+const maxYear = Math.max(...yearly.map(([, count]) => count));
+const publicationTypes = [...new Set(publications.map((publication) => publication.type))];
+const typeSummary = Object.entries(publications.reduce((acc, publication) => {
+  acc[publication.type] = (acc[publication.type] ?? 0) + 1;
+  return acc;
+}, {} as Record<string, number>)).sort(([, a], [, b]) => b - a);
+const areaSummary = Object.entries(publications.reduce((acc, publication) => {
+  const area = publication.area || 'Pozostałe';
+  acc[area] = (acc[area] ?? 0) + 1;
+  return acc;
+}, {} as Record<string, number>)).sort(([, a], [, b]) => b - a);
+const maxTypeCount = Math.max(...typeSummary.map(([, count]) => count));
+const maxAreaCount = Math.max(...areaSummary.map(([, count]) => count));
+const doiCount = publications.filter((publication) => publication.doi).length;
+const afterDoctorate = publications.filter((publication) => publication.period === 'po').length;
+const beforeDoctorate = publications.filter((publication) => publication.period === 'przed').length;
+const coauthoredCount = publications.filter((publication) => /,|&| i /i.test(publication.authors)).length;
+const soloCount = publications.length - coauthoredCount;
+const recentCount = publications.filter((publication) => Number(publication.year) >= 2022).length;
+const coauthorCounts = publications.reduce((acc, publication) => {
+  publication.authors.split(/,|&|\si\s/).forEach((rawName) => {
+    const name = rawName.trim().replace(/^and\s+/i, '');
+    if (!name || /kinelski|…/i.test(name) || name.length > 38 || !name.includes(' ')) return;
+    acc[name] = (acc[name] ?? 0) + 1;
+  });
+  return acc;
+}, {} as Record<string, number>);
+const topCoauthors = Object.entries(coauthorCounts).sort(([, a], [, b]) => b - a).slice(0, 10);
+const recentPublications = publications.slice(0, 5);
+---
+<BaseLayout
+  title="Bibliometria"
+  description="Bibliometria, profile ORCID, Scopus i Web of Science oraz zweryfikowany dorobek naukowy Grzegorza Kinelskiego."
+>
+  <section class="biblio-hero-v543">
+    <div class="container">
+      <div class="biblio-hero-grid-v543">
+        <div>
+          <p class="eyebrow">{data.meta.eyebrow}</p>
+          <h1>{data.meta.title}</h1>
+          <p class="page-lead">{data.meta.lead}</p>
+        </div>
+        <div class="biblio-orcid-card-v543">
+          <span>ORCID</span>
+          <strong>{data.orcid.id}</strong>
+          <p>{data.orcid.description}</p>
+          <a href={data.orcid.profileUrl} target="_blank" rel="noopener noreferrer">Otwórz rekord ORCID ↗</a>
+        </div>
+      </div>
+      <div class="biblio-metrics-v543">
+        <article><span>Lokalna bibliografia</span><strong>{publications.length}</strong><small>zweryfikowanych pozycji</small></article>
+        <article><span>Publiczny rekord ORCID</span><strong data-orcid-count>—</strong><small data-orcid-status>pobieranie danych…</small></article>
+        <article><span>Publikacje z DOI</span><strong>{doiCount}</strong><small>trwałych identyfikatorów</small></article>
+        <article><span>Zakres dorobku</span><strong>{yearly[0][0]}–{yearly.at(-1)?.[0]}</strong><small>{publicationTypes.length} typy publikacji</small></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section biblio-profiles-v543">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow">Profile autora</p><h2>Trzy niezależne źródła</h2></div>
+        <p>Każda baza ma własny zakres indeksowania, dlatego wartości cytowań i indeksu H należy interpretować w obrębie konkretnego źródła.</p>
+      </div>
+      <div class="biblio-profile-grid-v543">
+        <article class="is-live">
+          <div><span>01</span><strong>ORCID</strong><em>połączenie publiczne</em></div>
+          <p>{data.orcid.description}</p>
+          <a href={data.orcid.profileUrl} target="_blank" rel="noopener noreferrer">Zobacz profil ↗</a>
+        </article>
+        <article>
+          <div><span>02</span><strong>Scopus</strong><em>dostęp zewnętrzny</em></div>
+          <p>{data.scopus.description}</p>
+          <small>{data.scopus.accessNote}</small>
+          <a href={data.scopus.profileUrl} target="_blank" rel="noopener noreferrer">Zobacz profil ↗</a>
+        </article>
+        <article>
+          <div><span>03</span><strong>Web of Science</strong><em>{data.webOfScience.researcherId}</em></div>
+          <p>{data.webOfScience.description}</p>
+          <small>{data.webOfScience.accessNote}</small>
+          <a href={data.webOfScience.profileUrl} target="_blank" rel="noopener noreferrer">Zobacz profil ↗</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section biblio-identity-v544">
+    <div class="container">
+      <div class="biblio-identity-grid-v544">
+        <article>
+          <p class="eyebrow">Tożsamość naukowa</p>
+          <span class="biblio-verified-v544">{data.identity.status}</span>
+          <h2>{data.identity.name}</h2>
+          <p class="biblio-affiliation-v544">{data.identity.affiliation}</p>
+          <dl>
+            <div><dt>ORCID</dt><dd>{data.identity.orcid}</dd></div>
+            <div><dt>ResearcherID</dt><dd>{data.identity.researcherId}</dd></div>
+          </dl>
+          <small>{data.identity.note}</small>
+        </article>
+        <div>
+          <div class="section-heading">
+            <div><p class="eyebrow">Zakres danych</p><h2>Status źródeł</h2></div>
+          </div>
+          <div class="biblio-source-list-v544">
+            {data.sourceComparison.map((source) => (
+              <article>
+                <span class:list={{ 'is-active': source.status === 'active' }}>{source.status === 'active' ? 'Dostępne' : 'Oczekuje'}</span>
+                <div><strong>{source.source}</strong><p>{source.scope}</p></div>
+                <small>{source.availability}</small>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section biblio-structure-v545">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow">Struktura dorobku</p><h2>Typy publikacji i obszary badań</h2></div>
+        <p>Zestawienie powstaje automatycznie z lokalnej bibliografii. Pokazuje strukturę dorobku bez mieszania jej ze wskaźnikami cytowań zewnętrznych baz.</p>
+      </div>
+      <div class="biblio-structure-grid-v545">
+        <article>
+          <div class="biblio-structure-head-v545"><strong>Według typu</strong><span>{typeSummary.length} kategorii</span></div>
+          <div class="biblio-horizontal-chart-v545">
+            {typeSummary.map(([label, count]) => (
+              <a href={`/publikacje?typ=${encodeURIComponent(label)}`} aria-label={`Pokaż publikacje typu ${label}`}>
+                <p><span>{label}</span><strong>{count}</strong></p>
+                <i><b style={`--share:${(count / maxTypeCount) * 100}%`}></b></i>
+              </a>
+            ))}
+          </div>
+        </article>
+        <article>
+          <div class="biblio-structure-head-v545"><strong>Według obszaru</strong><span>{areaSummary.length} obszarów</span></div>
+          <div class="biblio-horizontal-chart-v545 is-areas">
+            {areaSummary.map(([label, count]) => (
+              <a href={`/publikacje?obszar=${encodeURIComponent(label)}`} aria-label={`Pokaż publikacje z obszaru ${label}`}>
+                <p><span>{label}</span><strong>{count}</strong></p>
+                <i><b style={`--share:${(count / maxAreaCount) * 100}%`}></b></i>
+              </a>
+            ))}
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section biblio-comparison-v549">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow pale">Profil dorobku</p><h2>Etapy i model autorstwa</h2></div>
+        <p class="light-copy">Porównanie jest wyliczane z lokalnej bibliografii i aktualizuje się automatycznie po dodaniu kolejnych rekordów.</p>
+      </div>
+      <div class="biblio-comparison-grid-v549">
+        <a href="/publikacje?okres=po">
+          <span>Po doktoracie</span><strong>{afterDoctorate}</strong>
+          <i><b style={`--share:${(afterDoctorate / publications.length) * 100}%`}></b></i>
+          <small>{Math.round((afterDoctorate / publications.length) * 100)}% całego dorobku</small>
+        </a>
+        <a href="/publikacje?okres=przed">
+          <span>Przed doktoratem</span><strong>{beforeDoctorate}</strong>
+          <i><b style={`--share:${(beforeDoctorate / publications.length) * 100}%`}></b></i>
+          <small>{Math.round((beforeDoctorate / publications.length) * 100)}% całego dorobku</small>
+        </a>
+        <article>
+          <span>Publikacje współautorskie</span><strong>{coauthoredCount}</strong>
+          <i><b style={`--share:${(coauthoredCount / publications.length) * 100}%`}></b></i>
+          <small>{Math.round((coauthoredCount / publications.length) * 100)}% rekordów ma więcej niż jednego autora</small>
+        </article>
+        <article>
+          <span>Publikacje samodzielne</span><strong>{soloCount}</strong>
+          <i><b style={`--share:${(soloCount / publications.length) * 100}%`}></b></i>
+          <small>{recentCount} publikacji pochodzi z lat 2022–2026</small>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section biblio-coauthors-v5411">
+    <div class="container biblio-coauthors-layout-v5411">
+      <div>
+        <p class="eyebrow">Współautorstwo</p>
+        <h2>Najczęściej występujący współautorzy</h2>
+        <p class="page-lead">Zestawienie na podstawie nazwisk zapisanych w lokalnej bibliografii. Kliknięcie otwiera wspólne publikacje.</p>
+      </div>
+      <div class="biblio-coauthor-list-v5411">
+        {topCoauthors.map(([name, count], index) => (
+          <a href={`/publikacje?q=${encodeURIComponent(name)}`}>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <strong>{name}</strong>
+            <small>{count} {count === 1 ? 'publikacja' : count < 5 ? 'publikacje' : 'publikacji'}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section biblio-chart-section-v543">
+    <div class="container">
+      <div class="section-heading">
+        <div><p class="eyebrow pale">Dynamika dorobku</p><h2>Publikacje według roku</h2></div>
+        <p class="light-copy">Wykres powstaje automatycznie z lokalnej bazy publikacji serwisu.</p>
+      </div>
+      <div class="biblio-chart-v543" aria-label="Liczba publikacji według roku">
+        {yearly.map(([year, count]) => (
+          <a href={`/publikacje?rok=${encodeURIComponent(year)}`} title={`${year}: ${count}`} aria-label={`Pokaż ${count} publikacji z roku ${year}`}>
+            <span>{count}</span>
+            <i style={`--bar-height:${Math.max(8, (count / maxYear) * 100)}%`}></i>
+            <small>{year}</small>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container biblio-feed-layout-v543">
+      <div>
+        <p class="eyebrow">Najnowsze prace</p>
+        <h2>Rekord ORCID na żywo</h2>
+        <p class="page-lead">Pozycje są pobierane bezpośrednio z publicznego rekordu ORCID. Jeśli usługa jest chwilowo niedostępna, wyświetlane są najnowsze publikacje z lokalnej bibliografii.</p>
+        <p class="biblio-sync-v543" data-orcid-sync>Łączenie z ORCID…</p>
+      </div>
+      <div class="biblio-live-list-v543" data-orcid-list>
+        {recentPublications.map((publication) => (
+          <article><span>{publication.year} • {publication.type}</span><h3>{publication.title}</h3>{publication.url && <a href={publication.url} target="_blank" rel="noopener noreferrer">Otwórz publikację ↗</a>}</article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section biblio-method-v543">
+    <div class="container biblio-method-grid-v543">
+      <div><p class="eyebrow">Metodologia</p><h2>Jak czytać te dane</h2><p>{data.meta.updatedLabel}</p></div>
+      <ol>{data.methodology.map((item) => <li>{item}</li>)}</ol>
+    </div>
+  </section>
+
+  <script is:inline define:vars={{ orcidApiUrl: data.orcid.apiUrl }}>
+    (() => {
+      const count = document.querySelector('[data-orcid-count]');
+      const status = document.querySelector('[data-orcid-status]');
+      const sync = document.querySelector('[data-orcid-sync]');
+      const list = document.querySelector('[data-orcid-list]');
+      const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (character) => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+      })[character]);
+
+      fetch(orcidApiUrl, { headers: { Accept: 'application/json' } })
+        .then((response) => {
+          if (!response.ok) throw new Error('ORCID unavailable');
+          return response.json();
+        })
+        .then((payload) => {
+          const groups = Array.isArray(payload.group) ? payload.group : [];
+          if (count) count.textContent = String(groups.length);
+          if (status) status.textContent = 'publicznych grup prac';
+          if (sync) sync.textContent = `Połączono z ORCID • ${new Date().toLocaleDateString('pl-PL')}`;
+          const works = groups
+            .map((group) => group['work-summary']?.[0])
+            .filter(Boolean)
+            .sort((a, b) => Number(b['publication-date']?.year?.value || 0) - Number(a['publication-date']?.year?.value || 0))
+            .slice(0, 5);
+          if (list && works.length) {
+            list.innerHTML = works.map((work) => {
+              const title = escapeHtml(work.title?.title?.value || 'Publikacja');
+              const year = escapeHtml(work['publication-date']?.year?.value || 'ORCID');
+              const type = escapeHtml(String(work.type || '').replaceAll('_', ' ').toLowerCase());
+              const url = work.url?.value;
+              return `<article><span>${year} • ${type}</span><h3>${title}</h3>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">Otwórz publikację ↗</a>` : ''}</article>`;
+            }).join('');
+          }
+        })
+        .catch(() => {
+          if (status) status.textContent = 'rekord chwilowo niedostępny';
+          if (sync) sync.textContent = 'ORCID jest chwilowo niedostępny — pokazano dane lokalne.';
+        });
+    })();
+  </script>
+</BaseLayout>

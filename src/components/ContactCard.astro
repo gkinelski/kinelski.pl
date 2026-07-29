@@ -2,16 +2,28 @@
 import contact from '../data/contact.json';
 ---
 <article class="contact-card-v4">
-  <p class="eyebrow">Kontakt akademicki</p>
+  <p class="eyebrow">Kontakt bezpośredni</p>
   <h2 class="notranslate" translate="no">{contact.name}</h2>
   <p>{contact.degree}<br />{contact.role}</p>
   <div class="contact-lines">
-    <a class="notranslate" translate="no" href={`mailto:${contact.email}`}>{contact.email}</a>
     <span>{contact.affiliation} • {contact.department}</span>
     <a href={contact.orcid} target="_blank" rel="noopener">ORCID</a>
   </div>
-  <div class="actions">
-    <a class="button primary" href={`mailto:${contact.email}`}>Napisz wiadomość</a>
-    <a class="button secondary" href="/grzegorz-kinelski.vcf" download>Pobierz kontakt</a>
+  <div class="contact-email-options-v5420">
+    <a class="notranslate" translate="no" href={`mailto:${contact.scientificEmail}`}>
+      <span>Kontakty naukowe</span>
+      <strong>{contact.scientificEmail}</strong>
+      <small>Badania, publikacje, konferencje i współpraca akademicka</small>
+    </a>
+    <a class="notranslate" translate="no" href={`mailto:${contact.industryEmail}`}>
+      <span>Kontakty branżowe</span>
+      <strong>{contact.industryEmail}</strong>
+      <small>Energetyka, zarządzanie, projekty i współpraca ekspercka</small>
+    </a>
   </div>
+  <div class="actions">
+    <a class="button primary" href={`mailto:${contact.scientificEmail}`}>Kontakt naukowy</a>
+    <a class="button secondary" href={`mailto:${contact.industryEmail}`}>Kontakt branżowy</a>
+  </div>
+  <a class="contact-download-v5420" href="/grzegorz-kinelski.vcf" download>Pobierz kontakt VCF ↓</a>
 </article>

@@ -9,18 +9,30 @@ interface Props {
   title?: string;
   description?: string;
   image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  preloadImage?: string;
   noindex?: boolean;
 }
 
 const {
   title = site.title,
   description = site.description,
-  image = '/images/grzegorz-kinelski.webp',
+  image = '/og-v5422.jpg',
+  imageAlt = 'KINELSKI.PL — Grzegorz Kinelski: nauka, energetyka i zarządzanie',
+  imageWidth = 1200,
+  imageHeight = 630,
+  preloadImage,
   noindex = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, site.url);
 const fullTitle = title === site.title ? title : `${title} | ${site.name}`;
+const absoluteImage = new URL(image, site.url);
+const robotsContent = noindex
+  ? 'noindex,nofollow,noarchive'
+  : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 
 const themeCss = `:root{--theme-primary:${theme.primary};--theme-primary-dark:${theme.primaryDark};--theme-navy:${theme.navy};--theme-navy-soft:${theme.navySoft};--theme-light-bg:${theme.light.background};--theme-light-surface:${theme.light.surface};--theme-light-surface-soft:${theme.light.surfaceSoft};--theme-light-text:${theme.light.text};--theme-light-muted:${theme.light.muted};--theme-light-line:${theme.light.line};--theme-dark-bg:${theme.dark.background};--theme-dark-surface:${theme.dark.surface};--theme-dark-surface-soft:${theme.dark.surfaceSoft};--theme-dark-text:${theme.dark.text};--theme-dark-muted:${theme.dark.muted};--theme-dark-line:${theme.dark.line};}`;
 
@@ -95,7 +107,34 @@ const personSchema = {
   image: new URL(image, site.url).href,
   jobTitle: site.role,
   affiliation: { '@type': 'CollegeOrUniversity', name: site.affiliation },
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      contactType: 'kontakt naukowy',
+      email: site.scientificEmail,
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'kontakt branżowy',
+      email: site.industryEmail,
+    },
+  ],
   sameAs: site.sameAs ?? [site.orcid],
+};
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${site.url}/#website`,
+  url: site.url,
+  name: site.title,
+  alternateName: 'KINELSKI.PL',
+  description: site.description,
+  inLanguage: 'pl-PL',
+  publisher: {
+    '@type': 'Person',
+    name: site.name,
+    url: site.url,
+  },
 };
 ---
 <!doctype html>
@@ -105,23 +144,33 @@ const personSchema = {
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
   <meta name="theme-color" content={theme.navy} />
-  {noindex && <meta name="robots" content="noindex,nofollow,noarchive" />}
+  <meta name="author" content={site.name} />
+  <meta name="robots" content={robotsContent} />
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  <link rel="me" href={site.orcid} />
+  {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pl_PL" />
+  <meta property="og:site_name" content="KINELSKI.PL" />
   <meta property="og:title" content={fullTitle} />
   <meta property="og:description" content={description} />
   <meta property="og:url" content={canonical} />
-  <meta property="og:image" content={new URL(image, site.url)} />
+  <meta property="og:image" content={absoluteImage} />
+  <meta property="og:image:secure_url" content={absoluteImage} />
+  <meta property="og:image:width" content={String(imageWidth)} />
+  <meta property="og:image:height" content={String(imageHeight)} />
+  <meta property="og:image:alt" content={imageAlt} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={fullTitle} />
   <meta name="twitter:description" content={description} />
-  <meta name="twitter:image" content={new URL(image, site.url)} />
+  <meta name="twitter:image" content={absoluteImage} />
+  <meta name="twitter:image:alt" content={imageAlt} />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
   <style is:global set:html={designCss}></style>
 </head>
 <body>

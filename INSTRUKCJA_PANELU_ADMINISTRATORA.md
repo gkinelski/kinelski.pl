@@ -1,4 +1,4 @@
-# Panel administratora KINELSKI.PL 5.0
+# Panel administratora KINELSKI.PL 5.4.23
 
 ## 1. Uruchomienie strony lokalnie
 
@@ -10,7 +10,7 @@ npm run dev
 Panel lokalny:
 
 ```text
-http://localhost:4321/admin
+http://127.0.0.1:4321/admin
 ```
 
 ## 2. Utworzenie bezpiecznego tokenu GitHub
@@ -36,6 +36,15 @@ https://kinelski.pl/admin
 ```
 
 Wpisz token. Token jest używany wyłącznie w przeglądarce do bezpośredniej komunikacji z GitHub API. Domyślnie nie jest zapisywany po zamknięciu lub odświeżeniu strony.
+
+Panel sprawdza osobno dostęp do repozytorium i gałęzi. Jeśli repozytorium publiczne zawiera jeszcze starszą wersję strony i nie ma któregoś z nowych plików danych, panel wczyta jego aktualną kopię z lokalnej strony. Brakujący plik powstanie na GitHubie dopiero wtedy, gdy świadomie zapiszesz odpowiednią sekcję.
+
+Jeżeli pojawi się komunikat o niewidocznym repozytorium lub gałęzi, sprawdź:
+
+- właściciela `gkinelski`;
+- repozytorium `kinelski.pl`;
+- gałąź `main`;
+- czy token ma dostęp właśnie do tego repozytorium.
 
 ## 4. Publikowanie
 
@@ -63,4 +72,4 @@ Zmiana jest widoczna w podglądzie natychmiast, ale trafia na stronę publiczną
 
 ## Pierwsze uruchomienie panelu typografii
 
-Jeżeli repozytorium zawiera jeszcze wersję 5.3.0 i nie ma pliku `src/data/typography.json`, panel 5.3.2 połączy się normalnie, zastosuje ustawienia standardowe i utworzy plik automatycznie przy pierwszym zapisie zmian typografii.
+Jeżeli repozytorium zawiera starszą wersję i nie ma któregoś z plików danych wersji 5.4, panel połączy się normalnie, wczyta lokalne dane zastępcze i utworzy brakujący plik dopiero przy pierwszym zapisie tej sekcji.

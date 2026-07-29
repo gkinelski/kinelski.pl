@@ -1,10 +1,10 @@
 ---
 const { book } = Astro.props;
 ---
-<article class="monograph-card" data-book-card data-category={book.categoryKey}>
+<article class="monograph-card" data-book-card data-category={book.categoryKey} data-language={book.language} data-year={book.year}>
   <a href={`/monografie/${book.slug}`} aria-label={`Zobacz książkę: ${book.title}`}>
     <div class="monograph-card-cover">
-      <img src={book.cover} alt={`Okładka książki: ${book.title}`} width={book.coverWidth} height={book.coverHeight} loading="lazy" />
+      <img src={book.cover} alt={`Okładka książki: ${book.title}`} width={book.coverWidth} height={book.coverHeight} loading="lazy" decoding="async" />
       {book.featured && <span class="monograph-featured">Główne osiągnięcie</span>}
     </div>
     <div class="monograph-card-body">

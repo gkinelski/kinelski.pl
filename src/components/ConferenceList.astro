@@ -28,6 +28,21 @@ const years: string[] = Array.from(
       .filter((value: string) => value.length > 0)
   )
 ).sort().reverse();
+
+const participationTypes = [
+  { key: 'panel', label: 'Panele' },
+  { key: 'wystapienie', label: 'Wystąpienia i referaty' },
+  { key: 'organizacja', label: 'Rady i organizacja' }
+];
+
+const getParticipationTypes = (conference: Conference): string[] => {
+  const activity = String(conference.activity ?? '').toLowerCase();
+  const types: string[] = [];
+  if (activity.includes('panel')) types.push('panel');
+  if (['wystąp', 'wystap', 'referat', 'prezentac', 'wykład', 'poster', 'abstract'].some((term) => activity.includes(term))) types.push('wystapienie');
+  if (['rada naukowa', 'sekretarz', 'organizac'].some((term) => activity.includes(term))) types.push('organizacja');
+  return types;
+};
 ---
 <div class="conference-browser">
   <div class="conference-toolbar">
@@ -44,7 +59,20 @@ const years: string[] = Array.from(
     </label>
   </div>
 
-  <div class="conference-count"><strong id="conference-count">{clean.length}</strong> wydarzeń</div>
+  <div class="conference-type-filter-v5419">
+    <span>Rodzaj udziału</span>
+    <div role="group" aria-label="Filtrowanie według rodzaju udziału">
+      <button class="active" type="button" data-conference-type="all" aria-pressed="true">Wszystkie <b>{clean.length}</b></button>
+      {participationTypes.map((type) => (
+        <button type="button" data-conference-type={type.key} aria-pressed="false">
+          {type.label} <b>{clean.filter((conference) => getParticipationTypes(conference).includes(type.key)).length}</b>
+        </button>
+      ))}
+    </div>
+    <button type="button" data-conference-reset>Wyczyść filtry</button>
+  </div>
+
+  <div class="conference-count"><strong id="conference-count">{clean.length}</strong> wydarzeń spełnia kryteria</div>
 
   <div class="conference-list">
     {clean.map((conference: Conference) => (
@@ -52,6 +80,7 @@ const years: string[] = Array.from(
         class="conference-item-v4"
         data-conference
         data-year={conference.year}
+        data-types={getParticipationTypes(conference).join(' ')}
         data-search={`${conference.name ?? ''} ${conference.organizer ?? ''} ${conference.place ?? ''} ${conference.activity ?? ''}`.toLowerCase()}
       >
         <time>{conference.date || conference.year}</time>
@@ -72,11 +101,14 @@ const years: string[] = Array.from(
 <script>
   const search = document.querySelector<HTMLInputElement>('#conference-search');
   const year = document.querySelector<HTMLSelectElement>('#conference-year');
+  const typeButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-conference-type]'));
+  const reset = document.querySelector<HTMLButtonElement>('[data-conference-reset]');
   const items = Array.from(
     document.querySelectorAll<HTMLElement>('[data-conference]')
   );
   const count = document.querySelector<HTMLElement>('#conference-count');
   const empty = document.querySelector<HTMLElement>('#conference-empty');
+  let selectedType = 'all';
 
   const normalize = (value: unknown): string =>
     String(value ?? '')
@@ -91,7 +123,8 @@ const years: string[] = Array.from(
     items.forEach((item: HTMLElement) => {
       const show =
         (!query || normalize(item.dataset.search).includes(query)) &&
-        (!year?.value || item.dataset.year === year.value);
+        (!year?.value || item.dataset.year === year.value) &&
+        (selectedType === 'all' || String(item.dataset.types ?? '').split(' ').includes(selectedType));
 
       item.hidden = !show;
       if (show) visible += 1;
@@ -103,4 +136,25 @@ const years: string[] = Array.from(
 
   search?.addEventListener('input', filterConferences);
   year?.addEventListener('change', filterConferences);
+  typeButtons.forEach((button) => button.addEventListener('click', () => {
+    selectedType = button.dataset.conferenceType || 'all';
+    typeButtons.forEach((item) => {
+      const active = item === button;
+      item.classList.toggle('active', active);
+      item.setAttribute('aria-pressed', String(active));
+    });
+    filterConferences();
+  }));
+  reset?.addEventListener('click', () => {
+    if (search) search.value = '';
+    if (year) year.value = '';
+    selectedType = 'all';
+    typeButtons.forEach((button) => {
+      const active = button.dataset.conferenceType === 'all';
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    });
+    filterConferences();
+    search?.focus();
+  });
 </script>

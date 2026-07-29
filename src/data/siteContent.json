@@ -5,6 +5,8 @@
     "description": "Smart City, transformacja energetyczno-klimatyczna, gospodarka cyfrowa i rezyliencja miejska.",
     "url": "https://kinelski.pl",
     "email": "gkinelski@wsb.edu.pl",
+    "scientificEmail": "gkinelski@wsb.edu.pl",
+    "industryEmail": "grzegorz@kinelski.pl",
     "orcid": "https://orcid.org/0000-0002-5768-463X",
     "affiliation": "Akademia WSB",
     "role": "doktor nauk ekonomicznych • adiunkt • menedżer sektora energii",
@@ -26,6 +28,14 @@
     {
       "href": "/kariera",
       "label": "Kariera"
+    },
+    {
+      "href": "/projekty",
+      "label": "Projekty"
+    },
+    {
+      "href": "/bibliometria",
+      "label": "Bibliometria"
     },
     {
       "href": "/badania",

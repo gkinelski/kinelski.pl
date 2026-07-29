@@ -27,6 +27,12 @@ const { publication } = Astro.props as Props;
   data-area={publication.area}
   data-type={publication.type}
   data-period={publication.period ?? (Number(publication.year) >= 2018 ? "po" : "przed")}
+  data-title={publication.title}
+  data-authors={publication.authors}
+  data-publisher={publication.publisher ?? ''}
+  data-doi={publication.doi ?? ''}
+  data-url={publication.doiUrl || publication.url || ''}
+  data-apa={publication.apa ?? ''}
   data-search={`${publication.title} ${publication.authors} ${publication.publisher ?? ''}`.toLowerCase()}
 >
   <div class="publication-year">{publication.year}</div>

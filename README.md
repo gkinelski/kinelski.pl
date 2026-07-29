@@ -1,4 +1,4 @@
-# KINELSKI.PL 5.3.2
+# KINELSKI.PL 5.4.22
 
 Wielojęzyczny portal akademicki Astro z panelem administratora.
 
@@ -8,6 +8,10 @@ Wielojęzyczny portal akademicki Astro z panelem administratora.
 - 66 publikacji naukowych,
 - katalog 9 książek naukowych z osobnymi kartami,
 - podstrona Kariera z osiągnięciami, osią czasu i publicznymi profilami,
+- interaktywne CV z filtrowaniem według organizacji i obszarów kompetencji,
+- rozwijane projekty i rezultaty dla każdego etapu kariery,
+- interaktywna mapa projektów energetycznych z portfolio wdrożeń,
+- bibliometria z publiczną synchronizacją ORCID i profilami Scopus oraz Web of Science,
 - panel administratora obsługujący treści, publikacje, książki i karierę,
 - panel Typografia z presetami, regulacją rozmiarów i podglądem na żywo.
 

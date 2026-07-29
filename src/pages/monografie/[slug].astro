@@ -8,12 +8,20 @@ const {book,related}=Astro.props;
 const people=book.authors.length?book.authors:book.editors;
 const schema={'@context':'https://schema.org','@type':'Book',name:book.title,datePublished:String(book.year),inLanguage:book.language,isbn:book.isbn||undefined,author:book.authors.map((name)=>({'@type':'Person',name})),editor:book.editors.map((name)=>({'@type':'Person',name})),publisher:{'@type':'Organization',name:book.publisher},image:new URL(book.cover,'https://kinelski.pl').href};
 ---
-<BaseLayout title={book.title} description={book.lead} image={book.cover}>
+<BaseLayout
+  title={book.title}
+  description={book.lead}
+  image={book.cover}
+  imageAlt={`Okładka książki: ${book.title}`}
+  imageWidth={book.coverWidth}
+  imageHeight={book.coverHeight}
+  preloadImage={book.cover}
+>
   <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
   <section class="book-detail-hero">
     <div class="container"><a class="book-back-link" href="/monografie">← Wszystkie monografie</a></div>
     <div class="container book-detail-hero-grid">
-      <figure class="book-detail-cover"><img src={book.cover} alt={`Okładka książki: ${book.title}`} width={book.coverWidth} height={book.coverHeight} /></figure>
+      <figure class="book-detail-cover"><img src={book.cover} alt={`Okładka książki: ${book.title}`} width={book.coverWidth} height={book.coverHeight} loading="eager" fetchpriority="high" decoding="async" /></figure>
       <div class="book-detail-copy">
         <div class="book-detail-kickers"><span>{book.categoryLabel}</span><span>{book.year}</span></div>
         <h1 class="notranslate" translate="no">{book.title}</h1>
@@ -54,6 +62,6 @@ const schema={'@context':'https://schema.org','@type':'Book',name:book.title,dat
     <div class="citation-panel"><p id="book-citation" class="notranslate" translate="no">{book.citation}</p><div class="actions"><button class="button primary" type="button" data-copy-book>Kopiuj opis</button>{book.externalUrl && <a class="button secondary" href={book.externalUrl} target="_blank" rel="noopener">Źródło ↗</a>}</div></div>
   </div></section>
 
-  {related.length>0 && <section class="section related-books-section"><div class="container"><p class="eyebrow">Ta sama kategoria</p><h2>Zobacz także</h2><div class="related-books-grid">{related.map((item)=><a href={`/monografie/${item.slug}`}><img src={item.cover} alt={`Okładka: ${item.title}`} width={item.coverWidth} height={item.coverHeight}/><div><span>{item.year}</span><h3 class="notranslate" translate="no">{item.title}</h3></div></a>)}</div></div></section>}
+  {related.length>0 && <section class="section related-books-section"><div class="container"><p class="eyebrow">Ta sama kategoria</p><h2>Zobacz także</h2><div class="related-books-grid">{related.map((item)=><a href={`/monografie/${item.slug}`}><img src={item.cover} alt={`Okładka: ${item.title}`} width={item.coverWidth} height={item.coverHeight} loading="lazy" decoding="async"/><div><span>{item.year}</span><h3 class="notranslate" translate="no">{item.title}</h3></div></a>)}</div></div></section>}
   <script>document.querySelector('[data-copy-book]')?.addEventListener('click',async(event)=>{const citation=document.querySelector('#book-citation')?.textContent?.trim();if(!citation)return;await navigator.clipboard.writeText(citation);const button=event.currentTarget;if(!(button instanceof HTMLButtonElement))return;const old=button.textContent;button.textContent='Skopiowano';setTimeout(()=>button.textContent=old,1300);});</script>
 </BaseLayout>

@@ -7,6 +7,8 @@ import summary from '../data/publication-summary.json';
 const sorted = [...publications].sort(
   (a, b) => Number(b.year) - Number(a.year) || Number(b.lp) - Number(a.lp)
 );
+const afterDoctorateCount = publications.filter((publication) => publication.period === 'po').length;
+const beforeDoctorateCount = publications.filter((publication) => publication.period === 'przed').length;
 ---
 <BaseLayout title="Publikacje" description="Pełny wykaz publikacji naukowych dr. Grzegorza Kinelskiego.">
   <section class="publication-hero">
@@ -15,11 +17,11 @@ const sorted = [...publications].sort(
         <p class="eyebrow">Dorobek naukowy</p>
         <h1>Publikacje</h1>
         <p class="page-lead">
-          Pełny wykaz 66 publikacji naukowych: 13 pozycji przed doktoratem oraz 53 po doktoracie, z wyszukiwaniem, filtrowaniem i narzędziami cytowania.
+          Pełny wykaz {publications.length} publikacji naukowych: {beforeDoctorateCount} pozycji przed doktoratem oraz {afterDoctorateCount} po doktoracie, z wyszukiwaniem, filtrowaniem i narzędziami cytowania.
         </p>
       </div>
       <div class="publication-stat-panel">
-        <div><strong>{summary.count}</strong><span>pozycji</span></div>
+        <div><strong>{publications.length}</strong><span>pozycji</span></div>
         <div><strong>{summary.years.length}</strong><span>lat</span></div>
         <div><strong>{summary.areas.length}</strong><span>obszarów</span></div>
       </div>
@@ -58,17 +60,25 @@ const sorted = [...publications].sort(
           <span>Okres</span>
           <select id="publication-period">
             <option value="">Wszystkie publikacje</option>
-            <option value="po">Po doktoracie (53)</option>
-            <option value="przed">Przed doktoratem (13)</option>
+            <option value="po">Po doktoracie ({afterDoctorateCount})</option>
+            <option value="przed">Przed doktoratem ({beforeDoctorateCount})</option>
           </select>
         </label>
       </div>
 
+      <div class="publication-active-filters-v5412" data-active-filters hidden>
+        <span>Aktywne filtry:</span>
+        <div data-filter-chips></div>
+        <button type="button" data-copy-filter-link>Kopiuj link do wyników</button>
+      </div>
+
       <div class="publication-result-bar">
-        <p><strong id="publication-count">{summary.count}</strong> wyników</p>
-        <button id="publication-reset" class="publication-reset" type="button">
-          Wyczyść filtry
-        </button>
+        <p><strong id="publication-count">{publications.length}</strong> wyników</p>
+        <div class="publication-export-actions-v548">
+          <button type="button" data-export-csv>Pobierz CSV</button>
+          <button type="button" data-export-bibtex>Pobierz BibTeX</button>
+          <button id="publication-reset" class="publication-reset" type="button">Wyczyść filtry</button>
+        </div>
       </div>
 
       <div class="publication-list">
@@ -94,14 +104,58 @@ const sorted = [...publications].sort(
     const type = document.querySelector<HTMLSelectElement>('#publication-type');
     const period = document.querySelector<HTMLSelectElement>('#publication-period');
     const reset = document.querySelector<HTMLButtonElement>('#publication-reset');
+    const exportCsv = document.querySelector<HTMLButtonElement>('[data-export-csv]');
+    const exportBibtex = document.querySelector<HTMLButtonElement>('[data-export-bibtex]');
+    const activeFilters = document.querySelector<HTMLElement>('[data-active-filters]');
+    const filterChips = document.querySelector<HTMLElement>('[data-filter-chips]');
+    const copyFilterLink = document.querySelector<HTMLButtonElement>('[data-copy-filter-link]');
     const cards = Array.from(
       document.querySelectorAll<HTMLElement>('[data-publication]')
     );
     const count = document.querySelector<HTMLElement>('#publication-count');
     const empty = document.querySelector<HTMLElement>('#publication-empty');
 
-    const selectedArea = new URLSearchParams(window.location.search).get('obszar');
-    if (area && selectedArea) area.value = selectedArea;
+    const initialParams = new URLSearchParams(window.location.search);
+    if (search) search.value = initialParams.get('q') ?? '';
+    if (area) area.value = initialParams.get('obszar') ?? '';
+    if (year) year.value = initialParams.get('rok') ?? '';
+    if (type) type.value = initialParams.get('typ') ?? '';
+    if (period) period.value = initialParams.get('okres') ?? '';
+
+    const updateFilterUrl = (): void => {
+      const params = new URLSearchParams();
+      if (search?.value) params.set('q', search.value);
+      if (area?.value) params.set('obszar', area.value);
+      if (year?.value) params.set('rok', year.value);
+      if (type?.value) params.set('typ', type.value);
+      if (period?.value) params.set('okres', period.value);
+      const query = params.toString();
+      window.history.replaceState({}, '', `${window.location.pathname}${query ? `?${query}` : ''}`);
+    };
+
+    const renderActiveFilters = (): void => {
+      if (!activeFilters || !filterChips) return;
+      const filters = [
+        { key: 'q', label: 'Szukaj', value: search?.value ?? '', clear: () => { if (search) search.value = ''; } },
+        { key: 'obszar', label: 'Obszar', value: area?.value ?? '', clear: () => { if (area) area.value = ''; } },
+        { key: 'rok', label: 'Rok', value: year?.value ?? '', clear: () => { if (year) year.value = ''; } },
+        { key: 'typ', label: 'Typ', value: type?.value ?? '', clear: () => { if (type) type.value = ''; } },
+        { key: 'okres', label: 'Okres', value: period?.value === 'po' ? 'Po doktoracie' : period?.value === 'przed' ? 'Przed doktoratem' : '', clear: () => { if (period) period.value = ''; } }
+      ].filter((filter) => filter.value);
+      activeFilters.hidden = filters.length === 0;
+      filterChips.innerHTML = '';
+      filters.forEach((filter) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.dataset.filterKey = filter.key;
+        button.textContent = `${filter.label}: ${filter.value} ×`;
+        button.addEventListener('click', () => {
+          filter.clear();
+          filterPublications();
+        });
+        filterChips.append(button);
+      });
+    };
 
     const filterPublications = (): void => {
       const query = normalize(search?.value);
@@ -121,6 +175,8 @@ const sorted = [...publications].sort(
 
       if (count) count.textContent = String(visible);
       if (empty) empty.hidden = visible !== 0;
+      updateFilterUrl();
+      renderActiveFilters();
     };
 
     search?.addEventListener('input', filterPublications);
@@ -138,6 +194,50 @@ const sorted = [...publications].sort(
       if (type) type.value = '';
       if (period) period.value = '';
       filterPublications();
+    });
+
+    copyFilterLink?.addEventListener('click', async () => {
+      await navigator.clipboard.writeText(window.location.href);
+      const original = copyFilterLink.textContent ?? '';
+      copyFilterLink.textContent = 'Link skopiowany';
+      window.setTimeout(() => { copyFilterLink.textContent = original; }, 1400);
+    });
+
+    const visibleCards = (): HTMLElement[] => cards.filter((card) => !card.hidden);
+    const downloadText = (contents: string, filename: string, type: string): void => {
+      const blob = new Blob([contents], { type });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    };
+    const csvCell = (value: string | undefined): string => `"${String(value ?? '').replaceAll('"', '""')}"`;
+
+    exportCsv?.addEventListener('click', () => {
+      const header = ['Rok', 'Tytuł', 'Autorzy', 'Typ', 'Obszar', 'Wydawca', 'DOI', 'URL'];
+      const rows = visibleCards().map((card) => [
+        card.dataset.year, card.dataset.title, card.dataset.authors, card.dataset.type,
+        card.dataset.area, card.dataset.publisher, card.dataset.doi, card.dataset.url
+      ]);
+      const csv = [header, ...rows].map((row) => row.map(csvCell).join(';')).join('\n');
+      downloadText(`\uFEFF${csv}`, 'kinelski-publikacje.csv', 'text/csv;charset=utf-8');
+    });
+
+    exportBibtex?.addEventListener('click', () => {
+      const entries = visibleCards().map((card, index) => {
+        const authors = String(card.dataset.authors ?? '').replace(/,|&| i /g, ' and ');
+        const key = `Kinelski${card.dataset.year ?? ''}${index + 1}`;
+        return `@article{${key},
+  author = {${authors}},
+  title = {${card.dataset.title ?? ''}},
+  year = {${card.dataset.year ?? ''}},
+  journal = {${card.dataset.publisher ?? ''}},
+  doi = {${card.dataset.doi ?? ''}},
+  url = {${card.dataset.url ?? ''}}
+}`;
+      });
+      downloadText(entries.join('\n\n'), 'kinelski-publikacje.bib', 'application/x-bibtex;charset=utf-8');
     });
 
     document.querySelectorAll<HTMLButtonElement>('[data-show-apa]').forEach((button) => {

@@ -42,6 +42,25 @@ const schema={ '@context':'https://schema.org','@type':'ItemList',name:'Monograf
           <button type="button" data-book-filter="redakcja" aria-pressed="false">Redakcje <span>3</span></button>
         </div>
       </div>
+      <div class="book-catalogue-tools-v5418">
+        <div>
+          <span>Język</span>
+          <div class="book-language-filters-v5418" role="group" aria-label="Filtrowanie według języka">
+            <button class="active" type="button" data-book-language="all" aria-pressed="true">Wszystkie</button>
+            <button type="button" data-book-language="polski" aria-pressed="false">Polski</button>
+            <button type="button" data-book-language="angielski" aria-pressed="false">Angielski</button>
+          </div>
+        </div>
+        <label>
+          <span>Kolejność</span>
+          <select data-book-sort aria-label="Kolejność książek">
+            <option value="default">Katalogowa</option>
+            <option value="newest">Od najnowszych</option>
+            <option value="oldest">Od najstarszych</option>
+          </select>
+        </label>
+        <p aria-live="polite"><strong data-books-count>{catalogue.items.length}</strong> pozycji</p>
+      </div>
       <div class="monograph-card-grid" data-book-grid>
         {catalogue.items.map((book)=><MonographCard book={book} />)}
       </div>
@@ -50,13 +69,50 @@ const schema={ '@context':'https://schema.org','@type':'ItemList',name:'Monograf
   </section>
   <script>
     const filters = document.querySelectorAll<HTMLButtonElement>('[data-book-filter]');
+    const languageFilters = document.querySelectorAll<HTMLButtonElement>('[data-book-language]');
     const cards = document.querySelectorAll<HTMLElement>('[data-book-card]');
     const empty = document.querySelector<HTMLElement>('[data-books-empty]');
-    filters.forEach((button)=>button.addEventListener('click',()=>{
-      const selected=button.dataset.bookFilter || 'all'; let visible=0;
-      filters.forEach((item)=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});
-      cards.forEach((card)=>{const show=selected==='all'||card.dataset.category===selected;card.hidden=!show;if(show)visible++;});
+    const count = document.querySelector<HTMLElement>('[data-books-count]');
+    const grid = document.querySelector<HTMLElement>('[data-book-grid]');
+    const sort = document.querySelector<HTMLSelectElement>('[data-book-sort]');
+    const initialOrder = [...cards];
+    let selectedCategory = 'all';
+    let selectedLanguage = 'all';
+
+    const updateCatalogue = () => {
+      let visible = 0;
+      cards.forEach((card)=>{
+        const categoryMatch = selectedCategory === 'all' || card.dataset.category === selectedCategory;
+        const languageMatch = selectedLanguage === 'all' || card.dataset.language === selectedLanguage;
+        const show = categoryMatch && languageMatch;
+        card.hidden = !show;
+        if(show) visible++;
+      });
       if(empty) empty.hidden=visible!==0;
+      if(count) count.textContent=String(visible);
+    };
+
+    filters.forEach((button)=>button.addEventListener('click',()=>{
+      selectedCategory=button.dataset.bookFilter || 'all';
+      filters.forEach((item)=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});
+      updateCatalogue();
     }));
+
+    languageFilters.forEach((button)=>button.addEventListener('click',()=>{
+      selectedLanguage=button.dataset.bookLanguage || 'all';
+      languageFilters.forEach((item)=>{const active=item===button;item.classList.toggle('active',active);item.setAttribute('aria-pressed',String(active));});
+      updateCatalogue();
+    }));
+
+    sort?.addEventListener('change',()=>{
+      if(!grid) return;
+      const ordered = sort.value === 'default'
+        ? initialOrder
+        : [...initialOrder].sort((a,b)=>{
+            const difference=Number(b.dataset.year)-Number(a.dataset.year);
+            return sort.value === 'newest' ? difference : -difference;
+          });
+      ordered.forEach((card)=>grid.appendChild(card));
+    });
   </script>
 </BaseLayout>

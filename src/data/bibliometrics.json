@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "eyebrow": "Wpływ naukowy",
+    "title": "Bibliometria i profile naukowe",
+    "lead": "Jedno miejsce łączące zweryfikowaną bibliografię strony z publicznym rekordem ORCID oraz profilami autora w Scopus i Web of Science.",
+    "updatedLabel": "Dane lokalne: 29 lipca 2026"
+  },
+  "identity": {
+    "name": "Grzegorz Kinelski",
+    "affiliation": "Uniwersytet WSB Merito",
+    "orcid": "0000-0002-5768-463X",
+    "researcherId": "AAA-3088-2020",
+    "status": "Profil autora zweryfikowany",
+    "note": "Dawny profil Web of Science AAO-2316-2021 został scalony z profilem głównym AAA-3088-2020."
+  },
+  "orcid": {
+    "id": "0000-0002-5768-463X",
+    "profileUrl": "https://orcid.org/0000-0002-5768-463X",
+    "apiUrl": "https://pub.orcid.org/v3.0/0000-0002-5768-463X/works",
+    "description": "Publiczny rekord autora aktualizowany bezpośrednio przez ORCID."
+  },
+  "scopus": {
+    "profileUrl": "https://www.scopus.com/results/authorNamesList.uri?orcidId=0000-0002-5768-463X",
+    "description": "Profil autora wyszukiwany według identyfikatora ORCID.",
+    "accessNote": "Cytowania i indeks H wymagają dostępu Scopus lub klucza API Elsevier."
+  },
+  "webOfScience": {
+    "researcherId": "AAA-3088-2020",
+    "profileUrl": "https://www.webofscience.com/wos/author/record/AAA-3088-2020",
+    "description": "Profil autora w Web of Science.",
+    "accessNote": "Metryki cytowań wymagają dostępu Web of Science i licencjonowanego API."
+  },
+  "sourceComparison": [
+    {
+      "source": "Bibliografia KINELSKI.PL",
+      "scope": "Zweryfikowany dorobek prezentowany na stronie",
+      "availability": "Dane lokalne",
+      "status": "active"
+    },
+    {
+      "source": "ORCID",
+      "scope": "Publiczne grupy prac i trwała identyfikacja autora",
+      "availability": "Synchronizacja publiczna",
+      "status": "active"
+    },
+    {
+      "source": "Scopus",
+      "scope": "Cytowania, indeks H i rekordy indeksowane przez Elsevier",
+      "availability": "Profil zewnętrzny; API w przygotowaniu",
+      "status": "pending"
+    },
+    {
+      "source": "Web of Science",
+      "scope": "Profil badacza, cytowania i rekordy indeksowane przez Clarivate",
+      "availability": "Profil potwierdzony; API wymaga dostępu instytucjonalnego",
+      "status": "pending"
+    }
+  ],
+  "methodology": [
+    "Liczba publikacji serwisu pochodzi z lokalnej, zweryfikowanej bazy bibliograficznej.",
+    "Liczba prac ORCID jest pobierana z publicznego rekordu autora podczas otwierania strony.",
+    "Scopus i Web of Science mogą różnie łączyć wersje publikacji oraz profile autora.",
+    "Indeks H i liczba cytowań nie są przenoszone między bazami, ponieważ każda stosuje własny indeks i zakres źródeł."
+  ]
+}

@@ -6,7 +6,14 @@ import { site } from '../data/site';
     <div><strong>{site.name}</strong><p>{site.footerTagline}</p></div>
     <div class="footer-links">
       <a href={site.orcid} target="_blank" rel="noopener">ORCID</a>
-      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <a class="footer-email-v5421" href={`mailto:${site.scientificEmail}`}>
+        <span>Nauka</span>
+        <strong>{site.scientificEmail}</strong>
+      </a>
+      <a class="footer-email-v5421" href={`mailto:${site.industryEmail}`}>
+        <span>Branża</span>
+        <strong>{site.industryEmail}</strong>
+      </a>
       <a href="/admin" rel="nofollow">Panel</a>
       <span>© {new Date().getFullYear()}</span>
     </div>
