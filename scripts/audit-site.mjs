@@ -35,7 +35,7 @@ const monographs = readJson('src/data/monographs.json');
 const energyProjects = readJson('src/data/energyProjects.json');
 const conferences = readJson('src/data/conferences.json');
 const contact = readJson('src/data/contact.json');
-const expectedVersion = '5.4.26';
+const expectedVersion = '5.4.27';
 const analysisSlugs = [
   'rezyliencja-miasta-inteligentnego',
   'model-4t-plus',

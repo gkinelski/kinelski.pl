@@ -1,4 +1,4 @@
-# KINELSKI.PL 5.4.26
+# KINELSKI.PL 5.4.27
 
 Wielojęzyczny portal akademicki Astro z panelem administratora.
 
