@@ -8,6 +8,12 @@ const keyLocation = `${siteUrl}/${key}.txt`;
 const monographs = JSON.parse(
   fs.readFileSync(new URL('../src/data/monographs.json', import.meta.url), 'utf8')
 );
+const analysisSlugs = [
+  'rezyliencja-miasta-inteligentnego',
+  'model-4t-plus',
+  'akceptacja-transformacji-energetycznej',
+  'cyfrowe-blizniaki-transformacja-energetyczna',
+];
 
 const routes = [
   '/',
@@ -15,6 +21,7 @@ const routes = [
   '/kariera/',
   '/bibliometria/',
   '/badania/',
+  '/analizy/',
   '/publikacje/',
   '/monografie/',
   '/aktywnosc/',
@@ -23,6 +30,7 @@ const routes = [
   '/asystent/',
   '/bezpieczenstwo/',
   ...monographs.items.map((item) => `/monografie/${item.slug}/`),
+  ...analysisSlugs.map((slug) => `/analizy/${slug}/`),
 ];
 
 const urlList = [...new Set(routes)].map((route) => new URL(route, siteUrl).href);

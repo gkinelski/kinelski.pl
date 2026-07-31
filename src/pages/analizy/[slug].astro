@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { analyses, analysesBySlug, type Analysis } from '../../data/analyses';
+import { site } from '../../data/site';
+
+export function getStaticPaths() {
+  return analyses.map((analysis) => ({
+    params: { slug: analysis.slug },
+    props: { analysis },
+  }));
+}
+
+interface Props {
+  analysis: Analysis;
+}
+
+const { analysis } = Astro.props;
+const related = analysis.related
+  .map((slug) => analysesBySlug[slug])
+  .filter((item): item is Analysis => Boolean(item));
+const articleUrl = `${site.url}/analizy/${analysis.slug}/`;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ScholarlyArticle',
+  '@id': `${articleUrl}#article`,
+  headline: analysis.title,
+  description: analysis.description,
+  datePublished: analysis.datePublished,
+  dateModified: analysis.dateModified,
+  inLanguage: 'pl-PL',
+  url: articleUrl,
+  mainEntityOfPage: articleUrl,
+  author: { '@id': `${site.url}/#person` },
+  publisher: { '@id': `${site.url}/#person` },
+  image: `${site.url}/og-v5422.jpg`,
+  keywords: analysis.topics.join(', '),
+  citation: analysis.sources.map((source) => source.url),
+  about: analysis.topics.map((topic) => ({ '@type': 'Thing', name: topic })),
+};
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Strona główna', item: `${site.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Analizy', item: `${site.url}/analizy/` },
+    { '@type': 'ListItem', position: 3, name: analysis.shortTitle, item: articleUrl },
+  ],
+};
+---
+
+<BaseLayout
+  title={analysis.title}
+  description={analysis.description}
+  structuredData={[articleSchema, breadcrumbSchema]}
+>
+  <article class="analysis-article-v5426">
+    <header class="analysis-article-hero-v5426">
+      <div class="container">
+        <nav class="analysis-breadcrumb-v5426" aria-label="Okruszki">
+          <a href="/">Strona główna</a><span>›</span><a href="/analizy/">Analizy</a><span>›</span><strong>{analysis.category}</strong>
+        </nav>
+        <div class="analysis-article-hero-grid-v5426">
+          <div>
+            <p class="eyebrow">{analysis.category}</p>
+            <h1>{analysis.title}</h1>
+            <p class="analysis-article-lead-v5426">{analysis.lead}</p>
+            <div class="analysis-article-meta-v5426">
+              <span>Grzegorz Kinelski</span>
+              <span><time datetime={analysis.datePublished}>31 lipca 2026</time></span>
+              <span>{analysis.readingTime} czytania</span>
+            </div>
+          </div>
+          <aside class="analysis-hero-metric-v5426">
+            <span>{analysis.accent}</span>
+            <strong>{analysis.metric.value}</strong>
+            <p>{analysis.metric.label}</p>
+          </aside>
+        </div>
+      </div>
+    </header>
+
+    <div class="container analysis-article-layout-v5426">
+      <aside class="analysis-toc-v5426">
+        <p>W tej analizie</p>
+        <nav aria-label="Spis treści analizy">
+          {analysis.sections.map((section, index) => (
+            <a href={`#${section.id}`}><span>{String(index + 1).padStart(2, '0')}</span>{section.title}</a>
+          ))}
+          <a href="#rekomendacje"><span>→</span>Rekomendacje</a>
+          <a href="#zrodla"><span>↗</span>Źródła</a>
+        </nav>
+      </aside>
+
+      <div class="analysis-prose-v5426">
+        {analysis.sections.map((section) => (
+          <section id={section.id}>
+            <p class="eyebrow">{section.eyebrow}</p>
+            <h2>{section.title}</h2>
+            {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+            {section.bullets && (
+              <ul>
+                {section.bullets.map((bullet) => <li>{bullet}</li>)}
+              </ul>
+            )}
+            {section.note && <aside class="analysis-note-v5426"><strong>Ważne zastrzeżenie</strong><p>{section.note}</p></aside>}
+          </section>
+        ))}
+
+        <section class="analysis-recommendations-v5426" id="rekomendacje">
+          <p class="eyebrow pale">Do zastosowania</p>
+          <h2>Pięć rekomendacji</h2>
+          <ol>
+            {analysis.recommendations.map((recommendation, index) => (
+              <li><span>{String(index + 1).padStart(2, '0')}</span><p>{recommendation}</p></li>
+            ))}
+          </ol>
+        </section>
+
+        <section class="analysis-sources-v5426" id="zrodla">
+          <p class="eyebrow">Podstawa opracowania</p>
+          <h2>Publikacje źródłowe</h2>
+          <p class="analysis-source-intro-v5426">
+            Tekst jest autorskim omówieniem wyników poniższych publikacji.
+            Odnośniki prowadzą do DOI lub oficjalnych stron wydawców.
+          </p>
+          <div>
+            {analysis.sources.map((source) => (
+              <a href={source.url} target="_blank" rel="noopener noreferrer">
+                <span>{source.label}</span>
+                <strong class="notranslate" translate="no">{source.title}</strong>
+                <p class="notranslate" translate="no">{source.citation}</p>
+                <b>Otwórz źródło ↗</b>
+              </a>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="section analysis-related-v5426">
+      <div class="container">
+        <div class="analysis-related-head-v5426">
+          <div><p class="eyebrow">Czytaj dalej</p><h2>Powiązane analizy</h2></div>
+          <a href="/analizy/">Wszystkie analizy →</a>
+        </div>
+        <div class="analysis-related-grid-v5426">
+          {related.map((item) => (
+            <a href={`/analizy/${item.slug}/`}>
+              <span>{item.category}</span>
+              <h3>{item.shortTitle}</h3>
+              <p>{item.description}</p>
+              <strong>Czytaj ↗</strong>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

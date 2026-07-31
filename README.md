@@ -1,4 +1,4 @@
-# KINELSKI.PL 5.4.25
+# KINELSKI.PL 5.4.26
 
 Wielojęzyczny portal akademicki Astro z panelem administratora.
 
@@ -6,6 +6,7 @@ Wielojęzyczny portal akademicki Astro z panelem administratora.
 
 - 7 języków: PL, EN, DE, CS, FR, UA, IT,
 - 66 publikacji naukowych,
+- dział Analizy z czterema autorskimi omówieniami wyników badań,
 - katalog 9 książek naukowych z osobnymi kartami,
 - podstrona Kariera z osiągnięciami, osią czasu i publicznymi profilami,
 - interaktywne CV z filtrowaniem według organizacji i obszarów kompetencji,

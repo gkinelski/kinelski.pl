@@ -37,7 +37,13 @@
     },
     {
       "href": "/badania",
-      "label": "Badania"
+      "label": "Badania",
+      "children": [
+        {
+          "href": "/analizy",
+          "label": "Analizy"
+        }
+      ]
     },
     {
       "href": "/publikacje",

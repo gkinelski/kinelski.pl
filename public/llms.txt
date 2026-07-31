@@ -13,6 +13,7 @@
 ## Główne treści
 
 - Program badawczy: https://kinelski.pl/badania/
+- Autorskie analizy wyników badań: https://kinelski.pl/analizy/
 - Publikacje naukowe: https://kinelski.pl/publikacje/
 - Monografie: https://kinelski.pl/monografie/
 - Bibliometria i profile autora: https://kinelski.pl/bibliometria/

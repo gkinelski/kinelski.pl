@@ -35,7 +35,13 @@ const monographs = readJson('src/data/monographs.json');
 const energyProjects = readJson('src/data/energyProjects.json');
 const conferences = readJson('src/data/conferences.json');
 const contact = readJson('src/data/contact.json');
-const expectedVersion = '5.4.25';
+const expectedVersion = '5.4.26';
+const analysisSlugs = [
+  'rezyliencja-miasta-inteligentnego',
+  'model-4t-plus',
+  'akceptacja-transformacji-energetycznej',
+  'cyfrowe-blizniaki-transformacja-energetyczna',
+];
 
 addCheck(
   packageData.version === packageLock.version &&
@@ -259,7 +265,29 @@ if (fs.existsSync(sitemapPath)) {
     'Mapa strony zawiera publiczną stronę bezpieczeństwa.',
     'Mapa strony nie zawiera publicznej strony bezpieczeństwa.'
   );
+  addCheck(
+    sitemap.includes('https://kinelski.pl/analizy') &&
+      analysisSlugs.every((slug) => sitemap.includes(`https://kinelski.pl/analizy/${slug}`)),
+    'Mapa strony zawiera dział Analizy i cztery opracowania.',
+    'Mapa strony nie zawiera kompletu nowych analiz.'
+  );
 }
+
+for (const slug of analysisSlugs) {
+  const analysisPath = path.join(distDir, 'analizy', slug, 'index.html');
+  if (!fs.existsSync(analysisPath)) {
+    errors.push(`Brakuje zbudowanej analizy /analizy/${slug}/.`);
+    continue;
+  }
+  const analysisHtml = fs.readFileSync(analysisPath, 'utf8');
+  if (!analysisHtml.includes('"@type":"ScholarlyArticle"')) {
+    errors.push(`/analizy/${slug}/: brak danych strukturalnych ScholarlyArticle.`);
+  }
+  if (!analysisHtml.includes('Podstawa opracowania')) {
+    errors.push(`/analizy/${slug}/: brak jawnej sekcji źródłowej.`);
+  }
+}
+checks.push(`Sprawdzono ${analysisSlugs.length} autorskie analizy i ich dane strukturalne.`);
 
 const securityPath = path.join(distDir, '.well-known', 'security.txt');
 addCheck(

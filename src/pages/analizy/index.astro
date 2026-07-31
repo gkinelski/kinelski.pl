@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { analyses } from '../../data/analyses';
+import { site } from '../../data/site';
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${site.url}/analizy/#collection`,
+  name: 'Analizy — Grzegorz Kinelski',
+  description:
+    'Autorskie omówienia badań Grzegorza Kinelskiego dotyczących Smart City, transformacji energetycznej, modelu 4T+, rezyliencji i gospodarki cyfrowej.',
+  url: `${site.url}/analizy/`,
+  author: { '@id': `${site.url}/#person` },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: analyses.map((analysis, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: `${site.url}/analizy/${analysis.slug}/`,
+      name: analysis.title,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title="Analizy"
+  description="Autorskie analizy Grzegorza Kinelskiego o rezyliencji miast, modelu 4T+, transformacji energetycznej i cyfrowych bliźniakach."
+  structuredData={collectionSchema}
+>
+  <section class="analysis-index-hero-v5426">
+    <div class="analysis-orbit-v5426 analysis-orbit-a-v5426"></div>
+    <div class="analysis-orbit-v5426 analysis-orbit-b-v5426"></div>
+    <div class="container analysis-index-hero-grid-v5426">
+      <div>
+        <p class="eyebrow">Wiedza oparta na badaniach</p>
+        <h1>Analizy</h1>
+        <p class="page-lead">
+          Najważniejsze wyniki moich artykułów i monografii przełożone na
+          język decyzji zarządczych, polityk miejskich i transformacji sektora energii.
+        </p>
+      </div>
+      <aside class="analysis-index-note-v5426">
+        <span>Standard źródłowy</span>
+        <strong>{analyses.length} opracowania</strong>
+        <p>
+          Każdy tekst wskazuje publikacje źródłowe, DOI oraz ograniczenia
+          interpretacji wyników.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section analysis-index-section-v5426">
+    <div class="container">
+      <div class="analysis-index-intro-v5426">
+        <div>
+          <p class="eyebrow">Cztery perspektywy</p>
+          <h2>Od wyników naukowych do zastosowań</h2>
+        </div>
+        <p>
+          Teksty nie zastępują publikacji naukowych. Porządkują ich wnioski,
+          pokazują zależności między badaniami i wskazują praktyczne pytania,
+          które warto zadać przed podjęciem decyzji.
+        </p>
+      </div>
+
+      <div class="analysis-card-grid-v5426">
+        {analyses.map((analysis, index) => (
+          <a class="analysis-card-v5426" href={`/analizy/${analysis.slug}/`}>
+            <div class="analysis-card-top-v5426">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <em>{analysis.readingTime} czytania</em>
+            </div>
+            <p>{analysis.category}</p>
+            <h2>{analysis.shortTitle}</h2>
+            <div class="analysis-card-metric-v5426">
+              <strong>{analysis.metric.value}</strong>
+              <span>{analysis.metric.label}</span>
+            </div>
+            <small>{analysis.description}</small>
+            <b>Czytaj analizę ↗</b>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section analysis-method-v5426">
+    <div class="container analysis-method-grid-v5426">
+      <div>
+        <p class="eyebrow pale">Jak powstają teksty</p>
+        <h2>Źródło, interpretacja, zastosowanie</h2>
+      </div>
+      <ol>
+        <li><span>01</span><div><strong>Źródła własne</strong><p>Monografie i recenzowane artykuły z mojego dorobku.</p></div></li>
+        <li><span>02</span><div><strong>Kontrola metadanych</strong><p>Tytuły, autorstwo i DOI sprawdzane na stronach wydawców.</p></div></li>
+        <li><span>03</span><div><strong>Uczciwa interpretacja</strong><p>Wyniki są oddzielone od rekomendacji i opisane wraz z ograniczeniami.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section analysis-index-cta-v5426">
+    <div class="container analysis-index-cta-grid-v5426">
+      <div>
+        <p class="eyebrow">Pełny kontekst</p>
+        <h2>Przejdź do publikacji i programu badawczego</h2>
+      </div>
+      <div class="actions">
+        <a class="button primary" href="/publikacje/">Publikacje</a>
+        <a class="button secondary" href="/badania/">Program badawczy</a>
+        <a class="button secondary" href="/monografie/">Monografie</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

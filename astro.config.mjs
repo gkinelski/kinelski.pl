@@ -14,7 +14,7 @@ export default defineConfig({
         !page.endsWith('/monografia/'),
       serialize(item) {
         const isHomepage = item.url === 'https://kinelski.pl/';
-        const isPrimary = ['/badania', '/kariera', '/projekty', '/publikacje', '/monografie'].some((path) =>
+        const isPrimary = ['/analizy', '/badania', '/kariera', '/projekty', '/publikacje', '/monografie'].some((path) =>
           item.url.endsWith(`${path}/`)
         );
         item.changefreq = isHomepage ? 'weekly' : isPrimary ? 'monthly' : 'yearly';
