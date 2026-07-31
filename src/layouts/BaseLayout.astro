@@ -29,7 +29,11 @@ const {
   structuredData = [],
 } = Astro.props;
 
-const canonical = new URL(Astro.url.pathname, site.url);
+const canonicalPath =
+  Astro.url.pathname === '/' || Astro.url.pathname.endsWith('/')
+    ? Astro.url.pathname
+    : `${Astro.url.pathname}/`;
+const canonical = new URL(canonicalPath, site.url);
 const fullTitle = title === site.title ? title : `${title} | ${site.name}`;
 const absoluteImage = new URL(image, site.url);
 const robotsContent = noindex
@@ -107,7 +111,7 @@ const personSchema = {
   name: site.name,
   honorificPrefix: 'dr',
   url: site.url,
-  mainEntityOfPage: `${site.url}/o-mnie`,
+  mainEntityOfPage: `${site.url}/o-mnie/`,
   image: {
     '@type': 'ImageObject',
     url: `${site.url}/images/grzegorz-kinelski.webp`,

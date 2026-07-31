@@ -11,18 +11,18 @@ const monographs = JSON.parse(
 
 const routes = [
   '/',
-  '/o-mnie',
-  '/kariera',
-  '/bibliometria',
-  '/badania',
-  '/publikacje',
-  '/monografie',
-  '/aktywnosc',
-  '/projekty',
-  '/kontakt',
-  '/asystent',
-  '/bezpieczenstwo',
-  ...monographs.items.map((item) => `/monografie/${item.slug}`),
+  '/o-mnie/',
+  '/kariera/',
+  '/bibliometria/',
+  '/badania/',
+  '/publikacje/',
+  '/monografie/',
+  '/aktywnosc/',
+  '/projekty/',
+  '/kontakt/',
+  '/asystent/',
+  '/bezpieczenstwo/',
+  ...monographs.items.map((item) => `/monografie/${item.slug}/`),
 ];
 
 const urlList = [...new Set(routes)].map((route) => new URL(route, siteUrl).href);

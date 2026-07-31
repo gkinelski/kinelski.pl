@@ -155,6 +155,15 @@ for (const filePath of indexableFiles) {
     errors.push(`${route}: brak opisu meta.`);
   if (!/<link[^>]+rel="canonical"[^>]+href="https:\/\/kinelski\.pl\//i.test(html))
     errors.push(`${route}: brak poprawnego adresu canonical.`);
+  if (
+    route !== '/' &&
+    !new RegExp(
+      `<link[^>]+rel="canonical"[^>]+href="https:\\/\\/kinelski\\.pl${route.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\/"`,
+      'i'
+    ).test(html)
+  ) {
+    errors.push(`${route}: canonical nie odpowiada końcowemu adresowi GitHub Pages z ukośnikiem.`);
+  }
   if (!/<h1[\s>]/i.test(html)) errors.push(`${route}: brak nagłówka H1.`);
   if (!/<meta[^>]+property="og:image"[^>]+content="https:\/\/kinelski\.pl\//i.test(html))
     errors.push(`${route}: brak grafiki Open Graph.`);
@@ -254,7 +263,7 @@ if (fs.existsSync(securityPath)) {
     /^Contact: mailto:grzegorz@kinelski\.pl$/m.test(securityText) &&
       /^Expires: \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/m.test(securityText) &&
       /^Canonical: https:\/\/kinelski\.pl\/\.well-known\/security\.txt$/m.test(securityText) &&
-      /^Policy: https:\/\/kinelski\.pl\/bezpieczenstwo$/m.test(securityText),
+      /^Policy: https:\/\/kinelski\.pl\/bezpieczenstwo\/$/m.test(securityText),
     'security.txt zawiera kontakt, termin ważności, adres kanoniczny i politykę.',
     'security.txt nie zawiera wszystkich wymaganych pól.'
   );

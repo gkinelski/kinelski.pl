@@ -4,7 +4,7 @@
 
 ## Tożsamość autora
 
-- Profil: https://kinelski.pl/o-mnie
+- Profil: https://kinelski.pl/o-mnie/
 - ORCID: https://orcid.org/0000-0002-5768-463X
 - Web of Science ResearcherID: AAA-3088-2020
 - Profil Web of Science: https://www.webofscience.com/wos/author/record/AAA-3088-2020
@@ -12,14 +12,14 @@
 
 ## Główne treści
 
-- Program badawczy: https://kinelski.pl/badania
-- Publikacje naukowe: https://kinelski.pl/publikacje
-- Monografie: https://kinelski.pl/monografie
-- Bibliometria i profile autora: https://kinelski.pl/bibliometria
-- Kariera zawodowa: https://kinelski.pl/kariera
-- Aktywność ekspercka: https://kinelski.pl/aktywnosc
-- Projekty: https://kinelski.pl/projekty
-- Kontakt: https://kinelski.pl/kontakt
+- Program badawczy: https://kinelski.pl/badania/
+- Publikacje naukowe: https://kinelski.pl/publikacje/
+- Monografie: https://kinelski.pl/monografie/
+- Bibliometria i profile autora: https://kinelski.pl/bibliometria/
+- Kariera zawodowa: https://kinelski.pl/kariera/
+- Aktywność ekspercka: https://kinelski.pl/aktywnosc/
+- Projekty: https://kinelski.pl/projekty/
+- Kontakt: https://kinelski.pl/kontakt/
 
 ## Zakres tematyczny
 
