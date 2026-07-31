@@ -34,6 +34,7 @@ const canonicalPath =
     ? Astro.url.pathname
     : `${Astro.url.pathname}/`;
 const canonical = new URL(canonicalPath, site.url);
+const isHomepage = Astro.url.pathname === '/';
 const fullTitle = title === site.title ? title : `${title} | ${site.name}`;
 const absoluteImage = new URL(image, site.url);
 const robotsContent = noindex
@@ -212,6 +213,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
   <meta name="generator" content={Astro.generator} />
   <meta name="theme-color" content={theme.navy} />
   <meta name="author" content={site.name} />
+  {isHomepage && <meta name="google-site-verification" content="61rjJcRlqM_ra-WvC5WYwY069AHtckMgKcg4MgD19PE" />}
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="robots" content={robotsContent} />
   <title>{fullTitle}</title>

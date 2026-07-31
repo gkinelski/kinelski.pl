@@ -188,6 +188,16 @@ if (fs.existsSync(aboutPath)) {
   errors.push('Brakuje zbudowanej strony /o-mnie.');
 }
 
+const homepagePath = path.join(distDir, 'index.html');
+if (fs.existsSync(homepagePath)) {
+  const homepageHtml = fs.readFileSync(homepagePath, 'utf8');
+  addCheck(
+    /<meta[^>]+name="google-site-verification"[^>]+content="[^"]+"/i.test(homepageHtml),
+    'Strona główna zawiera znacznik weryfikacyjny Google Search Console.',
+    'Strona główna nie zawiera znacznika weryfikacyjnego Google Search Console.'
+  );
+}
+
 const internalTargets = new Set();
 for (const filePath of htmlFiles) {
   const html = fs.readFileSync(filePath, 'utf8');
