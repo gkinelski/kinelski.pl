@@ -19,7 +19,7 @@ export default defineConfig({
         );
         item.changefreq = isHomepage ? 'weekly' : isPrimary ? 'monthly' : 'yearly';
         item.priority = isHomepage ? 1 : isPrimary ? 0.8 : 0.6;
-        item.lastmod = new Date('2026-07-29');
+        item.lastmod = new Date('2026-07-31');
         return item;
       },
     }),

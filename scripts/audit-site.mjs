@@ -35,12 +35,18 @@ const monographs = readJson('src/data/monographs.json');
 const energyProjects = readJson('src/data/energyProjects.json');
 const conferences = readJson('src/data/conferences.json');
 const contact = readJson('src/data/contact.json');
+const expectedVersion = '5.4.25';
 
 addCheck(
   packageData.version === packageLock.version &&
     packageData.version === packageLock.packages?.['']?.version,
   `Wersja projektu jest spójna: ${packageData.version}.`,
   'Wersje w package.json i package-lock.json nie są spójne.'
+);
+addCheck(
+  packageData.version === expectedVersion,
+  `Audyt dotyczy oczekiwanej wersji ${expectedVersion}.`,
+  `Oczekiwano wersji ${expectedVersion}, zapisano ${packageData.version}.`
 );
 
 const publicationMetric = Number(
@@ -152,8 +158,26 @@ for (const filePath of indexableFiles) {
   if (!/<h1[\s>]/i.test(html)) errors.push(`${route}: brak nagłówka H1.`);
   if (!/<meta[^>]+property="og:image"[^>]+content="https:\/\/kinelski\.pl\//i.test(html))
     errors.push(`${route}: brak grafiki Open Graph.`);
+  if (!/<meta[^>]+name="referrer"[^>]+content="strict-origin-when-cross-origin"/i.test(html))
+    errors.push(`${route}: brak bezpiecznej polityki referrer.`);
+  if (!html.includes('"@type":"WebPage"'))
+    errors.push(`${route}: brak danych strukturalnych WebPage.`);
 }
 checks.push(`Metadane sprawdzono na ${indexableFiles.length} stronach indeksowanych.`);
+
+const aboutPath = path.join(distDir, 'o-mnie', 'index.html');
+if (fs.existsSync(aboutPath)) {
+  const aboutHtml = fs.readFileSync(aboutPath, 'utf8');
+  addCheck(
+    aboutHtml.includes('"@type":"ProfilePage"') &&
+      aboutHtml.includes('"propertyID":"ORCID"') &&
+      aboutHtml.includes('"propertyID":"Web of Science ResearcherID"'),
+    'Profil autora ma dane ProfilePage oraz stałe identyfikatory naukowe.',
+    'Profil autora nie zawiera pełnych danych ProfilePage, ORCID i ResearcherID.'
+  );
+} else {
+  errors.push('Brakuje zbudowanej strony /o-mnie.');
+}
 
 const internalTargets = new Set();
 for (const filePath of htmlFiles) {
@@ -211,7 +235,48 @@ if (fs.existsSync(sitemapPath)) {
   } else {
     checks.push('Mapa strony nie zawiera panelu ani tras technicznych.');
   }
+  addCheck(
+    sitemap.includes('https://kinelski.pl/bezpieczenstwo'),
+    'Mapa strony zawiera publiczną stronę bezpieczeństwa.',
+    'Mapa strony nie zawiera publicznej strony bezpieczeństwa.'
+  );
 }
+
+const securityPath = path.join(distDir, '.well-known', 'security.txt');
+addCheck(
+  fs.existsSync(securityPath),
+  'Plik /.well-known/security.txt został opublikowany.',
+  'Brakuje pliku /.well-known/security.txt.'
+);
+if (fs.existsSync(securityPath)) {
+  const securityText = fs.readFileSync(securityPath, 'utf8');
+  addCheck(
+    /^Contact: mailto:grzegorz@kinelski\.pl$/m.test(securityText) &&
+      /^Expires: \d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/m.test(securityText) &&
+      /^Canonical: https:\/\/kinelski\.pl\/\.well-known\/security\.txt$/m.test(securityText) &&
+      /^Policy: https:\/\/kinelski\.pl\/bezpieczenstwo$/m.test(securityText),
+    'security.txt zawiera kontakt, termin ważności, adres kanoniczny i politykę.',
+    'security.txt nie zawiera wszystkich wymaganych pól.'
+  );
+}
+
+const llmsPath = path.join(distDir, 'llms.txt');
+addCheck(
+  fs.existsSync(llmsPath) &&
+    fs.readFileSync(llmsPath, 'utf8').includes('0000-0002-5768-463X') &&
+    fs.readFileSync(llmsPath, 'utf8').includes('AAA-3088-2020'),
+  'Maszynowy opis /llms.txt zawiera potwierdzone identyfikatory autora.',
+  'Brakuje poprawnego pliku /llms.txt.'
+);
+
+const indexNowKey = '2c0026577a9f79ecf165ed8017bc0f71';
+const indexNowKeyPath = path.join(distDir, `${indexNowKey}.txt`);
+addCheck(
+  fs.existsSync(indexNowKeyPath) &&
+    fs.readFileSync(indexNowKeyPath, 'utf8').trim() === indexNowKey,
+  'Plik weryfikacyjny IndexNow jest dostępny i spójny.',
+  'Brakuje poprawnego pliku weryfikacyjnego IndexNow.'
+);
 
 for (const warning of warnings) console.warn(`UWAGA: ${warning}`);
 for (const check of checks) console.log(`OK: ${check}`);

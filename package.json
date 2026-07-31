@@ -1,7 +1,7 @@
 {
   "name": "kinelski-pl-5",
   "type": "module",
-  "version": "5.4.24",
+  "version": "5.4.25",
   "private": true,
   "scripts": {
     "dev": "astro dev",

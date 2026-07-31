@@ -14,6 +14,7 @@ interface Props {
   imageHeight?: number;
   preloadImage?: string;
   noindex?: boolean;
+  structuredData?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   imageHeight = 630,
   preloadImage,
   noindex = false,
+  structuredData = [],
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, site.url);
@@ -101,12 +103,53 @@ const designCss = `${themeCss}${typographyCss}`;
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
+  '@id': `${site.url}/#person`,
   name: site.name,
   honorificPrefix: 'dr',
   url: site.url,
-  image: new URL(image, site.url).href,
+  mainEntityOfPage: `${site.url}/o-mnie`,
+  image: {
+    '@type': 'ImageObject',
+    url: `${site.url}/images/grzegorz-kinelski.webp`,
+    width: 360,
+    height: 480,
+  },
+  description: site.description,
   jobTitle: site.role,
-  affiliation: { '@type': 'CollegeOrUniversity', name: site.affiliation },
+  affiliation: [
+    {
+      '@type': 'CollegeOrUniversity',
+      name: site.affiliation,
+      url: 'https://wsb.edu.pl',
+    },
+    {
+      '@type': 'Organization',
+      name: 'Enea S.A.',
+      url: 'https://www.enea.pl',
+    },
+  ],
+  identifier: [
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'ORCID',
+      value: '0000-0002-5768-463X',
+      url: site.orcid,
+    },
+    {
+      '@type': 'PropertyValue',
+      propertyID: 'Web of Science ResearcherID',
+      value: 'AAA-3088-2020',
+      url: 'https://www.webofscience.com/wos/author/record/AAA-3088-2020',
+    },
+  ],
+  knowsAbout: [
+    'Smart City',
+    'transformacja energetyczna',
+    'gospodarka cyfrowa',
+    'rezyliencja miejska',
+    'zarządzanie organizacjami infrastrukturalnymi',
+    'bezpieczeństwo energetyczne',
+  ],
   contactPoint: [
     {
       '@type': 'ContactPoint',
@@ -131,11 +174,31 @@ const websiteSchema = {
   description: site.description,
   inLanguage: 'pl-PL',
   publisher: {
-    '@type': 'Person',
-    name: site.name,
-    url: site.url,
+    '@id': `${site.url}/#person`,
   },
 };
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${canonical.href}#webpage`,
+  url: canonical.href,
+  name: fullTitle,
+  description,
+  inLanguage: 'pl-PL',
+  isPartOf: {
+    '@id': `${site.url}/#website`,
+  },
+  about: {
+    '@id': `${site.url}/#person`,
+  },
+  primaryImageOfPage: {
+    '@type': 'ImageObject',
+    url: absoluteImage.href,
+    width: imageWidth,
+    height: imageHeight,
+  },
+};
+const additionalSchemas = Array.isArray(structuredData) ? structuredData : [structuredData];
 ---
 <!doctype html>
 <html lang="pl" data-language="pl">
@@ -145,10 +208,13 @@ const websiteSchema = {
   <meta name="generator" content={Astro.generator} />
   <meta name="theme-color" content={theme.navy} />
   <meta name="author" content={site.name} />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="robots" content={robotsContent} />
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />
+  <link rel="author" href="/o-mnie" />
+  <link rel="help" href="/bezpieczenstwo" />
   <link rel="me" href={site.orcid} />
   {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
   <meta property="og:type" content="website" />
@@ -171,6 +237,10 @@ const websiteSchema = {
   <link rel="manifest" href="/manifest.webmanifest" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(webPageSchema)} />
+  {additionalSchemas.map((schema) => (
+    <script is:inline type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))}
   <style is:global set:html={designCss}></style>
 </head>
 <body>

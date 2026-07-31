@@ -4,8 +4,26 @@ import SectionHeading from '../components/SectionHeading.astro';
 import Timeline from '../components/Timeline.astro';
 import ProfileFact from '../components/ProfileFact.astro';
 import profile from '../data/profile.json';
+import { site } from '../data/site';
+
+const profilePageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfilePage',
+  '@id': `${site.url}/o-mnie#profile`,
+  url: `${site.url}/o-mnie`,
+  name: `Profil dr. ${site.name}`,
+  description: 'Biogram, wykształcenie, doświadczenie menedżerskie i profil naukowy dr. Grzegorza Kinelskiego.',
+  dateModified: '2026-07-31',
+  inLanguage: 'pl-PL',
+  isPartOf: {
+    '@id': `${site.url}/#website`,
+  },
+  mainEntity: {
+    '@id': `${site.url}/#person`,
+  },
+};
 ---
-<BaseLayout title="O mnie" description="Biogram, wykształcenie, doświadczenie menedżerskie i profil naukowy dr. Grzegorza Kinelskiego." preloadImage={profile.hero.portrait}>
+<BaseLayout title="O mnie" description="Biogram, wykształcenie, doświadczenie menedżerskie i profil naukowy dr. Grzegorza Kinelskiego." preloadImage={profile.hero.portrait} structuredData={profilePageSchema}>
 <section class="about-hero"><div class="about-hero-orbit"></div><div class="container about-hero-grid"><div><p class="eyebrow">{profile.hero.eyebrow}</p><h1>{profile.hero.title}</h1><p class="page-lead">{profile.hero.lead}</p><div class="actions"><a class="button primary" href="#biogram">Czytaj biogram</a><a class="button secondary" href="/kontakt">Kontakt</a></div></div><div class="about-portrait-wrap"><img class="about-portrait" src={profile.hero.portrait} alt={profile.hero.portraitAlt} width="360" height="480" loading="eager" fetchpriority="high" decoding="async"/><div class="about-portrait-label"><span>{profile.hero.portraitKicker}</span><strong>{profile.hero.portraitTitle}</strong></div></div></div></section>
 <section class="about-lenses-v5414"><div class="container"><div class="about-lenses-grid-v5414">
   <a href="/badania"><span>01</span><div><p>Perspektywa naukowa</p><h2>Badania zorientowane na problemy transformacji</h2><strong>Program 4T+, Smart City, rezyliencja i gospodarka cyfrowa ↗</strong></div></a>
