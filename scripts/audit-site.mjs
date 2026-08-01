@@ -141,6 +141,16 @@ addCheck(
 );
 
 const htmlFiles = walk(distDir).filter((filePath) => filePath.endsWith('.html'));
+const forbiddenProductionPaths = [
+  path.join(distDir, 'admin'),
+  path.join(distDir, 'admin-data'),
+  path.join(distDir, 'i18n-admin.js'),
+];
+addCheck(
+  forbiddenProductionPaths.every((filePath) => !fs.existsSync(filePath)),
+  'Panel administratora i jego dane nie są częścią wersji produkcyjnej.',
+  'Wersja produkcyjna nadal zawiera panel administratora, jego dane albo skrypt językowy.'
+);
 const routeForFile = (filePath) => {
   const relative = path.relative(distDir, filePath).split(path.sep).join('/');
   if (relative === 'index.html') return '/';
@@ -175,6 +185,11 @@ for (const filePath of indexableFiles) {
     errors.push(`${route}: brak grafiki Open Graph.`);
   if (!/<meta[^>]+name="referrer"[^>]+content="strict-origin-when-cross-origin"/i.test(html))
     errors.push(`${route}: brak bezpiecznej polityki referrer.`);
+  if (
+    !/<meta[^>]+http-equiv="Content-Security-Policy"[^>]+content="[^"]*default-src 'self'[^"]*object-src 'none'[^"]*upgrade-insecure-requests[^"]*"/i.test(html)
+  ) {
+    errors.push(`${route}: brak podstawowej polityki Content Security Policy.`);
+  }
   if (!html.includes('"@type":"WebPage"'))
     errors.push(`${route}: brak danych strukturalnych WebPage.`);
 }

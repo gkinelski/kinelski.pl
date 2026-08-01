@@ -41,6 +41,23 @@ const robotsContent = noindex
   ? 'noindex,nofollow,noarchive'
   : 'index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1';
 
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "frame-src 'none'",
+  "form-action 'self'",
+  "img-src 'self' data:",
+  "font-src 'self' data: https://fonts.gstatic.com",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+  "script-src 'self' 'unsafe-inline'",
+  "connect-src 'self' https://pub.orcid.org",
+  "manifest-src 'self'",
+  "media-src 'self'",
+  "worker-src 'self'",
+  'upgrade-insecure-requests',
+].join('; ');
+
 const themeCss = `:root{--theme-primary:${theme.primary};--theme-primary-dark:${theme.primaryDark};--theme-navy:${theme.navy};--theme-navy-soft:${theme.navySoft};--theme-light-bg:${theme.light.background};--theme-light-surface:${theme.light.surface};--theme-light-surface-soft:${theme.light.surfaceSoft};--theme-light-text:${theme.light.text};--theme-light-muted:${theme.light.muted};--theme-light-line:${theme.light.line};--theme-dark-bg:${theme.dark.background};--theme-dark-surface:${theme.dark.surface};--theme-dark-surface-soft:${theme.dark.surfaceSoft};--theme-dark-text:${theme.dark.text};--theme-dark-muted:${theme.dark.muted};--theme-dark-line:${theme.dark.line};}`;
 
 const finite = (value: unknown, fallback: number, min: number, max: number) => {
@@ -214,6 +231,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
   <meta name="theme-color" content={theme.navy} />
   <meta name="author" content={site.name} />
   {isHomepage && <meta name="google-site-verification" content="61rjJcRlqM_ra-WvC5WYwY069AHtckMgKcg4MgD19PE" />}
+  <meta http-equiv="Content-Security-Policy" content={contentSecurityPolicy} />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="robots" content={robotsContent} />
   <title>{fullTitle}</title>

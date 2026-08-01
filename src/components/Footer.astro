@@ -16,7 +16,7 @@ import { site } from '../data/site';
         <strong>{site.industryEmail}</strong>
       </a>
       <a href="/bezpieczenstwo/">Bezpieczeństwo</a>
-      <a href="/admin" rel="nofollow">Panel</a>
+      {import.meta.env.DEV && <a href="/admin" rel="nofollow">Panel lokalny</a>}
       <span>© {new Date().getFullYear()}</span>
     </div>
   </div>
