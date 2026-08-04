@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfpCfHzV5OG7n6LkhGtPwbUDBeh7lxC4zJavtVSzjavK7v3Jw/viewform?usp=publish-editor';
+const embeddedFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfpCfHzV5OG7n6LkhGtPwbUDBeh7lxC4zJavtVSzjavK7v3Jw/viewform?embedded=true';
+const publicChartUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT5-wXAgPw2mGj2kiUpVAw4hvWEYxNZAJ6YfPipmedXLYe3GIoXTSkzWrd0atAGmmrw1a2eNPtrskwR/pubchart?oid=90051598&format=interactive';
+---
+
+<BaseLayout
+  title="Mapa potrzeb Smart City 2026"
+  description="Anonimowa ankieta o rozwiązaniach Smart City i potrzebach mieszkańców polskich miast i gmin."
+>
+  <section class="page-hero survey-hero-v5428">
+    <div class="container narrow">
+      <p class="eyebrow">Badanie KINELSKI.PL</p>
+      <h1>Mapa potrzeb Smart City 2026</h1>
+      <p class="page-lead">
+        Powiedz, jakie rozwiązania działają w Twoim mieście lub gminie i czego najbardziej
+        brakuje. Wypełnienie ankiety zajmuje około 3 minut.
+      </p>
+      <div class="survey-privacy-note-v5428" role="note">
+        <strong>Bez danych osobowych</strong>
+        <span>
+          Nie pytamy o imię, e-mail, telefon ani miejsce pracy. Nazwa miasta lub gminy
+          jest obowiązkowa wyłącznie po to, aby właściwie zinterpretować odpowiedzi.
+        </span>
+      </div>
+      <div class="actions">
+        <a class="button" href={formUrl} target="_blank" rel="noopener">Otwórz ankietę w nowej karcie</a>
+        <a class="button secondary" href="/polityka-prywatnosci/">Zasady prywatności</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section survey-section-v5428">
+    <div class="container survey-layout-v5428">
+      <div class="survey-intro-v5428">
+        <p class="eyebrow">Twoja miejscowość ma znaczenie</p>
+        <h2>Jedna ankieta dla miast i gmin</h2>
+        <p>
+          Odpowiedzi z Facebooka, Instagrama, LinkedIna i KINELSKI.PL trafiają do jednego
+          prywatnego zbioru. Dzięki obowiązkowej nazwie miasta lub gminy będzie można
+          ocenić, których obszarów dotyczą wskazane rozwiązania i potrzeby.
+        </p>
+        <ul>
+          <li>można wskazać jedną, kilka albo wszystkie technologie;</li>
+          <li>oceny są udzielane w czytelnej skali od 1 do 5;</li>
+          <li>surowe odpowiedzi i nazwy miejscowości nie są publiczne;</li>
+          <li>wyniki na stronie są prezentowane wyłącznie zbiorczo.</li>
+        </ul>
+      </div>
+
+      <div class="survey-embed-v5428">
+        <iframe
+          src={embeddedFormUrl}
+          title="Anonimowa ankieta Mapa potrzeb Smart City 2026"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        >Ładowanie ankiety…</iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tinted survey-results-v5428" id="wyniki">
+    <div class="container editorial-grid">
+      <div>
+        <p class="eyebrow">Wyniki zbiorcze</p>
+        <h2>Co pokażemy publicznie</h2>
+      </div>
+      <div class="editorial-copy">
+        <p class="lead">
+          Wykres ogólny pojawi się automatycznie po zebraniu co najmniej 5 odpowiedzi.
+        </p>
+        <p>
+          Będzie przedstawiał wyłącznie zbiorczą ocenę wykorzystania rozwiązań Smart City
+          w skali 1–5. Nie pokaże nazw miast, odpowiedzi pojedynczych osób ani danych
+          umożliwiających ich identyfikację.
+        </p>
+        <div class="survey-result-placeholder-v5428" role="note">
+          <span>Próg publikacji</span>
+          <strong>minimum 5 odpowiedzi</strong>
+          <p>Do tego czasu wykres nie pokazuje rozkładu odpowiedzi.</p>
+        </div>
+        <div class="survey-chart-v5428">
+          <iframe
+            src={publicChartUrl}
+            title="Zbiorcza ocena wykorzystania rozwiązań Smart City w skali od 1 do 5"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          >Ładowanie wykresu zbiorczego…</iframe>
+        </div>
+        <p class="survey-chart-note-v5428">
+          Wykres jest odświeżany na podstawie zagregowanych wyników. Jego źródło nie
+          zawiera nazw miejscowości ani surowych odpowiedzi respondentów.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -10,7 +10,7 @@ const featured: Publication[] = home.publications.featuredLp
   .filter((publication): publication is Publication => publication !== undefined);
 ---
 <BaseLayout preloadImage={home.hero.portrait}>
-<section class="hero"><div class="hero-orbit hero-orbit-one"></div><div class="hero-orbit hero-orbit-two"></div>
+<section class="hero"><img class="hero-scene" src="/images/hero-energy-city-v5427-edge.webp" alt="" width="1774" height="887" aria-hidden="true" decoding="async"/><div class="hero-orbit hero-orbit-one"></div><div class="hero-orbit hero-orbit-two"></div>
 <div class="container hero-grid"><div class="hero-copy"><p class="eyebrow">{home.hero.eyebrow}</p><h1>{home.hero.firstName}<br/><span>{home.hero.lastName}</span></h1><p class="hero-specialisms">{home.hero.specialisms}</p><p class="hero-intro">{home.hero.intro}</p><p class="hero-detail">{home.hero.detail}</p><div class="actions"><a class="button primary" href={home.hero.primaryButton.href}>{home.hero.primaryButton.label}</a><a class="button secondary" href={home.hero.secondaryButton.href}>{home.hero.secondaryButton.label}</a></div></div>
 <div class="portrait-shell"><div class="portrait-panel"><img src={home.hero.portrait} alt={home.hero.portraitAlt} width="360" height="480" loading="eager" fetchpriority="high" decoding="async" /></div><div class="portrait-note"><span>{home.hero.portraitKicker}</span><strong>{home.hero.portraitTitle}</strong></div></div></div>
 <div class="container metrics">{home.metrics.map((item)=><article><strong>{item.value}</strong><span>{item.label}</span></article>)}</div></section>

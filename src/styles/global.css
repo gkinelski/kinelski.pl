@@ -96,7 +96,7 @@ button { font: inherit; }
 .menu-button span { display: block; width: 25px; height: 2px; margin: 5px; background: currentColor; }
 
 .hero { position: relative; overflow: hidden; padding: 72px 0 42px; background: linear-gradient(180deg, var(--surface), var(--bg)); }
-.hero::before { content: ""; position: absolute; z-index: 0; inset: 0; background: url('/images/hero-energy-city-v5427-edge.webp') center 32px / 100% auto no-repeat; opacity: .54; filter: grayscale(1) saturate(.4); transform: translateX(2.8%); pointer-events: none; }
+.hero-scene { position: absolute; z-index: 0; inset: 0; width: 100%; max-width: none; height: 100%; object-fit: cover; object-position: right bottom; opacity: .48; filter: grayscale(1) saturate(.4); pointer-events: none; }
 .hero-orbit { position: absolute; z-index: 1; border: 1px solid rgba(37, 103, 217, 0.13); border-radius: 50%; }
 .hero-orbit-one { width: 700px; height: 700px; right: -260px; top: -320px; }
 .hero-orbit-two { width: 440px; height: 440px; right: -110px; top: -170px; }
@@ -179,6 +179,7 @@ h3 { margin-top: 0; }
   .navigation { position: absolute; top: 78px; left: 0; right: 0; display: none; flex-direction: column; align-items: flex-start; padding: 24px; border-bottom: 1px solid var(--line); background: var(--surface); }
   .navigation[data-open] { display: flex; }
   .hero-grid, .editorial-grid, .monograph-grid { grid-template-columns: 1fr; }
+  .hero-scene { object-position: 68% bottom; }
   .portrait-shell { justify-self: center; }
   .metrics { grid-template-columns: repeat(2, 1fr); }
   .area-grid, .publication-preview { grid-template-columns: repeat(2, 1fr); }
@@ -193,7 +194,7 @@ h3 { margin-top: 0; }
   .hero-grid { gap: 42px; }
   .hero-copy { padding-top: 0; }
   .hero-detail { font-size: 15px; }
-  .hero::before { background-position: 62% 78%; background-size: auto 620px; opacity: .42; transform: none; }
+  .hero-scene { object-position: 62% bottom; opacity: .38; }
   .portrait-shell { width: min(100%, 280px); }
   .portrait-panel { height: 360px; border-radius: 26px; }
   .portrait-note { right: -10px; bottom: 14px; min-width: 190px; padding: 12px 15px; }
@@ -2717,3 +2718,30 @@ main label > span,
 .home-analysis-callout-v5426{padding:38px 0;background:var(--surface)}.home-analysis-callout-grid-v5426{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:28px 32px;border:1px solid var(--line);border-radius:24px;background:var(--surface-soft)}.home-analysis-callout-grid-v5426>span{width:62px;height:62px;display:grid;place-items:center;border-radius:18px;color:#fff;background:var(--blue);font:800 18px Manrope,sans-serif}.home-analysis-callout-grid-v5426 h2{margin:0 0 5px;font-size:28px}.home-analysis-callout-grid-v5426 p{margin:0;color:var(--muted);font-size:13px}
 @media(max-width:980px){.analysis-index-hero-grid-v5426,.analysis-index-intro-v5426,.analysis-method-grid-v5426,.analysis-index-cta-grid-v5426,.analysis-article-hero-grid-v5426{grid-template-columns:1fr}.analysis-card-grid-v5426{grid-template-columns:1fr}.analysis-index-note-v5426{max-width:520px}.analysis-index-cta-v5426 .actions{justify-content:flex-start}.analysis-hero-metric-v5426{min-height:220px}.analysis-article-layout-v5426{grid-template-columns:1fr;gap:45px}.analysis-toc-v5426{position:static}.analysis-toc-v5426 nav{grid-template-columns:repeat(2,1fr);column-gap:22px}.home-analysis-callout-grid-v5426{grid-template-columns:auto 1fr}.home-analysis-callout-grid-v5426>a{grid-column:1/-1;justify-self:start}}
 @media(max-width:650px){.analysis-index-hero-v5426{padding:76px 0 60px}.analysis-index-hero-v5426 h1{font-size:58px}.analysis-index-hero-grid-v5426{gap:42px}.analysis-card-v5426{min-height:0;padding:25px}.analysis-card-v5426>p{margin-top:34px}.analysis-card-v5426>h2{font-size:35px}.analysis-method-grid-v5426{gap:38px}.analysis-index-cta-v5426 .actions{display:grid}.analysis-article-hero-v5426{padding-bottom:58px}.analysis-breadcrumb-v5426{margin-bottom:42px}.analysis-article-hero-v5426 h1{font-size:43px}.analysis-article-lead-v5426{font-size:18px}.analysis-article-meta-v5426{display:grid;gap:6px}.analysis-article-meta-v5426 span{padding:0;border:0}.analysis-article-layout-v5426{padding-top:54px;padding-bottom:70px}.analysis-toc-v5426 nav{grid-template-columns:1fr}.analysis-prose-v5426>section{padding-bottom:48px;margin-bottom:48px}.analysis-prose-v5426>section>p:not(.eyebrow):not(.analysis-source-intro-v5426){font-size:16px}.analysis-prose-v5426>section>p:nth-of-type(2){font-size:18px}.analysis-prose-v5426>.analysis-recommendations-v5426{padding:27px 22px}.analysis-related-head-v5426{display:block}.analysis-related-grid-v5426{grid-template-columns:1fr}.home-analysis-callout-grid-v5426{grid-template-columns:1fr;padding:24px}.home-analysis-callout-grid-v5426>span{width:52px;height:52px}}
+
+/* KINELSKI.PL 5.4.28 — anonimowa mapa potrzeb Smart City */
+.survey-hero-v5428{position:relative;overflow:hidden;background:radial-gradient(circle at 85% 20%,rgba(37,103,217,.14),transparent 32%),var(--surface-soft)}
+.survey-hero-v5428 .page-lead{max-width:760px}
+.survey-privacy-note-v5428{max-width:760px;display:grid;grid-template-columns:auto 1fr;gap:18px;margin:30px 0 0;padding:22px 24px;border:1px solid color-mix(in srgb,var(--blue) 30%,var(--line));border-radius:20px;background:var(--surface)}
+.survey-privacy-note-v5428 strong{color:var(--blue)}
+.survey-privacy-note-v5428 span{color:var(--muted)}
+.survey-hero-v5428 .actions{margin-top:26px}
+.survey-layout-v5428{display:grid;grid-template-columns:minmax(280px,.7fr) minmax(520px,1.3fr);gap:54px;align-items:start}
+.survey-intro-v5428{position:sticky;top:calc(var(--type-navigation-height,78px) + 28px)}
+.survey-intro-v5428 h2{font-size:clamp(38px,4.6vw,58px)}
+.survey-intro-v5428>p:not(.eyebrow){color:var(--muted);font-size:18px;line-height:1.75}
+.survey-intro-v5428 ul{display:grid;gap:12px;margin:28px 0 0;padding:0;list-style:none}
+.survey-intro-v5428 li{position:relative;padding-left:27px;color:var(--muted)}
+.survey-intro-v5428 li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-weight:800}
+.survey-embed-v5428{overflow:hidden;border:1px solid var(--line);border-radius:26px;background:#fff;box-shadow:0 24px 70px rgba(13,34,56,.08)}
+.survey-embed-v5428 iframe{width:100%;height:1680px;display:block;border:0;background:#fff}
+.survey-result-placeholder-v5428{margin-top:28px;padding:26px;border:1px dashed color-mix(in srgb,var(--blue) 45%,var(--line));border-radius:22px;background:var(--surface)}
+.survey-result-placeholder-v5428 span,.survey-result-placeholder-v5428 strong{display:block}
+.survey-result-placeholder-v5428 span{color:var(--blue);font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.survey-result-placeholder-v5428 strong{margin-top:7px;font:800 28px Manrope,sans-serif}
+.survey-result-placeholder-v5428 p{margin:8px 0 0;color:var(--muted)}
+.survey-chart-v5428{overflow:hidden;margin-top:24px;border:1px solid var(--line);border-radius:22px;background:#fff}
+.survey-chart-v5428 iframe{width:100%;height:440px;display:block;border:0;background:#fff}
+.survey-chart-note-v5428{font-size:13px}
+@media(max-width:980px){.survey-layout-v5428{grid-template-columns:1fr}.survey-intro-v5428{position:static}.survey-embed-v5428 iframe{height:1740px}}
+@media(max-width:650px){.survey-privacy-note-v5428{grid-template-columns:1fr}.survey-hero-v5428 .actions{display:grid}.survey-embed-v5428{border-radius:18px}.survey-embed-v5428 iframe{height:1840px}.survey-chart-v5428 iframe{height:360px}}
