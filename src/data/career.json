@@ -1,7 +1,7 @@
 {
   "meta": {
-    "verifiedAt": "24 lipca 2026 r.",
-    "sourceNote": "Treść opracowano na podstawie CV zawodowego oraz zweryfikowanych, publicznie dostępnych profili instytucjonalnych. Dane prywatne z dokumentów aplikacyjnych nie są publikowane."
+    "verifiedAt": "10 sierpnia 2026 r.",
+    "sourceNote": "Treść opracowano na podstawie najnowszego CV zawodowego oraz porównania wcześniejszych wersji CV z lat 2017–2018 i 2024–2026. Dane prywatne z dokumentów aplikacyjnych nie są publikowane."
   },
   "hero": {
     "eyebrow": "Kariera zawodowa i przywództwo",
@@ -18,8 +18,8 @@
       "label": "lata w sektorze energetycznym"
     },
     {
-      "value": "6",
-      "label": "dużych grup i organizacji energetycznych"
+      "value": "7+",
+      "label": "grup i organizacji energetycznych oraz publicznych"
     },
     {
       "value": "9",
@@ -74,109 +74,262 @@
       "linkLabel": "Profil naukowy AWSB"
     }
   ],
+  "cvExplorer": {
+    "eyebrow": "Interaktywne CV",
+    "title": "Ponad trzy dekady w sektorze energii",
+    "lead": "Połącz filtry spółki, stanowiska i projektu, aby prześledzić wybrany fragment doświadczenia zawodowego. Wybrane kryteria można udostępnić przez adres strony.",
+    "allLabel": "Wszystkie",
+    "organisationLabel": "Spółka lub organizacja",
+    "roleLabel": "Stanowisko",
+    "projectLabel": "Projekt lub wdrożenie",
+    "resetLabel": "Wyczyść filtry",
+    "resultLabel": "etapów kariery",
+    "emptyTitle": "Brak dopasowanych etapów",
+    "emptyText": "Wybrane kryteria nie występują razem. Zmień jeden z filtrów albo wyczyść wszystkie.",
+    "filters": {
+      "organisations": [
+        { "key": "enea", "label": "Enea" },
+        { "key": "veolia", "label": "Veolia" },
+        { "key": "energia-dla-firm", "label": "Energetyczne Centrum / Energia dla Firm" },
+        { "key": "metropolia-gzm", "label": "Górnośląsko-Zagłębiowska Metropolia" },
+        { "key": "grupa-ecb", "label": "Grupa Kapitałowa ECB S.A." },
+        { "key": "pkp-energetyka", "label": "PKP Energetyka" },
+        { "key": "tauron-gze", "label": "TAURON / GZE" },
+        { "key": "vattenfall-gze", "label": "Vattenfall / GZE" },
+        { "key": "inproel-gze", "label": "INPROEL / GZE" }
+      ],
+      "roles": [
+        { "key": "prezes-zarzadu", "label": "Prezes Zarządu" },
+        { "key": "czlonek-zarzadu", "label": "Członek Zarządu" },
+        { "key": "wiceprezes-zarzadu", "label": "Wiceprezes Zarządu" },
+        { "key": "doradca-zarzadu", "label": "Doradca Zarządu" },
+        { "key": "doradca-prezesa", "label": "Doradca Prezesa Zarządu" },
+        { "key": "dyrektor-prokurent", "label": "Dyrektor / prokurent" },
+        { "key": "menedzer-specjalista", "label": "Menedżer / specjalista" }
+      ],
+      "projects": [
+        { "key": "enea-strategia-2035", "label": "Strategia rozwoju Grupy Enea do 2035 roku" },
+        { "key": "enea-oze-infrastruktura", "label": "Rozwój OZE i inwestycji infrastrukturalnych" },
+        { "key": "enea-bezpieczenstwo", "label": "Bezpieczeństwo energetyczne i cyberbezpieczeństwo" },
+        { "key": "enea-rynek-mocy", "label": "Aukcje rynku mocy" },
+        { "key": "enea-farmy-wiatrowe", "label": "Akwizycje farm wiatrowych" },
+        { "key": "enea-farmy-pv", "label": "Budowa farm PV" },
+        { "key": "enea-jednostki-cieplownicze", "label": "Uruchomienie nowych jednostek ciepłowniczych" },
+        { "key": "enea-bogdanka", "label": "Akwizycja LW Bogdanka do Grupy Enea" },
+        { "key": "enea-lad-korporacyjny", "label": "Wdrożenie ładu korporacyjnego Enea" },
+        { "key": "enea-produkty-handlowe", "label": "Produkty handlowe energii i gazu" },
+        { "key": "elektron", "label": "ELEKTRON — centralizacja obrotu energią i gazem" },
+        { "key": "veolia-sprzedaz-obsluga", "label": "Rozwój sprzedaży i obsługi klienta w Veolii" },
+        { "key": "veolia-strategia", "label": "Strategie obszarowe Grupy Veolia" },
+        { "key": "energia-reorganizacja", "label": "Reorganizacja przedsiębiorstw energetycznych" },
+        { "key": "energia-produkty", "label": "Rozwój produktów energii i gazu" },
+        { "key": "energia-sprzedaz", "label": "Strategia sprzedaży B2B i B2C" },
+        { "key": "omega", "label": "OMEGA — budowa obszaru handlu energią i gazem" },
+        { "key": "pkp-strategia", "label": "Strategia sprzedaży i procesów rynkowych PKP" },
+        { "key": "pkp-migracja", "label": "Migracja zasobów do struktur sprzedażowych PKP" },
+        { "key": "pkp-doradztwo-procesy", "label": "Restrukturyzacja procesów i wsparcie sprzedaży PKP" },
+        { "key": "gzm-grupa-zakupowa-energii", "label": "Grupa zakupowa energii dla Metropolii Śląskiej" },
+        { "key": "gzm-klastry-energii", "label": "Współpraca klastrów energii w metropolii" },
+        { "key": "ecb-restrukturyzacja", "label": "Restrukturyzacja obszaru i procesów ECB" },
+        { "key": "ecb-obsluga-sprzedazy-produkcji", "label": "Projekty obsługi sprzedaży i produkcji" },
+        { "key": "ecb-rozwoj-produktow", "label": "Rozwój produktów energetycznych" },
+        { "key": "ecb-strategia-sprzedazy", "label": "Strategia sprzedaży ECB" },
+        { "key": "enea-centralizacja-handlu", "label": "Centralizacja handlu energią, gazem i paliwami" },
+        { "key": "enea-cuw", "label": "Centrum biznesowe sprzedaży i usługi wspólne" },
+        { "key": "enea-akwizycje", "label": "Wsparcie akwizycji strategicznych" },
+        { "key": "tauron-integracja-obslugi", "label": "Integracja spółek obsługi klienta" },
+        { "key": "tauron-reorganizacja", "label": "Reorganizacja wsparcia sprzedaży" },
+        { "key": "tauron-modele", "label": "Modele biznesowe Grupy TAURON" },
+        { "key": "tauron-gze-due-diligence", "label": "Akwizycja aktywów GZE do TAURON — due diligence" },
+        { "key": "tauron-wydzielenie-sprzedazy", "label": "Wydzielenie sprzedaży i obsługi klienta z OSD" },
+        { "key": "tauron-polaczenie-bok", "label": "Połączenie EnergiaPro i Enion" },
+        { "key": "zmiana-sprzedawcy", "label": "Pierwszy proces zmiany sprzedawcy" },
+        { "key": "vattenfall-door-to-door", "label": "Pierwsza kampania door-to-door w Polsce" },
+        { "key": "vattenfall-unbundling", "label": "Unbundling — podział funkcji" },
+        { "key": "sla-c2s", "label": "Model rozliczeń SLA i obniżenie kosztów obsługi" },
+        { "key": "windykacja-odczyty", "label": "Windykacja, sprzedaż długów i automatyzacja odczytów" },
+        { "key": "sap-crm-billing", "label": "Wdrożenia SAP, CRM i systemów billingowych" },
+        { "key": "call-center-e-uslugi", "label": "Call center, e-usługi i nowe kanały sprzedaży" },
+        { "key": "kompetencje-techniczne", "label": "Rozwój kompetencji technicznych i rynkowych" },
+        { "key": "obsluga-handlowa", "label": "Zarządzanie obsługą handlową" },
+        { "key": "operacje-elektroenergetyczne", "label": "Doświadczenie operacyjne w elektroenergetyce" }
+      ]
+    }
+  },
   "timeline": [
     {
+      "id": "enea-2024-obecnie",
       "period": "2024–obecnie",
       "organisation": "Enea S.A.",
+      "organisationKey": "enea",
       "role": "Prezes Zarządu",
+      "roleKeys": ["prezes-zarzadu"],
       "description": "Odpowiedzialność za strategię i transformację Grupy Enea, rozwój zielonego portfela wytwórczego, inwestycje, bezpieczeństwo energetyczne oraz zarządzanie grupą kapitałową.",
       "filterKeys": ["enea", "zarzad", "transformacja", "oze"],
       "tags": ["Zarząd", "Transformacja", "OZE", "Bezpieczeństwo energetyczne"],
       "projects": [
-        "Realizacja Strategii rozwoju Grupy Enea do 2035 roku",
-        "Rozwój portfela OZE i inwestycji infrastrukturalnych",
-        "Bezpieczeństwo energetyczne i cyberbezpieczeństwo"
+        { "key": "enea-strategia-2035", "title": "Realizacja Strategii rozwoju Grupy Enea do 2035 roku" },
+        { "key": "enea-oze-infrastruktura", "title": "Rozwój portfela OZE i inwestycji infrastrukturalnych" },
+        { "key": "enea-bezpieczenstwo", "title": "Bezpieczeństwo energetyczne i cyberbezpieczeństwo" },
+        { "key": "enea-rynek-mocy", "title": "Wygrane aukcje rynku mocy" },
+        { "key": "enea-farmy-wiatrowe", "title": "Akwizycje farm wiatrowych" },
+        { "key": "enea-farmy-pv", "title": "Budowa farm PV" },
+        { "key": "enea-jednostki-cieplownicze", "title": "Uruchomienie nowych jednostek ciepłowniczych" }
       ]
     },
     {
+      "id": "veolia-2018-2024",
       "period": "2018–2024",
       "organisation": "Grupa Veolia w Polsce",
+      "organisationKey": "veolia",
       "role": "Funkcje zarządcze, m.in. członek zarządu Veolia Energy Contracting Poland",
+      "roleKeys": ["czlonek-zarzadu"],
       "description": "Restrukturyzacja i wdrażanie strategii obszarowych, budowa i centralizacja obrotu energią i gazem, rozwój sprzedaży, usług wspólnych oraz obsługi klienta.",
       "filterKeys": ["veolia", "zarzad", "handel", "restrukturyzacja"],
       "tags": ["Zarząd", "Handel", "Restrukturyzacja", "Usługi wspólne"],
       "projects": [
-        "Projekt ELEKTRON — centralizacja obrotu energią i gazem",
-        "Rozwój sprzedaży i obsługi klienta",
-        "Wdrażanie strategii obszarowych Grupy Veolia"
+        { "key": "elektron", "title": "Projekt ELEKTRON — centralizacja obrotu energią i gazem" },
+        { "key": "veolia-sprzedaz-obsluga", "title": "Rozwój sprzedaży i obsługi klienta" },
+        { "key": "veolia-strategia", "title": "Wdrażanie strategii obszarowych Grupy Veolia" }
       ]
     },
     {
+      "id": "energia-dla-firm-2018",
       "period": "2018",
       "organisation": "Energetyczne Centrum / Energia dla Firm",
+      "organisationKey": "energia-dla-firm",
       "role": "Prezes Zarządu",
+      "roleKeys": ["prezes-zarzadu"],
       "description": "Reorganizacja przedsiębiorstw, rozwój produktów i strategii sprzedaży energii oraz gazu dla klientów biznesowych i konsumentów.",
       "filterKeys": ["inne", "zarzad", "handel", "restrukturyzacja"],
       "tags": ["Zarząd", "Handel", "Restrukturyzacja"],
       "projects": [
-        "Reorganizacja przedsiębiorstw",
-        "Rozwój produktów energii i gazu",
-        "Strategia sprzedaży B2B i B2C"
+        { "key": "energia-reorganizacja", "title": "Reorganizacja przedsiębiorstw" },
+        { "key": "energia-produkty", "title": "Rozwój produktów energii i gazu" },
+        { "key": "energia-sprzedaz", "title": "Strategia sprzedaży B2B i B2C" }
       ]
     },
     {
+      "id": "metropolia-gzm-2018",
+      "period": "2018",
+      "organisation": "Górnośląsko-Zagłębiowska Metropolia",
+      "organisationKey": "metropolia-gzm",
+      "role": "Doradca Zarządu",
+      "roleKeys": ["doradca-zarzadu"],
+      "description": "Rozwój projektu grupy zakupowej energii dla Metropolii Śląskiej oraz współpracy klastrów energii i produktów powiązanych w obszarze metropolitalnym.",
+      "filterKeys": ["metropolia", "doradca", "energia", "smart-city"],
+      "tags": ["Doradztwo", "Metropolia", "Energia", "Klastry energii"],
+      "projects": [
+        { "key": "gzm-grupa-zakupowa-energii", "title": "Rozwój projektu grupy zakupowej energii dla Metropolii Śląskiej" },
+        { "key": "gzm-klastry-energii", "title": "Rozwój współpracy klastrów energii i produktów powiązanych" }
+      ]
+    },
+    {
+      "id": "grupa-ecb-2016-2017",
+      "period": "2016–2017",
+      "organisation": "Grupa Kapitałowa ECB S.A.",
+      "organisationKey": "grupa-ecb",
+      "role": "Doradca Prezesa Zarządu",
+      "roleKeys": ["doradca-prezesa", "doradca-zarzadu"],
+      "description": "Doradztwo w zakresie restrukturyzacji obszaru i procesów, projektów obsługi sprzedaży i produkcji, rozwoju produktów oraz strategii sprzedaży.",
+      "filterKeys": ["ecb", "doradca", "restrukturyzacja", "sprzedaz"],
+      "tags": ["Doradztwo", "Restrukturyzacja", "Sprzedaż", "Produkty"],
+      "projects": [
+        { "key": "ecb-restrukturyzacja", "title": "Restrukturyzacja obszaru i procesów" },
+        { "key": "ecb-obsluga-sprzedazy-produkcji", "title": "Projekty obsługi sprzedaży i produkcji" },
+        { "key": "ecb-rozwoj-produktow", "title": "Rozwój produktów energetycznych" },
+        { "key": "ecb-strategia-sprzedazy", "title": "Strategia sprzedaży" }
+      ]
+    },
+    {
+      "id": "pkp-energetyka-2017-2018",
       "period": "2017–2018",
       "organisation": "PKP Energetyka Sprzedaż",
+      "organisationKey": "pkp-energetyka",
       "role": "Prezes Zarządu",
+      "roleKeys": ["prezes-zarzadu"],
       "description": "Utworzenie struktur obrotu hurtowego i sprzedaży energii oraz gazu, rozwój strategii firmy i przygotowanie migracji zasobów do nowych struktur sprzedażowych.",
       "filterKeys": ["pkp", "zarzad", "handel", "restrukturyzacja"],
       "tags": ["Zarząd", "Handel", "Sprzedaż", "Transformacja organizacyjna"],
       "projects": [
-        "Projekt OMEGA — budowa obszaru handlu energią i gazem",
-        "Strategia sprzedaży i procesów rynkowych",
-        "Migracja zasobów do nowych struktur sprzedażowych"
+        { "key": "omega", "title": "Projekt OMEGA — budowa obszaru handlu energią i gazem" },
+        { "key": "pkp-strategia", "title": "Strategia sprzedaży i procesów rynkowych" },
+        { "key": "pkp-migracja", "title": "Migracja zasobów do nowych struktur sprzedażowych" },
+        { "key": "pkp-doradztwo-procesy", "title": "Restrukturyzacja obszaru i procesów oraz wsparcie sprzedaży i produkcji" }
       ]
     },
     {
+      "id": "enea-2013-2016",
       "period": "2013–2016",
       "organisation": "Enea S.A.",
+      "organisationKey": "enea",
       "role": "Członek Zarządu ds. Handlowych",
+      "roleKeys": ["czlonek-zarzadu"],
       "description": "Strategia handlowa, centralizacja obrotu energią, gazem i paliwami, rozwój centrum biznesowego sprzedaży oraz funkcji usług wspólnych i akwizycji strategicznych.",
       "filterKeys": ["enea", "zarzad", "handel", "restrukturyzacja"],
       "tags": ["Zarząd", "Handel", "Usługi wspólne", "Akwizycje"],
       "projects": [
-        "Centralizacja handlu energią, gazem i paliwami",
-        "Centrum biznesowe sprzedaży i usługi wspólne",
-        "Wsparcie akwizycji strategicznych"
+        { "key": "enea-centralizacja-handlu", "title": "Centralizacja handlu energią, gazem i paliwami" },
+        { "key": "enea-cuw", "title": "Centrum biznesowe sprzedaży i usługi wspólne" },
+        { "key": "enea-akwizycje", "title": "Wsparcie akwizycji strategicznych" },
+        { "key": "enea-bogdanka", "title": "Organizacja akwizycji LW Bogdanka do Grupy Enea" },
+        { "key": "enea-lad-korporacyjny", "title": "Wdrożenie ładu korporacyjnego Enea" },
+        { "key": "enea-produkty-handlowe", "title": "Wdrożenie produktów handlowych w obszarze energii i gazu" }
       ]
     },
     {
+      "id": "tauron-gze-2010-2013",
       "period": "2010–2013",
       "organisation": "TAURON / GZE",
+      "organisationKey": "tauron-gze",
       "role": "Wiceprezes Zarządu i funkcje zarządcze",
+      "roleKeys": ["wiceprezes-zarzadu"],
       "description": "Strategia obsługi klienta, reorganizacja procesów wsparcia sprzedaży, integracja spółek obsługowych i rozwój modeli biznesowych w grupie energetycznej.",
       "filterKeys": ["tauron", "zarzad", "cyfryzacja", "restrukturyzacja"],
       "tags": ["Zarząd", "Obsługa klienta", "Integracja", "Modele biznesowe"],
       "projects": [
-        "Integracja spółek obsługi klienta",
-        "Reorganizacja procesów wsparcia sprzedaży",
-        "Rozwój modeli biznesowych Grupy TAURON"
+        { "key": "tauron-integracja-obslugi", "title": "Integracja spółek obsługi klienta" },
+        { "key": "tauron-reorganizacja", "title": "Reorganizacja procesów wsparcia sprzedaży" },
+        { "key": "tauron-modele", "title": "Rozwój modeli biznesowych Grupy TAURON" },
+        { "key": "tauron-gze-due-diligence", "title": "Akwizycja aktywów GZE do TAURON — udział ekspercki w due diligence" },
+        { "key": "tauron-wydzielenie-sprzedazy", "title": "Wydzielenie sprzedaży i obsługi klienta z OSD" },
+        { "key": "tauron-polaczenie-bok", "title": "Połączenie spółek obsługi klienta EnergiaPro i Enion" }
       ]
     },
     {
+      "id": "vattenfall-gze-2000-2010",
       "period": "2000–2010",
       "organisation": "Vattenfall / GZE",
+      "organisationKey": "vattenfall-gze",
       "role": "Dyrektor Obsługi Klientów, prokurent i wcześniejsze funkcje menedżerskie",
+      "roleKeys": ["dyrektor-prokurent", "menedzer-specjalista"],
       "description": "Rozwój nowoczesnych kanałów sprzedaży i obsługi, proces zmiany sprzedawcy, projekty SAP i billingowe, call center, e-usługi oraz unbundling.",
       "filterKeys": ["vattenfall", "dyrektor", "cyfryzacja", "handel"],
       "tags": ["Dyrektor", "Cyfryzacja", "Sprzedaż", "Obsługa klienta"],
       "projects": [
-        "Pierwszy proces zmiany sprzedawcy",
-        "Wdrożenia SAP, CRM i systemów billingowych",
-        "Call center, e-usługi i nowe kanały sprzedaży"
+        { "key": "zmiana-sprzedawcy", "title": "Pierwszy proces zmiany sprzedawcy" },
+        { "key": "vattenfall-door-to-door", "title": "Pierwsza kampania door-to-door w Polsce" },
+        { "key": "vattenfall-unbundling", "title": "Unbundling — podział funkcji" },
+        { "key": "sla-c2s", "title": "Model rozliczeń SLA i obniżenie kosztów obsługi" },
+        { "key": "windykacja-odczyty", "title": "Windykacja, sprzedaż długów i automatyzacja odczytów" },
+        { "key": "sap-crm-billing", "title": "Wdrożenia SAP, CRM i systemów billingowych" },
+        { "key": "call-center-e-uslugi", "title": "Call center, e-usługi i nowe kanały sprzedaży" }
       ]
     },
     {
+      "id": "inproel-gze-1993-2000",
       "period": "1993–2000",
       "organisation": "INPROEL / Górnośląski Zakład Energetyczny",
+      "organisationKey": "inproel-gze",
       "role": "Początki kariery w sprzedaży i elektroenergetyce",
+      "roleKeys": ["menedzer-specjalista"],
       "description": "Doświadczenie sprzedażowe, handlowe i operacyjne, następnie zarządzanie obsługą handlową oraz rozwój kompetencji technicznych i rynkowych.",
       "filterKeys": ["inne", "specjalista", "handel"],
       "tags": ["Sprzedaż", "Elektroenergetyka", "Obsługa handlowa"],
       "projects": [
-        "Rozwój kompetencji technicznych i rynkowych",
-        "Zarządzanie obsługą handlową",
-        "Doświadczenie operacyjne w elektroenergetyce"
+        { "key": "kompetencje-techniczne", "title": "Rozwój kompetencji technicznych i rynkowych" },
+        { "key": "obsluga-handlowa", "title": "Zarządzanie obsługą handlową" },
+        { "key": "operacje-elektroenergetyczne", "title": "Doświadczenie operacyjne w elektroenergetyce" }
       ]
     }
   ],

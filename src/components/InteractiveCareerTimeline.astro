@@ -1,0 +1,321 @@
+---
+interface FilterOption {
+  key: string;
+  label: string;
+}
+
+interface CareerProject {
+  key: string;
+  title: string;
+}
+
+interface CareerEntry {
+  id?: string;
+  period: string;
+  organisation: string;
+  organisationKey?: string;
+  role: string;
+  roleKeys?: string[];
+  description: string;
+  filterKeys?: string[];
+  tags?: string[];
+  projects?: Array<string | CareerProject>;
+}
+
+interface CareerExplorer {
+  eyebrow?: string;
+  title?: string;
+  lead?: string;
+  allLabel?: string;
+  organisationLabel?: string;
+  roleLabel?: string;
+  projectLabel?: string;
+  resetLabel?: string;
+  resultLabel?: string;
+  emptyTitle?: string;
+  emptyText?: string;
+  filters?: {
+    organisations?: FilterOption[];
+    roles?: FilterOption[];
+    projects?: FilterOption[];
+  };
+}
+
+interface Props {
+  timeline: CareerEntry[];
+  explorer?: CareerExplorer;
+}
+
+const { timeline, explorer = {} } = Astro.props;
+
+const slugify = (value: string) =>
+  value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+
+const normaliseProject = (project: string | CareerProject): CareerProject =>
+  typeof project === 'string'
+    ? { key: slugify(project), title: project }
+    : project;
+
+const normalisedTimeline = timeline.map((entry, index) => {
+  const projects = (entry.projects ?? []).map(normaliseProject);
+  return {
+    ...entry,
+    id: entry.id ?? `career-${index + 1}`,
+    organisationKey:
+      entry.organisationKey ?? entry.filterKeys?.[0] ?? slugify(entry.organisation),
+    roleKeys:
+      entry.roleKeys?.length ? entry.roleKeys : [slugify(entry.role)],
+    projects,
+  };
+});
+
+const uniqueOptions = (options: FilterOption[]) =>
+  [...new Map(options.map((option) => [option.key, option])).values()];
+
+const organisationOptions = explorer.filters?.organisations?.length
+  ? explorer.filters.organisations
+  : uniqueOptions(
+      normalisedTimeline.map((entry) => ({
+        key: entry.organisationKey,
+        label: entry.organisation,
+      }))
+    );
+
+const roleOptions = explorer.filters?.roles?.length
+  ? explorer.filters.roles
+  : uniqueOptions(
+      normalisedTimeline.flatMap((entry) =>
+        entry.roleKeys.map((key) => ({ key, label: entry.role }))
+      )
+    );
+
+const projectOptions = explorer.filters?.projects?.length
+  ? explorer.filters.projects
+  : uniqueOptions(
+      normalisedTimeline.flatMap((entry) =>
+        entry.projects.map((project) => ({ key: project.key, label: project.title }))
+      )
+    );
+
+const copy = {
+  eyebrow: explorer.eyebrow ?? 'Interaktywne CV',
+  title: explorer.title ?? 'Ponad trzy dekady w sektorze energii',
+  lead:
+    explorer.lead ??
+    'Połącz filtry spółki, stanowiska i projektu, aby prześledzić wybrany fragment doświadczenia zawodowego.',
+  allLabel: explorer.allLabel ?? 'Wszystkie',
+  organisationLabel: explorer.organisationLabel ?? 'Spółka lub organizacja',
+  roleLabel: explorer.roleLabel ?? 'Stanowisko',
+  projectLabel: explorer.projectLabel ?? 'Projekt lub wdrożenie',
+  resetLabel: explorer.resetLabel ?? 'Wyczyść filtry',
+  resultLabel: explorer.resultLabel ?? 'etapów kariery',
+  emptyTitle: explorer.emptyTitle ?? 'Brak dopasowanych etapów',
+  emptyText:
+    explorer.emptyText ??
+    'Wybrane kryteria nie występują razem. Zmień jeden z filtrów albo wyczyść wszystkie.',
+};
+---
+
+<section class="section career-timeline-section-v5" id="doswiadczenie">
+  <div class="container career-explorer-v5430" data-career-explorer>
+    <div class="career-timeline-intro-v5 career-explorer-intro-v5430">
+      <p class="eyebrow pale">{copy.eyebrow}</p>
+      <h2>{copy.title}</h2>
+      <p>{copy.lead}</p>
+
+      <form class="career-filter-panel-v5430" data-career-filter-form>
+        <label>
+          <span>{copy.organisationLabel}</span>
+          <select data-career-filter="organisation" name="firma">
+            <option value="all">{copy.allLabel}</option>
+            {organisationOptions.map((option) => (
+              <option value={option.key}>{option.label}</option>
+            ))}
+          </select>
+        </label>
+
+        <label>
+          <span>{copy.roleLabel}</span>
+          <select data-career-filter="role" name="stanowisko">
+            <option value="all">{copy.allLabel}</option>
+            {roleOptions.map((option) => <option value={option.key}>{option.label}</option>)}
+          </select>
+        </label>
+
+        <label>
+          <span>{copy.projectLabel}</span>
+          <select data-career-filter="project" name="projekt">
+            <option value="all">{copy.allLabel}</option>
+            {projectOptions.map((option) => <option value={option.key}>{option.label}</option>)}
+          </select>
+        </label>
+
+        <div class="career-filter-summary-v5430">
+          <p aria-live="polite">
+            <strong data-career-count>{normalisedTimeline.length}</strong>
+            <span>{copy.resultLabel}</span>
+          </p>
+          <button type="reset" data-career-reset disabled>{copy.resetLabel}</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="career-explorer-results-v5430">
+      <div class="career-active-filters-v5430" data-career-active-filters hidden></div>
+
+      <div class="career-timeline-v5 career-timeline-v5430" data-career-timeline>
+        {normalisedTimeline.map((item, index) => (
+          <article
+            id={item.id}
+            data-career-entry
+            data-organisation={item.organisationKey}
+            data-roles={item.roleKeys.join(' ')}
+            data-projects={item.projects.map((project) => project.key).join(' ')}
+          >
+            <div class="career-timeline-marker-v5">
+              <span>{String(index + 1).padStart(2, '0')}</span>
+            </div>
+            <div class="career-timeline-date-v5">{item.period}</div>
+            <div class="career-timeline-body-v5">
+              <p>{item.organisation}</p>
+              <h3>{item.role}</h3>
+              <strong>{item.description}</strong>
+              <div class="career-tags-v54">
+                {item.tags?.map((tag) => <span>{tag}</span>)}
+              </div>
+              {item.projects.length > 0 && (
+                <details class="career-details-v54">
+                  <summary>Najważniejsze projekty i rezultaty</summary>
+                  <ul>
+                    {item.projects.map((project) => (
+                      <li data-career-project={project.key}>{project.title}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="career-empty-v5430" data-career-empty hidden>
+        <strong>{copy.emptyTitle}</strong>
+        <p>{copy.emptyText}</p>
+        <button type="button" data-career-empty-reset>{copy.resetLabel}</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-career-explorer]');
+    if (!root) return;
+
+    const form = root.querySelector('[data-career-filter-form]');
+    const selects = [...root.querySelectorAll('[data-career-filter]')];
+    const entries = [...root.querySelectorAll('[data-career-entry]')];
+    const count = root.querySelector('[data-career-count]');
+    const empty = root.querySelector('[data-career-empty]');
+    const reset = root.querySelector('[data-career-reset]');
+    const emptyReset = root.querySelector('[data-career-empty-reset]');
+    const activeFilters = root.querySelector('[data-career-active-filters]');
+    const queryKeys = { organisation: 'firma', role: 'stanowisko', project: 'projekt' };
+
+    const validOption = (select, value) =>
+      [...select.options].some((option) => option.value === value);
+
+    const readState = () =>
+      Object.fromEntries(selects.map((select) => [select.dataset.careerFilter, select.value]));
+
+    const renderActiveFilters = (state) => {
+      if (!activeFilters) return;
+      activeFilters.innerHTML = '';
+      selects.forEach((select) => {
+        const group = select.dataset.careerFilter;
+        if (state[group] === 'all') return;
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.dataset.clearCareerFilter = group;
+        const label = select.closest('label')?.querySelector('span')?.textContent || '';
+        const value = select.selectedOptions[0]?.textContent || '';
+        chip.innerHTML = `<span>${label}: ${value}</span><b aria-hidden="true">×</b>`;
+        chip.setAttribute('aria-label', `${label}: ${value}`);
+        activeFilters.append(chip);
+      });
+      activeFilters.hidden = !activeFilters.children.length;
+    };
+
+    const updateUrl = (state) => {
+      const url = new URL(window.location.href);
+      Object.entries(queryKeys).forEach(([group, key]) => {
+        if (state[group] && state[group] !== 'all') url.searchParams.set(key, state[group]);
+        else url.searchParams.delete(key);
+      });
+      history.replaceState(null, '', `${url.pathname}${url.search}${url.hash}`);
+    };
+
+    const applyFilters = () => {
+      const state = readState();
+      let visible = 0;
+
+      entries.forEach((entry) => {
+        const roles = (entry.dataset.roles || '').split(' ').filter(Boolean);
+        const projects = (entry.dataset.projects || '').split(' ').filter(Boolean);
+        const matches =
+          (state.organisation === 'all' || entry.dataset.organisation === state.organisation) &&
+          (state.role === 'all' || roles.includes(state.role)) &&
+          (state.project === 'all' || projects.includes(state.project));
+
+        entry.hidden = !matches;
+        entry.setAttribute('aria-hidden', String(!matches));
+        if (matches) {
+          visible += 1;
+          if (state.project !== 'all') entry.querySelector('details')?.setAttribute('open', '');
+        }
+      });
+
+      if (count) count.textContent = String(visible);
+      if (empty) empty.hidden = visible !== 0;
+      if (reset) reset.disabled = Object.values(state).every((value) => value === 'all');
+      renderActiveFilters(state);
+      updateUrl(state);
+    };
+
+    const clearFilters = () => {
+      selects.forEach((select) => {
+        select.value = 'all';
+      });
+      applyFilters();
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    selects.forEach((select) => {
+      const key = queryKeys[select.dataset.careerFilter];
+      const value = params.get(key);
+      if (value && validOption(select, value)) select.value = value;
+      select.addEventListener('change', applyFilters);
+    });
+
+    form?.addEventListener('submit', (event) => event.preventDefault());
+    form?.addEventListener('reset', (event) => {
+      event.preventDefault();
+      clearFilters();
+    });
+    emptyReset?.addEventListener('click', clearFilters);
+    activeFilters?.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-clear-career-filter]');
+      if (!button) return;
+      const select = root.querySelector(`[data-career-filter="${button.dataset.clearCareerFilter}"]`);
+      if (select) select.value = 'all';
+      applyFilters();
+    });
+
+    applyFilters();
+  })();
+</script>

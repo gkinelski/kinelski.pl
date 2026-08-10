@@ -35,7 +35,8 @@ const monographs = readJson('src/data/monographs.json');
 const energyProjects = readJson('src/data/energyProjects.json');
 const conferences = readJson('src/data/conferences.json');
 const contact = readJson('src/data/contact.json');
-const expectedVersion = '5.4.29';
+const career = readJson('src/data/career.json');
+const expectedVersion = '5.4.30';
 const analysisSlugs = [
   'rezyliencja-miasta-inteligentnego',
   'model-4t-plus',
@@ -138,6 +139,25 @@ addCheck(
     contactText.includes('grzegorz@kinelski.pl'),
   'Oba ustalone kanały e-mail są zapisane w danych kontaktowych.',
   'Brakuje jednego z ustalonych adresów e-mail w danych kontaktowych.'
+);
+
+const careerProjectOptions = new Set(
+  career.cvExplorer?.filters?.projects?.map((project) => project.key) ?? []
+);
+const careerProjectKeys = career.timeline.flatMap((entry) =>
+  (entry.projects ?? []).map((project) => (typeof project === 'string' ? project : project.key))
+);
+const missingCareerProjectOptions = careerProjectKeys.filter((key) => !careerProjectOptions.has(key));
+const gzmEntry = career.timeline.find((entry) => entry.organisationKey === 'metropolia-gzm');
+addCheck(
+  career.timeline.length >= 9 &&
+    Boolean(gzmEntry) &&
+    gzmEntry.roleKeys?.includes('doradca-zarzadu') &&
+    missingCareerProjectOptions.length === 0,
+  `Interaktywne CV zawiera ${career.timeline.length} etapów i komplet projektów do filtrowania.`,
+  missingCareerProjectOptions.length
+    ? `Brak opcji filtrów CV dla projektów: ${missingCareerProjectOptions.join(', ')}.`
+    : 'Brakuje etapu GZM albo roli Doradcy Zarządu w interaktywnym CV.'
 );
 
 const htmlFiles = walk(distDir).filter((filePath) => filePath.endsWith('.html'));
