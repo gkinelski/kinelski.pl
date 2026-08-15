@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import AnalyticsConsent from '../components/AnalyticsConsent.astro';
 import '../styles/global.css';
 import { site, theme } from '../data/site';
 import typography from '../data/typography.json';
@@ -47,11 +48,11 @@ const contentSecurityPolicy = [
   "object-src 'none'",
   "frame-src 'self' https://docs.google.com",
   "form-action 'self'",
-  "img-src 'self' data:",
+  "img-src 'self' data: https://*.google-analytics.com",
   "font-src 'self' data: https://fonts.gstatic.com",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-  "script-src 'self' 'unsafe-inline'",
-  "connect-src 'self' https://pub.orcid.org",
+  "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
+  "connect-src 'self' https://pub.orcid.org https://*.google-analytics.com https://analytics.google.com",
   "manifest-src 'self'",
   "media-src 'self'",
   "worker-src 'self'",
@@ -272,6 +273,7 @@ const additionalSchemas = Array.isArray(structuredData) ? structuredData : [stru
   <Header />
   <main id="main"><slot /></main>
   <Footer />
+  <AnalyticsConsent />
   <script is:inline src="/i18n-public.js" defer></script>
   <script is:inline>
     const root = document.documentElement;

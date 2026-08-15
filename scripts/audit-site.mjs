@@ -35,8 +35,9 @@ const monographs = readJson('src/data/monographs.json');
 const energyProjects = readJson('src/data/energyProjects.json');
 const conferences = readJson('src/data/conferences.json');
 const contact = readJson('src/data/contact.json');
+const analytics = readJson('src/data/analytics.json');
 const career = readJson('src/data/career.json');
-const expectedVersion = '5.4.30';
+const expectedVersion = '5.4.31';
 const analysisSlugs = [
   'rezyliencja-miasta-inteligentnego',
   'model-4t-plus',
@@ -160,6 +161,15 @@ addCheck(
     : 'Brakuje etapu GZM albo roli Doradcy Zarządu w interaktywnym CV.'
 );
 
+addCheck(
+  analytics.enabled === true &&
+    /^G-[A-Z0-9]+$/i.test(analytics.measurementId ?? '') &&
+    typeof analytics.consentKey === 'string' &&
+    analytics.consentKey.length > 0,
+  `Google Analytics 4 ma poprawny identyfikator ${analytics.measurementId} i klucz zgody.`,
+  'Konfiguracja Google Analytics 4 jest niepełna albo ma nieprawidłowy identyfikator.'
+);
+
 const htmlFiles = walk(distDir).filter((filePath) => filePath.endsWith('.html'));
 const forbiddenProductionPaths = [
   path.join(distDir, 'admin'),
@@ -236,6 +246,13 @@ if (fs.existsSync(homepagePath)) {
     /<meta[^>]+name="google-site-verification"[^>]+content="[^"]+"/i.test(homepageHtml),
     'Strona główna zawiera znacznik weryfikacyjny Google Search Console.',
     'Strona główna nie zawiera znacznika weryfikacyjnego Google Search Console.'
+  );
+  addCheck(
+    homepageHtml.includes(analytics.measurementId) &&
+      homepageHtml.includes('analytics_storage') &&
+      homepageHtml.includes('data-analytics-consent'),
+    'Strona główna zawiera GA4 z domyślnie zablokowanym pomiarem i banerem zgody.',
+    'Strona główna nie zawiera kompletnej integracji GA4/Consent Mode.'
   );
 }
 

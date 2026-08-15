@@ -1,0 +1,142 @@
+---
+import analytics from '../data/analytics.json';
+---
+
+<div
+  class="cookie-consent-v5431"
+  data-analytics-consent
+  data-measurement-id={analytics.measurementId}
+  data-consent-key={analytics.consentKey}
+  role="dialog"
+  aria-labelledby="cookie-consent-title"
+  aria-describedby="cookie-consent-description"
+  hidden
+>
+  <div class="cookie-consent-copy-v5431">
+    <p class="cookie-consent-kicker-v5431">Prywatność</p>
+    <h2 id="cookie-consent-title">Czy zgadzasz się na anonimowe statystyki?</h2>
+    <p id="cookie-consent-description">
+      Używamy Google Analytics 4, aby sprawdzać, które strony są odwiedzane i poprawiać
+      serwis. Pomiar jest wyłączony, dopóki nie wyrazisz zgody. Nie używamy tu reklam ani
+      profilowania marketingowego. Zgodę możesz później zmienić w ustawieniach cookies.
+    </p>
+    <a href="/polityka-prywatnosci/">Dowiedz się więcej w polityce prywatności</a>
+  </div>
+  <div class="cookie-consent-actions-v5431">
+    <button type="button" class="button secondary" data-cookie-reject>Tylko niezbędne</button>
+    <button type="button" class="button primary" data-cookie-accept>Zezwól na statystyki</button>
+  </div>
+</div>
+<button type="button" class="cookie-settings-button-v5431" data-cookie-settings hidden>
+  Ustawienia cookies
+</button>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-analytics-consent]');
+    if (!root || root.dataset.initialized === 'true') return;
+    root.dataset.initialized = 'true';
+
+    const measurementId = root.dataset.measurementId;
+    const consentKey = root.dataset.consentKey || 'kinelski_cookie_consent_v1';
+    const settingsButtons = document.querySelectorAll('[data-cookie-settings]');
+    const acceptButton = root.querySelector('[data-cookie-accept]');
+    const rejectButton = root.querySelector('[data-cookie-reject]');
+    const deniedConsent = {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      functionality_storage: 'granted',
+      security_storage: 'granted',
+      wait_for_update: 500,
+    };
+    const grantedConsent = {
+      analytics_storage: 'granted',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+    };
+    const readConsent = () => {
+      try {
+        return localStorage.getItem(consentKey);
+      } catch {
+        return null;
+      }
+    };
+    const saveConsent = (value) => {
+      try {
+        localStorage.setItem(consentKey, value);
+      } catch {
+        // If storage is blocked, the decision still applies to this page view.
+      }
+    };
+
+    const ensureGoogleTag = () => {
+      if (!measurementId || !/^G-[A-Z0-9]+$/i.test(measurementId)) return;
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = window.gtag || function gtag() {
+        window.dataLayer.push(arguments);
+      };
+      window.gtag('consent', 'default', deniedConsent);
+      window.gtag('consent', 'update', grantedConsent);
+      window.gtag('js', new Date());
+      window.gtag('config', measurementId, { send_page_view: true });
+
+      if (!document.querySelector(`script[data-ga4-tag="${measurementId}"]`)) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+        script.dataset.ga4Tag = measurementId;
+        document.head.appendChild(script);
+      }
+    };
+
+    const updateDeniedConsent = () => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+      }
+    };
+
+    const closeBanner = () => {
+      root.hidden = true;
+      settingsButtons.forEach((button) => { button.hidden = false; });
+    };
+
+    const showBanner = () => {
+      root.hidden = false;
+      settingsButtons.forEach((button) => { button.hidden = true; });
+      acceptButton?.focus();
+    };
+
+    acceptButton?.addEventListener('click', () => {
+      saveConsent('accepted');
+      ensureGoogleTag();
+      closeBanner();
+    });
+
+    rejectButton?.addEventListener('click', () => {
+      saveConsent('rejected');
+      updateDeniedConsent();
+      closeBanner();
+    });
+
+    settingsButtons.forEach((button) => button.addEventListener('click', showBanner));
+
+    const savedConsent = readConsent();
+    if (savedConsent === 'accepted') {
+      ensureGoogleTag();
+      closeBanner();
+    } else if (savedConsent === 'rejected') {
+      updateDeniedConsent();
+      closeBanner();
+    } else {
+      showBanner();
+    }
+  })();
+</script>
