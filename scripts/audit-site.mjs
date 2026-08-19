@@ -37,7 +37,7 @@ const conferences = readJson('src/data/conferences.json');
 const contact = readJson('src/data/contact.json');
 const analytics = readJson('src/data/analytics.json');
 const career = readJson('src/data/career.json');
-const expectedVersion = '5.4.31';
+const expectedVersion = '5.4.32';
 const analysisSlugs = [
   'rezyliencja-miasta-inteligentnego',
   'model-4t-plus',

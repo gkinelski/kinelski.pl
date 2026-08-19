@@ -1,0 +1,166 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import newsData from '../data/news.json';
+import { site } from '../data/site';
+
+const items = [...newsData.items].sort((a, b) => b.date.localeCompare(a.date));
+const featured = items.find((item) => item.featured) ?? items[0];
+const remainingItems = items.filter((item) => item.id !== featured.id);
+const pressCount = items.filter((item) => item.type === 'press').length;
+const videoCount = items.filter((item) => item.type === 'video').length;
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${site.url}/newsy/#collection`,
+  name: 'Newsy — Grzegorz Kinelski',
+  description:
+    'Wywiady, publikacje prasowe, materiały wideo i autorskie aktualności Grzegorza Kinelskiego.',
+  url: `${site.url}/newsy/`,
+  author: { '@id': `${site.url}/#person` },
+  mainEntity: {
+    '@type': 'ItemList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: item.url,
+      name: item.title,
+    })),
+  },
+};
+---
+
+<BaseLayout
+  title="Newsy"
+  description="Wywiady, publikacje prasowe, materiały wideo i autorskie aktualności Grzegorza Kinelskiego."
+  structuredData={collectionSchema}
+>
+  <section class="news-hero-v5432">
+    <div class="news-orbit-v5432 news-orbit-a-v5432"></div>
+    <div class="news-orbit-v5432 news-orbit-b-v5432"></div>
+    <div class="container news-hero-grid-v5432">
+      <div>
+        <p class="eyebrow">Prasa • wideo • media społecznościowe</p>
+        <h1>Newsy</h1>
+        <p class="page-lead">
+          Wywiady, komentarze eksperckie i autorskie publikacje o energetyce,
+          Smart City, transformacji oraz zarządzaniu.
+        </p>
+      </div>
+      <aside class="news-hero-stats-v5432" aria-label="Podsumowanie materiałów">
+        <div><strong>{items.length}</strong><span>materiałów</span></div>
+        <div><strong>{pressCount}</strong><span>publikacji prasowych</span></div>
+        <div><strong>{videoCount}</strong><span>materiały wideo</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section news-featured-section-v5432">
+    <div class="container">
+      <a class="news-featured-v5432" href={featured.url} target="_blank" rel="noopener noreferrer">
+        <div class="news-featured-mark-v5432" aria-hidden="true">
+          <span>{featured.source}</span>
+          <b>01</b>
+        </div>
+        <div class="news-featured-body-v5432">
+          <div class="news-meta-v5432">
+            <span>{featured.typeLabel}</span>
+            <time datetime={featured.date}>{featured.displayDate}</time>
+          </div>
+          <h2>{featured.title}</h2>
+          <p>{featured.excerpt}</p>
+          <strong>Czytaj w serwisie {featured.source} ↗</strong>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="section news-channels-section-v5432">
+    <div class="container">
+      <div class="news-section-head-v5432">
+        <div>
+          <p class="eyebrow">Kanały autorskie</p>
+          <h2>Obserwuj aktualności</h2>
+        </div>
+        <p>Nowe analizy, komentarze i materiały publikowane bezpośrednio w mediach społecznościowych.</p>
+      </div>
+      <div class="news-channel-grid-v5432">
+        {newsData.channels.map((channel) => (
+          <a href={channel.url} target="_blank" rel="noopener noreferrer">
+            <span aria-hidden="true">{channel.mark}</span>
+            <div>
+              <p>{channel.name}</p>
+              <h3>{channel.handle}</h3>
+              <small>{channel.description}</small>
+            </div>
+            <b>↗</b>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section news-archive-v5432">
+    <div class="container">
+      <div class="news-section-head-v5432">
+        <div>
+          <p class="eyebrow">Archiwum</p>
+          <h2>Publikacje i wystąpienia</h2>
+        </div>
+        <p>Linki prowadzą bezpośrednio do materiałów źródłowych.</p>
+      </div>
+
+      <div class="news-filters-v5432" aria-label="Filtruj materiały">
+        <button class="is-active" type="button" data-news-filter="all" aria-pressed="true">Wszystkie</button>
+        <button type="button" data-news-filter="press" aria-pressed="false">Prasa</button>
+        <button type="button" data-news-filter="video" aria-pressed="false">Wideo</button>
+        <button type="button" data-news-filter="social" aria-pressed="false">Social media</button>
+      </div>
+
+      <div class="news-grid-v5432" data-news-grid>
+        {remainingItems.map((item, index) => (
+          <a
+            class="news-card-v5432"
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-news-type={item.type}
+          >
+            <div class="news-card-top-v5432">
+              <span>{String(index + 2).padStart(2, '0')}</span>
+              <time datetime={item.date}>{item.displayDate}</time>
+            </div>
+            <p>{item.typeLabel} • {item.source}</p>
+            <h3>{item.title}</h3>
+            <small>{item.excerpt}</small>
+            <b>Otwórz materiał ↗</b>
+          </a>
+        ))}
+      </div>
+
+      <p class="news-updated-v5432">
+        Ostatnia kontrola źródeł: <time datetime={newsData.updatedAt}>19 sierpnia 2026</time>.
+      </p>
+    </div>
+  </section>
+
+  <script>
+    const filterButtons = document.querySelectorAll('[data-news-filter]');
+    const newsCards = document.querySelectorAll('[data-news-type]');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-news-filter') ?? 'all';
+        filterButtons.forEach((candidate) => {
+          const active = candidate === button;
+          candidate.classList.toggle('is-active', active);
+          candidate.setAttribute('aria-pressed', String(active));
+        });
+        newsCards.forEach((card) => {
+          const visible = filter === 'all' || card.getAttribute('data-news-type') === filter;
+          card.toggleAttribute('hidden', !visible);
+        });
+      });
+    });
+  </script>
+</BaseLayout>

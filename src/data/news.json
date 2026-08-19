@@ -1,0 +1,139 @@
+{
+  "updatedAt": "2026-08-19",
+  "channels": [
+    {
+      "name": "LinkedIn",
+      "handle": "Grzegorz Kinelski",
+      "url": "https://pl.linkedin.com/in/kinelski",
+      "mark": "in",
+      "description": "Komentarze eksperckie, energetyka, Smart City i zarządzanie transformacją."
+    },
+    {
+      "name": "Facebook",
+      "handle": "KINELSKI.PL",
+      "url": "https://www.facebook.com/profile.php?id=61592896557262",
+      "mark": "f",
+      "description": "Aktualności serwisu, nowe analizy i materiały popularyzujące badania."
+    },
+    {
+      "name": "Instagram",
+      "handle": "@grzegorz_kinelski",
+      "url": "https://www.instagram.com/grzegorz_kinelski/",
+      "mark": "ig",
+      "description": "Wizualne skróty analiz, wydarzenia i kulisy aktywności zawodowej."
+    }
+  ],
+  "items": [
+    {
+      "id": "polityka-2026-08-18",
+      "date": "2026-08-18",
+      "displayDate": "18 sierpnia 2026",
+      "type": "press",
+      "typeLabel": "Wywiad",
+      "source": "Polityka",
+      "title": "Gorąco w energetyce. Czy światło nam zgaśnie?",
+      "excerpt": "Rozmowa o pracy systemu energetycznego podczas upałów, bezpieczeństwie dostaw i wyzwaniach transformacji energetycznej.",
+      "url": "https://www.polityka.pl/tygodnikpolityka/rynek/2353789,1,goraco-w-energetyce-czy-swiatlo-nam-zgasnie-nie-grozi-nam-blackout-ale-sytuacja-jest-trudna.read",
+      "featured": true
+    },
+    {
+      "id": "pap-urc-2026-06-30",
+      "date": "2026-06-30",
+      "displayDate": "30 czerwca 2026",
+      "type": "video",
+      "typeLabel": "Wideo i relacja",
+      "source": "PAP MediaRoom",
+      "title": "Enea na URC Gdańsk: sektor energetyczny jest gotowy do odbudowy Ukrainy",
+      "excerpt": "Wypowiedź o odbudowie infrastruktury energetycznej, współpracy przedsiębiorstw oraz znaczeniu europejskiego i polskiego local content.",
+      "url": "https://pap-mediaroom.pl/biznes-i-finanse/enea-na-urc-gdansk-polski-sektor-energetyczny-jest-gotowy-do-odbudowy-ukrainskiej"
+    },
+    {
+      "id": "xyz-2026-05-29",
+      "date": "2026-05-29",
+      "displayDate": "29 maja 2026",
+      "type": "video",
+      "typeLabel": "Wywiad wideo",
+      "source": "XYZ",
+      "title": "Polska może się stać przedmurzem energetycznego bezpieczeństwa Europy",
+      "excerpt": "Rozmowa o tempie transformacji, bezpieczeństwie energetycznym i roli Polski w europejskim systemie energii.",
+      "url": "https://xyz.pl/prezes-enei-polska-moze-sie-stac-przedmurzem-energetycznego-bezpieczenstwa-europy-wideo/"
+    },
+    {
+      "id": "business-insider-2026-05-24",
+      "date": "2026-05-24",
+      "displayDate": "24 maja 2026",
+      "type": "press",
+      "typeLabel": "Wywiad",
+      "source": "Business Insider Polska",
+      "title": "Prezes Enei o transformacji grupy i przyszłości bloków węglowych",
+      "excerpt": "Wywiad o inwestycjach, wydzieleniu aktywów węglowych, magazynach energii i strategii transformacji Grupy Enea.",
+      "url": "https://businessinsider.com.pl/gospodarka/reforma-ets-i-nowe-inwestycje-grzegorz-kinelski-zdradza-strategie-enei/mzm7s2t"
+    },
+    {
+      "id": "pap-impact-2026-05-13",
+      "date": "2026-05-13",
+      "displayDate": "13 maja 2026",
+      "type": "press",
+      "typeLabel": "Wypowiedź",
+      "source": "PAP",
+      "title": "Kryzys paliwowy pokazuje, że ważny jest zróżnicowany miks energetyczny",
+      "excerpt": "Komentarz podczas Impact'26 o odporności systemu, źródłach energii i potrzebie utrzymywania zróżnicowanego miksu.",
+      "url": "https://www.pap.pl/aktualnosci/prezes-enei-kryzys-paliwowy-pokazuje-ze-wazny-jest-zroznicowany-miks-energetyczny"
+    },
+    {
+      "id": "linkedin-ekg-2026-04-23",
+      "date": "2026-04-23",
+      "displayDate": "23 kwietnia 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Profil autorski",
+      "title": "Enea na Europejskim Kongresie Gospodarczym 2026",
+      "excerpt": "O odpowiedzialnej transformacji energetycznej, inwestycjach oraz wzmacnianiu krajowego łańcucha dostaw i local content.",
+      "url": "https://pl.linkedin.com/posts/kinelski_eneaekg-localcontent-transformacjaenei-activity-7452992512090320896-ng2l"
+    },
+    {
+      "id": "rzeczpospolita-2026-04-21",
+      "date": "2026-04-21",
+      "displayDate": "21 kwietnia 2026",
+      "type": "press",
+      "typeLabel": "Wywiad",
+      "source": "Rzeczpospolita",
+      "title": "Polska „przedmurzem” bezpieczeństwa energetycznego Europy",
+      "excerpt": "Rozmowa o inwestycjach, elastyczności systemu i znaczeniu krajowych kompetencji dla bezpieczeństwa energetycznego.",
+      "url": "https://energia.rp.pl/energetyka-zawodowa/art44189111-polska-przedmurzem-bezpieczenstwa-energetycznego-europy"
+    },
+    {
+      "id": "linkedin-local-content-2026-04-10",
+      "date": "2026-04-10",
+      "displayDate": "10 kwietnia 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Profil autorski",
+      "title": "Dostawcy, inteligentne opomiarowanie i local content",
+      "excerpt": "O współpracy z krajowymi dostawcami, cyfryzacji sieci oraz rozwiązaniach wspierających transformację energetyczną.",
+      "url": "https://pl.linkedin.com/posts/kinelski_enea-dzie%C5%84dostawc%C3%B3wenei-localcontent-activity-7448388343022702592-ZnuS"
+    },
+    {
+      "id": "money-2026-04-09",
+      "date": "2026-04-09",
+      "displayDate": "9 kwietnia 2026",
+      "type": "video",
+      "typeLabel": "Rozmowa wideo",
+      "source": "money.pl",
+      "title": "Energetyka przyspiesza — to już nie plany, tylko konkretne inwestycje",
+      "excerpt": "Rozmowa o skali inwestycji, tempie zmian oraz największych wyzwaniach transformacji energetycznej w Polsce.",
+      "url": "https://www.money.pl/gospodarka/energetyka-przyspiesza-prezes-enea-to-juz-nie-plany-tylko-konkretne-inwestycje-7273428059609344a.html"
+    },
+    {
+      "id": "linkedin-n3xt-2026-03-25",
+      "date": "2026-03-25",
+      "displayDate": "25 marca 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Profil autorski",
+      "title": "N3XT EnergINN 2026 — technologie dla transformacji energii",
+      "excerpt": "O innowacjach, inwestycjach i budowaniu praktycznych rozwiązań dla bezpiecznej transformacji sektora energii.",
+      "url": "https://pl.linkedin.com/posts/kinelski_strategiaenei-transformacjaenei-n3xtenerginn-activity-7442585465758830592-uAUx"
+    }
+  ]
+}

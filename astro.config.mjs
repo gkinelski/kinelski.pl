@@ -14,12 +14,12 @@ export default defineConfig({
         !page.endsWith('/monografia/'),
       serialize(item) {
         const isHomepage = item.url === 'https://kinelski.pl/';
-        const isPrimary = ['/analizy', '/badania', '/kariera', '/projekty', '/publikacje', '/monografie'].some((path) =>
+        const isPrimary = ['/analizy', '/badania', '/kariera', '/newsy', '/projekty', '/publikacje', '/monografie'].some((path) =>
           item.url.endsWith(`${path}/`)
         );
         item.changefreq = isHomepage ? 'weekly' : isPrimary ? 'monthly' : 'yearly';
         item.priority = isHomepage ? 1 : isPrimary ? 0.8 : 0.6;
-        item.lastmod = new Date('2026-07-31');
+        item.lastmod = new Date('2026-08-19');
         return item;
       },
     }),

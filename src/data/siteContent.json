@@ -32,10 +32,6 @@
       "label": "Kariera"
     },
     {
-      "href": "/bibliometria",
-      "label": "Bibliometria"
-    },
-    {
       "href": "/badania",
       "label": "Badania",
       "children": [
@@ -47,7 +43,17 @@
     },
     {
       "href": "/publikacje",
-      "label": "Publikacje"
+      "label": "Publikacje",
+      "children": [
+        {
+          "href": "/bibliometria",
+          "label": "Bibliometria"
+        }
+      ]
+    },
+    {
+      "href": "/newsy",
+      "label": "Newsy"
     },
     {
       "href": "/monografie",
