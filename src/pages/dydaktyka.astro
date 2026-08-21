@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import academic from '../data/academicActivity.json';
+---
+
+<BaseLayout
+  title="Dydaktyka"
+  description="Przedmioty i zajęcia akademickie prowadzone przez dr. Grzegorza Kinelskiego w Akademii WSB oraz na innych uczelniach w latach 2019–2026."
+>
+  <section class="activity-hero">
+    <div class="activity-shape shape-one"></div>
+    <div class="activity-shape shape-two"></div>
+    <div class="container activity-hero-grid">
+      <div>
+        <p class="eyebrow">Aktywność akademicka</p>
+        <h1>Dydaktyka<br /><span>oparta na praktyce</span></h1>
+        <p class="page-lead">
+          Zajęcia na studiach licencjackich, magisterskich, w Szkole Doktorskiej
+          oraz w programach MBA i Executive MBA łączą nauki o zarządzaniu
+          z doświadczeniem sektora energetycznego i projektów transformacyjnych.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#akademia-wsb">Wykaz zajęć</a>
+          <a class="button secondary" href="#inne-uczelnie">Inne uczelnie</a>
+        </div>
+      </div>
+
+      <div class="activity-hero-panel">
+        <div><strong>7</strong><span>lat akademickich w wykazie</span></div>
+        <div><strong>4</strong><span>ścieżki: I, II, doktorancka i MBA</span></div>
+        <div><strong>PL/EN</strong><span>zajęcia po polsku i angielsku</span></div>
+        <div><strong>W·Ć·S</strong><span>wykłady, ćwiczenia i seminaria</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section teaching-section-v4" id="akademia-wsb">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Akademia WSB · 2019–2026"
+        title="Przedmioty w podziale na lata akademickie"
+        text="Zestawienie opracowano na podstawie Wykazu osiągnięć naukowych. Powtarzające się grupy zajęciowe połączono, zachowując nazwy przedmiotów, formę zajęć i język prowadzenia."
+      />
+
+      <div class="academic-years-v4">
+        {academic.teachingYears.map((entry, index) => (
+          <details open={index === academic.teachingYears.length - 1}>
+            <summary>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <strong>Rok akademicki {entry.year}</strong>
+              <em>{entry.courses.length} pozycji</em>
+            </summary>
+            <ul>
+              {entry.courses.map((course) => <li>{course}</li>)}
+            </ul>
+          </details>
+        ))}
+      </div>
+
+      <p class="source-note-v4">
+        Skróty: W — wykład, Ć — ćwiczenia, S — seminarium. Zajęcia obejmują m.in.
+        zarządzanie strategiczne i projektowe, rynki energii, transformację energetyczną,
+        gospodarkę cyfrową, Smart City oraz praktykę zarządzania.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="inne-uczelnie">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Zajęcia gościnne i mobilność"
+        title="Współpraca z innymi uczelniami"
+        text="Wykłady eksperckie, popularyzacja nauki i międzynarodowa wymiana doświadczeń uzupełniają stałą działalność dydaktyczną w Akademii WSB."
+      />
+      <div class="academic-cards-v4">
+        {academic.guestTeaching.map((entry) => (
+          <article>
+            <span>{entry.period}</span>
+            <h2>{entry.institution}</h2>
+            <p>{entry.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section teaching-method-v4">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Metoda pracy"
+        title="Od problemu do decyzji zarządczej"
+        text="Zajęcia wykorzystują aktualną literaturę, wyniki badań oraz studia rzeczywistych projektów i przemian organizacyjnych."
+      />
+      <div class="expertise-grid-v4">
+        <article><h3>Aktualna wiedza</h3><p>Badania, regulacje i bieżące uwarunkowania gospodarcze.</p></article>
+        <article><h3>Studia przypadków</h3><p>Decyzje i projekty prowadzone w organizacjach infrastrukturalnych.</p></article>
+        <article><h3>Perspektywa systemowa</h3><p>Technologia, ekonomia, kompetencje i współpraca interesariuszy.</p></article>
+        <article><h3>Praktyczne rezultaty</h3><p>Ocena wykonalności, ryzyka i mierzalnych efektów rozwiązania.</p></article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

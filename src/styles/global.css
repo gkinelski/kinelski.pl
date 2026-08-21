@@ -2848,3 +2848,50 @@ main label > span,
 .news-archive-v5432{background:var(--bg)}.news-filters-v5432{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:28px}.news-filters-v5432 button{min-height:42px;padding:9px 17px;border:1px solid var(--line);border-radius:999px;color:var(--muted);background:var(--surface);font:800 12px Manrope,sans-serif;cursor:pointer}.news-filters-v5432 button:hover,.news-filters-v5432 button.is-active{border-color:var(--blue);color:#fff;background:var(--blue)}.news-grid-v5432{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.news-card-v5432{min-height:390px;display:flex;flex-direction:column;padding:29px;border:1px solid var(--line);border-radius:25px;background:var(--surface);transition:transform .2s,border-color .2s,box-shadow .2s}.news-card-v5432:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--blue) 45%,var(--line));box-shadow:0 23px 60px rgba(13,34,56,.09)}.news-card-v5432[hidden]{display:none}.news-card-top-v5432{display:flex;align-items:center;justify-content:space-between}.news-card-top-v5432>span{width:45px;height:45px;display:grid;place-items:center;border-radius:50%;color:#fff;background:var(--blue);font:800 11px Manrope,sans-serif}.news-card-top-v5432 time{color:var(--muted);font-size:10px}.news-card-v5432>p{margin:38px 0 8px;color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}.news-card-v5432 h3{max-width:610px;margin:0 0 19px;font-size:30px}.news-card-v5432 small{color:var(--muted);font-size:14px;line-height:1.7}.news-card-v5432>b{margin-top:auto;padding-top:25px;color:var(--blue);font-size:12px}.news-updated-v5432{margin:28px 0 0;color:var(--muted);font-size:11px;text-align:right}
 @media(max-width:1000px){.news-hero-grid-v5432,.news-featured-v5432{grid-template-columns:1fr}.news-featured-mark-v5432{min-height:220px}.news-featured-mark-v5432 b{font-size:100px}.news-channel-grid-v5432{grid-template-columns:1fr}.news-channel-grid-v5432>a{min-height:0}.news-section-head-v5432{align-items:start;flex-direction:column}}
 @media(max-width:700px){.news-hero-v5432{padding:76px 0 60px}.news-hero-v5432 h1{font-size:60px}.news-hero-grid-v5432{gap:42px}.news-hero-stats-v5432{grid-template-columns:1fr}.news-hero-stats-v5432 div{min-height:94px;border-right:0;border-bottom:1px solid rgba(255,255,255,.15)}.news-hero-stats-v5432 div:last-child{border-bottom:0}.news-featured-mark-v5432{min-height:180px;padding:25px}.news-featured-body-v5432{padding:32px 25px}.news-featured-body-v5432 h2{font-size:36px}.news-grid-v5432{grid-template-columns:1fr}.news-card-v5432{min-height:350px;padding:24px}.news-channel-grid-v5432>a{grid-template-columns:52px 1fr}.news-channel-grid-v5432>a>b{display:none}}
+
+/* Dydaktyka i opieka promotorska — wykazy źródłowe */
+.academic-years-v4{border-top:1px solid var(--line)}
+.academic-years-v4 details{border-bottom:1px solid var(--line)}
+.academic-years-v4 summary{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;padding:23px 0;cursor:pointer;list-style:none}
+.academic-years-v4 summary::-webkit-details-marker,.diploma-groups-v4 summary::-webkit-details-marker{display:none}
+.academic-years-v4 summary>span{color:var(--blue);font:800 18px Manrope,sans-serif}
+.academic-years-v4 summary>strong{font:800 22px Manrope,sans-serif}
+.academic-years-v4 summary>em{color:var(--muted);font-size:11px;font-style:normal;font-weight:700}
+.academic-years-v4 details[open] summary>strong{color:var(--blue)}
+.academic-years-v4 ul{display:grid;gap:10px;margin:0;padding:0 0 26px 70px;list-style:none}
+.academic-years-v4 li{position:relative;padding-left:22px;color:var(--muted);line-height:1.6}
+.academic-years-v4 li::before{content:'→';position:absolute;left:0;color:var(--blue);font-weight:800}
+.source-note-v4{margin:30px 0 0;padding:20px 22px;border-left:4px solid var(--blue);border-radius:0 16px 16px 0;color:var(--muted);background:var(--surface)}
+.academic-cards-v4{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.academic-cards-v4 article{min-height:230px;padding:27px;border:1px solid var(--line);border-radius:23px;background:var(--surface)}
+.academic-cards-v4 article>span{color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase}
+.academic-cards-v4 h2{margin:24px 0 12px;font-size:24px}
+.academic-cards-v4 p{color:var(--muted)}
+.academic-cards-v4.compact{grid-template-columns:repeat(2,1fr)}
+.academic-cards-v4.compact article{min-height:210px}
+.teaching-method-v4{background:var(--surface-soft)}
+.doctorates-grid-v4{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.doctorates-grid-v4 article{min-height:330px;padding:32px;border:1px solid var(--line);border-radius:25px;background:var(--surface)}
+.doctorates-grid-v4 article>span{color:var(--blue);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.doctorates-grid-v4 h2{margin:27px 0 18px;font-size:32px}
+.doctorates-grid-v4 blockquote{margin:0;padding:0;border:0;color:var(--text);font:700 18px/1.55 Manrope,sans-serif}
+.doctorates-grid-v4 p{margin-top:26px;color:var(--muted)}
+.diploma-summary-v4{display:grid;grid-template-columns:repeat(3,1fr);overflow:hidden;margin-bottom:34px;border:1px solid var(--line);border-radius:23px;background:var(--surface-soft)}
+.diploma-summary-v4 article{min-height:150px;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;border-right:1px solid var(--line)}
+.diploma-summary-v4 article:last-child{border-right:0}
+.diploma-summary-v4 strong{font:800 35px Manrope,sans-serif}
+.diploma-summary-v4 span{margin-top:6px;color:var(--muted);font-size:11px;line-height:1.45}
+.diploma-groups-v4{display:grid;gap:16px}
+.diploma-groups-v4 details{overflow:hidden;border:1px solid var(--line);border-radius:22px;background:var(--surface)}
+.diploma-groups-v4 summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 27px;cursor:pointer;list-style:none}
+.diploma-groups-v4 summary strong{font:800 23px Manrope,sans-serif}
+.diploma-groups-v4 summary span{color:var(--blue);font-size:11px;font-weight:800}
+.diploma-groups-v4 details[open] summary{border-bottom:1px solid var(--line);background:var(--surface-soft)}
+.diploma-groups-v4 ol{margin:0;padding:0;list-style:none;counter-reset:diplomas}
+.diploma-groups-v4 li{counter-increment:diplomas;display:grid;grid-template-columns:92px 1fr;gap:24px;padding:21px 27px;border-bottom:1px solid var(--line)}
+.diploma-groups-v4 li:last-child{border-bottom:0}
+.diploma-groups-v4 time{color:var(--blue);font-size:11px;font-weight:800}
+.diploma-groups-v4 h3{margin:0 0 7px;font-size:17px;line-height:1.45}
+.diploma-groups-v4 p{margin:0;color:var(--muted);font-size:12px}
+@media(max-width:980px){.academic-cards-v4{grid-template-columns:repeat(2,1fr)}.doctorates-grid-v4{grid-template-columns:1fr}}
+@media(max-width:700px){.academic-years-v4 summary{grid-template-columns:36px 1fr}.academic-years-v4 summary>em{grid-column:2}.academic-years-v4 ul{padding-left:54px}.academic-cards-v4,.academic-cards-v4.compact,.diploma-summary-v4{grid-template-columns:1fr}.diploma-summary-v4 article{min-height:110px;border-right:0;border-bottom:1px solid var(--line)}.diploma-summary-v4 article:last-child{border-bottom:0}.diploma-groups-v4 summary{align-items:flex-start;flex-direction:column}.diploma-groups-v4 li{grid-template-columns:1fr;gap:8px;padding:20px}.doctorates-grid-v4 article{min-height:0;padding:25px}}

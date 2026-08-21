@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import academic from '../data/academicActivity.json';
+---
+
+<BaseLayout
+  title="Opieka promotorska"
+  description="Promotorstwo pomocnicze, prace dyplomowe, obrony i recenzje dr. Grzegorza Kinelskiego w Akademii WSB."
+>
+  <section class="activity-hero">
+    <div class="activity-shape shape-one"></div>
+    <div class="activity-shape shape-two"></div>
+    <div class="container activity-hero-grid">
+      <div>
+        <p class="eyebrow">Kształcenie i rozwój badaczy</p>
+        <h1>Opieka<br /><span>promotorska</span></h1>
+        <p class="page-lead">
+          Promotorstwo pomocnicze rozpraw doktorskich oraz opieka nad pracami
+          dyplomowymi obejmują rozwój problemu badawczego, konsultacje metodologiczne,
+          interpretację wyników i przygotowanie do obrony.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#doktoraty">Doktoraty</a>
+          <a class="button secondary" href="#prace-dyplomowe">Prace dyplomowe</a>
+        </div>
+      </div>
+
+      <div class="activity-hero-panel">
+        <div><strong>2</strong><span>rozprawy doktorskie</span></div>
+        <div><strong>35</strong><span>postępowań dyplomowych</span></div>
+        <div><strong>18</strong><span>prac jako promotor</span></div>
+        <div><strong>17</strong><span>prac jako recenzent</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section supervision-section-v4" id="doktoraty">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Promotorstwo pomocnicze"
+        title="Rozprawy doktorskie zakończone publiczną obroną"
+        text="Wsparcie obejmowało rozwój koncepcji badawczej i warsztatu naukowego w obszarach zarządzania wartością, technologii oraz nowoczesnej mobilności."
+      />
+      <div class="doctorates-grid-v4">
+        {academic.doctorates.map((item) => (
+          <article>
+            <span>{item.role}</span>
+            <h2>{item.name}</h2>
+            <blockquote>{item.title}</blockquote>
+            <p>{item.status}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="prace-dyplomowe">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Akademia WSB · 2022–2025"
+        title="Obrony i recenzje prac dyplomowych"
+        text="Oficjalne zaświadczenie Akademii WSB obejmuje 35 postępowań: 18 prac prowadzonych jako promotor oraz 17 prac ocenionych jako recenzent. Lista nie ujawnia danych osobowych absolwentów."
+      />
+
+      <div class="diploma-summary-v4">
+        <article><strong>17 + 1</strong><span>promotor: 17 prac magisterskich i 1 licencjacka</span></article>
+        <article><strong>15 + 2</strong><span>recenzent: 15 prac magisterskich i 2 licencjackie</span></article>
+        <article><strong>3</strong><span>jednostki: Dąbrowa Górnicza, Kraków i Cieszyn</span></article>
+      </div>
+
+      <div class="diploma-groups-v4">
+        <details open>
+          <summary><strong>Prace prowadzone jako promotor</strong><span>{academic.promotedDiplomas.length} pozycji</span></summary>
+          <ol>
+            {academic.promotedDiplomas.map(([date, title, meta]) => (
+              <li><time>{date}</time><div><h3>{title}</h3><p>{meta}</p></div></li>
+            ))}
+          </ol>
+        </details>
+        <details>
+          <summary><strong>Prace ocenione jako recenzent</strong><span>{academic.reviewedDiplomas.length} pozycji</span></summary>
+          <ol>
+            {academic.reviewedDiplomas.map(([date, title, meta]) => (
+              <li><time>{date}</time><div><h3>{title}</h3><p>{meta}</p></div></li>
+            ))}
+          </ol>
+        </details>
+      </div>
+
+      <p class="source-note-v4">
+        Tematy obejmują zarządzanie i projekty, przywództwo i zasoby ludzkie,
+        komunikację międzykulturową, CSR, cyfryzację, systemy wspomagania decyzji
+        oraz bezpieczeństwo energetyczne.
+      </p>
+    </div>
+  </section>
+
+  <section class="section supervision-section-v4" id="recenzje-naukowe">
+    <div class="container">
+      <SectionHeading
+        eyebrow="Działalność recenzencka"
+        title="Ocena jakości badań i publikacji"
+        text="Niezależnie od recenzji prac dyplomowych działalność naukowa obejmuje recenzowanie artykułów i monografii oraz udział w ocenie dorobku badawczego."
+      />
+      <div class="academic-cards-v4 compact">
+        <article><span>Web of Science</span><h2>34 recenzje</h2><p>Ocena 25 manuskryptów wykazana w dorobku recenzenckim.</p></article>
+        <article><span>Standard pracy</span><h2>Rzetelność i użyteczność</h2><p>Ocena metod, przejrzystości argumentacji, jakości dowodów i zasadności wniosków.</p></article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

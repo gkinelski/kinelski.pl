@@ -1,0 +1,161 @@
+{
+  "teachingYears": [
+    {
+      "year": "2019/2020",
+      "courses": [
+        "Zarządzanie projektami / Project Management — wykład i ćwiczenia, język angielski",
+        "Komunikacja korporacyjna i PR projektu / Corporate Communications and Project PR — wykład i ćwiczenia, język angielski",
+        "Zarządzanie przedsiębiorstwem na rynku międzynarodowym / Management of Enterprise on the International Market — wykład, język angielski"
+      ]
+    },
+    {
+      "year": "2020/2021",
+      "courses": [
+        "Zarządzanie przedsiębiorstwem na rynku międzynarodowym — wykład, język angielski",
+        "Strategie marketingowe w praktyce – case study — ćwiczenia, język polski",
+        "Negocjacje w biznesie — ćwiczenia, język angielski",
+        "Praktyka zarządzania / Practice Management — ćwiczenia, język angielski",
+        "Kierunki sprzedaży międzynarodowej / International Sales Directions — ćwiczenia, język angielski",
+        "Seminarium dyplomowe — język angielski",
+        "Seminarium magisterskie — język angielski"
+      ]
+    },
+    {
+      "year": "2021/2022",
+      "courses": [
+        "Marketing międzynarodowy i eksport / International Marketing and Export — wykłady i ćwiczenia",
+        "Zarządzanie przedsiębiorstwem na rynku międzynarodowym — wykład",
+        "Kierunki sprzedaży międzynarodowej — wykłady i ćwiczenia",
+        "Zarządzanie zasobami przedsiębiorstwa w praktyce / case study — ćwiczenia",
+        "Praktyka zarządzania — ćwiczenia",
+        "Seminarium dyplomowe",
+        "Seminarium magisterskie — także w Filii Akademii WSB w Krakowie"
+      ]
+    },
+    {
+      "year": "2022/2023",
+      "courses": [
+        "Kierunki sprzedaży międzynarodowej — wykład",
+        "Zarządzanie przedsiębiorstwem na rynku międzynarodowym — wykład",
+        "Spotkanie z praktykiem / Meeting with Expert — wykład",
+        "Wyzwania zarządzania na rynkach mediów energetycznych w nowym otoczeniu geopolitycznym — wykład ekspercki",
+        "Smart City to nie tylko technologie — wykład dla kilku kierunków i roczników, 22 marca 2023 r.",
+        "Zarządzanie zasobami przedsiębiorstwa w praktyce / case study — ćwiczenia",
+        "Praktyka zarządzania — ćwiczenia",
+        "Seminarium dyplomowe i seminarium magisterskie"
+      ]
+    },
+    {
+      "year": "2023/2024",
+      "courses": [
+        "Kierunki sprzedaży międzynarodowej — wykład",
+        "Corporation Management / Zarządzanie korporacją — wykład",
+        "Spotkanie z praktykiem / Meeting with Expert — wykład",
+        "Wyzwania zarządzania na rynkach mediów energetycznych w nowym otoczeniu geopolitycznym — wykład ekspercki",
+        "Zarządzanie operacyjne / Operational Management — MBA w Krakowie i MBA EY w Cieszynie",
+        "Praktyka zarządzania — ćwiczenia",
+        "Seminarium dyplomowe i seminarium magisterskie, w tym grupy krakowskie"
+      ]
+    },
+    {
+      "year": "2024/2025",
+      "courses": [
+        "Capstone Project: Synthesizing MBA Knowledge for Real-World Application — Executive MBA",
+        "Seminarium magisterskie",
+        "Zajęcia w programie Executive MBA"
+      ]
+    },
+    {
+      "year": "2025/2026",
+      "courses": [
+        "Capstone Project — prezentacje, konsultacje, obrony i ocena projektów Executive MBA",
+        "Zajęcia seminaryjne i doktorskie w Szkole Doktorskiej Akademii WSB"
+      ]
+    }
+  ],
+  "guestTeaching": [
+    {
+      "institution": "Uniwersytet Warszawski — Wydział Prawa i Administracji",
+      "period": "11 marca 2026",
+      "text": "Wykład ekspercki „Podstawy transformacji energetycznej”."
+    },
+    {
+      "institution": "Uniwersytet Ekonomiczny w Poznaniu",
+      "period": "2021–2022",
+      "text": "Wykłady eksperckie dotyczące ryzyka w zarządzaniu projektami."
+    },
+    {
+      "institution": "Uniwersytet Ekonomiczny we Wrocławiu",
+      "period": "2021",
+      "text": "Wykłady eksperckie o zarządzaniu procesowym na rynku energii."
+    },
+    {
+      "institution": "Uniwersytet Ekonomiczny w Katowicach",
+      "period": "2021–2026",
+      "text": "Udział ekspercki w cyklu „Biznes w Kulturze – Kultura w Biznesie”; członkostwo w radzie programowej wydarzeń w 2022 i 2024 r."
+    },
+    {
+      "institution": "VŠB – Technical University of Ostrava",
+      "period": "6–9 grudnia 2022",
+      "text": "Mobilność visiting professor i zajęcia związane z energetyką, transformacją oraz zarządzaniem."
+    },
+    {
+      "institution": "Festiwal Nauki Akademii WSB",
+      "period": "2021–2022",
+      "text": "Wykłady popularyzujące badania rynku energii i koncepcję Smart City."
+    }
+  ],
+  "doctorates": [
+    {
+      "name": "dr Wojciech Muras",
+      "role": "promotor pomocniczy",
+      "title": "Wpływ akcjonariuszy na kreowanie wartości spółki kapitałowej w sektorze IT",
+      "status": "Rozprawa zakończona publiczną obroną."
+    },
+    {
+      "name": "dr Jakub Stęchły",
+      "role": "promotor pomocniczy",
+      "title": "Nowoczesna mobilność jako determinanta podejścia ekosystemu biznesu w planowaniu strategicznym mobilności",
+      "status": "Rozprawa zakończona publiczną obroną."
+    }
+  ],
+  "promotedDiplomas": [
+    ["26.10.2022", "Challenges facing women faculty in Azerbaijani academic context", "Wydział Nauk Stosowanych · Zarządzanie · studia II stopnia"],
+    ["25.06.2024", "Modern methods and models of enterprise management in international business", "Wydział Nauk Stosowanych · Zarządzanie · studia II stopnia"],
+    ["15.07.2022", "The importance of creating a brand and personal brand in marketing and sales management", "Wydział Nauk Stosowanych · Zarządzanie · studia I stopnia"],
+    ["06.07.2023", "The Impact of Social Media on a Selected Group of Consumers' Purchase Behavior", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.07.2023", "Management mechanism of family businesses in Turkey", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.07.2023", "The supply chain management and its contribution to business performance. Case: CEVITAL-Algeria", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["01.07.2024", "Influence of Internal Organizational Communication on the Success of Organizations, with a focus on the public sector of Georgia", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["31.10.2023", "Agile Multicultural Management Within Localization Department", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["29.05.2024", "From Banknotes to Bits: An In-Depth Investigation of the Evolving Landscape of Cash and the Emergence of Digital Currencies in the Global Economy", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["28.03.2024", "The effect of Corporate Social Responsibility (CSR) on the profitability of commercial banks", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["01.07.2024", "Tourism Destination Management in Azerbaijan", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["01.07.2024", "Effectiveness of business strategies to expand enterprises", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.03.2025", "The Global Gender Inequality in Organizations and Work Culture", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["01.07.2024", "The Impact of Cross-Cultural Communication on International Business Relationships (Case of Turkiye)", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["22.10.2024", "PISA Success Rankings of Nations and Global Knowledge Index Rankings: A Comparative Analysis Using a CRITIC-Based Proportionality Method", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.03.2025", "Enhancing Organizational Agility: Exploring the Role of Leadership Styles and Employee Empowerment in Modern Businesses", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.03.2025", "Effects of COVID-19 on Turkey Macroeconomy", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.03.2025", "Joint Ventures and Airport Terminal Management (A Case Study in the TAV Industry)", "Filia w Krakowie · Zarządzanie · studia II stopnia"]
+  ],
+  "reviewedDiplomas": [
+    ["15.07.2022", "Outsourcing in international business and the global economy", "Wydział Nauk Stosowanych · Stosunki międzynarodowe · studia I stopnia"],
+    ["14.07.2023", "Critical examination of the impact of project management on the return on investment", "Wydział Nauk Stosowanych · Zarządzanie · studia I stopnia"],
+    ["14.11.2022", "French Guiana and Amapa: Cooperation on Amazonian Territory", "Wydział Nauk Stosowanych · Zarządzanie · studia II stopnia"],
+    ["01.07.2022", "Stres jako element pracy na stanowisku kierowniczym", "Filia w Cieszynie · Zarządzanie · studia II stopnia"],
+    ["01.07.2022", "Kompetencje menedżerów w procesie zarządzania zasobami ludzkimi", "Filia w Cieszynie · Zarządzanie · studia II stopnia"],
+    ["01.07.2022", "Poczucie bezpieczeństwa zatrudnienia i pracy w warunkach pandemii COVID-19", "Filia w Cieszynie · Zarządzanie · studia II stopnia"],
+    ["01.07.2022", "Znaczenie kompetencji i zarządzania zasobami pracowników w firmie Kuźnia Polska S.A. w Skoczowie", "Filia w Cieszynie · Zarządzanie · studia II stopnia"],
+    ["01.07.2022", "Poczucie bezpieczeństwa w pracy w percepcji pracowników różnych generacji", "Filia w Cieszynie · Zarządzanie · studia II stopnia"],
+    ["01.07.2022", "Work-life balance – uwarunkowania, konsekwencje dla pracownika i organizacji, sposoby zachowania równowagi pomiędzy życiem zawodowym i prywatnym", "Filia w Cieszynie · Zarządzanie · studia II stopnia"],
+    ["06.07.2023", "TrueView advertising applications on YouTube", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.07.2023", "The role of human resources during a crisis: the role of teleworking and other information systems", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["22.10.2024", "The Influence of Cultural Factors on Leadership Styles in Multinational Corporations", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["22.10.2024", "Challenges of pharmaceutical companies with the Coronavirus", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["22.10.2024", "The influence of Ownership on Firm Performance", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.07.2023", "Azerbaijan's contribution to global energy security as a source and transit country", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.07.2023", "Regulatory developments: analysis of recent investment business risks in the market", "Filia w Krakowie · Zarządzanie · studia II stopnia"],
+    ["06.07.2023", "The use of decision support systems in improving the quality of management decisions (on the example of agricultural decision support system)", "Filia w Krakowie · Zarządzanie · studia II stopnia"]
+  ]
+}

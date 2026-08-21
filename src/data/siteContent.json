@@ -64,8 +64,16 @@
       "label": "Aktywność",
       "children": [
         {
+          "href": "/dydaktyka",
+          "label": "Dydaktyka"
+        },
+        {
           "href": "/projekty",
           "label": "Projekty"
+        },
+        {
+          "href": "/opieka-promotorska",
+          "label": "Opieka promotorska"
         }
       ]
     },
