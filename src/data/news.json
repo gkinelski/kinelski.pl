@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19",
+  "updatedAt": "2026-11-23",
   "channels": [
     {
       "name": "LinkedIn",
@@ -24,6 +24,127 @@
     }
   ],
   "items": [
+    {
+      "id": "enea-muzeum-powstania-wielkopolskiego-2026-11-19",
+      "date": "2026-11-19",
+      "displayDate": "19 listopada 2026",
+      "type": "press",
+      "typeLabel": "Wypowiedź",
+      "source": "Biuro Prasowe Grupy Enea",
+      "title": "Enea mecenasem nowego Muzeum Powstania Wielkopolskiego",
+      "excerpt": "Komentarz Grzegorza Kinelskiego o wspieraniu nowoczesnego opowiadania historii Powstania Wielkopolskiego i tworzeniu ważnego miejsca dla mieszkańców regionu oraz odwiedzających Poznań.",
+      "url": "https://media.enea.pl/pr/880146/enea-mecenasem-nowego-muzeum-powstania-wielkopolskiego"
+    },
+    {
+      "id": "enea-wyniki-trzy-kwartaly-2026-11-18",
+      "date": "2026-11-18",
+      "displayDate": "18 listopada 2026",
+      "type": "press",
+      "typeLabel": "Komentarz",
+      "source": "Biuro Prasowe Grupy Enea",
+      "title": "Inwestycje i bezpieczeństwo dostaw — Grupa Enea po trzech kwartałach 2026 roku",
+      "excerpt": "Komentarz Grzegorza Kinelskiego do wyników Grupy Enea, realizacji programu inwestycyjnego oraz konsekwentnego wdrażania strategicznych założeń transformacji.",
+      "url": "https://media.enea.pl/pr/880099/grupa-enea-po-trzech-kwartalach-2026"
+    },
+    {
+      "id": "linkedin-energyon-polish-local-content-2026-11-16",
+      "date": "2026-11-16",
+      "displayDate": "16 listopada 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "EnergyON Summit",
+      "title": "Zaproszenie na Polish Local Content 2026 — szansa dla krajowych firm",
+      "excerpt": "Grzegorz Kinelski zaprasza przedsiębiorców, dostawców i firmy z sektora MŚP na wydarzenie poświęcone udziałowi polskich przedsiębiorstw w strategicznych inwestycjach energetycznych i rozwojowi krajowych łańcuchów dostaw.",
+      "url": "https://pl.linkedin.com/posts/energyonsummit_energyon-polishlocalcontent-energetyka-activity-7528165843113996288-1itL"
+    },
+    {
+      "id": "pap-kozienice-bloki-gazowe-2026-11-09",
+      "date": "2026-11-09",
+      "displayDate": "9 listopada 2026",
+      "type": "press",
+      "typeLabel": "Wypowiedź",
+      "source": "PAP MediaRoom",
+      "title": "Bloki gazowo-parowe w Kozienicach — bezpieczeństwo energetyczne i udział polskich firm",
+      "excerpt": "Grzegorz Kinelski omawia znaczenie budowy dwóch bloków gazowo-parowych dla elastyczności systemu, ciągłości dostaw energii oraz udziału krajowych przedsiębiorstw w strategicznej inwestycji.",
+      "url": "https://www.pap.pl/mediaroom/enea-bloki-gazowo-parowe-w-kozienicach-beda-gotowe-w-2029-r-75-proc-prac-przypadnie"
+    },
+    {
+      "id": "linkedin-enea-europower-2026-11-06",
+      "date": "2026-11-06",
+      "displayDate": "6 listopada 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Grupa Enea",
+      "title": "EuroPOWER 2026 — Local Content i bezpośredni dialog z dostawcami",
+      "excerpt": "Relacja Grupy Enea z konferencji EuroPOWER & OZE POWER. Grzegorz Kinelski mówił o praktycznym wdrażaniu Local Content, Dniach Dostawców Enei i znaczeniu słuchania potrzeb biznesu.",
+      "url": "https://pl.linkedin.com/posts/grupa-enea_enea-dzie%C5%84dostawc%C3%B3wenei-localcontent-activity-7524503895029653504-4DRh"
+    },
+    {
+      "id": "youtube-uep-kadry-transformacji-2026-11-04",
+      "date": "2026-11-04",
+      "displayDate": "4 listopada 2026",
+      "type": "video",
+      "typeLabel": "Wywiad wideo",
+      "source": "Uniwersytet Ekonomiczny w Poznaniu",
+      "title": "Transformacja energetyczna — jakich ludzi szuka Enea?",
+      "excerpt": "Rozmowa o prosumeryzmie, modernizacji sieci, magazynach energii i kompetencjach potrzebnych do realizacji programu inwestycyjnego Grupy Enea. Wywiad przeprowadziła prof. Maja Sajdak.",
+      "url": "https://www.youtube.com/watch?v=Kf36UlRzktU"
+    },
+    {
+      "id": "my-company-polska-energy-days-2026-10-21",
+      "date": "2026-10-21",
+      "displayDate": "21 października 2026",
+      "type": "video",
+      "typeLabel": "Wywiad wideo",
+      "source": "My Company Polska",
+      "title": "Dobra cena energii, szybkość przyłączenia i proste procedury",
+      "excerpt": "Rozmowa z Energy Days 2026 o bezpieczeństwie dostaw, konkurencyjnych cenach energii, inwestycjach w elastyczny miks oraz impulsie rozwojowym dla polskich firm i technologii.",
+      "url": "https://mycompanypolska.pl/artykul/nalezy-zachecac-dobra-cena-energii-szybkoscia-przylaczenia-i-prostymi-procedurami-grzegorz-kinelski-enea/21305"
+    },
+    {
+      "id": "linkedin-polish-local-content-2026-10-21",
+      "date": "2026-10-21",
+      "displayDate": "21 października 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Polish Local Content",
+      "title": "Rada Programowa Polish Local Content 2026 wyznacza kierunki programu",
+      "excerpt": "Relacja ze spotkania przedstawicieli administracji, biznesu i przemysłu poświęconego zwiększaniu udziału polskich firm w strategicznych inwestycjach i rozwojowi krajowych łańcuchów dostaw; w pracach Rady uczestniczył Grzegorz Kinelski.",
+      "url": "https://pl.linkedin.com/posts/polishlocalcontent_rada-programowa-polish-local-content-2026-activity-7518601453876473856-1X8c"
+    },
+    {
+      "id": "linkedin-enea-sprzedaz-2026-10-05",
+      "date": "2026-10-05",
+      "displayDate": "5 października 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Profil autorski",
+      "title": "Enea Sprzedaż — jasny podział odpowiedzialności i bliżej klientów",
+      "excerpt": "O uruchomieniu Enei Sprzedaż, większej samodzielności zespołów obsługujących 2,8 mln klientów oraz roli Enei S.A. w zarządzaniu strategią całej Grupy.",
+      "url": "https://pl.linkedin.com/posts/kinelski_eneasprzeda%C5%BC-enea-strategiaenei-activity-7512819459150016513-WGAW"
+    },
+    {
+      "id": "linkedin-energy-days-2026-10-02",
+      "date": "2026-10-02",
+      "displayDate": "2 października 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Profil autorski",
+      "title": "Energy Days 2026 — transformacja, sieci i krajowi dostawcy",
+      "excerpt": "Podsumowanie rozmów o modernizacji aktywów, inwestycjach w sieci, źródła gazowe, OZE i magazyny energii oraz o znaczeniu local content dla bezpieczeństwa transformacji.",
+      "url": "https://pl.linkedin.com/posts/kinelski_transformacjaenei-gazowekozienice-oze-activity-7511704518993010688-5gMn"
+    },
+    {
+      "id": "linkedin-uep-konferencja-gorynia-2026-09-30",
+      "date": "2026-09-30",
+      "displayDate": "30 września 2026",
+      "type": "social",
+      "typeLabel": "LinkedIn",
+      "source": "Uniwersytet Ekonomiczny w Poznaniu",
+      "title": "Konferencja jubileuszowa profesora Mariana Goryni — konkurencyjność w nauce i gospodarce",
+      "excerpt": "Relacja z konferencji UEP „Ewolucja postrzegania konkurencyjności”. Grzegorz Kinelski uczestniczył w panelu o wpływie badań nad konkurencyjnością na gospodarkę i naukę.",
+      "url": "https://pl.linkedin.com/posts/uepoznan_29-wrze%C5%9Bnia-2026-roku-na-uniwersytecie-activity-7511046490581016577-tgBL"
+    },
     {
       "id": "polityka-2026-08-18",
       "date": "2026-08-18",
