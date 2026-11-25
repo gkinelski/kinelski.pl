@@ -8,6 +8,8 @@ const featured = items.find((item) => item.featured) ?? items[0];
 const remainingItems = items.filter((item) => item.id !== featured.id);
 const pressCount = items.filter((item) => item.type === 'press').length;
 const videoCount = items.filter((item) => item.type === 'video').length;
+const updatedLabel = new Intl.DateTimeFormat('pl-PL', { dateStyle: 'long', timeZone: 'UTC' })
+  .format(new Date(newsData.updatedAt));
 
 const collectionSchema = {
   '@context': 'https://schema.org',
@@ -139,7 +141,7 @@ const collectionSchema = {
       </div>
 
       <p class="news-updated-v5432">
-        Ostatnia kontrola źródeł: <time datetime={newsData.updatedAt}>19 sierpnia 2026</time>.
+        Ostatnia kontrola źródeł: <time datetime={newsData.updatedAt}>{updatedLabel}</time>.
       </p>
     </div>
   </section>

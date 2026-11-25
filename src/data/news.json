@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23",
+  "updatedAt": "2026-11-25",
   "channels": [
     {
       "name": "LinkedIn",
@@ -91,6 +91,18 @@
       "url": "https://www.youtube.com/watch?v=Kf36UlRzktU"
     },
     {
+      "id": "puls-biznesu-kozienice-2026-11-02",
+      "date": "2026-11-02",
+      "displayDate": "2 listopada 2026",
+      "type": "press",
+      "typeLabel": "Rozmowa z PB",
+      "source": "Puls Biznesu",
+      "title": "Alarm nad Kozienicami nie zmienił planów Enei. Dwie gazówki już w budowie, kolejne czekają na decyzje",
+      "excerpt": "W rozmowie z Magdaleną Graniszewską Grzegorz Kinelski omawia postęp budowy bloków gazowo-parowych w Kozienicach, warunki dalszych inwestycji w Połańcu i współpracę grup energetycznych nad systemem wczesnego ostrzegania.",
+      "url": "https://www.pb.pl/alarm-nad-kozienicami-nie-zmienil-planow-enei-dwie-gazowki-juz-w-budowie-kolejne-czekaja-na-decyzje-1269758",
+      "featured": true
+    },
+    {
       "id": "my-company-polska-energy-days-2026-10-21",
       "date": "2026-10-21",
       "displayDate": "21 października 2026",
@@ -154,8 +166,7 @@
       "source": "Polityka",
       "title": "Gorąco w energetyce. Czy światło nam zgaśnie?",
       "excerpt": "Rozmowa o pracy systemu energetycznego podczas upałów, bezpieczeństwie dostaw i wyzwaniach transformacji energetycznej.",
-      "url": "https://www.polityka.pl/tygodnikpolityka/rynek/2353789,1,goraco-w-energetyce-czy-swiatlo-nam-zgasnie-nie-grozi-nam-blackout-ale-sytuacja-jest-trudna.read",
-      "featured": true
+      "url": "https://www.polityka.pl/tygodnikpolityka/rynek/2353789,1,goraco-w-energetyce-czy-swiatlo-nam-zgasnie-nie-grozi-nam-blackout-ale-sytuacja-jest-trudna.read"
     },
     {
       "id": "pap-urc-2026-06-30",
